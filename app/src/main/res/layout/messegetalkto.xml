@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarmessege"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </android.support.v7.widget.Toolbar>
+    <android.support.design.widget.TextInputLayout
+        android:layout_below="@+id/toolbarmessege"
+        android:id="@+id/input_layout_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <EditText
+          android:id="@+id/input_Name"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="*Messege" />
+
+      <EditText
+
+          android:id="@+id/input_Email"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="*Email" />
+      <EditText
+          android:id="@+id/input_Messege"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="*Name" />
+      <Button
+          android:textColor="@android:color/white"
+          android:background="@color/colorPrimary"
+          android:text="submit"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+  </LinearLayout>
+
+    </android.support.design.widget.TextInputLayout>
+
+</RelativeLayout>

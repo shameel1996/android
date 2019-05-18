@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:background="@android:color/white"
+tools:context=".Home">
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/Home"
+            android:src="@drawable/maxresdefault"
+            android:layout_width="match_parent"
+            android:layout_height="240dp" />
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:layout_below="@+id/Home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+
+                android:textSize="24sp"
+                android:textColor="#302b63"
+                android:text="How does VmatchU work?"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+
+                android:textSize="12sp"
+                android:textColor="#302b63"
+                android:text="VmatchU lets any real estate agent or a layperson fill the form of his requirements whether for selling, purchasing or renting any property and then VmatchU shows all available matches after form submission.
+Our system works in a unique way that it provides separate services for agents and laypersons:
+– If you are an agent and once you submit your form, we will notify you, for until a period of 30 days, whenever we find someone whose requirement matches with yours and you can contact the person for further details.
+– If you are a layperson seeking property dealing, then VmatchU will give you a total of five login opportunities monthly, where you can submit your requirement to get a perfect match. Once a form is submitted, then only the agent will contact you himself for the further dealing.
+The users can hide/pause the suggestions of matches anytime they want, and change his property status to “sold” or “purchased”.
+
+What makes VmatchU unique?
+
+Following features demonstrate why VmatchU should be your first platform in the realm of property dealing
+
+"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="12dp"
+                android:textSize="24sp"
+                android:textColor="#302b63"
+                android:text="B2B Agent System"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+
+                android:textSize="12sp"
+                android:textColor="#302b63"
+                android:text="You can grow your connections with other agents through our B2B Agent System. VmatchU lets you connect with other agents of the field and help build a integrated professional environment."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="12dp"
+                android:textSize="24sp"
+                android:textColor="#302b63"
+                android:text="B2C Services"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+
+                android:textSize="12sp"
+                android:textColor="#302b63"
+                android:text="End consumer version of this portal is highly beneficial for the real estate industry as the requirements of a layperson user of VmatchU are only shown to his perfect match. The agents, with only perfect matches, then contact the layperson themselves.
+This feature helps our subscribers from unwanted calls."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="12dp"
+                android:textSize="24sp"
+                android:textColor="#302b63"
+                android:text="Administrative Rights"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+
+                android:textSize="12sp"
+                android:textColor="#302b63"
+                android:text="We are also offering Administrative Rights to companies’ owners, which enable them to monitor and manage their employees/sub-agents.
+This option facilitates owners in knowing their team’s work efficiency, products’ market price, market trends (due to matching), subsequently, helping to keep a check on any hidden deals by the sub-agents."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+
+                android:layout_marginTop="12dp"
+                android:textSize="24sp"
+                android:textColor="#302b63"
+                android:text="OUR PROCESS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:text="This portal is specifically designed to facilitate real estate business, it mainly offers B2B dealings, in addition to some B2C communication."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+
+                    android:padding="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/facebook"/>
+                <ImageView
+                    android:padding="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/twitter"/>
+                <ImageView
+                    android:padding="5dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/insta"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+</ScrollView>

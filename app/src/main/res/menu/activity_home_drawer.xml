@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:color="#ffffff"
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_project"
+            android:icon="@drawable/box"
+            android:title="Project" />
+        <item
+            android:id="@+id/nav_package"
+            android:icon="@drawable/project"
+            android:title="Package" />
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/contact"
+            android:title="Contact" />
+        <item
+            android:id="@+id/nav_aboutus"
+            android:icon="@drawable/aboutus"
+            android:title="About Us" />
+        <item
+            android:id="@+id/nav_myacoount"
+            android:icon="@drawable/myaccount"
+            android:title="My Account" />
+    </group>
+
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_blog"
+                android:icon="@drawable/blogger"
+                android:title="Blogs" />
+            <item
+                android:id="@+id/nav_term"
+                android:icon="@drawable/termanduse"
+                android:title="Term and Use" />
+        </menu>
+    </item>
+
+</menu>

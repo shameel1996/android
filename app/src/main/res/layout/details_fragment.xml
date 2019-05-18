@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_margin="5dp"
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="horizontal">
+
+            <LinearLayout
+
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Property ID" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+
+
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="03105" />
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="horizontal">
+
+            <LinearLayout
+
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:background="#F1EDED"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Property Status" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+
+
+                android:background="#F1EDED"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="For Sell" />
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="horizontal">
+
+            <LinearLayout
+
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Price" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+
+
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Price On Sell" />
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="horizontal">
+
+            <LinearLayout
+
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:background="#F1EDED"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Min Size" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+
+
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:background="#F1EDED"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="4" />
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="horizontal">
+
+            <LinearLayout
+
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Property Type" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+
+
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Shop/ Showroom" />
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="horizontal">
+
+            <LinearLayout
+
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:background="#F1EDED"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Rooms" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+
+
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:background="#F1EDED"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="4" />
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="horizontal">
+
+            <LinearLayout
+
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Bedrooms" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+
+
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2" />
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="horizontal">
+
+            <LinearLayout
+
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:background="#F1EDED"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Bathrooms" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+
+
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:background="#F1EDED"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="2" />
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="horizontal">
+
+            <LinearLayout
+
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Garages" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+
+
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+
+                android:orientation="horizontal">
+
+                1<TextView
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="1" />
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="horizontal">
+
+            <LinearLayout
+
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:background="#F1EDED"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Area Type" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+
+
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:background="#F1EDED"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Kanal" />
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="horizontal">
+
+                <LinearLayout
+
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:text="Min Price" />
+
+
+
+                </LinearLayout>
+                <LinearLayout
+
+
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="30dp"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_margin="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="1200000 Rs" />
+
+
+
+                </LinearLayout>
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F1EDED"
+            android:orientation="horizontal">
+
+            <LinearLayout
+
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Max Size" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+
+                android:background="#F1EDED"
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_margin="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="1500000 Rs." />
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

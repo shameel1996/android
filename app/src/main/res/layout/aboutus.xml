@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+ >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/aboutLogo"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="20dp"
+            android:padding="20dp"
+            android:src="@drawable/vmatchu_logo_final" />
+        <TextView
+            android:id="@+id/aboutus"
+            android:layout_below="@+id/aboutLogo"
+            android:padding="15dp"
+            android:text="
+21st century is the technology era and no industry could grow without it. VmatchU provides the tech facility to real estate industry. VmatchU is the portal for real estate agents which will revolutionized the traditional property dealings. This portal is only for the real estate agents and it supports real estate business no end consumer can be a part of this so that the requirements or product consumes cannot be forwarded directly to the end consumer, while the agents are working on it.
+
+Agents are simply requested to fill the form of their requirements whether for sale, purchase, rent, and then submit. You will be notified if the exact matches of your preference are available at the time of submission. If not then within the span of 30 days any match found, will be notified in the property section of your account. Anytime an agent can hide/pause matching temporarily or permanently if sold. Any written/selection mistake could easily be edited. Moreover, your money will be deducted on editing and re-submitting.
+
+To submit the same type of product there’s no need to select the fields again and again, after one submission the page you filled the previous field on could be resubmitted after the required amendments are made.
+
+Pictures, video clips, location on google map and other description regarding your product could easily be added.
+
+Agent does not need to think about the requirements out of his area, just submit their desired requirements and find the exact matching.
+
+This portal can also support you in taking decision of investment or purchasing. Just by watching the quantity of matchings to the products/ requirements for sale you do not need to give an extra call while the product is under the process of getting purchased neither do you have to continuously go back to the search engine to check whether you got a match or not. We will notify you when we find an agent whose requirements match to yours.
+
+Project Version
+All the participants of this portal will have the opportunity to be authorized dealer or project marketing partner. They would be able to market all the projects signed for marketing at their own places. End consumer/traffic forwarded through our marketing tools, could easily be dealt in their own areas with our authorized dealers. Our authorization system of marketing will be very helpful for dealers to deal with the end consumer.
+
+Upcoming version
+Upcoming B2C (business-to-consumer) version provides immense support to the real estate industry. The End Consumer will receive a list of agents that match his/her requirements. Then he/she can select interested agent, the selected agent only would be able to call against the requirements. Through this the End consumer will also feel comfortable, because he/she can easily customize the call receiving against his/her requirement of purchase or sale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/aboutus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:padding="5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/facebook"/>
+            <ImageView
+                android:padding="5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/twitter"/>
+            <ImageView
+                android:padding="5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/insta"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

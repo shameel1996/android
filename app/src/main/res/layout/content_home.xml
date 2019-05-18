@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".HomeActivity"
+    tools:showIn="@layout/app_bar_home"
+    android:background="@drawable/backnayawal"
+
+    >
+    <FrameLayout
+
+        android:id="@+id/content_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/lgo"
+            android:layout_marginHorizontal="65dp"
+            android:layout_width="240dp"
+            android:layout_height="99dp"
+            android:layout_marginTop="120dp"
+            android:src="@drawable/vmatchu_logo_new" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="50dp"
+            android:padding="30dp">
+            <Button
+                android:id="@+id/myProper"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/buttons"
+                android:drawableLeft="@drawable/home"
+                android:padding="10dp"
+                android:text="My Property"
+                android:textColor="#ffffff"
+                android:textSize="12dp" />
+
+            <Button
+
+                android:id="@+id/mySUb"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/myProper"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/buttons"
+                android:drawableLeft="@drawable/home"
+                android:padding="10dp"
+                android:text="Submit new Property"
+                android:textColor="@android:color/white"
+                android:textSize="12dp" />
+
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+    <TextView
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+android:layout_alignParentBottom="true"
+        android:text="© 2019 - VMatchU DESIGNED BY KNOVATEK"/>
+
+
+</RelativeLayout>

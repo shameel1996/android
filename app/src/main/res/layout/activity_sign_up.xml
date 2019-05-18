@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+    <ImageView
+        android:id="@+id/logosignUp"
+        android:layout_marginTop="40dp"
+       android:padding="10dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"/>
+    <EditText
+        android:textColor="#302b63"
+        android:drawableLeft="@drawable/manuser"
+        android:layout_marginTop="50dp"
+        android:id="@+id/userName"
+        android:textAllCaps="false"
+        android:hint="  User Name"
+        android:padding="20dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/cornesrs"
+       android:layout_below="@+id/logosignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+
+        android:textColor="#302b63"
+        android:drawableLeft="@drawable/closeenvelope"
+        android:inputType="textEmailAddress"
+        android:layout_below="@+id/userName"
+        android:id="@+id/Email"
+        android:textAllCaps="false"
+        android:hint="  Email"
+        android:padding="20dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/cornesrs"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+    <EditText
+
+        android:textColor="#302b63"
+        android:drawableLeft="@drawable/lock"
+        android:inputType="textPassword"
+        android:layout_below="@+id/Email"
+        android:id="@+id/Password"
+        android:textAllCaps="false"
+        android:hint="  Password"
+        android:padding="20dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/cornesrs"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+    <Button
+        android:id="@+id/signUp"
+        android:textColor="#ffffff"
+        android:text="sign up"
+        android:padding="20dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Password"
+        android:background="@drawable/buttons"
+        />
+    <TextView
+
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/signUp"
+        android:text="Already have an Account ?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginBottom="5dp"
+        android:textAlignment="center"
+        android:text="© 2019 - VMatchU DESIGNED BY KNOVATEK"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

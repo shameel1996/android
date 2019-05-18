@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fcfcfc"
+    android:layout_height="match_parent"
+    tools:context=".Home2activity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/apBar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            app:layout_scrollFlags="exitUntilCollapsed|scroll"
+            android:layout_width="match_parent"
+            app:title="Reyan's House"
+            app:titleTextColor="#FFFFFF"
+            app:expandedTitleMarginStart="60dp"
+            app:expandedTitleMarginEnd="50dp"
+            android:background="@drawable/propertyback"
+            android:layout_height="match_parent">
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/peic"
+                    android:textColor="@android:color/white"
+                    android:layout_margin="10dp"
+                    android:textSize="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Price On Sell"
+                    />
+                <LinearLayout
+                    android:layout_marginTop="30dp"
+                android:layout_width="150dp"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_below="@id/peic"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/colorsnew"
+                android:orientation="vertical">
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="For Sell"
+                    android:textColor="@android:color/white"
+                    android:textSize="30dp" />
+
+            </LinearLayout>
+            </RelativeLayout>
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/Base.AlertDialog.AppCompat.Light"></android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <GridLayout
+                android:layout_below="@+id/date_and_views"
+                android:id="@+id/header_details"
+                android:layout_centerInParent="true"
+                android:columnCount="2"
+                android:rowCount="2"
+                android:padding="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+
+                    android:layout_margin="15dp"
+                    >
+                    <RelativeLayout
+
+                        android:layout_width="120dp"
+                        android:layout_height="120dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="7dp"
+                            android:id="@+id/bar_imaqe"
+                            android:layout_width="80dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/bar" />
+                        <TextView
+                            android:id="@+id/id_text"
+                            android:gravity="center"
+                            android:layout_below="@+id/bar_imaqe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Property ID"
+                            android:layout_centerHorizontal="true"
+                            />
+                        <TextView
+                            android:id="@+id/id_value"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/id_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="03403"
+                            android:textColor="@android:color/black"
+                            />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:padding="10dp"
+                    android:layout_margin="15dp"
+                    >
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="120dp">
+                        <de.hdodenhof.circleimageview.CircleImageView
+
+                            android:layout_marginTop="7dp"
+                            android:layout_width="80dp"
+                            android:id="@+id/size_imaqe"
+                            android:layout_height="60dp"
+                            android:src="@drawable/size"/>
+                        <TextView
+                            android:id="@+id/size_text"
+                            android:gravity="center"
+                            android:layout_below="@+id/size_imaqe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Property ID"
+                            android:layout_centerHorizontal="true"
+                            />
+                        <TextView
+                            android:id="@+id/size_value"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/size_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="03403"
+                            android:textColor="@android:color/black"
+                            />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:padding="10dp"
+                    android:layout_margin="15dp"
+                    >
+                    <RelativeLayout
+                        android:layout_width="120dp"
+                        android:layout_height="120dp">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="80dp"
+                            android:layout_marginTop="7dp"
+                            android:id="@+id/bed_imaqe"
+                            android:layout_height="60dp"
+                            android:src="@drawable/bath"/>
+                        <TextView
+                            android:id="@+id/bed_text"
+                            android:gravity="center"
+                            android:layout_below="@+id/bed_imaqe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Property ID"
+                            android:layout_centerHorizontal="true"
+                            />
+                        <TextView
+                            android:id="@+id/bed_value"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/bed_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="03403"
+                            android:textColor="@android:color/black"
+                            />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:padding="10dp"
+                    android:layout_margin="15dp"
+                    >
+                    <RelativeLayout
+
+                        android:layout_width="120dp"
+                        android:layout_height="120dp">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="80dp"
+                            android:layout_marginTop="7dp"
+                            android:id="@+id/bath_imaqe"
+                            android:layout_height="60dp"
+                            android:src="@drawable/bednew"/>
+                        <TextView
+                            android:id="@+id/bath_text"
+                            android:gravity="center"
+                            android:layout_below="@+id/bath_imaqe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Property ID"
+                            android:layout_centerHorizontal="true"
+                            />
+                        <TextView
+                            android:id="@+id/bath_value"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/bath_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="03403"
+                            android:textColor="@android:color/black"
+                            />
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </GridLayout>
+
+<LinearLayout
+    android:layout_centerHorizontal="true"
+    android:id="@+id/date_and_views"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+
+    <TextView
+        android:padding="10dp"
+        android:drawableLeft="@drawable/calendra"
+        android:id="@+id/date_desc"
+        android:gravity="center"
+        android:text="02-May-2019"
+        android:drawablePadding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:drawablePadding="10dp"
+        android:padding="10dp"
+        android:drawableLeft="@drawable/eyeopen"
+        android:id="@+id/views_desc"
+        android:gravity="center"
+        android:text="5 views"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+
+            <TextView
+
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/header_details"
+                android:layout_marginLeft="30dp"
+                android:text="Description"
+                android:textColor="@color/colorPrimaryNext"
+                android:textSize="18dp"
+               />
+            <LinearLayout
+
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:layout_below="@+id/description"
+                android:layout_width="150dp"
+                android:layout_height="2dp"></LinearLayout>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/desc_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/description"
+                android:padding="10dp"
+                android:text="Essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
+
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:id="@+id/adress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/desc_text"
+
+                android:text="Address"
+                android:textColor="@color/colorPrimaryNext"
+                android:textSize="18dp" />
+            <LinearLayout
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:layout_below="@+id/adress"
+                android:layout_width="150dp"
+                android:layout_height="2dp"></LinearLayout>
+            <LinearLayout
+
+                android:id="@+id/lladd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/adress"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Country" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="City" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Area" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Sub-Area" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Sector" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tv_city"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Pakistan"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_area"
+                        android:layout_margin="5dp"
+                        android:text="Karachi"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_sub_area"
+                        android:layout_margin="5dp"
+                        android:text="Bahria Town Karachi"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Bahria Apartment"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_sector"
+                        android:layout_margin="5dp"
+                        android:text="Bahria Apartment - 4 bed"
+                        android:textColor="@android:color/black" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <android.support.design.widget.TabLayout
+                android:layout_marginTop="10dp"
+                android:id="@+id/tabMode"
+
+                android:layout_width="match_parent"
+
+                app:tabSelectedTextColor="@color/colorPrimary"
+                android:layout_height="match_parent"
+                android:layout_below="@id/lladd"
+                app:tabGravity="fill"
+                app:tabMode="fixed" />
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_below="@+id/tabMode"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+<LinearLayout
+    android:layout_marginTop="20dp"
+    android:id="@+id/agent_detail"
+    android:layout_below="@+id/viewpager"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="150dp"
+
+        android:layout_height="150dp"
+
+        android:layout_alignTop="@+id/agent_detail"
+        android:src="@drawable/profileavatar"
+        android:layout_alignLeft="@+id/agent_detail" />
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:text="Reyan Ahmed"
+            android:id="@+id/desc_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+
+            android:textSize="12dp"
+            android:text="Property Agent"
+            android:id="@+id/desc_agent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/email"
+            android:text="reyana015@gmail.com"
+            android:id="@+id/desc_Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>
+
+          <LinearLayout
+              android:layout_below="@+id/agent_detail"
+              android:id="@+id/customer_message"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              tools:ignore="UnknownId">
+
+              <android.support.design.widget.TextInputLayout
+
+                  android:layout_marginTop="10dp"
+                  android:layout_margin="10dp"
+                  android:id="@+id/full_name"
+                  android:layout_centerHorizontal="true"
+                  style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+                  <android.support.design.widget.TextInputEditText
+
+                      android:id="@+id/full_name_ed"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:hint="Full Name *" />
+              </android.support.design.widget.TextInputLayout>
+
+              <android.support.design.widget.TextInputLayout
+
+                  android:layout_marginTop="10dp"
+                  android:layout_margin="10dp"
+                  android:id="@+id/phone_number"
+                  android:layout_centerHorizontal="true"
+                  style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+                  <android.support.design.widget.TextInputEditText
+
+                      android:id="@+id/phone_number_ed"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:hint="Phone Number *" />
+              </android.support.design.widget.TextInputLayout>
+
+              <android.support.design.widget.TextInputLayout
+
+              android:layout_marginTop="10dp"
+              android:layout_margin="10dp"
+              android:id="@+id/email_adress"
+              android:layout_centerHorizontal="true"
+              style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+              <android.support.design.widget.TextInputEditText
+
+                  android:id="@+id/email_adress_ed"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:hint="Email *" />
+          </android.support.design.widget.TextInputLayout>
+              <android.support.design.widget.TextInputLayout
+
+                  android:layout_marginTop="10dp"
+                  android:layout_margin="10dp"
+                  android:id="@+id/input_Messege_text"
+                  android:layout_centerHorizontal="true"
+                  style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+                  <android.support.design.widget.TextInputEditText
+
+                      android:gravity="top"
+                      android:id="@+id/input_Messege_text_ed"
+                      android:layout_width="match_parent"
+                      android:layout_height="200dp"
+                      android:hint="Message *" />
+              </android.support.design.widget.TextInputLayout>
+
+          </LinearLayout>
+            <Button
+                android:layout_below="@id/customer_message"
+                android:layout_margin="10dp"
+                android:textColor="@android:color/white"
+                android:text="Submit Request"
+                android:id="@+id/sumit_btn"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttons"/>
+            <LinearLayout
+
+                android:layout_below="@+id/sumit_btn"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"></LinearLayout>
+
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>
