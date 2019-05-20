@@ -14,7 +14,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -47,8 +51,11 @@ import com.example.vmatchu.Rest.APIService;
 import com.example.vmatchu.Rest.ApiUtil;
 import com.example.vmatchu.SharedPrefs.SaveInSharedPreference;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import in.galaxyofandroid.spinerdialog.OnSpinerItemClick;
 import in.galaxyofandroid.spinerdialog.SpinnerDialog;
@@ -132,6 +139,14 @@ public class EnterProperptyDetails2Activity extends AppCompatActivity implements
         setContentView(R.layout.activity_enter_properpty_details2);
 
         initialize();
+        Toolbar toolbar=findViewById(R.id.toolbarEnterProprttyTwo);
+        setSupportActionBar(toolbar);
+        if(getSupportActionBar()!=null){
+
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        }
 
         country.add("Pakistan");
         country.add("India");
@@ -804,5 +819,81 @@ public class EnterProperptyDetails2Activity extends AppCompatActivity implements
             }
         });
     }
+    private TextWatcher textWatcherMin(){
+        return new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                minPrice.removeTextChangedListener(this);
+
+                String orignal_price=s.toString();
+                long longVal;
+                if(orignal_price.contains(",")){
+                    orignal_price=orignal_price.replaceAll(",","");
+
+                }
+                longVal=Long.parseLong(orignal_price);
+                DecimalFormat format=(DecimalFormat) NumberFormat.getInstance(Locale.US);
+                format.applyPattern("#,###,###,###");
+                String formaterString=format.format(longVal);
+                minPrice.setText(formaterString);
+                minPrice.setSelection(minPrice.getText().toString().length());
+                minPrice.addTextChangedListener(this);
+            }
+        };
+    }
+    private TextWatcher textWatcherMax(){
+        return new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                maxPrice.removeTextChangedListener(this);
+
+                String orignal_price=s.toString();
+                long longVal;
+                if(orignal_price.contains(",")){
+                    orignal_price=orignal_price.replaceAll(",","");
+
+                }
+                longVal=Long.parseLong(orignal_price);
+                DecimalFormat format=(DecimalFormat) NumberFormat.getInstance(Locale.US);
+                format.applyPattern("#,###,###,###");
+                String formaterString=format.format(longVal);
+                maxPrice.setText(formaterString);
+                maxPrice.setSelection(maxPrice.getText().toString().length());
+                maxPrice.addTextChangedListener(this);
+            }
+        };
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        onBackPressed();
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(EnterProperptyDetails2Activity.this,submitProperty.class));
+        super.onBackPressed();
+    }
 }

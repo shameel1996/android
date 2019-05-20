@@ -19,8 +19,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.vmatchu.EditPropertyActivity" />
+        <activity android:name="com.example.vmatchu.EditSellPropertyActivity" />
         <activity android:name="com.example.vmatchu.MatchPropertyActivity" />
         <activity android:name="com.example.vmatchu.PropertyDetailsActivity" />
         <activity android:name="com.example.vmatchu.EnterProperptyDetails2Activity" />
@@ -35,8 +36,12 @@
         <activity
             android:name="com.example.vmatchu.HomeActivity"
             android:label="@string/title_activity_home" />
-        <activity android:name="com.example.vmatchu.SignUpActivity" />
-        <activity android:name="com.example.vmatchu.signInActivity" />
+        <activity
+            android:name="com.example.vmatchu.SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.vmatchu.signInActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.example.vmatchu.MainActivity"
             android:screenOrientation="portrait" >

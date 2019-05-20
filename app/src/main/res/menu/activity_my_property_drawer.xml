@@ -36,14 +36,27 @@
                 app:actionLayout="@layout/homelayout" />
             <item
                 android:id="@+id/nav_Tcredit"
-                android:title=" Total Credit" />
+                android:title=" Total Credit"
+                app:actionLayout="@layout/homelayout" />
             <item
                 android:id="@+id/nav_Rcredit"
-                android:title=" Remaining Credit" />
+                android:title=" Remaining Credit"
+                app:actionLayout="@layout/homelayout" />
             <item
                 android:id="@+id/nav_send"
-                android:title=" End Date" />
+                android:title=" End Date"
+                app:actionLayout="@layout/homelayout" />
         </menu>
     </item>
+    <item android:title="Log Out Profile">
+        <menu>
+            <item
 
+                android:icon="@drawable/bednew"
+                android:id="@+id/LogOut_btn_prop"
+                android:title="Log out"
+                ></item>
+        </menu>
+
+    </item>
 </menu>

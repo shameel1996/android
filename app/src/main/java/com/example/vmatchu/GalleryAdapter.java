@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ public class GalleryAdapter extends BaseAdapter {
     private int pos;
     private LayoutInflater inflater;
     private ImageView ivGallery;
+    private ImageButton imageButton;
     ArrayList<Uri> mArrayUri;
     public GalleryAdapter(Context ctx, ArrayList<Uri> mArrayUri) {
 
@@ -39,17 +41,28 @@ public class GalleryAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
 
         pos = position;
         inflater = (LayoutInflater) ctx
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        View itemView = inflater.inflate(R.layout.gv_items, parent, false);
+        final View itemView = inflater.inflate(R.layout.gv_items, parent, false);
 
         ivGallery = (ImageView) itemView.findViewById(R.id.ivGallery);
 
+        imageButton=(ImageButton) itemView.findViewById(R.id.delete_image);
+
         ivGallery.setImageURI(mArrayUri.get(position));
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mArrayUri.remove(mArrayUri.get(position));
+                itemView.setVisibility(View.GONE);
+            }
+
+        });
+
 
         return itemView;
     }
