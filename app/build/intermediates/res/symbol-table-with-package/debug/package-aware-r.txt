@@ -1055,6 +1055,7 @@ drawable contact
 drawable contactus
 drawable cornesrs
 drawable creditcard
+drawable cross
 drawable deal
 drawable dealdone
 drawable design
@@ -1105,6 +1106,7 @@ drawable mapsandflags
 drawable mark
 drawable match
 drawable maxresdefault
+drawable menub
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable myaccount
@@ -1156,11 +1158,18 @@ id CTRL
 id City_ed
 id City_ed_2
 id Country_ed
-id Email
+id EmailSignUp
 id FUNCTION
+id GL
+id GL2
 id Home
+id LL1
+id LogOut_btn_home
+id LogOut_btn_prop
 id META
 id Password
+id PasswordSignUp
+id RB_check
 id SHIFT
 id SYM
 id Subarea_ed
@@ -1258,6 +1267,7 @@ id date_desc
 id dd
 id decor_content_parent
 id default_activity_button
+id delete_image
 id desc
 id desc_Email
 id desc_agent
@@ -1270,10 +1280,12 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id details_text
 id dimensions
 id direct
 id disableHome
 id drawer_layout
+id drawer_layout_my_property
 id dropForProperty
 id edit_query
 id email
@@ -1324,6 +1336,7 @@ id image360_ed
 id imageView
 id image_prop_2
 id info
+id info_text
 id input_Email
 id input_Messege
 id input_Messege_text
@@ -1349,7 +1362,9 @@ id listTitle
 id list_item
 id ll11
 id lladd
+id llformedia
 id location_2
+id location_text
 id logo
 id logosignIn
 id logosignUp
@@ -1362,6 +1377,8 @@ id maxS
 id maxS_ed
 id max_ed
 id media_actions
+id media_text
+id menuRight
 id message
 id middle
 id min
@@ -1420,6 +1437,7 @@ id pid
 id pin
 id price
 id price_ed
+id price_text
 id proId
 id proTitle
 id pro_title
@@ -1437,6 +1455,7 @@ id relative_row_city
 id relative_row_property_type
 id relative_row_sector
 id relative_row_subarea
+id remeberMe
 id right
 id right_icon
 id right_side
@@ -1535,7 +1554,12 @@ id title
 id titleDividerNoCustom
 id title_myProp_2
 id title_template
+id title_text
 id toolbar
+id toolbarEnterProprtty
+id toolbarEnterProprttyTwo
+id toolbarMyProperty
+id toolbarSubmitProperty
 id toolbar_layout
 id toolbarmessege
 id top
@@ -1553,12 +1577,17 @@ id tv_sector
 id tv_sub_area
 id type
 id type_2
+<<<<<<< HEAD
 id type_value
+=======
+id type_text
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
 id uniform
 id unlabeled
 id up
 id useLogo
 id userName
+id userNameSignUp
 id vedioURL
 id vedioURL_ed
 id videoview
@@ -1620,7 +1649,10 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout aboutus
+<<<<<<< HEAD
 layout activity_edit_purchase_property
+=======
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
 layout activity_edit_sell_property
 layout activity_enter_properpty_details2
 layout activity_enter_property_detail

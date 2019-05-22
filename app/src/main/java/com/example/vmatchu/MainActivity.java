@@ -8,6 +8,10 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.example.vmatchu.Prevelent.Prevalent;
+
+import io.paperdb.Paper;
+
 public class MainActivity extends AppCompatActivity {
     ImageView imageView;
 
@@ -27,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,signInActivity.class));
             }
         },2000);
+
 
     }
 }

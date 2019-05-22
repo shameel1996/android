@@ -24,6 +24,7 @@ import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -45,6 +46,7 @@ import java.util.Properties;
 
 import in.galaxyofandroid.spinerdialog.OnSpinerItemClick;
 import in.galaxyofandroid.spinerdialog.SpinnerDialog;
+import io.paperdb.Paper;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -69,8 +71,12 @@ public class myProperty extends AppCompatActivity implements NavigationView.OnNa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_property);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+
+
+        Toolbar toolbar=findViewById(R.id.toolbarMyProperty);
         setSupportActionBar(toolbar);
+
         status.add("For Rent");
         status.add("For Sell");
         status.add("Want Rent");
@@ -160,14 +166,31 @@ public class myProperty extends AppCompatActivity implements NavigationView.OnNa
             }
         });
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
+        final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_my_property);
+        ImageButton menuRight = (ImageButton) findViewById(R.id.menuRight);
+        menuRight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (drawer.isDrawerOpen(GravityCompat.END)) {
+                    drawer.closeDrawer(GravityCompat.END);
+                } else {
+                    drawer.openDrawer(GravityCompat.END);
+                }
+            }
+        });
 
+
+        setSupportActionBar(toolbar);
+        if(getSupportActionBar()!=null){
+
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        }
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
     }
 
     private void getMyPropertyResponse() {
@@ -623,14 +646,22 @@ public class myProperty extends AppCompatActivity implements NavigationView.OnNa
             }
         });
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        onBackPressed();
+        return super.onOptionsItemSelected(item);
+    }
+
+
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_my_property);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
+        }
+        else {
+            startActivity(new Intent(myProperty.this,HomeActivity.class));
         }
     }
 
@@ -654,9 +685,12 @@ public class myProperty extends AppCompatActivity implements NavigationView.OnNa
         } else if (id == R.id.nav_send) {
 
         }
+        else if(id==R.id.LogOut_btn_prop){
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_my_property);
+        drawer.closeDrawer(GravityCompat.END);
         return true;
     }
 

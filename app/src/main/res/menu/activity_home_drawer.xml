@@ -44,5 +44,16 @@
                 android:title="Term and Use" />
         </menu>
     </item>
+    <item android:title="Log Out Profile">
+        <menu>
+            <item
+
+                android:icon="@drawable/bednew"
+                android:id="@+id/LogOut_btn_home"
+                android:title="Log out"
+                ></item>
+        </menu>
+
+    </item>
 
 </menu>

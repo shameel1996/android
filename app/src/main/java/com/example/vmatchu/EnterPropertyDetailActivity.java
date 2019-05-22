@@ -17,8 +17,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
@@ -55,8 +59,11 @@ import com.example.vmatchu.Rest.ApiUtil;
 import com.example.vmatchu.SharedPrefs.SaveInSharedPreference;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import in.galaxyofandroid.spinerdialog.OnSpinerItemClick;
 import in.galaxyofandroid.spinerdialog.SpinnerDialog;
@@ -113,7 +120,11 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
     int totalMoney;
     int remainingMoney;
 
+
     private SpinnerDialog spinnnerDialogue, spinnerDialog, DialogAreaType;
+
+    ArrayList<Uri> mArrayUri;
+
 
 
     private String[] proStatus = {"For Rent", "For Purchase"};
@@ -133,9 +144,17 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enter_property_detail);
+        Toolbar toolbar=findViewById(R.id.toolbarEnterProprtty);
+        setSupportActionBar(toolbar);
+        if(getSupportActionBar()!=null){
 
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        }
         initialize();
 
+        mArrayUri=new ArrayList<>();
         country.add("Pakistan");
         country.add("India");
         country.add("Bangladesh");
@@ -216,8 +235,12 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
 
 //        });
         ArrayAdapter<String> spinnerArrayAdapter1 = new ArrayAdapter<String>(
-                this, R.layout.spinner_item, proType
-        );
+                this, R.layout.spinner_item, proType);
+
+        gvGallery = (GridView)findViewById(R.id.gv);
+
+
+
         // setting adapteers to spinners
 //        spinType.setAdapter(spinnerArrayAdapter1);
 //        spinStatus = (Spinner) findViewById(R.id.status);//fetching view's id
@@ -260,7 +283,17 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
         });
 
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        onBackPressed();
+        return super.onOptionsItemSelected(item);
+    }
 
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(EnterPropertyDetailActivity.this,submitProperty.class));
+        super.onBackPressed();
+    }
     private void getCitiesApi() {
         Call<CityResponse> call = apiService.getCities();
 
@@ -395,7 +428,7 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
                     imageEncoded = cursor.getString(columnIndex);
                     cursor.close();
 
-                    ArrayList<Uri> mArrayUri = new ArrayList<Uri>();
+
                     mArrayUri.add(mImageUri);
                     galleryAdapter = new GalleryAdapter(getApplicationContext(), mArrayUri);
                     gvGallery.setAdapter(galleryAdapter);
@@ -407,7 +440,7 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
                 } else {
                     if (data.getClipData() != null) {
                         ClipData mClipData = data.getClipData();
-                        ArrayList<Uri> mArrayUri = new ArrayList<Uri>();
+
                         for (int i = 0; i < mClipData.getItemCount(); i++) {
 
                             ClipData.Item item = mClipData.getItemAt(i);
@@ -845,6 +878,40 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
             }
         });
     }
+    private TextWatcher textWatcher(){
+        return new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                price.removeTextChangedListener(this);
+
+                String orignal_price=s.toString();
+                long longVal;
+                if(orignal_price.contains(",")){
+                    orignal_price=orignal_price.replaceAll(",","");
+
+                }
+                longVal=Long.parseLong(orignal_price);
+                DecimalFormat format=(DecimalFormat) NumberFormat.getInstance(Locale.US);
+                format.applyPattern("#,###,###,###");
+                String formaterString=format.format(longVal);
+                price.setText(formaterString);
+                price.setSelection(price.getText().toString().length());
+                price.addTextChangedListener(this);
+            }
+        };
+    }
+
 
 }
 

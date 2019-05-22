@@ -8,17 +8,20 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.vmatchu.CustomAlert.CustomAlert;
 import com.example.vmatchu.Pojo.UserLogin;
 import com.example.vmatchu.Pojo.UserSignup;
+import com.example.vmatchu.Prevelent.Prevalent;
 import com.example.vmatchu.R;
 import com.example.vmatchu.Rest.APIService;
 import com.example.vmatchu.Rest.ApiUtil;
 import com.example.vmatchu.SharedPrefs.SaveInSharedPreference;
 
+import io.paperdb.Paper;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -31,12 +34,14 @@ public class signInActivity extends AppCompatActivity {
     String uname, pass;
     ProgressDialog progressDialog;
     APIService apiService;
+    CheckBox rememberMe;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
        initialize();
+
         //signIn=(Button)findViewById(R.id.signin);
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +65,7 @@ public class signInActivity extends AppCompatActivity {
         });
     }
 
-    private void postLogInApi(String uname, String pass) {
+    private void postLogInApi(final String uname, final String pass) {
         Call<UserLogin> call = apiService.postLogin(uname, pass);
 
         call.enqueue(new Callback<UserLogin>() {
@@ -93,6 +98,7 @@ public class signInActivity extends AppCompatActivity {
         et_username = findViewById(R.id.userName);
         et_password = findViewById(R.id.Password);
 
+        rememberMe=findViewById(R.id.remeberMe);
         apiService = ApiUtil.getAPIService();
 
         progressDialog = new ProgressDialog(signInActivity.this);

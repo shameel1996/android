@@ -3,6 +3,7 @@ package com.example.vmatchu;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -17,6 +18,16 @@ public class submitProperty extends AppCompatActivity {
         rent_take=(ImageView)findViewById(R.id.onRent);
         rent_give=(ImageView)findViewById(R.id.giveOnRent);
         purchase=(ImageView)findViewById(R.id.purProp);
+
+
+        android.support.v7.widget.Toolbar toolbar=findViewById(R.id.toolbarSubmitProperty);
+        setSupportActionBar(toolbar);
+        if(getSupportActionBar()!=null){
+
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        }
 
         sell.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,5 +61,15 @@ public class submitProperty extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        onBackPressed();
+        return super.onOptionsItemSelected(item);
+    }
 
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(submitProperty.this,HomeActivity.class));
+        super.onBackPressed();
+    }
 }

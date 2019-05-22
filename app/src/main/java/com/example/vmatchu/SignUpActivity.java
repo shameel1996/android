@@ -42,9 +42,9 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private void initialize() {
-        et_uname = findViewById(R.id.userName);
-        et_password = findViewById(R.id.Password);
-        et_email = findViewById(R.id.Email);
+        et_uname = findViewById(R.id.userNameSignUp);
+        et_password = findViewById(R.id.PasswordSignUp);
+        et_email = findViewById(R.id.EmailSignUp);
         btn_signup = findViewById(R.id.signUp);
 
         progressDialog = new ProgressDialog(SignUpActivity.this);
