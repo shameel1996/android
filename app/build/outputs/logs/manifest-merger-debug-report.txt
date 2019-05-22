@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:2:1-42:12
+ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:2:1-43:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\pc1\.gradle\caches\transforms-2\files-2.1\b68188692728fee0b151b37a946342ee\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\pc1\.gradle\caches\transforms-2\files-2.1\6cbba51632de68ce6377a8af5b44bf3c\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\pc1\.gradle\caches\transforms-2\files-2.1\75d0a5c7554e0e77097d5cb0077f6f3d\AndroidManifest.xml:17:1-22:12
@@ -40,20 +40,20 @@ MERGED from [com.android.support:interpolator:28.0.0] C:\Users\pc1\.gradle\cache
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\pc1\.gradle\caches\transforms-2\files-2.1\c6ac6b3042a8dea65ff89547e9f38ddc\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\pc1\.gradle\caches\transforms-2\files-2.1\c38abafeffff010c7a1edec160506505\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\pc1\.gradle\caches\transforms-2\files-2.1\46de174e0f05aab6901b10047bf62386\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:2:1-43:12
+INJECTED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:2:1-43:12
 	package
 		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:3:5-34
 		INJECTED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml
 		INJECTED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml
-		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:2:1-42:12
+		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:2:1-43:12
 		INJECTED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml
-		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:2:1-42:12
+		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:2:1-43:12
 		INJECTED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:2:11-69
@@ -62,7 +62,7 @@ ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:5
 	android:name
 		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:7:5-40:19
+ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:7:5-41:19
 MERGED from [com.android.support:design:28.0.0] C:\Users\pc1\.gradle\caches\transforms-2\files-2.1\b68188692728fee0b151b37a946342ee\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] C:\Users\pc1\.gradle\caches\transforms-2\files-2.1\b68188692728fee0b151b37a946342ee\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\pc1\.gradle\caches\transforms-2\files-2.1\9f419472d125ba628150c342be1bef79\AndroidManifest.xml:9:5-20
@@ -89,76 +89,80 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\pc1\.gradl
 		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:8:9-35
 	android:theme
 		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:13:9-40
-activity#com.example.vmatchu.EditPropertyActivity
-ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:14:9-67
+activity#com.example.vmatchu.EditPurchasePropertyActivity
+ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:14:9-75
 	android:name
-		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:14:19-55
+		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:14:19-63
+activity#com.example.vmatchu.EditSellPropertyActivity
+ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:15:9-62
+	android:name
+		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:15:19-59
 activity#com.example.vmatchu.MatchPropertyActivity
-ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:15:9-59
+ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:16:9-59
 	android:name
-		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:15:19-56
+		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:16:19-56
 activity#com.example.vmatchu.PropertyDetailsActivity
-ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:16:9-61
+ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:17:9-61
 	android:name
-		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:16:19-58
+		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:17:19-58
 activity#com.example.vmatchu.EnterProperptyDetails2Activity
-ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:17:9-68
+ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:18:9-68
 	android:name
-		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:17:19-65
+		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:18:19-65
 activity#com.example.vmatchu.myProperty
-ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:18:9-21:59
+ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:19:9-22:59
 	android:label
-		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:20:13-63
+		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:21:13-63
 	android:theme
-		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:21:13-56
+		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:22:13-56
 	android:name
-		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:19:13-39
+		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:20:13-39
 activity#com.example.vmatchu.EnterPropertyDetailActivity
-ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:22:9-65
+ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:23:9-65
 	android:name
-		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:22:19-62
+		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:23:19-62
 activity#com.example.vmatchu.myProfileActivity
-ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:23:9-55
+ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:24:9-55
 	android:name
-		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:23:19-52
+		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:24:19-52
 activity#com.example.vmatchu.Home2activity
-ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:24:9-51
+ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:25:9-51
 	android:name
-		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:24:19-48
+		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:25:19-48
 activity#com.example.vmatchu.submitProperty
-ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:25:9-52
+ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:26:9-52
 	android:name
-		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:25:19-49
+		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:26:19-49
 activity#com.example.vmatchu.HomeActivity
-ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:26:9-28:59
+ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:27:9-29:59
 	android:label
-		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:28:13-56
+		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:29:13-56
 	android:name
-		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:27:13-41
+		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:28:13-41
 activity#com.example.vmatchu.SignUpActivity
-ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:29:9-52
-	android:name
-		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:29:19-49
-activity#com.example.vmatchu.signInActivity
 ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:30:9-52
 	android:name
 		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:30:19-49
+activity#com.example.vmatchu.signInActivity
+ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:31:9-52
+	android:name
+		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:31:19-49
 activity#com.example.vmatchu.MainActivity
-ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:31:9-39:20
+ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:32:9-40:20
 	android:screenOrientation
-		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:33:13-49
+		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:34:13-49
 	android:name
-		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:32:13-41
+		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:33:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:34:13-38:29
+ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:35:13-39:29
 action#android.intent.action.MAIN
-ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:35:17-69
+ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:36:17-69
 	android:name
-		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:35:25-66
+		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:36:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:37:17-77
+ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:38:17-77
 	android:name
-		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:37:27-74
+		ADDED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml:38:27-74
 uses-sdk
 INJECTED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\VmatchU Android App\VmatchU new\app\src\main\AndroidManifest.xml

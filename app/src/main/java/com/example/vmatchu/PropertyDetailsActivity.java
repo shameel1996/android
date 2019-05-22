@@ -13,6 +13,12 @@ import com.example.vmatchu.DBhelper.DBhelper;
 import com.example.vmatchu.Fragments.DetailsFragments;
 import com.example.vmatchu.Fragments.Image360Fragment;
 import com.example.vmatchu.Fragments.vedioFragment;
+import com.example.vmatchu.Models.MyPropertyBathroomsForDB;
+import com.example.vmatchu.Models.MyPropertyBedroomsForDB;
+import com.example.vmatchu.Models.MyPropertyDescriptionForDB;
+import com.example.vmatchu.Models.MyPropertyGaragesForDB;
+import com.example.vmatchu.Models.MyPropertyRoomsForDB;
+import com.example.vmatchu.Models.MyPropertySectorsForDB;
 import com.example.vmatchu.Pojo.MyPropertyForDB;
 
 import java.util.ArrayList;
@@ -23,7 +29,13 @@ public class PropertyDetailsActivity extends AppCompatActivity {
     TabLayout tabLayout;
     DBhelper dBhelper;
     ArrayList<MyPropertyForDB> propertyList;
-    TextView city,area,sub_Area,sector;
+    ArrayList<MyPropertySectorsForDB> propertyListSectors;
+    ArrayList<MyPropertyGaragesForDB> propertyListGarages;
+    ArrayList<MyPropertyBathroomsForDB> propertyListBathrooms;
+    ArrayList<MyPropertyBedroomsForDB> propertyListBedrooms;
+    ArrayList<MyPropertyRoomsForDB> propertyListRooms;
+    ArrayList<MyPropertyDescriptionForDB> propertyListDescription;
+    TextView city,area,sub_Area,sector,propertyId,propertyType,bathroom,bedroom;
     String pid;
     @Override
 
@@ -38,7 +50,17 @@ public class PropertyDetailsActivity extends AppCompatActivity {
         area = findViewById(R.id.tv_area);
         sub_Area = findViewById(R.id.tv_sub_area);
         sector = findViewById(R.id.tv_sector);
+        propertyId = findViewById(R.id.id_value);
+        propertyType = findViewById(R.id.type_value);
+        bathroom = findViewById(R.id.bed_value);
+        bedroom = findViewById(R.id.bath_value);
         propertyList = dBhelper.getMyPropertyAreaSubAreaSector(pid);
+        propertyListGarages = dBhelper.getMyPropertyGarages(pid);
+        propertyListBathrooms = dBhelper.getMyPropertyBathrooms(pid);
+        propertyListBedrooms = dBhelper.getMyPropertyBedrooms(pid);
+        propertyListRooms = dBhelper.getMyPropertyRooms(pid);
+        propertyListDescription = dBhelper.getMyPropertyDescription(pid);
+        propertyListSectors = dBhelper.getMyPropertySectors(pid);
 
         setViews();
         setupViewPager(viewPager);
@@ -52,12 +74,28 @@ public class PropertyDetailsActivity extends AppCompatActivity {
         city.setText(propertyList.get(0).getCity());
         area.setText(propertyList.get(0).getArea());
         sub_Area.setText(propertyList.get(0).getSub_area());
-        sector.setText(propertyList.get(0).getSector());
+        sector.setText(propertyListSectors.get(0).getSectors());
+        propertyId.setText(propertyList.get(0).getPid());
+        bathroom.setText(propertyListBathrooms.get(0).getBathrooms());
+        bedroom.setText(propertyListBedrooms.get(0).getBedrooms());
+        propertyType.setText(propertyList.get(0).getPropertyType());
+
     }
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new DetailsFragments(), "Details");
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("propertyList", propertyList);
+        bundle.putSerializable("propertyListSectors", propertyListSectors);
+        bundle.putSerializable("propertyListGarages", propertyListGarages);
+        bundle.putSerializable("propertyListBathrooms", propertyListBathrooms);
+        bundle.putSerializable("propertyListBedrooms", propertyListBedrooms);
+        bundle.putSerializable("propertyListRooms", propertyListRooms);
+        bundle.putSerializable("propertyListDescription", propertyListDescription);
+        DetailsFragments fragobj = new DetailsFragments();
+        fragobj.setArguments(bundle);
+
+        adapter.addFragment(fragobj, "Details");
         adapter.addFragment(new vedioFragment(), "Video");
         adapter.addFragment(new Image360Fragment(), "Image 360");
         viewPager.setAdapter(adapter);

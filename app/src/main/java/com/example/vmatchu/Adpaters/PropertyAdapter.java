@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.vmatchu.Classes.PropertiesDetails;
+import com.example.vmatchu.EditPurchasePropertyActivity;
 import com.example.vmatchu.EditSellPropertyActivity;
 import com.example.vmatchu.MatchPropertyActivity;
 import com.example.vmatchu.Pojo.MyPropertyForDB;
@@ -96,9 +97,25 @@ public class PropertyAdapter extends RecyclerView.Adapter {
             @Override
             public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id) {
                 if(position == 2){
-                    Intent intent = new Intent(context, EditSellPropertyActivity.class);
-                    intent.putExtra("pid", propertiesDetails.get(i).getPid());
-                    context.startActivity(intent);
+
+                    if(propertiesDetails.get(i).getStatus().equals("Want Buy")){
+                        Intent intent = new Intent(context, EditPurchasePropertyActivity.class);
+                        intent.putExtra("pid", propertiesDetails.get(i).getPid());
+                        context.startActivity(intent);
+                    } else if(propertiesDetails.get(i).getStatus().equals("For Sale")){
+                        Intent intent = new Intent(context, EditSellPropertyActivity.class);
+                        intent.putExtra("pid", propertiesDetails.get(i).getPid());
+                        context.startActivity(intent);
+                    }  else if(propertiesDetails.get(i).getStatus().equals("For Rent")){
+                        Intent intent = new Intent(context, EditSellPropertyActivity.class);
+                        intent.putExtra("pid", propertiesDetails.get(i).getPid());
+                        context.startActivity(intent);
+                    } else if(propertiesDetails.get(i).getStatus().equals("Want Rent")){
+                        Intent intent = new Intent(context, EditPurchasePropertyActivity.class);
+                        intent.putExtra("pid", propertiesDetails.get(i).getPid());
+                        context.startActivity(intent);
+                    }
+
                 }
             }
             @Override

@@ -183,49 +183,360 @@ public class myProperty extends AppCompatActivity implements NavigationView.OnNa
                     if (myPropertyResponse.getError().equals("-1")) {
 
                         dBhelper.emptyTable("myProperty");
+                        dBhelper.emptyTable("myPropertySector");
+                        dBhelper.emptyTable("myPropertyGarages");
+                        dBhelper.emptyTable("myPropertyBathrooms");
+                        dBhelper.emptyTable("myPropertyBedrooms");
+                        dBhelper.emptyTable("myPropertyRooms");
+                        dBhelper.emptyTable("myPropertyDescription");
 
 
-                        for (int i = 0; i < myPropertyResponse.getData().size(); i++) {
+                        if (myPropertyResponse.getData().size() == 0) {
+                            CustomAlert.alertDialog(myProperty.this, "No Property Found");
+                            progressDialog.dismiss();
+                        } else {
+                            for (int i = 0; i < myPropertyResponse.getData().size(); i++) {
 
-                            if(myPropertyResponse.getSector().size() == 0){
+                                if (myPropertyResponse.getSector().size() == 0) {
 
-                            }else if(myPropertyResponse.getGarages().size() == 0){
+                                    if(myPropertyResponse.getGarages().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getGarages().size(); j++) {
+                                            dBhelper.adddMyPropertyGarages(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getGarages().get(j).getGarages());
+                                        }
 
-                            }else if(myPropertyResponse.getBathrooms().size() == 0){
+                                    }
+                                    if(myPropertyResponse.getBathrooms().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getBathrooms().size(); j++) {
+                                            dBhelper.addMyPropertyBathrooms(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getBathrooms().get(j).getBathroom());
+                                        }
+                                    }
+                                    if(myPropertyResponse.getBedrooms().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getBedrooms().size(); j++) {
+                                            dBhelper.addMyPropertyBedrooms(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getBedrooms().get(j).getBedroom());
+                                        }
+                                    }
+                                    if(myPropertyResponse.getRooms().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getRooms().size(); j++) {
+                                            dBhelper.addMyPropertyRooms(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getRooms().get(j).getRoom());
+                                        }
+                                    }
+                                    if(myPropertyResponse.getDescription().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getDescription().size(); j++) {
+                                            dBhelper.addMyPropertyDescription(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getDescription().get(j).getDescription());
+                                        }
+                                    }
 
-                            }else if(myPropertyResponse.getBedrooms().size() == 0){
+                                    else{
+                                        dBhelper.addMyPropertyData(myPropertyResponse.getData().get(i).getPid(),
+                                                myPropertyResponse.getData().get(i).getTitle(),
+                                                myPropertyResponse.getData().get(i).getPostDate(),
+                                                myPropertyResponse.getStatus().get(i).getStatus(),
+                                                myPropertyResponse.getCity().get(i).getCity(),
+                                                myPropertyResponse.getArea().get(i).getArea(),
+                                                myPropertyResponse.getSub_area().get(i).getSubArea(),
+                                                myPropertyResponse.getAreaType().get(i).getAreaType(),
+                                                myPropertyResponse.getPropertyType().get(i).getPropertyType());
+                                    }
 
-                            }else if(myPropertyResponse.getRooms().size() == 0){
 
-                            }else if(myPropertyResponse.getDescription().size() == 0){
 
-                            }else{
+                                } else if (myPropertyResponse.getGarages().size() == 0) {
 
-                                dBhelper.addMyPropertyData(myPropertyResponse.getData().get(i).getPid(),
-                                        myPropertyResponse.getData().get(i).getTitle(),
-                                        myPropertyResponse.getData().get(i).getPostDate(),
-                                        myPropertyResponse.getStatus().get(i).getStatus(),
-                                        myPropertyResponse.getCity().get(i).getCity(),
-                                        myPropertyResponse.getArea().get(i).getArea(),
-                                        myPropertyResponse.getSub_area().get(i).getSubArea(),
-                                        myPropertyResponse.getSector().get(i).getSector(),
-                                        myPropertyResponse.getGarages().get(i).getGarages(),
-                                        myPropertyResponse.getBathrooms().get(i).getBathroom(),
-                                        myPropertyResponse.getBedrooms().get(i).getBedroom(),
-                                        myPropertyResponse.getRooms().get(i).getRoom(),
-                                        myPropertyResponse.getDescription().get(i).getDescription());
-                                
+                                    if(myPropertyResponse.getSector().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getSector().size(); j++) {
+                                            dBhelper.addMyPropertySectors(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getSector().get(j).getSector());
+                                        }
+
+                                    }
+                                    if(myPropertyResponse.getBathrooms().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getBathrooms().size(); j++) {
+                                            dBhelper.addMyPropertyBathrooms(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getBathrooms().get(j).getBathroom());
+                                        }
+                                    }
+                                    if(myPropertyResponse.getBedrooms().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getBedrooms().size(); j++) {
+                                            dBhelper.addMyPropertyBedrooms(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getBedrooms().get(j).getBedroom());
+                                        }
+                                    }
+                                    if(myPropertyResponse.getRooms().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getRooms().size(); j++) {
+                                            dBhelper.addMyPropertyRooms(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getRooms().get(j).getRoom());
+                                        }
+                                    }
+                                    if(myPropertyResponse.getDescription().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getDescription().size(); j++) {
+                                            dBhelper.addMyPropertyDescription(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getDescription().get(j).getDescription());
+                                        }
+                                    }
+
+                                    else{
+                                        dBhelper.addMyPropertyData(myPropertyResponse.getData().get(i).getPid(),
+                                                myPropertyResponse.getData().get(i).getTitle(),
+                                                myPropertyResponse.getData().get(i).getPostDate(),
+                                                myPropertyResponse.getStatus().get(i).getStatus(),
+                                                myPropertyResponse.getCity().get(i).getCity(),
+                                                myPropertyResponse.getArea().get(i).getArea(),
+                                                myPropertyResponse.getSub_area().get(i).getSubArea(),
+                                                myPropertyResponse.getAreaType().get(i).getAreaType(),
+                                                myPropertyResponse.getPropertyType().get(i).getPropertyType());
+                                    }
+
+
+                                } else if (myPropertyResponse.getBathrooms().size() == 0) {
+
+                                    if(myPropertyResponse.getGarages().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getGarages().size(); j++) {
+                                            dBhelper.adddMyPropertyGarages(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getGarages().get(j).getGarages());
+                                        }
+
+                                    }
+                                    if(myPropertyResponse.getSector().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getSector().size(); j++) {
+                                            dBhelper.addMyPropertySectors(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getSector().get(j).getSector());
+                                        }
+                                    }
+                                    if(myPropertyResponse.getBedrooms().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getBedrooms().size(); j++) {
+                                            dBhelper.addMyPropertyBedrooms(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getBedrooms().get(j).getBedroom());
+                                        }
+                                    }
+                                    if(myPropertyResponse.getRooms().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getRooms().size(); j++) {
+                                            dBhelper.addMyPropertyRooms(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getRooms().get(j).getRoom());
+                                        }
+                                    }
+                                    if(myPropertyResponse.getDescription().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getDescription().size(); j++) {
+                                            dBhelper.addMyPropertyDescription(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getDescription().get(j).getDescription());
+                                        }
+                                    }
+
+                                    else{
+                                        dBhelper.addMyPropertyData(myPropertyResponse.getData().get(i).getPid(),
+                                                myPropertyResponse.getData().get(i).getTitle(),
+                                                myPropertyResponse.getData().get(i).getPostDate(),
+                                                myPropertyResponse.getStatus().get(i).getStatus(),
+                                                myPropertyResponse.getCity().get(i).getCity(),
+                                                myPropertyResponse.getArea().get(i).getArea(),
+                                                myPropertyResponse.getSub_area().get(i).getSubArea(),
+                                                myPropertyResponse.getAreaType().get(i).getAreaType(),
+                                                myPropertyResponse.getPropertyType().get(i).getPropertyType());
+                                    }
+
+                                } else if (myPropertyResponse.getBedrooms().size() == 0) {
+
+
+                                    if(myPropertyResponse.getGarages().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getGarages().size(); j++) {
+                                            dBhelper.adddMyPropertyGarages(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getGarages().get(j).getGarages());
+                                        }
+
+                                    }
+                                    if(myPropertyResponse.getBathrooms().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getBathrooms().size(); j++) {
+                                            dBhelper.addMyPropertyBathrooms(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getBathrooms().get(j).getBathroom());
+                                        }
+                                    }
+                                    if(myPropertyResponse.getSector().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getSector().size(); j++) {
+                                            dBhelper.addMyPropertySectors(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getSector().get(j).getSector());
+                                        }
+                                    }
+                                    if(myPropertyResponse.getRooms().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getRooms().size(); j++) {
+                                            dBhelper.addMyPropertyRooms(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getRooms().get(j).getRoom());
+                                        }
+                                    }
+                                    if(myPropertyResponse.getDescription().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getDescription().size(); j++) {
+                                            dBhelper.addMyPropertyDescription(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getDescription().get(j).getDescription());
+                                        }
+                                    }
+
+                                    else{
+                                        dBhelper.addMyPropertyData(myPropertyResponse.getData().get(i).getPid(),
+                                                myPropertyResponse.getData().get(i).getTitle(),
+                                                myPropertyResponse.getData().get(i).getPostDate(),
+                                                myPropertyResponse.getStatus().get(i).getStatus(),
+                                                myPropertyResponse.getCity().get(i).getCity(),
+                                                myPropertyResponse.getArea().get(i).getArea(),
+                                                myPropertyResponse.getSub_area().get(i).getSubArea(),
+                                                myPropertyResponse.getAreaType().get(i).getAreaType(),
+                                                myPropertyResponse.getPropertyType().get(i).getPropertyType());
+                                    }
+
+                                } else if (myPropertyResponse.getRooms().size() == 0) {
+
+                                    if(myPropertyResponse.getGarages().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getGarages().size(); j++) {
+                                            dBhelper.adddMyPropertyGarages(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getGarages().get(j).getGarages());
+                                        }
+
+                                    }
+                                    if(myPropertyResponse.getBathrooms().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getBathrooms().size(); j++) {
+                                            dBhelper.addMyPropertyBathrooms(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getBathrooms().get(j).getBathroom());
+                                        }
+                                    }
+                                    if(myPropertyResponse.getBedrooms().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getBedrooms().size(); j++) {
+                                            dBhelper.addMyPropertyBedrooms(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getBedrooms().get(j).getBedroom());
+                                        }
+                                    }
+                                    if(myPropertyResponse.getSector().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getSector().size(); j++) {
+                                            dBhelper.addMyPropertySectors(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getSector().get(j).getSector());
+                                        }
+                                    }
+                                    if(myPropertyResponse.getDescription().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getDescription().size(); j++) {
+                                            dBhelper.addMyPropertyDescription(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getDescription().get(j).getDescription());
+                                        }
+                                    }
+
+                                    else{
+                                        dBhelper.addMyPropertyData(myPropertyResponse.getData().get(i).getPid(),
+                                                myPropertyResponse.getData().get(i).getTitle(),
+                                                myPropertyResponse.getData().get(i).getPostDate(),
+                                                myPropertyResponse.getStatus().get(i).getStatus(),
+                                                myPropertyResponse.getCity().get(i).getCity(),
+                                                myPropertyResponse.getArea().get(i).getArea(),
+                                                myPropertyResponse.getSub_area().get(i).getSubArea(),
+                                                myPropertyResponse.getAreaType().get(i).getAreaType(),
+                                                myPropertyResponse.getPropertyType().get(i).getPropertyType());
+                                    }
+
+                                } else if (myPropertyResponse.getDescription().size() == 0) {
+
+                                    if(myPropertyResponse.getGarages().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getGarages().size(); j++) {
+                                            dBhelper.adddMyPropertyGarages(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getGarages().get(j).getGarages());
+                                        }
+
+                                    }
+                                    if(myPropertyResponse.getBathrooms().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getBathrooms().size(); j++) {
+                                            dBhelper.addMyPropertyBathrooms(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getBathrooms().get(j).getBathroom());
+                                        }
+                                    }
+                                    if(myPropertyResponse.getBedrooms().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getBedrooms().size(); j++) {
+                                            dBhelper.addMyPropertyBedrooms(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getBedrooms().get(j).getBedroom());
+                                        }
+                                    }
+                                    if(myPropertyResponse.getRooms().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getRooms().size(); j++) {
+                                            dBhelper.addMyPropertyRooms(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getRooms().get(j).getRoom());
+                                        }
+                                    }
+                                    if(myPropertyResponse.getSector().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getSector().size(); j++) {
+                                            dBhelper.addMyPropertySectors(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getSector().get(j).getSector());
+                                        }
+                                    }
+
+                                    else{
+                                        dBhelper.addMyPropertyData(myPropertyResponse.getData().get(i).getPid(),
+                                                myPropertyResponse.getData().get(i).getTitle(),
+                                                myPropertyResponse.getData().get(i).getPostDate(),
+                                                myPropertyResponse.getStatus().get(i).getStatus(),
+                                                myPropertyResponse.getCity().get(i).getCity(),
+                                                myPropertyResponse.getArea().get(i).getArea(),
+                                                myPropertyResponse.getSub_area().get(i).getSubArea(),
+                                                myPropertyResponse.getAreaType().get(i).getAreaType(),
+                                                myPropertyResponse.getPropertyType().get(i).getPropertyType());
+                                    }
+
+                                } else {
+
+                                    dBhelper.addMyPropertyData(myPropertyResponse.getData().get(i).getPid(),
+                                            myPropertyResponse.getData().get(i).getTitle(),
+                                            myPropertyResponse.getData().get(i).getPostDate(),
+                                            myPropertyResponse.getStatus().get(i).getStatus(),
+                                            myPropertyResponse.getCity().get(i).getCity(),
+                                            myPropertyResponse.getArea().get(i).getArea(),
+                                            myPropertyResponse.getSub_area().get(i).getSubArea(),
+                                            myPropertyResponse.getAreaType().get(i).getAreaType(),
+                                            myPropertyResponse.getPropertyType().get(i).getPropertyType());
+
+
+                                    if(myPropertyResponse.getGarages().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getGarages().size(); j++) {
+                                            dBhelper.adddMyPropertyGarages(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getGarages().get(j).getGarages());
+                                        }
+
+                                    }
+                                    if(myPropertyResponse.getBathrooms().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getBathrooms().size(); j++) {
+                                            dBhelper.addMyPropertyBathrooms(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getBathrooms().get(j).getBathroom());
+                                        }
+                                    }
+                                    if(myPropertyResponse.getBedrooms().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getBedrooms().size(); j++) {
+                                            dBhelper.addMyPropertyBedrooms(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getBedrooms().get(j).getBedroom());
+                                        }
+                                    }
+                                    if(myPropertyResponse.getRooms().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getRooms().size(); j++) {
+                                            dBhelper.addMyPropertyRooms(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getRooms().get(j).getRoom());
+                                        }
+                                    }
+                                    if(myPropertyResponse.getDescription().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getDescription().size(); j++) {
+                                            dBhelper.addMyPropertyDescription(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getDescription().get(j).getDescription());
+                                        }
+                                    }
+
+                                    if(myPropertyResponse.getSector().size() != myPropertyResponse.getData().size()){
+                                        for (int j = 0; j < myPropertyResponse.getSector().size(); j++) {
+                                            dBhelper.addMyPropertySectors(myPropertyResponse.getData().get(i).getPid(),
+                                                    myPropertyResponse.getSector().get(j).getSector());
+                                        }
+                                    }
+
+
+
+                                }
+
 
                             }
-
-
                         }
 
-//                        for(int i=0;i<myPropertyResponse.getStatus().size();i++){
-//                            dBhelper.addMyPropertyStatus(myPropertyResponse.getStatus().get(i).getStatus());
-//                        }
-//
-//                        dBhelper.addMyPropertyCity(myPropertyResponse.getCity());
 
                         propertyResponsesList = dBhelper.getMyProperty();
 
@@ -242,24 +553,34 @@ public class myProperty extends AppCompatActivity implements NavigationView.OnNa
                         }
 
                         progressDialog.dismiss();
+
                     }
+
+
+//                        for(int i=0;i<myPropertyResponse.getStatus().size();i++){
+//                            dBhelper.addMyPropertyStatus(myPropertyResponse.getStatus().get(i).getStatus());
+//                        }
+//
+//                        dBhelper.addMyPropertyCity(myPropertyResponse.getCity());
+
+
+                }
 
 //                        citytxt.setText(dBhelper.getCityById(SaveInSharedPreference.getInSharedPreference(EnterPropertyDetailActivity.this).getCityId()));
 
 
-                }
+            }
 //                Log.i("response", "post submitted to API." + areaTypeResponse);
-            }
 
 
-            @Override
-            public void onFailure(Call<MyPropertyResponse> call, Throwable t) {
-                progressDialog.dismiss();
-                CustomAlert.alertDialog(myProperty.this, "Response Failed");
-                Log.e("response_Failed", "Unable to submit post to API." + t);
-            }
-        });
-    }
+        @Override
+        public void onFailure (Call < MyPropertyResponse > call, Throwable t){
+            progressDialog.dismiss();
+            CustomAlert.alertDialog(myProperty.this, "Response Failed");
+            Log.e("response_Failed", "Unable to submit post to API." + t);
+        }
+    });
+}
 
     private void getMatchedPropertyResponse(final String pid) {
         String userid = SaveInSharedPreference.getInSharedPreference(this).getUserId();

@@ -8,8 +8,8 @@ public class MyPropertyForDB {
     String city;
     String area;
     String sub_area;
-    String sector;
-
+    String areaType;
+    String propertyType;
 
     public MyPropertyForDB(String pid,String title, String date, String status, String city) {
         this.pid = pid;
@@ -19,10 +19,17 @@ public class MyPropertyForDB {
         this.city = city;
     }
 
-    public MyPropertyForDB(String area, String sub_area, String sector) {
+    public MyPropertyForDB(String pid, String title, String date, String status, String city, String area,
+                           String sub_area, String areaType, String propertyType) {
+        this.pid = pid;
+        this.title = title;
+        this.date = date;
+        this.status = status;
+        this.city = city;
         this.area = area;
         this.sub_area = sub_area;
-        this.sector = sector;
+        this.areaType = areaType;
+        this.propertyType = propertyType;
     }
 
     public String getPid() {
@@ -53,7 +60,11 @@ public class MyPropertyForDB {
         return sub_area;
     }
 
-    public String getSector() {
-        return sector;
+    public String getAreaType() {
+        return areaType;
+    }
+
+    public String getPropertyType() {
+        return propertyType;
     }
 }

@@ -3,6 +3,7 @@ package com.example.vmatchu;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ClipData;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
@@ -10,6 +11,7 @@ import android.os.Build;
 import android.provider.MediaStore;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.TextInputEditText;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -52,6 +54,7 @@ import java.util.List;
 
 import in.galaxyofandroid.spinerdialog.OnSpinerItemClick;
 import in.galaxyofandroid.spinerdialog.SpinnerDialog;
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -104,6 +107,9 @@ public class EnterProperptyDetails2Activity extends AppCompatActivity implements
     PropertyTypeAdapter propertyTypeAdapter;
     RecyclerView recyclerViewAreaType;
     AreaTypeAdapter areaTypeAdapter;
+
+    int totalMoney;
+    int remainingMoney;
 
     String statusTypeID = "";
     private ArrayList<CityAreaSubareaSectorDetailsResponse> area_type=new ArrayList<>();
@@ -452,8 +458,20 @@ public class EnterProperptyDetails2Activity extends AppCompatActivity implements
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.submitProp:
-                progressDialog.show();
-                postPropertyDetails();
+                String s = status.getText().toString();
+                if (!title.getText().toString().equals("") && !areatxt.getText().toString().equals("") &&
+                        !citytxt.getText().toString().equals("") && !countrytxt.getText().toString().equals("")
+                        && !subareatxt.getText().toString().equals("")
+                        && !propertyType.getText().toString().equals("") &&
+                        !status.getText().toString().equals("")
+                        && !areaType.getText().toString().equals("")) {
+                    progressDialog.show();
+                    totalMoney = SaveInSharedPreference.getInSharedPreference(this).getRemainingMoney();
+                    remainingMoney = totalMoney - 50;
+                    postPropertyDetails();
+                } else {
+                    CustomAlert.alertDialog(this, "Please Insert Correct Data");
+                }
                 break;
 
             case R.id.City_ed_2:
@@ -769,6 +787,7 @@ public class EnterProperptyDetails2Activity extends AppCompatActivity implements
         String o = bedroom.getText().toString();
         String p = bathroom.getText().toString();
         String q = garages.getText().toString();
+        int r = remainingMoney;
 
         Call<InsertPurchasePropertyResponse> call = apiService.postInsertPurchaseProperty(title.getText().toString(),
                 SaveInSharedPreference.getInSharedPreference(this).getUserId(), SaveInSharedPreference.getInSharedPreference(this).getPropertyTypeId(),
@@ -778,7 +797,7 @@ public class EnterProperptyDetails2Activity extends AppCompatActivity implements
                 SaveInSharedPreference.getInSharedPreference(this).getSectorId(),
                 minPrice.getText().toString(),maxPrice.getText().toString(),minSize.getText().toString(),maxSize.getText().toString(),
                 SaveInSharedPreference.getInSharedPreference(this).getAreaTypeId(),rooms.getText().toString(),
-                bedroom.getText().toString(),bathroom.getText().toString(),garages.getText().toString());
+                bedroom.getText().toString(),bathroom.getText().toString(),garages.getText().toString(),remainingMoney);
 
         call.enqueue(new Callback<InsertPurchasePropertyResponse>() {
 
@@ -789,7 +808,9 @@ public class EnterProperptyDetails2Activity extends AppCompatActivity implements
                     InsertPurchasePropertyResponse insertResponse = response.body();
                     if(insertResponse.getError().equals("-1")){
 
-                        CustomAlert.alertDialog(EnterProperptyDetails2Activity.this,"Your Property Has Been Inserted !");
+                        SaveInSharedPreference.getInSharedPreference(EnterProperptyDetails2Activity.this).savePidToRedirectToWeb(insertResponse.getPid());
+//                        CustomAlert.alertDialog(EnterProperptyDetails2Activity.this,"Your Property Has Been Inserted !");
+                        redirectToWeb();
 
                     }
                     Log.i("response", "post submitted to API." + insertResponse);
@@ -801,6 +822,52 @@ public class EnterProperptyDetails2Activity extends AppCompatActivity implements
                 progressDialog.dismiss();
                 CustomAlert.alertDialog(EnterProperptyDetails2Activity.this,"Property Inserted");
                 Log.e("response_Failed", "Unable to submit post to API." + t.getCause());
+            }
+        });
+    }
+
+    private void redirectToWeb() {
+        Call<ResponseBody> call = apiService.postRedirectToWeb(SaveInSharedPreference.getInSharedPreference(this).getPidToRedirectToWeb(),
+                SaveInSharedPreference.getInSharedPreference(this).getUserId());
+
+        call.enqueue(new Callback<ResponseBody>() {
+
+            @Override
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                if (response.isSuccessful()) {
+                    progressDialog.dismiss();
+                    ResponseBody insertResponse = response.body();
+
+                    AlertDialog.Builder alert;
+                    alert = new AlertDialog.Builder(EnterProperptyDetails2Activity.this);
+                    alert.setMessage("Your Property Has Been Inserted");
+                    alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            startActivity(new Intent(EnterProperptyDetails2Activity.this, HomeActivity.class));
+                        }
+                    });
+                    alert.show();
+
+
+                    Log.i("response", "post submitted to API." + insertResponse);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
+                progressDialog.dismiss();
+                AlertDialog.Builder alert;
+                alert = new AlertDialog.Builder(EnterProperptyDetails2Activity.this);
+                alert.setMessage("Your Property Has Been Inserted");
+                alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        startActivity(new Intent(EnterProperptyDetails2Activity.this, HomeActivity.class));
+                    }
+                });
+                alert.show();
+                Log.e("response_Failed", "Unable to submit post to API." + t);
             }
         });
     }

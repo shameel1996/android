@@ -54,6 +54,14 @@ public class MyPropertyResponse {
     @Expose
     private List<MyPropertyDescription> description;
 
+    @SerializedName("areaType")
+    @Expose
+    private List<MyPropertyAreaType> areaType;
+
+    @SerializedName("propertyType")
+    @Expose
+    private List<MyPropertyPropertyType> propertyType;
+
     public String getError() {
         return error;
     }
@@ -100,5 +108,13 @@ public class MyPropertyResponse {
 
     public List<MyPropertyDescription> getDescription() {
         return description;
+    }
+
+    public List<MyPropertyAreaType> getAreaType() {
+        return areaType;
+    }
+
+    public List<MyPropertyPropertyType> getPropertyType() {
+        return propertyType;
     }
 }

@@ -1200,6 +1200,7 @@ id apBar
 id areaType_ed
 id area_ed
 id area_type_ed
+id areatype
 id async
 id auto
 id bar_imaqe
@@ -1209,6 +1210,7 @@ id bath_text
 id bath_value
 id bathroom
 id bathroom_ed
+id bathrooms
 id bed_imaqe
 id bed_text
 id bed_value
@@ -1355,6 +1357,7 @@ id mainView
 id masked
 id mat
 id max
+id maxPrice
 id maxS
 id maxS_ed
 id max_ed
@@ -1362,6 +1365,7 @@ id media_actions
 id message
 id middle
 id min
+id minPrice
 id minS
 id minS_ed
 id min_ed
@@ -1412,6 +1416,7 @@ id peic
 id percent
 id phone_number
 id phone_number_ed
+id pid
 id pin
 id price
 id price_ed
@@ -1422,6 +1427,7 @@ id pro_title_ed
 id profile_image
 id progress_circular
 id progress_horizontal
+id propertyType
 id property_type_ed
 id purProp
 id radio
@@ -1436,6 +1442,7 @@ id right_icon
 id right_side
 id rooms
 id rooms_ed
+id saveChangesProp
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1479,7 +1486,6 @@ id size
 id size_ed
 id size_imaqe
 id size_text
-id size_value
 id smallLabel
 id snackbar_action
 id snackbar_text
@@ -1496,6 +1502,7 @@ id src_in
 id src_over
 id standard
 id start
+id status
 id status1
 id status2
 id status_bar_latest_event_content
@@ -1541,10 +1548,12 @@ id transition_scene_layoutid_cache
 id transition_transform
 id tv_area
 id tv_city
+id tv_country
 id tv_sector
 id tv_sub_area
 id type
 id type_2
+id type_value
 id uniform
 id unlabeled
 id up
@@ -1611,6 +1620,8 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout aboutus
+layout activity_edit_purchase_property
+layout activity_edit_sell_property
 layout activity_enter_properpty_details2
 layout activity_enter_property_detail
 layout activity_home

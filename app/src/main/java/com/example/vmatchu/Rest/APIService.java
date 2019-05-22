@@ -43,25 +43,25 @@ public interface APIService {
 
     @GET("addSellProperty.php")
     Call<InsertPropertyResponse> postInsertSellProperty(@Query("propertyTitle") String propertyTitle,
-                                                    @Query("userId") String userId, @Query("propertyType") String propertyType,
-                                                    @Query("propertyTypeRentOrPurchase") String propertyTypeRentOrPurchase,
-                                                    @Query("propertyCountry") String propertyCountry,
-                                                    @Query("propertyCity") String propertyCity, @Query("propertyArea") String propertyArea,
-                                                    @Query("propertySubArea") String propertySubArea,
-                                                    @Query("propertySector") String propertySector,
-                                                    @Query("propertyPrice") String propertyPrice,
+                                                        @Query("userId") String userId, @Query("propertyType") String propertyType,
+                                                        @Query("propertyTypeRentOrPurchase") String propertyTypeRentOrPurchase,
+                                                        @Query("propertyCountry") String propertyCountry,
+                                                        @Query("propertyCity") String propertyCity, @Query("propertyArea") String propertyArea,
+                                                        @Query("propertySubArea") String propertySubArea,
+                                                        @Query("propertySector") String propertySector,
+                                                        @Query("propertyPrice") String propertyPrice,
 //                                                    @Field("propertyMaxPrice") String propertyMaxPrice,
-                                                    @Query("propertyDetailsSize") String propertyDetailsSize,
+                                                        @Query("propertyDetailsSize") String propertyDetailsSize,
 //                                                    @Field("propertyDetailsMaxSize") String propertyDetailsMaxSize,
-                                                    @Query("propertyDetailsAreaType") String propertyDetailsAreaType,
-                                                    @Query("propertyDetailsRooms") String propertyDetailsRooms,
-                                                    @Query("propertyDetailsBedrooms") String propertyDetailsBedrooms,
-                                                    @Query("propertyDetailsBathrooms") String propertyDetailsBathrooms,
-                                                    @Query("propertyDetailsGarages") String propertyDetailsGarages,
-                                                    @Query("propertyDescription") String propertyDescription,
-                                                    @Query("propertyImage") String propertyImage,
-                                                    @Query("propertyVideoUrl") String propertyVideoUrl,
-                                                    @Query("propertyImage360Url") String propertyImage360Url,
+                                                        @Query("propertyDetailsAreaType") String propertyDetailsAreaType,
+                                                        @Query("propertyDetailsRooms") String propertyDetailsRooms,
+                                                        @Query("propertyDetailsBedrooms") String propertyDetailsBedrooms,
+                                                        @Query("propertyDetailsBathrooms") String propertyDetailsBathrooms,
+                                                        @Query("propertyDetailsGarages") String propertyDetailsGarages,
+                                                        @Query("propertyDescription") String propertyDescription,
+                                                        @Query("propertyImage") String propertyImage,
+                                                        @Query("propertyVideoUrl") String propertyVideoUrl,
+                                                        @Query("propertyImage360Url") String propertyImage360Url,
                                                         @Query("remainingMoney") int remainingMoney);
 
     @GET("addPurchaseProperty.php")
@@ -80,8 +80,9 @@ public interface APIService {
                                                                     @Query("propertyDetailsRooms") String propertyDetailsRooms,
                                                                     @Query("propertyDetailsBedrooms") String propertyDetailsBedrooms,
                                                                     @Query("propertyDetailsBathrooms") String propertyDetailsBathrooms,
-                                                                    @Query("propertyDetailsGarages") String propertyDetailsGarages
-                                                );
+                                                                    @Query("propertyDetailsGarages") String propertyDetailsGarages,
+                                                                    @Query("remainingMoney") int remainingMoney
+    );
 
     @GET("getCities.php")
     Call<CityResponse> getCities();
@@ -93,7 +94,9 @@ public interface APIService {
     Call<SubAreaResponse> getSubArea(@Query("areaId") String areaId);
 
     @GET("getSector.php")
-    Call<SectorResponse> getSector(@Query("subAreaId") String subAreaId);;
+    Call<SectorResponse> getSector(@Query("subAreaId") String subAreaId);
+
+    ;
 
     @GET("getAreaType.php")
     Call<AreaTypeResponse> getAreaType();
@@ -114,6 +117,50 @@ public interface APIService {
 
     @GET("getRemainingMoney.php")
     Call<RemainingMoneyResponse> getRemainingMoney(@Query("userId") String userId);
+
+    @GET("editPurchaseProperty.php")
+    Call<InsertPurchasePropertyResponse> postEditPurchaseProperty(@Query("propertyID") String propertyID,
+                                                                  @Query("propertyTitle") String propertyTitle,
+                                                                  @Query("userId") String userId,
+                                                                  @Query("propertyType") String propertyType,
+                                                                  @Query("propertyTypeRentOrPurchase") String propertyTypeRentOrPurchase,
+                                                                  @Query("propertyCountry") String propertyCountry,
+                                                                  @Query("propertyCity") String propertyCity,
+                                                                  @Query("propertyArea") String propertyArea,
+                                                                  @Query("propertySubArea") String propertySubArea,
+                                                                  @Query("propertySector") String propertySector,
+                                                                  @Query("propertyMinPrice") String propertyMinPrice,
+                                                                  @Query("propertyMaxPrice") String propertyMaxPrice,
+                                                                  @Query("propertyDetailsMinSize") String propertyDetailsMinSize,
+                                                                  @Query("propertyDetailsMaxSize") String propertyDetailsMaxSize,
+                                                                  @Query("propertyDetailsAreaType") String propertyDetailsAreaType,
+                                                                  @Query("propertyDetailsRooms") String propertyDetailsRooms,
+                                                                  @Query("propertyDetailsBedrooms") String propertyDetailsBedrooms,
+                                                                  @Query("propertyDetailsBathrooms") String propertyDetailsBathrooms,
+                                                                  @Query("propertyDetailsGarages") String propertyDetailsGarages,
+                                                                  @Query("remainingMoney") int remainingMoney
+    );
+
+    @GET("editSellProperty.php")
+    Call<InsertPropertyResponse> postEditSellProperty(@Query("propertyTitle") String propertyTitle,
+                                                              @Query("userId") String userId, @Query("propertyType") String propertyType,
+                                                              @Query("propertyTypeRentOrPurchase") String propertyTypeRentOrPurchase,
+                                                              @Query("propertyCountry") String propertyCountry,
+                                                              @Query("propertyCity") String propertyCity, @Query("propertyArea") String propertyArea,
+                                                              @Query("propertySubArea") String propertySubArea,
+                                                              @Query("propertySector") String propertySector,
+                                                              @Query("propertyPrice") String propertyMinPrice,
+                                                              @Query("propertyDetailsSize") String propertyDetailsMinSize,
+                                                              @Query("propertyDetailsAreaType") String propertyDetailsAreaType,
+                                                              @Query("propertyDetailsRooms") String propertyDetailsRooms,
+                                                              @Query("propertyDetailsBedrooms") String propertyDetailsBedrooms,
+                                                              @Query("propertyDetailsBathrooms") String propertyDetailsBathrooms,
+                                                              @Query("propertyDetailsGarages") String propertyDetailsGarages,
+                                                              @Query("propertyDescription") String propertyDescription,
+                                                              @Query("propertyImage") String propertyImage,
+                                                              @Query("propertyVideoUrl") String propertyVideoUrl,
+                                                              @Query("propertyImage360Url") String propertyImage360Url,
+                                                              @Query("remainingMoney") int remainingMoney);
 
 
 }

@@ -3,6 +3,7 @@ package com.example.vmatchu;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ClipData;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
@@ -10,6 +11,7 @@ import android.os.Build;
 import android.provider.MediaStore;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.TextInputEditText;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -32,6 +34,12 @@ import com.example.vmatchu.Adpaters.SubAreaAdapter;
 import com.example.vmatchu.Adpaters.cityAdapter;
 import com.example.vmatchu.CustomAlert.CustomAlert;
 import com.example.vmatchu.DBhelper.DBhelper;
+import com.example.vmatchu.Models.MyPropertyBathroomsForDB;
+import com.example.vmatchu.Models.MyPropertyBedroomsForDB;
+import com.example.vmatchu.Models.MyPropertyDescriptionForDB;
+import com.example.vmatchu.Models.MyPropertyGaragesForDB;
+import com.example.vmatchu.Models.MyPropertyRoomsForDB;
+import com.example.vmatchu.Models.MyPropertySectorsForDB;
 import com.example.vmatchu.Pojo.AreaResponse;
 import com.example.vmatchu.Pojo.AreaTypeResponse;
 import com.example.vmatchu.Pojo.CityAreaSubareaSectorDetailsResponse;
@@ -86,6 +94,12 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
     private ArrayList<PropertyTypeData> propertyTypeList=new ArrayList<>();
     private ArrayList<String> areaTypeArray=new ArrayList<>();
     ArrayList<MyPropertyForDB> propertyList;
+    ArrayList<MyPropertySectorsForDB> propertyListSectors;
+    ArrayList<MyPropertyGaragesForDB> propertyListGarages;
+    ArrayList<MyPropertyBathroomsForDB> propertyListBathrooms;
+    ArrayList<MyPropertyBedroomsForDB> propertyListBedrooms;
+    ArrayList<MyPropertyRoomsForDB> propertyListRooms;
+    ArrayList<MyPropertyDescriptionForDB> propertyListDescription;
 
 
     Intent intent2,intent1;
@@ -105,6 +119,7 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
     int totalMoney;
     int remainingMoney;
     String pid;
+    String checkStatus;
 
     private SpinnerDialog spinnnerDialogue,spinnerDialog,DialogAreaType;
 
@@ -262,9 +277,35 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
         citytxt.setText(propertyList.get(0).getCity());
         areatxt.setText(propertyList.get(0).getArea());
         subareatxt.setText(propertyList.get(0).getSub_area());
-        sectortxt.setText(propertyList.get(0).getSector());
-        propertyType.setText(propertyList.get(0).getArea());
-        status.setText(propertyList.get(0).getArea());
+        if(propertyListSectors.size() != 0){
+            sectortxt.setText(propertyListSectors.get(0).getSectors());
+        }
+
+        propertyType.setText(propertyList.get(0).getPropertyType());
+        status.setText(propertyList.get(0).getStatus());
+
+        if(propertyListGarages.size() != 0){
+            garages.setText(propertyListGarages.get(0).getGarages());
+        }
+
+        if(propertyListBathrooms.size() != 0){
+            bathroom.setText(propertyListBathrooms.get(0).getBathrooms());
+        }
+
+        if(propertyListBedrooms.size() != 0){
+            bedroom.setText(propertyListBedrooms.get(0).getBedrooms());
+        }
+
+        if(propertyListRooms.size() != 0){
+            rooms.setText(propertyListRooms.get(0).getRooms());
+        }
+
+        title.setText(propertyList.get(0).getTitle());
+
+        if(propertyListDescription.size() != 0){
+            details.setText(propertyListDescription.get(0).getDescription());
+        }
+        areaType.setText(propertyList.get(0).getAreaType());
     }
 
     private void getCitiesApi() {
@@ -347,9 +388,10 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
         details = (TextInputEditText)findViewById(R.id.desc_ed);
         video_url = (TextInputEditText)findViewById(R.id.vedioURL_ed);
         image360_url = (TextInputEditText)findViewById(R.id.image360_ed);
+        submit=(Button)findViewById(R.id.saveChangesProp) ;
 
         dBhelper = new DBhelper(this);
-        submit=findViewById(R.id.submitProp) ;
+
 
         submit.setOnClickListener(this);
         citytxt.setOnClickListener(this);
@@ -365,7 +407,7 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
 //        intent1=getIntent();
 //        status.setText(intent1.getStringExtra("Rent"));
 
-        statusType = status.getText().toString();
+
 
         progressDialog = new ProgressDialog(EditSellPropertyActivity.this);
         progressDialog.setMessage("Please Wait...");
@@ -374,8 +416,17 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
         apiService = ApiUtil.getAPIService();
 
         pid = getIntent().getStringExtra("pid");
+//        checkStatus = getIntent().getStringExtra("status");
 
         propertyList = dBhelper.getMyPropertyOnPid(pid);
+        propertyListGarages = dBhelper.getMyPropertyGarages(pid);
+        propertyListBathrooms = dBhelper.getMyPropertyBathrooms(pid);
+        propertyListBedrooms = dBhelper.getMyPropertyBedrooms(pid);
+        propertyListRooms = dBhelper.getMyPropertyRooms(pid);
+        propertyListDescription = dBhelper.getMyPropertyDescription(pid);
+        propertyListSectors = dBhelper.getMyPropertySectors(pid);
+
+        statusType = propertyList.get(0).getStatus();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -456,14 +507,21 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.submitProp:
-                if(!title.equals("") && areatxt.equals("") && citytxt.equals("") && countrytxt.equals("") && subareatxt.equals("")
-                        && propertyType.equals("") && status.equals("") && size.equals("") && areaType.equals("")){
+            case R.id.saveChangesProp:
+                if(!title.getText().toString().equals("") &&
+                        !areatxt.getText().toString().equals("") &&
+                        !citytxt.getText().toString().equals("") &&
+                        !countrytxt.getText().toString().equals("") &&
+                        !subareatxt.getText().toString().equals("") &&
+                        !propertyType.getText().toString().equals("") &&
+                        !status.getText().toString().equals("") &&
+                        !size.getText().toString().equals("") &&
+                        !areaType.getText().toString().equals("")){
                     progressDialog.show();
                     totalMoney = SaveInSharedPreference.getInSharedPreference(this).getRemainingMoney();
                     remainingMoney = totalMoney - 50;
                     postPropertyDetails();
-                    startActivity(new Intent(this,HomeActivity.class));
+//                    startActivity(new Intent(this,HomeActivity.class));
                 }
 
                 else{
@@ -527,6 +585,18 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
                 if(response.isSuccessful()) {
                     progressDialog.dismiss();
                     ResponseBody insertResponse = response.body();
+
+                    AlertDialog.Builder alert;
+                    alert = new AlertDialog.Builder(EditSellPropertyActivity.this);
+                    alert.setMessage("Your Property Has Been Edited");
+                    alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            startActivity(new Intent(EditSellPropertyActivity.this, myProperty.class));
+                        }
+                    });
+                    alert.show();
+
                     Log.i("response", "post submitted to API." + insertResponse);
                 }
             }
@@ -534,7 +604,16 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
                 progressDialog.dismiss();
-                CustomAlert.alertDialog(EditSellPropertyActivity.this,"Property Inserted");
+                AlertDialog.Builder alert;
+                alert = new AlertDialog.Builder(EditSellPropertyActivity.this);
+                alert.setMessage("Your Property Has Been Edited");
+                alert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        startActivity(new Intent(EditSellPropertyActivity.this, myProperty.class));
+                    }
+                });
+                alert.show();
                 Log.e("response_Failed", "Unable to submit post to API." + t);
             }
         });
@@ -791,8 +870,12 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
             statusTypeID = "71";
         }else if(statusType.equals("For Sell")){
             statusTypeID = "72";
+        } else if(statusType.equals("For Purchase")){
+            statusTypeID = "229";
+        } else if(statusType.equals("Take On Rent")){
+            statusTypeID = "228";
         }
-        Call<InsertPropertyResponse> call = apiService.postInsertSellProperty(title.getText().toString(),
+        Call<InsertPropertyResponse> call = apiService.postEditSellProperty(title.getText().toString(),
                 SaveInSharedPreference.getInSharedPreference(this).getUserId(),
                 SaveInSharedPreference.getInSharedPreference(this).getPropertyTypeId(), statusTypeID,
                 countrytxt.getText().toString(),SaveInSharedPreference.getInSharedPreference(this).getCityId(),
@@ -813,7 +896,7 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
                     InsertPropertyResponse insertResponse = response.body();
                     if(insertResponse.getError().equals("-1")){
                         SaveInSharedPreference.getInSharedPreference(EditSellPropertyActivity.this).savePidToRedirectToWeb(insertResponse.getPid());
-                        CustomAlert.alertDialog(EditSellPropertyActivity.this,"Your Property Has Been Inserted !");
+//                        CustomAlert.alertDialog(EditSellPropertyActivity.this,"Your Property Has Been Edited !");
                         redirectToWeb();
 
                     }
