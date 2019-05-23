@@ -30,30 +30,33 @@
             android:layout_margin="50dp"
             android:padding="30dp">
             <Button
+
+                android:elevation="20dp"
                 android:id="@+id/myProper"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_centerInParent="true"
                 android:background="@drawable/buttons"
-                android:drawableLeft="@drawable/home"
+
                 android:padding="10dp"
                 android:text="My Property"
                 android:textColor="#ffffff"
-                android:textSize="12dp" />
+                android:textSize="15dp" />
 
             <Button
 
+                android:elevation="20dp"
                 android:id="@+id/mySUb"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_below="@+id/myProper"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/buttons"
-                android:drawableLeft="@drawable/home"
+
                 android:padding="10dp"
                 android:text="Submit new Property"
                 android:textColor="@android:color/white"
-                android:textSize="12dp" />
+                android:textSize="15dp" />
 
 
         </RelativeLayout>

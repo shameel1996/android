@@ -11,10 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EditSellPropertyActivity"></activity>
+        <activity android:name=".PackageActivity"></activity>
+        <activity android:name=".GeneratedInvoiceActivity" />
+        <activity android:name=".InvoiceActivity" />
+        <activity android:name=".EditSellPropertyActivity" />
         <activity android:name=".MatchPropertyActivity" />
         <activity android:name=".PropertyDetailsActivity" />
         <activity android:name=".EnterProperptyDetails2Activity" />
+        <activity android:name=".Splash" />
         <activity
             android:name=".myProperty"
             android:label="@string/title_activity_my_property"
@@ -26,10 +30,12 @@
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home" />
-        <activity android:name=".SignUpActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".signInActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".signInActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">

@@ -15,7 +15,7 @@
 
             app:layout_scrollFlags="exitUntilCollapsed|scroll"
             android:layout_width="match_parent"
-            app:title="My Property"
+
             app:titleTextColor="#FFFFFF"
             app:expandedTitleMarginStart="60dp"
             app:expandedTitleMarginEnd="50dp"

@@ -1,12 +1,16 @@
 package com.example.vmatchu;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.VideoView;
 
 import com.example.vmatchu.Prevelent.Prevalent;
 
@@ -34,4 +38,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 }

@@ -11,14 +11,18 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.vmatchu.Classes.PackageDetails;
 import com.example.vmatchu.Classes.PropertiesDetails;
 import com.example.vmatchu.EditSellPropertyActivity;
 import com.example.vmatchu.MatchPropertyActivity;
+import com.example.vmatchu.PackageActivity;
 import com.example.vmatchu.Pojo.MyPropertyForDB;
 import com.example.vmatchu.Pojo.MyPropertyResponse;
 import com.example.vmatchu.PropertyDetailsActivity;
@@ -125,6 +129,13 @@ public class PropertyAdapter extends RecyclerView.Adapter {
             return 0;
         }
     }
+    public void filterList(ArrayList<MyPropertyForDB> filterdNames) {
+        this.propertiesDetails = filterdNames;
+        notifyDataSetChanged();
+    }
+
+
+
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
 

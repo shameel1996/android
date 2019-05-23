@@ -8,6 +8,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -38,6 +39,7 @@ import com.example.vmatchu.Rest.APIService;
 import com.example.vmatchu.Rest.ApiUtil;
 import com.example.vmatchu.SharedPrefs.SaveInSharedPreference;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -49,13 +51,16 @@ public class HomeActivity extends AppCompatActivity
     ProgressDialog progressDialog;
     APIService apiService;
     DBhelper dBhelper;
-    private boolean doubleBackToExitPressedOnce = false;
+    CircleImageView gotoProfile;
+    boolean check;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
 
         initialize();
 
@@ -67,6 +72,12 @@ public class HomeActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(null);
         Whatsapp = (Button) findViewById(R.id.whatsapp);
+        gotoProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this,myProfileActivity.class));
+            }
+        });
         mypro = (Button) findViewById(R.id.myProper);
         mypro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,6 +123,12 @@ public class HomeActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
+    @Override
+    protected void onStart() {
+        check=false;
+        super.onStart();
+    }
+
     private void getRemainingMoneyData() {
 
         String userid = SaveInSharedPreference.getInSharedPreference(this).getUserId();
@@ -143,6 +160,8 @@ public class HomeActivity extends AppCompatActivity
     }
 
     private void initialize() {
+        check=false;
+        gotoProfile=(CircleImageView)findViewById(R.id.profile_image);
         progressDialog = new ProgressDialog(HomeActivity.this);
         progressDialog.setMessage("Syncing data...");
         progressDialog.setCancelable(false);
@@ -182,23 +201,27 @@ public class HomeActivity extends AppCompatActivity
         });
     }
 
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        }
-        else if (doubleBackToExitPressedOnce) {
-            super.onBackPressed();
-            return;
-        }
-        this.doubleBackToExitPressedOnce = true;
-        Toast.makeText(this, "Press One Time More to Exit", Toast.LENGTH_SHORT).show();
+//    @Override
+//    public void onBackPressed() {
+//
+//
+//
 
+//    }
+//
+@Override
+public void onBackPressed() {
+   if(!check){
+       Toast.makeText(this,"Press one more time to exit",Toast.LENGTH_SHORT).show();
+       check=true;
+   }
+   else {
+       Intent a = new Intent(Intent.ACTION_MAIN);
+       a.addCategory(Intent.CATEGORY_HOME);
+       a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+       startActivity(a);}
 
-    }
-
-
+}
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -233,7 +256,7 @@ public class HomeActivity extends AppCompatActivity
                 startActivity(new Intent(HomeActivity.this, HomeActivity.class));
                 break;
             case R.id.nav_package:
-                fragment = new Package();
+                startActivity(new Intent(HomeActivity.this,PackageActivity.class));
                 break;
             case R.id.nav_project:
                 fragment = new Project();

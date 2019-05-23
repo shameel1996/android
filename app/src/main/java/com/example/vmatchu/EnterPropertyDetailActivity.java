@@ -151,6 +151,7 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
             getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         }
+
         initialize();
 
         mArrayUri=new ArrayList<>();
@@ -368,6 +369,7 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
 
 
         status.setText(DemoClass.status);
+        this.setTitle(DemoClass.status);
 //        intent2=getIntent();
 //        status.setText(intent2.getStringExtra("Sell"));
 //        intent1=getIntent();

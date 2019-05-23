@@ -23,15 +23,15 @@ public final class R {
     public static final class id {
         private id() {}
 
-        public static final int bottom = 0x7f09004a;
-        public static final int center = 0x7f090052;
-        public static final int center_horizontal = 0x7f090053;
-        public static final int center_vertical = 0x7f090054;
-        public static final int end = 0x7f09008a;
-        public static final int left = 0x7f0900c5;
-        public static final int right = 0x7f09012a;
-        public static final int start = 0x7f09016b;
-        public static final int top = 0x7f090194;
+        public static final int bottom = 0x7f090054;
+        public static final int center = 0x7f09005e;
+        public static final int center_horizontal = 0x7f09005f;
+        public static final int center_vertical = 0x7f090060;
+        public static final int end = 0x7f09009a;
+        public static final int left = 0x7f0900db;
+        public static final int right = 0x7f090147;
+        public static final int start = 0x7f09018a;
+        public static final int top = 0x7f0901b5;
     }
     public static final class styleable {
         private styleable() {}

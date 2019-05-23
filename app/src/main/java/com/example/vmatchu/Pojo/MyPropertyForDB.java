@@ -19,6 +19,10 @@ public class MyPropertyForDB {
         this.city = city;
     }
 
+    public MyPropertyForDB() {
+
+    }
+
     public MyPropertyForDB(String area, String sub_area, String sector) {
         this.area = area;
         this.sub_area = sub_area;

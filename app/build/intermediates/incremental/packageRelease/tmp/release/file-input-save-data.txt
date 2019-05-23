@@ -1,7 +1,0 @@
-#Internal package file, do not edit.
-#Sat May 11 14:45:38 PKT 2019
-0.baseType=DIRECTORY
-0.base=D\:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out
-0.path=classes.dex
-0.set=DEX
-count=1
