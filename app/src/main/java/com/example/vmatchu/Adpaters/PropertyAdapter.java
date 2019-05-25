@@ -30,14 +30,14 @@ import com.example.vmatchu.EditSellPropertyActivity;
 import com.example.vmatchu.EnterPropertyDetailActivity;
 import com.example.vmatchu.HomeActivity;
 import com.example.vmatchu.MatchPropertyActivity;
-<<<<<<< HEAD
+
 import com.example.vmatchu.Models.MyPropertyCityForDB;
 import com.example.vmatchu.Models.MyPropertyStatusForDB;
 import com.example.vmatchu.Pojo.InsertPropertyResponse;
 import com.example.vmatchu.Pojo.MatchedPropertyResponse;
-=======
+
 import com.example.vmatchu.PackageActivity;
->>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+
 import com.example.vmatchu.Pojo.MyPropertyForDB;
 import com.example.vmatchu.Pojo.MyPropertyResponse;
 import com.example.vmatchu.PropertyDetailsActivity;
@@ -63,6 +63,7 @@ public class PropertyAdapter extends RecyclerView.Adapter {
     ArrayAdapter<String> arrayAdapter;
     private APIService apiService;
     ProgressDialog progressDialog;
+    boolean flag = false;
 
 
     @NonNull
@@ -232,15 +233,14 @@ public class PropertyAdapter extends RecyclerView.Adapter {
             return 0;
         }
     }
-<<<<<<< HEAD
-=======
+
     public void filterList(ArrayList<MyPropertyForDB> filterdNames) {
         this.propertiesDetails = filterdNames;
         notifyDataSetChanged();
     }
 
 
->>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 

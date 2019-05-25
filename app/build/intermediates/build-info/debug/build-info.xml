@@ -5,31 +5,42 @@
     build-mode="COLD"
     density="xxhdpi"
     format="10"
+    ir-eligibility="METHOD_DELETED"
     plugin-version="3.4.0"
-    timestamp="1558761281351"
+    timestamp="1558778549730"
     token="567512251353057965"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="886" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="50" />
     <task
         name="verifier"
-        duration="0" />
+        duration="14" />
+
+    <artifact
+        location="D:\VmatchU Android App\VmatchU new\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="D:\VmatchU Android App\VmatchU new\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+        type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1558759917428"
+        timestamp="1558777913297"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="D:\VmatchU Android App\VmatchU new\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
+            location="D:\VmatchU Android App\VmatchU new\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\VmatchU Android App\VmatchU new\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
         <artifact
             location="D:\VmatchU Android App\VmatchU new\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
@@ -38,9 +49,6 @@
             type="SPLIT" />
         <artifact
             location="D:\VmatchU Android App\VmatchU new\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\VmatchU Android App\VmatchU new\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
             location="D:\VmatchU Android App\VmatchU new\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
@@ -61,24 +69,23 @@
             location="D:\VmatchU Android App\VmatchU new\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="D:\VmatchU Android App\VmatchU new\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-            type="SPLIT" />
-        <artifact
             location="D:\VmatchU Android App\VmatchU new\app\build\intermediates\resources\instant-run\debug\resources-debug.apk"
             type="SPLIT" />
+        <artifact
+            location="D:\VmatchU Android App\VmatchU new\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1558761046231"
+        ir-eligibility="METHOD_DELETED"
+        timestamp="1558778549730"
         verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="D:\VmatchU Android App\VmatchU new\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
         <artifact
             location="D:\VmatchU Android App\VmatchU new\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
     </build>
-    <build
-        build-mode="COLD"
-        timestamp="1558761281351"
-        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

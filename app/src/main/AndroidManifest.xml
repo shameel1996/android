@@ -11,13 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
+
         <activity android:name=".EditPurchasePropertyActivity"></activity>
-=======
+
         <activity android:name=".PackageActivity"></activity>
         <activity android:name=".GeneratedInvoiceActivity" />
         <activity android:name=".InvoiceActivity" />
->>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+
         <activity android:name=".EditSellPropertyActivity" />
         <activity android:name=".MatchPropertyActivity" />
         <activity android:name=".PropertyDetailsActivity" />

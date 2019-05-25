@@ -39,13 +39,17 @@ import com.example.vmatchu.Models.MyPropertyCityForDB;
 import com.example.vmatchu.Models.MyPropertyStatusForDB;
 import com.example.vmatchu.Pojo.AreaTypeResponse;
 import com.example.vmatchu.Pojo.MatchedPropertyResponse;
+import com.example.vmatchu.Pojo.MyPropertyCity;
+import com.example.vmatchu.Pojo.MyPropertyData;
 import com.example.vmatchu.Pojo.MyPropertyForDB;
 import com.example.vmatchu.Pojo.MyPropertyResponse;
+import com.example.vmatchu.Pojo.MyPropertyStatus;
 import com.example.vmatchu.Rest.APIService;
 import com.example.vmatchu.Rest.ApiUtil;
 import com.example.vmatchu.SharedPrefs.SaveInSharedPreference;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 import in.galaxyofandroid.spinerdialog.OnSpinerItemClick;
@@ -71,20 +75,33 @@ public class myProperty extends AppCompatActivity implements NavigationView.OnNa
     AlertDialog dialog;
 
     private ArrayList<MyPropertyForDB> propertyResponsesList = new ArrayList<>();
-<<<<<<< HEAD
+
     private ArrayList<MyPropertyCityForDB> propertyResponsesCityList = new ArrayList<>();
     private ArrayList<MyPropertyStatusForDB> propertyResponsesStatusList = new ArrayList<>();
-=======
+
+    private List<MyPropertyData> propertyResponsesList1 = new ArrayList<>();
+
+    private ArrayList<MyPropertyCity> propertyResponsesCityList1 = new ArrayList<>();
+    private ArrayList<MyPropertyStatus> propertyResponsesStatusList1 = new ArrayList<>();
+
     private ArrayList<MyPropertyForDB> propertyResponsesListForFilter = new ArrayList<>();
->>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+
 
     private MyPropertyForDB myPropertyForDB;
+
+//    @Override
+//    protected void onStart(){
+//        super.onStart();
+//        progressDialog.show();
+//        getMyPropertyResponse();
+//    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_property);
 
-        myPropertyForDB=new MyPropertyForDB();
+//        myPropertyForDB=new MyPropertyForDB();
 
         Toolbar toolbar = findViewById(R.id.toolbarMyProperty);
         setSupportActionBar(toolbar);
@@ -180,13 +197,14 @@ public class myProperty extends AppCompatActivity implements NavigationView.OnNa
                     @Override
                     public void onClick(View v) {
 
-                        for(int i=0;i<propertyResponsesList.size();i++) {
-                            if (status_value == propertyResponsesList.get(i).getStatus()) {
+                        for(int i=0;i<propertyResponsesStatusList.size();i++) {
+                            if (status_value == propertyResponsesStatusList.get(i).getStatus()) {
 
                                 recyclerView = (RecyclerView) findViewById(R.id.content_my_property);
                                 RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(myProperty.this);
                                 recyclerView.setLayoutManager(layoutManager);
-                                adapter = new PropertyAdapter(arrayAdapter, myProperty.this, propertyResponsesList);
+                                adapter = new PropertyAdapter(arrayAdapter, myProperty.this, propertyResponsesList,propertyResponsesCityList,
+                                        propertyResponsesStatusList);
                                 recyclerView.setAdapter(adapter);
                                 dialog.dismiss();
 
@@ -260,6 +278,7 @@ public class myProperty extends AppCompatActivity implements NavigationView.OnNa
                             progressDialog.dismiss();
                         } else {
                             for (int i = 0; i < myPropertyResponse.getData().size(); i++) {
+
 
                                 if (myPropertyResponse.getCity().size() == 0) {
 
