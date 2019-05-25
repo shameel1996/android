@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -23,6 +24,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
@@ -59,22 +61,30 @@ public class myProperty extends AppCompatActivity implements NavigationView.OnNa
     private ArrayList<String> title = new ArrayList<>();
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
-    private String spin_val;
+    private String status_value="";
     private String[] proType = {"All status", "For Rent", "For Sell", "want Rent", "want Buy"};
     private APIService apiService;
     DBhelper dBhelper;
     ProgressDialog progressDialog;
     ArrayAdapter<String> arrayAdapter;
     SpinnerDialog spinnerDialog;
+    AlertDialog dialog;
+
     private ArrayList<MyPropertyForDB> propertyResponsesList = new ArrayList<>();
+<<<<<<< HEAD
     private ArrayList<MyPropertyCityForDB> propertyResponsesCityList = new ArrayList<>();
     private ArrayList<MyPropertyStatusForDB> propertyResponsesStatusList = new ArrayList<>();
+=======
+    private ArrayList<MyPropertyForDB> propertyResponsesListForFilter = new ArrayList<>();
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
 
+    private MyPropertyForDB myPropertyForDB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_property);
 
+        myPropertyForDB=new MyPropertyForDB();
 
         Toolbar toolbar = findViewById(R.id.toolbarMyProperty);
         setSupportActionBar(toolbar);
@@ -124,9 +134,10 @@ public class myProperty extends AppCompatActivity implements NavigationView.OnNa
                 Spinner spinner = (Spinner) view1.findViewById(R.id.spinT);
 
                 final EditText tittle_ed = (EditText) view1.findViewById(R.id.proTitle);
+                final Button search = (Button) view1.findViewById(R.id.searchBTN);
 
                 builder.setView(view1);
-                AlertDialog dialog = builder.create();
+                dialog = builder.create();
                 dialog.show();
 
                 spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -135,7 +146,7 @@ public class myProperty extends AppCompatActivity implements NavigationView.OnNa
                     public void onItemSelected(AdapterView<?> arg0, View arg1,
                                                int position, long id) {
 
-                        spin_val = proType[position];
+                        status_value = proType[position];
 
 
                     }
@@ -162,6 +173,28 @@ public class myProperty extends AppCompatActivity implements NavigationView.OnNa
                     @Override
                     public void onClick(View v) {
                         spinnerDialog.showSpinerDialog();
+                    }
+                });
+
+                search.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        for(int i=0;i<propertyResponsesList.size();i++) {
+                            if (status_value == propertyResponsesList.get(i).getStatus()) {
+
+                                recyclerView = (RecyclerView) findViewById(R.id.content_my_property);
+                                RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(myProperty.this);
+                                recyclerView.setLayoutManager(layoutManager);
+                                adapter = new PropertyAdapter(arrayAdapter, myProperty.this, propertyResponsesList);
+                                recyclerView.setAdapter(adapter);
+                                dialog.dismiss();
+
+                            }
+                            else{
+                                Toast.makeText(myProperty.this,status_value,Toast.LENGTH_LONG).show();
+                            }
+                        }
                     }
                 });
 
@@ -1549,11 +1582,22 @@ public class myProperty extends AppCompatActivity implements NavigationView.OnNa
 
         } else if (id == R.id.LogOut_btn_prop) {
 
+            logout();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_my_property);
         drawer.closeDrawer(GravityCompat.END);
         return true;
+    }
+    public void logout(){
+        SharedPreferences sharedPrefs =getSharedPreferences(signInActivity.PREFS_NAME,MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPrefs.edit();
+        editor.clear();
+        editor.commit();
+
+        //show login form
+        Intent intent=new Intent(this, signInActivity.class);
+        startActivity(intent);
     }
 
 

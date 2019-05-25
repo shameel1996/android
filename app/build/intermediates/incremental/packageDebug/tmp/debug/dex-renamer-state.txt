@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 #Sat May 25 09:52:25 PKT 2019
 path.1=classes.dex
+=======
+#Thu May 23 15:12:52 PKT 2019
+base.0=E\:\\vmatchUKnova\\android\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
 path.0=classes.dex
 renamed.10=classes11.dex
 renamed.9=classes10.dex

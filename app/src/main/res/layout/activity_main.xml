@@ -6,13 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     >
+    <!--<VideoView-->
+        <!--android:id="@+id/vv"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
 
     <ImageView
-        android:id="@+id/logo"
         android:layout_centerInParent="true"
+        android:id="@+id/logo"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:src="@drawable/vmatchu_logo_new"/>
+        android:src="@drawable/logo"
+        tools:ignore="InvalidId" />
 
     <TextView
         android:layout_marginBottom="5dp"

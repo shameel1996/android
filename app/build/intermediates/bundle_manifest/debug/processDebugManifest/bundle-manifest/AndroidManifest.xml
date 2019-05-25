@@ -20,11 +20,18 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+<<<<<<< HEAD
         <activity android:name="com.example.vmatchu.EditPurchasePropertyActivity" />
+=======
+        <activity android:name="com.example.vmatchu.PackageActivity" />
+        <activity android:name="com.example.vmatchu.GeneratedInvoiceActivity" />
+        <activity android:name="com.example.vmatchu.InvoiceActivity" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
         <activity android:name="com.example.vmatchu.EditSellPropertyActivity" />
         <activity android:name="com.example.vmatchu.MatchPropertyActivity" />
         <activity android:name="com.example.vmatchu.PropertyDetailsActivity" />
         <activity android:name="com.example.vmatchu.EnterProperptyDetails2Activity" />
+        <activity android:name="com.example.vmatchu.Splash" />
         <activity
             android:name="com.example.vmatchu.myProperty"
             android:label="@string/title_activity_my_property"

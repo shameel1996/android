@@ -2,6 +2,7 @@ package com.example.vmatchu;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -11,6 +12,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.vmatchu.CustomAlert.CustomAlert;
 import com.example.vmatchu.Pojo.UserLogin;
@@ -35,6 +37,11 @@ public class signInActivity extends AppCompatActivity {
     ProgressDialog progressDialog;
     APIService apiService;
     CheckBox rememberMe;
+
+    public static String  PREFS_NAME="mypre";
+    public static String PREF_USERNAME="username";
+    public static String PREF_PASSWORD="password";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +57,7 @@ public class signInActivity extends AppCompatActivity {
                 progressDialog.show();
                 uname = et_username.getText().toString();
                 pass = et_password.getText().toString();
+
 
                 if(!TextUtils.isEmpty(uname) && !TextUtils.isEmpty(pass)) {
                     postLogInApi(uname, pass);
@@ -77,11 +85,28 @@ public class signInActivity extends AppCompatActivity {
                     UserLogin signupResponse = response.body();
                     if(signupResponse.getError().equals("-1")){
                         SaveInSharedPreference.getInSharedPreference(signInActivity.this).saveUserId(signupResponse.getId());
+<<<<<<< HEAD
                         startActivity(new Intent(signInActivity.this,HomeActivity.class));
                     }else{
                         progressDialog.dismiss();
                         CustomAlert.alertDialog(signInActivity.this,"Incorrect Password");
+=======
+                       // startActivity(new Intent(signInActivity.this,HomeActivity.class));
+                        if(rememberMe.isChecked()){
+                            rememberme(uname,pass); //save username and password
+                        //show logout activity
+                        showLogout();
+
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
                     }
+                    else {
+
+                                rememberme(uname,pass); //save username and password
+                                //show logout activity
+                                showLogout();
+                    }
+
+                }
                     Log.i("response", "post submitted to API." + signupResponse);
                 }
             }
@@ -101,6 +126,7 @@ public class signInActivity extends AppCompatActivity {
         et_username = findViewById(R.id.userName);
         et_password = findViewById(R.id.Password);
 
+
         rememberMe=findViewById(R.id.remeberMe);
         apiService = ApiUtil.getAPIService();
 
@@ -109,4 +135,35 @@ public class signInActivity extends AppCompatActivity {
         progressDialog.setCancelable(false);
 
     }
+    @Override
+    public void onStart(){
+        super.onStart();
+        //read username and password from SharedPreferences
+        getUser();
+    }
+
+    private void getUser() {
+        SharedPreferences pref = getSharedPreferences(PREFS_NAME,MODE_PRIVATE);
+        String username = pref.getString(PREF_USERNAME, null);
+        String password = pref.getString(PREF_PASSWORD, null);
+
+        if (username != null || password != null) {
+            //directly show logout form
+            showLogout();
+        }
+    }
+
+    private void showLogout( ) {
+        Intent intent=new Intent(this, HomeActivity.class);
+        startActivity(intent);
+    }
+    public void rememberme(String user, String password){
+        //save username and password in SharedPreferences
+        getSharedPreferences(PREFS_NAME,MODE_PRIVATE)
+                .edit()
+                .putString(PREF_USERNAME,user)
+                .putString(PREF_PASSWORD,password)
+                .commit();
+    }
+
 }

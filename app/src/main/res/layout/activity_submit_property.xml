@@ -20,62 +20,90 @@
     android:columnCount="2"
     android:rowCount="2"
     android:padding="20dp"
-    android:layout_width="match_parent"
+
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content">
     <android.support.v7.widget.CardView
-        android:padding="10dp"
+
+android:padding="15dp"
+        android:layout_margin="5dp"
         >
-        <ImageView
-            android:id="@+id/onRent"
-            android:padding="10dp"
-            android:src="@drawable/renton"
-            android:layout_width="170dp"
-            android:layout_height="170dp" />
-        <TextView
-            android:text="Take On Rent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp">
+            <ImageView
+                android:id="@+id/onRent"
+                android:padding="10dp"
+                android:src="@drawable/renton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                android:gravity="center"
+                android:text="Take On Rent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
 
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
-        android:padding="10dp">
+        android:layout_margin="5dp"
+        android:padding="15dp">
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp">
         <ImageView
             android:id="@+id/giveOnRent"
             android:padding="10dp"
             android:src="@drawable/giverent"
-            android:layout_width="170dp"
-            android:layout_height="170dp" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
         <TextView
+            android:gravity="center"
             android:text="Give On Rent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+        </RelativeLayout>
     </android.support.v7.widget.CardView>
     <android.support.v7.widget.CardView
-        android:padding="10dp">
+        android:layout_margin="5dp"
+        android:padding="15dp">
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp">
         <ImageView
             android:id="@+id/purProp"
             android:padding="10dp"
             android:src="@drawable/purchasehouse"
-            android:layout_width="170dp"
-            android:layout_height="170dp" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
         <TextView
+            android:gravity="center"
             android:text="Purchase Property"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+        </RelativeLayout>
     </android.support.v7.widget.CardView>
     <android.support.v7.widget.CardView
-        android:padding="10dp">
+        android:layout_margin="5dp"
+        android:padding="15dp">
+        <RelativeLayout
+
+            android:layout_width="150dp"
+            android:layout_height="150dp">
         <ImageView
             android:id="@+id/selProp"
             android:padding="10dp"
             android:src="@drawable/sold"
-            android:layout_width="170dp"
-            android:layout_height="170dp" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
         <TextView
+            android:gravity="center"
             android:text="Sell Property"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+        </RelativeLayout>
     </android.support.v7.widget.CardView>
 
 </GridLayout>

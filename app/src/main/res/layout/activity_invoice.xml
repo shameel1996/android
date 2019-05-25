@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InvoiceActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        app:title="My Invoice"
+        android:id="@+id/toolbarInvoice"
+        app:titleTextColor="@android:color/darker_gray"
+        android:background="@drawable/blackcorner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="InvalidId"></android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:padding="20dp"
+        android:layout_below="@+id/toolbarInvoice"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:gravity="center"
+            android:text="Start Date"
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/blackcorner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <TextView
+            android:gravity="center"
+            android:text="End Date"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/blackcorner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <TextView
+            android:paddingRight="5dp"
+            android:drawableRight="@drawable/imgpshfullsizeanim"
+            android:gravity="center"
+            android:text="All Invoice Type"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/blackcorner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <TextView
+            android:paddingRight="5dp"
+            android:drawableRight="@drawable/imgpshfullsizeanim"
+            android:gravity="center"
+            android:text="All Payment Status"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/blackcorner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <Button
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/buttons"
+            android:text="Search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+
+            android:background="@drawable/blackcorner"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:background="@drawable/blackcorner"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@android:color/black"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Order ID:"/>
+                <TextView
+
+                    android:gravity="end"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="31149"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/blackcorner"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@android:color/black"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Purchase Date:"/>
+                <TextView
+
+                    android:gravity="end"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="April 215,2019"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/blackcorner"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@android:color/black"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Type:"/>
+                <TextView
+
+                    android:gravity="end"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Package"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/blackcorner"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@android:color/black"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Item Name:"/>
+                <TextView
+
+                    android:gravity="end"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Free"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/blackcorner"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@android:color/black"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Status:"/>
+                <TextView
+
+                    android:gravity="end"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Paid"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@drawable/blackcorner"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@android:color/black"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Total:"/>
+                <TextView
+
+                    android:gravity="end"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="0"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_gravity="center"
+
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="Goto Your Invoice "/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+
+</ScrollView>

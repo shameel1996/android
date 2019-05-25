@@ -624,6 +624,7 @@ color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
 color colorAccent
+color colorGrey
 color colorPrimary
 color colorPrimaryDark
 color colorPrimaryNext
@@ -1040,6 +1041,7 @@ drawable bathtub
 drawable battery
 drawable bed
 drawable bednew
+drawable blackcorner
 drawable blog
 drawable blogger
 drawable blurback
@@ -1079,6 +1081,8 @@ drawable giftbox
 drawable giverent
 drawable go
 drawable home
+drawable homeorang
+drawable homeorange
 drawable homepage
 drawable house
 drawable ic_launcher_background
@@ -1126,6 +1130,8 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable operation
 drawable pass
+drawable pdf
+drawable pdficon
 drawable profile
 drawable profileavatar
 drawable project
@@ -1137,11 +1143,13 @@ drawable propertyone
 drawable purchasehouse
 drawable rent
 drawable renton
+drawable ripplefactor
 drawable roundcorner
 drawable side_nav_bar
 drawable size
 drawable sold
 drawable submita
+drawable submitproperty
 drawable termanduse
 drawable toolbarpic
 drawable tooltip_frame_dark
@@ -1177,6 +1185,12 @@ id about
 id aboutLogo
 id about_ed
 id aboutus
+id acc_num_invoice
+id acc_num_invoice2
+id acc_num_invoice3
+id acc_title_invoice
+id acc_title_invoice2
+id acc_title_invoice3
 id action0
 id action_bar
 id action_bar_activity_content
@@ -1204,6 +1218,7 @@ id agent_detail
 id agentbtn
 id alertTitle
 id all
+id already_acc_btn
 id always
 id apBar
 id areaType_ed
@@ -1212,6 +1227,9 @@ id area_type_ed
 id areatype
 id async
 id auto
+id bank_invoice
+id bank_invoice2
+id bank_invoice3
 id bar_imaqe
 id barrier
 id bath_imaqe
@@ -1232,6 +1250,8 @@ id bottom
 id btnImage
 id btnImage360
 id buttonPanel
+id cName_invoice
+id c_adress_invoice
 id calenxder_2
 id cancel_action
 id card
@@ -1242,6 +1262,7 @@ id center_vertical
 id chains
 id change_pic
 id checkbox
+id choosePackage
 id chronometer
 id clip_horizontal
 id clip_vertical
@@ -1259,11 +1280,13 @@ id content_match_property
 id content_my_property
 id coordinator
 id createAcc
+id credit_pack
 id custom
 id customPanel
 id customer_message
 id date_and_views
 id date_desc
+id date_invoice
 id dd
 id decor_content_parent
 id default_activity_button
@@ -1292,11 +1315,13 @@ id email
 id email_adress
 id email_adress_ed
 id email_ed
+id email_invoice
 id end
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
 id exitUntilCollapsed
+id exp_pack
 id expand_activities_button
 id expandedListItem
 id expanded_menu
@@ -1311,6 +1336,7 @@ id first_name
 id first_name_ed
 id fixed
 id forever
+id from_invoice
 id full_name
 id full_name_ed
 id garages
@@ -1324,8 +1350,11 @@ id gv
 id header_details
 id home
 id homeAsUp
+id iamge_SS_invoice3
+id iamge_SS_invoice3_upload
 id icon
 id icon_group
+id id_invoice
 id id_property
 id id_text
 id id_value
@@ -1345,6 +1374,7 @@ id input_Name
 id input_layout_password
 id invisible
 id italic
+id item_name_invoice
 id item_touch_helper_previous_elevation
 id ivGallery
 id labeled
@@ -1394,6 +1424,7 @@ id mtrl_internal_children_alpha_tag
 id multiply
 id myProper
 id mySUb
+id name_invoice
 id nav_Rcredit
 id nav_Tcredit
 id nav_aboutus
@@ -1429,14 +1460,18 @@ id parallax
 id parent
 id parentPanel
 id parent_matrix
-id peic
+id payment_method_invoice
+id payment_type_invoice
 id percent
+id phone_invoice
 id phone_number
 id phone_number_ed
 id pid
 id pin
 id price
 id price_ed
+id price_invoice
+id price_pack
 id price_text
 id proId
 id proTitle
@@ -1449,6 +1484,8 @@ id propertyType
 id property_type_ed
 id purProp
 id radio
+id recyclePackage
+id relative1
 id relative_row_area
 id relative_row_area_type
 id relative_row_city
@@ -1464,6 +1501,7 @@ id rooms_ed
 id saveChangesProp
 id save_image_matrix
 id save_non_transition_alpha
+id save_pdf_invoice
 id save_scale_type
 id screen
 id scroll
@@ -1471,7 +1509,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
-id search
+id searchBTN
 id searchBox
 id searchIcon
 id search_badge
@@ -1489,6 +1527,7 @@ id seeMatch
 id selProp
 id select_dialog_listview
 id selected
+id send_invoice
 id shortcut
 id showArea
 id showAreaType
@@ -1558,6 +1597,8 @@ id title_text
 id toolbar
 id toolbarEnterProprtty
 id toolbarEnterProprttyTwo
+id toolbarInvoice
+id toolbarMyAccount
 id toolbarMyProperty
 id toolbarSubmitProperty
 id toolbar_layout
@@ -1577,6 +1618,7 @@ id tv_sector
 id tv_sub_area
 id type
 id type_2
+id type_pack
 id type_text
 id type_value
 id uniform
@@ -1650,13 +1692,16 @@ layout activity_edit_purchase_property
 layout activity_edit_sell_property
 layout activity_enter_properpty_details2
 layout activity_enter_property_detail
+layout activity_generated_invoice
 layout activity_home
 layout activity_home2
 layout activity_home2activity
+layout activity_invoice
 layout activity_main
 layout activity_match_property
 layout activity_my_profile
 layout activity_my_property
+layout activity_package
 layout activity_property_details
 layout activity_sign_in
 layout activity_sign_up
@@ -1666,6 +1711,7 @@ layout app_bar_match_property
 layout app_bar_my_property
 layout area
 layout area_type
+layout buy_packages
 layout child
 layout city
 layout contact
@@ -1739,6 +1785,7 @@ menu activity_home_drawer
 menu activity_my_property_drawer
 mipmap ic_launcher
 mipmap ic_launcher_round
+raw splash
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

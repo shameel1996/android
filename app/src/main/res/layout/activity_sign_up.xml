@@ -9,9 +9,10 @@
         android:id="@+id/logosignUp"
         android:layout_marginTop="40dp"
        android:padding="10dp"
+        android:layout_centerHorizontal="true"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/logo"/>
+        android:src="@drawable/unnamed"/>
     <EditText
         android:textColor="#302b63"
         android:drawableLeft="@drawable/manuser"
@@ -71,6 +72,7 @@
         android:background="@drawable/buttons"
         />
     <TextView
+        android:id="@+id/already_acc_btn"
 
         android:layout_marginRight="10dp"
         android:layout_alignParentRight="true"

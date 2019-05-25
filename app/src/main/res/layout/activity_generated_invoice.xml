@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GeneratedInvoiceActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+           android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:gravity="end"
+                    android:textColor="@android:color/black"
+                android:text="Invoice ID: "
+                android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:gravity="end"
+                    android:id="@+id/id_invoice"
+                    android:textColor="@android:color/black"
+                    android:text="31149"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+
+
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:gravity="end"
+                    android:textColor="@android:color/black"
+                    android:text="Date: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:gravity="end"
+                    android:id="@+id/date_invoice"
+                    android:textColor="@android:color/black"
+                    android:text="25 April 2019"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+
+
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginTop="75dp"
+                    android:textStyle="bold"
+                    android:gravity="end"
+                    android:textColor="@android:color/black"
+                    android:text="To: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+
+
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:gravity="end"
+                    android:textColor="@android:color/black"
+                    android:text="Full Name: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:gravity="end"
+                    android:id="@+id/name_invoice"
+                    android:textColor="@android:color/black"
+                    android:text="Reyan Ahmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+
+
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:gravity="end"
+                    android:textColor="@android:color/black"
+                    android:text="Email: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:gravity="end"
+                    android:id="@+id/email_invoice"
+                    android:textColor="@android:color/black"
+                    android:text="reyana015@gmial.com"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+
+
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:gravity="end"
+                    android:textColor="@android:color/black"
+                    android:text="From: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:gravity="end"
+                    android:id="@+id/from_invoice"
+                    android:textColor="@android:color/black"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+
+
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:gravity="end"
+                    android:textColor="@android:color/black"
+                    android:text="Company Name: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:gravity="end"
+                    android:id="@+id/cName_invoice"
+                    android:textColor="@android:color/black"
+                    android:text="Knova Pvt. Ltd."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+
+
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:gravity="end"
+                    android:textColor="@android:color/black"
+                    android:text="Company Address: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+
+                    android:id="@+id/c_adress_invoice"
+                    android:textColor="@android:color/black"
+                    android:text="Rim jhim Tower, Gulistan e johar karachi, Pakistan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+
+
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+                    android:gravity="end"
+                    android:textColor="@android:color/black"
+                    android:text="Phone: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:gravity="end"
+                    android:id="@+id/phone_invoice"
+                    android:textColor="@android:color/black"
+                    android:text="+92 345 5673551"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_marginTop="50dp"
+
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/black"
+                    android:text="Item Name: "
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/item_name_invoice"
+                    android:textColor="@android:color/black"
+                    android:text="Free"
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+
+
+
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/black"
+                    android:text="Payment Type: "
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/payment_type_invoice"
+                    android:textColor="@android:color/black"
+                    android:text="Package"
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+
+
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/black"
+                    android:text="payment Method: "
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/payment_method_invoice"
+                    android:textColor="@android:color/black"
+                    android:text="Free Package"
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+
+
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+
+                    android:textColor="@android:color/black"
+                    android:text="Total Price: "
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/price_invoice"
+                    android:textColor="@android:color/black"
+                    android:text="0"
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_marginTop="20dp"
+
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    android:text="Billing Method 1 "
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+
+
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:text="Bank: "
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/bank_invoice"
+                    android:textColor="@android:color/black"
+                    android:text="Bank Al-Habib Limited (Memon Medical Institute Branch)"
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+
+
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:text="Acoount Title: "
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/acc_title_invoice"
+                    android:textColor="@android:color/black"
+                    android:text="M/S Sattrox Maarketing"
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+
+
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:text="Account No.: "
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/acc_num_invoice"
+                    android:textColor="@android:color/black"
+                    android:text="15458166544563345"
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_marginTop="20dp"
+
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    android:text="Billing Method 2 "
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+
+
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:text="Bank: "
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/bank_invoice2"
+                    android:textColor="@android:color/black"
+                    android:text="Bank Al-Habib Limited (Memon Medical Institute Branch)"
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+
+
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:text="Acoount Title: "
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/acc_title_invoice2"
+                    android:textColor="@android:color/black"
+                    android:text="M/S Sattrox Maarketing"
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+
+
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:text="Account No.: "
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/acc_num_invoice2"
+                    android:textColor="@android:color/black"
+                    android:text="15458166544563345"
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_marginTop="20dp"
+
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    android:text="Billing Method 3 "
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+
+
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:text="Bank: "
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/bank_invoice3"
+                    android:textColor="@android:color/black"
+                    android:text="Bank Al-Habib Limited (Memon Medical Institute Branch)"
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+
+
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:text="Acoount Title: "
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/acc_title_invoice3"
+                    android:textColor="@android:color/black"
+                    android:text="M/S Sattrox Maarketing"
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+
+
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:text="Account No.: "
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/acc_num_invoice3"
+                    android:textColor="@android:color/black"
+                    android:text="15458166544563345"
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+
+
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textStyle="bold"
+
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:text="Upload your Bank Statement's Screen Short/Image Here: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+
+
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+
+                    android:id="@+id/iamge_SS_invoice3"
+                    android:layout_width="0dp"
+
+                    android:textSize="8dp"
+
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:text="Choose File"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:text="No file Chosen"
+                    android:id="@+id/iamge_SS_invoice3_upload"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+
+
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+
+                    android:textStyle="bold"
+                    android:id="@+id/send_invoice"
+
+                    android:layout_margin="10dp"
+
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/buttons"
+                    android:layout_marginTop="20dp"
+                    android:text="Send"
+                    android:layout_weight="1"
+                android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                   android:text="Save As PDF"
+                    android:id="@+id/save_pdf_invoice"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</ScrollView>
