@@ -836,10 +836,14 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
     }
 
     private void postPropertyDetails() {
-        if (statusType.equals("Give On Rent")) {
-            statusTypeID = "71";
-        } else if (statusType.equals("For Sell")) {
+        if(statusType.equals("Want Rent")){
+            statusTypeID = "228";
+        }else if(statusType.equals("Want Buy")){
+            statusTypeID = "229";
+        } else if(statusType.equals("For Sale")){
             statusTypeID = "72";
+        } else if(statusType.equals("For Rent")){
+            statusTypeID = "71";
         }
         Call<InsertPropertyResponse> call = apiService.postInsertSellProperty(title.getText().toString(),
                 SaveInSharedPreference.getInSharedPreference(this).getUserId(),

@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-#Wed May 22 09:29:58 PKT 2019
+#Wed May 22 15:12:10 PKT 2019
 base.0=D\:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\9
-=======
-#Mon May 20 10:23:14 PKT 2019
-base.0=E\:\\vmatchUKnova\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\9
->>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
 path.0=classes.dex
 renamed.0=classes.dex

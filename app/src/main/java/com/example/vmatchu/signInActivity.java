@@ -78,6 +78,9 @@ public class signInActivity extends AppCompatActivity {
                     if(signupResponse.getError().equals("-1")){
                         SaveInSharedPreference.getInSharedPreference(signInActivity.this).saveUserId(signupResponse.getId());
                         startActivity(new Intent(signInActivity.this,HomeActivity.class));
+                    }else{
+                        progressDialog.dismiss();
+                        CustomAlert.alertDialog(signInActivity.this,"Incorrect Password");
                     }
                     Log.i("response", "post submitted to API." + signupResponse);
                 }

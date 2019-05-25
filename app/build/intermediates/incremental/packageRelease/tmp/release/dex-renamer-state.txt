@@ -1,4 +1,0 @@
-#Sat May 11 14:45:37 PKT 2019
-base.0=D\:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out
-path.0=classes.dex
-renamed.0=classes.dex

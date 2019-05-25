@@ -33,18 +33,26 @@ import com.example.vmatchu.Adpaters.SubAreaAdapter;
 import com.example.vmatchu.Adpaters.cityAdapter;
 import com.example.vmatchu.CustomAlert.CustomAlert;
 import com.example.vmatchu.DBhelper.DBhelper;
+import com.example.vmatchu.Models.MyPropertyAreaForDB;
+import com.example.vmatchu.Models.MyPropertyAreaTypeForDB;
 import com.example.vmatchu.Models.MyPropertyBathroomsForDB;
 import com.example.vmatchu.Models.MyPropertyBedroomsForDB;
+import com.example.vmatchu.Models.MyPropertyCityForDB;
 import com.example.vmatchu.Models.MyPropertyDescriptionForDB;
 import com.example.vmatchu.Models.MyPropertyGaragesForDB;
+import com.example.vmatchu.Models.MyPropertyPropertyTypeForDB;
 import com.example.vmatchu.Models.MyPropertyRoomsForDB;
 import com.example.vmatchu.Models.MyPropertySectorsForDB;
+import com.example.vmatchu.Models.MyPropertyStatusForDB;
+import com.example.vmatchu.Models.MyPropertySubAreaForDB;
 import com.example.vmatchu.Pojo.AreaResponse;
 import com.example.vmatchu.Pojo.AreaTypeResponse;
 import com.example.vmatchu.Pojo.CityAreaSubareaSectorDetailsResponse;
 import com.example.vmatchu.Pojo.CityResponse;
 import com.example.vmatchu.Pojo.InsertPurchasePropertyResponse;
+import com.example.vmatchu.Pojo.MyPropertyAreaType;
 import com.example.vmatchu.Pojo.MyPropertyForDB;
+import com.example.vmatchu.Pojo.MyPropertySubArea;
 import com.example.vmatchu.Pojo.PropertyTypeData;
 import com.example.vmatchu.Pojo.SectorResponse;
 import com.example.vmatchu.Pojo.SubAreaResponse;
@@ -121,6 +129,13 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
     ArrayList<MyPropertyBedroomsForDB> propertyListBedrooms;
     ArrayList<MyPropertyRoomsForDB> propertyListRooms;
     ArrayList<MyPropertyDescriptionForDB> propertyListDescription;
+    ArrayList<MyPropertyAreaForDB> propertyListArea;
+    ArrayList<MyPropertySubAreaForDB> propertyListSubArea;
+    ArrayList<MyPropertyAreaTypeForDB> propertyListAreaType;
+    ArrayList<MyPropertyPropertyTypeForDB> propertyListPropertyType;
+    ArrayList<MyPropertyStatusForDB> propertyListStatus;
+    ArrayList<MyPropertyCityForDB> propertyListCity;
+
 
     String statusTypeID = "";
     private ArrayList<CityAreaSubareaSectorDetailsResponse> area_type=new ArrayList<>();
@@ -281,15 +296,31 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
     }
 
     private void setViews() {
-        citytxt.setText(propertyList.get(0).getCity());
-        areatxt.setText(propertyList.get(0).getArea());
-        subareatxt.setText(propertyList.get(0).getSub_area());
+        if(propertyListCity.size() != 0){
+            citytxt.setText(propertyListCity.get(0).getCity());
+        }
+
+        if(propertyListArea.size() != 0){
+            areatxt.setText(propertyListArea.get(0).getArea());
+        }
+
+        if(propertyListSubArea.size() != 0){
+            subareatxt.setText(propertyListSubArea.get(0).getSub_area());
+        }
+
+
         if(propertyListSectors.size() != 0){
             sectortxt.setText(propertyListSectors.get(0).getSectors());
         }
 
-        propertyType.setText(propertyList.get(0).getPropertyType());
-        status.setText(propertyList.get(0).getStatus());
+        if(propertyListPropertyType.size() != 0){
+            propertyType.setText(propertyListPropertyType.get(0).getProperty_type());
+        }
+
+        if(propertyListStatus.size() != 0){
+            status.setText(propertyListStatus.get(0).getStatus());
+        }
+
 
         if(propertyListGarages.size() != 0){
             garages.setText(propertyListGarages.get(0).getGarages());
@@ -309,7 +340,14 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
 
         title.setText(propertyList.get(0).getTitle());
 
-        areaType.setText(propertyList.get(0).getAreaType());
+        if(propertyListDescription.size() != 0){
+            details.setText(propertyListDescription.get(0).getDescription());
+        }
+
+        if(propertyListAreaType.size() != 0){
+            areaType.setText(propertyListAreaType.get(0).getArea_type());
+        }
+
     }
 
     private void getCitiesApi() {
@@ -432,8 +470,14 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
         propertyListRooms = dBhelper.getMyPropertyRooms(pid);
         propertyListDescription = dBhelper.getMyPropertyDescription(pid);
         propertyListSectors = dBhelper.getMyPropertySectors(pid);
+        propertyListCity = dBhelper.getMyPropertyCityByPid(pid);
+        propertyListArea = dBhelper.getMyPropertyArea(pid);
+        propertyListSubArea = dBhelper.getMyPropertySubArea(pid);
+        propertyListAreaType = dBhelper.getMyPropertyAreaType(pid);
+        propertyListPropertyType = dBhelper.getMyPropertyPropertyType(pid);
+        propertyListStatus = dBhelper.getMyPropertyStatusByPid(pid);
 
-        statusType = propertyList.get(0).getStatus();
+        statusType = propertyListStatus.get(0).getStatus();
 
     }
 

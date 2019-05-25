@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\hammad\\.gradle\\caches\\transforms-2\\files-2.1\\3cd56d486f08b47437e5bfe24cdc77ef\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\hammad\\.gradle\\caches\\transforms-2\\files-2.1\\c9347b383fd4185132045debda40b91b\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\6cbba51632de68ce6377a8af5b44bf3c\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,16 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\2121b4b51b44846123e5efea3d51db99\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]

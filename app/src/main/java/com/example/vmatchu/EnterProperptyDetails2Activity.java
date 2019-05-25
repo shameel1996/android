@@ -780,10 +780,14 @@ public class EnterProperptyDetails2Activity extends AppCompatActivity implements
 
     private void postPropertyDetails() {
 
-        if(statusType.equals("Take On Rent")){
+        if(statusType.equals("Want Rent")){
             statusTypeID = "228";
-        }else if(statusType.equals("For Purchase")){
+        }else if(statusType.equals("Want Buy")){
             statusTypeID = "229";
+        } else if(statusType.equals("For Sale")){
+            statusTypeID = "72";
+        } else if(statusType.equals("For Rent")){
+            statusTypeID = "71";
         }
         String a = SaveInSharedPreference.getInSharedPreference(this).getUserId();
         String b = SaveInSharedPreference.getInSharedPreference(this).getPropertyTypeId();

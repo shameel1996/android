@@ -21,10 +21,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-<<<<<<< HEAD
         <activity android:name="com.example.vmatchu.EditPurchasePropertyActivity" />
-=======
->>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
         <activity android:name="com.example.vmatchu.EditSellPropertyActivity" />
         <activity android:name="com.example.vmatchu.MatchPropertyActivity" />
         <activity android:name="com.example.vmatchu.PropertyDetailsActivity" />

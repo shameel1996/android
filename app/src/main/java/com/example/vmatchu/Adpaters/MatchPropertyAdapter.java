@@ -13,17 +13,18 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.vmatchu.MatchPropertyActivity;
+import com.example.vmatchu.Models.MathchedPropertyForDB;
 import com.example.vmatchu.Pojo.MyPropertyForDB;
 import com.example.vmatchu.R;
 
 import java.util.ArrayList;
 
 public class MatchPropertyAdapter extends RecyclerView.Adapter{
-    private ArrayList<MyPropertyForDB> matchPropertyLsit;
+    private ArrayList<MathchedPropertyForDB> matchPropertyLsit;
     Context context;
 
 
-    public MatchPropertyAdapter(Context context, ArrayList<MyPropertyForDB> matchPropertyLsit) {
+    public MatchPropertyAdapter(Context context, ArrayList<MathchedPropertyForDB> matchPropertyLsit) {
         this.matchPropertyLsit = matchPropertyLsit;
         this.context = context;
     }
@@ -45,7 +46,7 @@ public class MatchPropertyAdapter extends RecyclerView.Adapter{
         viewHolder1.status.setText(matchPropertyLsit.get(i).getStatus());
         viewHolder1.city.setText(matchPropertyLsit.get(i).getCity());
 //        viewHolder1.type.setText(propertiesDetails.get(i).getType());
-        viewHolder1.date.setText(matchPropertyLsit.get(i).getDate());
+        viewHolder1.date.setText(matchPropertyLsit.get(i).getPost_date());
     }
 
     @Override

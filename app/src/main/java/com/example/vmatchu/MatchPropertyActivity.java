@@ -19,6 +19,7 @@ import com.example.vmatchu.Adpaters.MatchPropertyAdapter;
 import com.example.vmatchu.Adpaters.PropertyAdapter;
 import com.example.vmatchu.CustomAlert.CustomAlert;
 import com.example.vmatchu.DBhelper.DBhelper;
+import com.example.vmatchu.Models.MathchedPropertyForDB;
 import com.example.vmatchu.Pojo.MyPropertyForDB;
 
 import java.util.ArrayList;
@@ -26,7 +27,7 @@ import java.util.ArrayList;
 public class MatchPropertyActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     RecyclerView recyclerView;
     DBhelper dBhelper;
-    private ArrayList<MyPropertyForDB> matchPropertyList;
+    private ArrayList<MathchedPropertyForDB> matchPropertyList;
     MatchPropertyAdapter matchPropertyAdapter;
     String pid;
 
@@ -72,11 +73,11 @@ public class MatchPropertyActivity extends AppCompatActivity implements Navigati
         recyclerView = (RecyclerView) findViewById(R.id.content_match_property);
         matchPropertyList = new ArrayList<>();
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
+//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+//                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+//        drawer.addDrawerListener(toggle);
+//        toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);

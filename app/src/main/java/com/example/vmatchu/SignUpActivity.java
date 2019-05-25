@@ -14,6 +14,7 @@ import com.example.vmatchu.CustomAlert.CustomAlert;
 import com.example.vmatchu.Pojo.UserSignup;
 import com.example.vmatchu.Rest.APIService;
 import com.example.vmatchu.Rest.ApiUtil;
+import com.example.vmatchu.SharedPrefs.SaveInSharedPreference;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -74,7 +75,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         }
     }
 
-    private void postSignUpApi(String uname, String pass, String email) {
+    private void postSignUpApi(String uname,  String email, String pass) {
         String currentDate = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(Calendar.getInstance().getTime());
         Call<UserSignup> call = apiService.postSignUp(uname, email, pass, currentDate);
 
@@ -86,7 +87,14 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                     progressDialog.dismiss();
                     UserSignup signupResponse = response.body();
                     if(signupResponse.getError().equals("-1")){
+                        SaveInSharedPreference.getInSharedPreference(SignUpActivity.this).saveUserId(signupResponse.getId());
                         startActivity(new Intent(SignUpActivity.this,HomeActivity.class));
+                    }else if(signupResponse.getError().equals("2")){
+                        progressDialog.dismiss();
+                        CustomAlert.alertDialog(SignUpActivity.this,"User already exist");
+                    }else if(signupResponse.getError().equals("1")){
+                        progressDialog.dismiss();
+                        CustomAlert.alertDialog(SignUpActivity.this,"Incorrect Password");
                     }
                     Log.i("response", "post submitted to API." + signupResponse);
                 }
@@ -95,7 +103,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onFailure(Call<UserSignup> call, Throwable t) {
                 progressDialog.dismiss();
-                CustomAlert.alertDialog(SignUpActivity.this,"Response failed");
+                CustomAlert.alertDialog(SignUpActivity.this,"Response Failed. Check your internet connection");
                 Log.e("response_Failed", "Unable to submit post to API." + t);
             }
         });

@@ -87,8 +87,8 @@ public class HomeActivity extends AppCompatActivity
             public void onClick(View v) {
                 String contact = "+92 3172504395"; // use country code with your phone number
                 String url = "https://api.whatsapp.com/send?phone=" + contact;
-                try {
 
+                try {
                     PackageManager pm = getPackageManager();
                     pm.getPackageInfo("com.whatsapp", PackageManager.GET_ACTIVITIES);
                     Intent i = new Intent(Intent.ACTION_VIEW);
@@ -100,7 +100,6 @@ public class HomeActivity extends AppCompatActivity
                 }
             }
         });
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -121,6 +120,7 @@ public class HomeActivity extends AppCompatActivity
 
             @Override
             public void onResponse(Call<RemainingMoneyResponse> call, Response<RemainingMoneyResponse> response) {
+
                 if (response.isSuccessful()) {
                     RemainingMoneyResponse remainingMoneyResponse = response.body();
                     if (remainingMoneyResponse.getError().equals("-1")) {
@@ -163,6 +163,7 @@ public class HomeActivity extends AppCompatActivity
             public void onResponse(Call<PropertyType> call, Response<PropertyType> response) {
                 if (response.isSuccessful()) {
                     PropertyType propertyTypeResponse = response.body();
+                    dBhelper.emptyTable("propertyType");
                     if (propertyTypeResponse.getError().equals("-1")) {
                         for (int i = 0; i < propertyTypeResponse.getData().size(); i++) {
                             dBhelper.addPropertyTypeData(propertyTypeResponse.getData().get(i).getTermId(),

@@ -1577,11 +1577,8 @@ id tv_sector
 id tv_sub_area
 id type
 id type_2
-<<<<<<< HEAD
-id type_value
-=======
 id type_text
->>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+id type_value
 id uniform
 id unlabeled
 id up
@@ -1649,10 +1646,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout aboutus
-<<<<<<< HEAD
 layout activity_edit_purchase_property
-=======
->>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
 layout activity_edit_sell_property
 layout activity_enter_properpty_details2
 layout activity_enter_property_detail

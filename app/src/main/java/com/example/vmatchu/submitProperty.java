@@ -33,7 +33,7 @@ public class submitProperty extends AppCompatActivity {
             @Override
             public void onClick(View v) {
               Intent intent=new Intent(submitProperty.this,EnterPropertyDetailActivity.class);
-             DemoClass.status="For Sell";
+             DemoClass.status="For Sale";
               startActivity(intent);
             }
         });
@@ -41,7 +41,7 @@ public class submitProperty extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(submitProperty.this,EnterPropertyDetailActivity.class);
-                DemoClass.status="Give On Rent";
+                DemoClass.status="For Rent";
                 startActivity(intent);
             }
         });
@@ -49,14 +49,14 @@ public class submitProperty extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(submitProperty.this,EnterProperptyDetails2Activity.class);
-                DemoClass.status="Take On Rent";
+                DemoClass.status="Want Rent";
                 startActivity(intent);            }
         });
         purchase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(submitProperty.this,EnterProperptyDetails2Activity.class);
-                DemoClass.status="For Purchase";
+                DemoClass.status="Want Buy";
                 startActivity(intent);
             }
         });

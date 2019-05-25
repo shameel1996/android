@@ -162,5 +162,9 @@ public interface APIService {
                                                               @Query("propertyImage360Url") String propertyImage360Url,
                                                               @Query("remainingMoney") int remainingMoney);
 
+    @GET("deleteProperty.php")
+    Call<InsertPropertyResponse> postDeletePropertyResponse(@Query("propertyID") String pid,
+                                         @Query("userId") String userId);
+
 
 }

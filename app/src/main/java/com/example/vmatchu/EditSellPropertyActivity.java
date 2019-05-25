@@ -34,12 +34,18 @@ import com.example.vmatchu.Adpaters.SubAreaAdapter;
 import com.example.vmatchu.Adpaters.cityAdapter;
 import com.example.vmatchu.CustomAlert.CustomAlert;
 import com.example.vmatchu.DBhelper.DBhelper;
+import com.example.vmatchu.Models.MyPropertyAreaForDB;
+import com.example.vmatchu.Models.MyPropertyAreaTypeForDB;
 import com.example.vmatchu.Models.MyPropertyBathroomsForDB;
 import com.example.vmatchu.Models.MyPropertyBedroomsForDB;
+import com.example.vmatchu.Models.MyPropertyCityForDB;
 import com.example.vmatchu.Models.MyPropertyDescriptionForDB;
 import com.example.vmatchu.Models.MyPropertyGaragesForDB;
+import com.example.vmatchu.Models.MyPropertyPropertyTypeForDB;
 import com.example.vmatchu.Models.MyPropertyRoomsForDB;
 import com.example.vmatchu.Models.MyPropertySectorsForDB;
+import com.example.vmatchu.Models.MyPropertyStatusForDB;
+import com.example.vmatchu.Models.MyPropertySubAreaForDB;
 import com.example.vmatchu.Pojo.AreaResponse;
 import com.example.vmatchu.Pojo.AreaTypeResponse;
 import com.example.vmatchu.Pojo.CityAreaSubareaSectorDetailsResponse;
@@ -100,6 +106,12 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
     ArrayList<MyPropertyBedroomsForDB> propertyListBedrooms;
     ArrayList<MyPropertyRoomsForDB> propertyListRooms;
     ArrayList<MyPropertyDescriptionForDB> propertyListDescription;
+    ArrayList<MyPropertyAreaForDB> propertyListArea;
+    ArrayList<MyPropertySubAreaForDB> propertyListSubArea;
+    ArrayList<MyPropertyAreaTypeForDB> propertyListAreaType;
+    ArrayList<MyPropertyPropertyTypeForDB> propertyListPropertyType;
+    ArrayList<MyPropertyStatusForDB> propertyListStatus;
+    ArrayList<MyPropertyCityForDB> propertyListCity;
 
 
     Intent intent2,intent1;
@@ -274,15 +286,32 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
     }
 
     private void setViews() {
-        citytxt.setText(propertyList.get(0).getCity());
-        areatxt.setText(propertyList.get(0).getArea());
-        subareatxt.setText(propertyList.get(0).getSub_area());
+
+        if(propertyListCity.size() != 0){
+            citytxt.setText(propertyListCity.get(0).getCity());
+        }
+
+        if(propertyListArea.size() != 0){
+            areatxt.setText(propertyListArea.get(0).getArea());
+        }
+
+        if(propertyListSubArea.size() != 0){
+            subareatxt.setText(propertyListSubArea.get(0).getSub_area());
+        }
+
+
         if(propertyListSectors.size() != 0){
             sectortxt.setText(propertyListSectors.get(0).getSectors());
         }
 
-        propertyType.setText(propertyList.get(0).getPropertyType());
-        status.setText(propertyList.get(0).getStatus());
+        if(propertyListPropertyType.size() != 0){
+            propertyType.setText(propertyListPropertyType.get(0).getProperty_type());
+        }
+
+        if(propertyListStatus.size() != 0){
+            status.setText(propertyListStatus.get(0).getStatus());
+        }
+
 
         if(propertyListGarages.size() != 0){
             garages.setText(propertyListGarages.get(0).getGarages());
@@ -305,7 +334,11 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
         if(propertyListDescription.size() != 0){
             details.setText(propertyListDescription.get(0).getDescription());
         }
-        areaType.setText(propertyList.get(0).getAreaType());
+
+        if(propertyListAreaType.size() != 0){
+            areaType.setText(propertyListAreaType.get(0).getArea_type());
+        }
+
     }
 
     private void getCitiesApi() {
@@ -426,7 +459,14 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
         propertyListDescription = dBhelper.getMyPropertyDescription(pid);
         propertyListSectors = dBhelper.getMyPropertySectors(pid);
 
-        statusType = propertyList.get(0).getStatus();
+        propertyListCity = dBhelper.getMyPropertyCityByPid(pid);
+        propertyListArea = dBhelper.getMyPropertyArea(pid);
+        propertyListSubArea = dBhelper.getMyPropertySubArea(pid);
+        propertyListAreaType = dBhelper.getMyPropertyAreaType(pid);
+        propertyListPropertyType = dBhelper.getMyPropertyPropertyType(pid);
+        propertyListStatus = dBhelper.getMyPropertyStatusByPid(pid);
+
+        statusType = propertyListStatus.get(0).getStatus();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -866,15 +906,29 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
     }
 
     private void postPropertyDetails() {
-        if(statusType.equals("Give On Rent")){
-            statusTypeID = "71";
-        }else if(statusType.equals("For Sell")){
-            statusTypeID = "72";
-        } else if(statusType.equals("For Purchase")){
-            statusTypeID = "229";
-        } else if(statusType.equals("Take On Rent")){
+        if(statusType.equals("Want Rent")){
             statusTypeID = "228";
+        }else if(statusType.equals("Want Buy")){
+            statusTypeID = "229";
+        } else if(statusType.equals("For Sale")){
+            statusTypeID = "72";
+        } else if(statusType.equals("For Rent")){
+            statusTypeID = "71";
         }
+        String a = SaveInSharedPreference.getInSharedPreference(this).getUserId();
+        String b = SaveInSharedPreference.getInSharedPreference(this).getPropertyTypeId();
+        String c = statusTypeID;
+        String d = countrytxt.getText().toString();
+        String e = SaveInSharedPreference.getInSharedPreference(this).getCityId();
+        String f = SaveInSharedPreference.getInSharedPreference(this).getAreaId();
+        String g = SaveInSharedPreference.getInSharedPreference(this).getSubAreaId();
+        String h = SaveInSharedPreference.getInSharedPreference(this).getSectorId();
+        String m = SaveInSharedPreference.getInSharedPreference(this).getAreaTypeId();
+        String n = rooms.getText().toString();
+        String o = bedroom.getText().toString();
+        String p = bathroom.getText().toString();
+        String q = garages.getText().toString();
+        int r = remainingMoney;
         Call<InsertPropertyResponse> call = apiService.postEditSellProperty(title.getText().toString(),
                 SaveInSharedPreference.getInSharedPreference(this).getUserId(),
                 SaveInSharedPreference.getInSharedPreference(this).getPropertyTypeId(), statusTypeID,
