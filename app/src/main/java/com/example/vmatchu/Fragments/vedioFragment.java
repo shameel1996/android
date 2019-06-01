@@ -16,6 +16,7 @@ public class vedioFragment extends Fragment {
 
     VideoView videoView;
     MediaController mControler;
+
     public vedioFragment() {
         // Required empty public constructor
     }
@@ -23,24 +24,23 @@ public class vedioFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.video_fragment, container, false);
-        videoView = (VideoView) rootView.findViewById(R.id.videoview);
-        mControler=new MediaController(getContext());
-
-
-  videoView=(VideoView)rootView.findViewById(R.id.videoview);
-  String path="";
-  Uri uri=Uri.parse(path);
-        videoView.setMediaController(mControler);
-        mControler.setAnchorView(videoView);
-  videoView.setVideoURI(uri);
-  videoView.start();
+//        videoView = (VideoView) rootView.findViewById(R.id.videoview);
+//        mControler = new MediaController(getContext());
+//
+//
+//        videoView = (VideoView) rootView.findViewById(R.id.videoview);
+//        String path = "";
+//        Uri uri = Uri.parse(path);
+//        videoView.setMediaController(mControler);
+//        mControler.setAnchorView(videoView);
+//        videoView.setVideoURI(uri);
+//        videoView.start();
         return rootView;
     }
 }

@@ -1,11 +1,11 @@
 [
     {
-        "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
-        "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\6cbba51632de68ce6377a8af5b44bf3c\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
-    },
-    {
         "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_homeorange.png.flat",
         "source": "D:\\VmatchU Android App\\VmatchU new\\app\\src\\main\\res\\drawable-v21\\homeorange.png"
+    },
+    {
+        "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
+        "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\6cbba51632de68ce6377a8af5b44bf3c\\res\\drawable-xxxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
         "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
@@ -36,10 +36,6 @@
         "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\151c3b5189cfbd80c1adf7a47aa6b093\\res\\layout\\dialog_layout.xml"
     },
     {
-        "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "D:\\VmatchU Android App\\VmatchU new\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
-    },
-    {
         "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\6cbba51632de68ce6377a8af5b44bf3c\\res\\drawable-xxhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
@@ -48,12 +44,12 @@
         "source": "D:\\VmatchU Android App\\VmatchU new\\app\\src\\main\\res\\layout\\area.xml"
     },
     {
-        "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_switch_thumb_material.xml.flat",
-        "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\6cbba51632de68ce6377a8af5b44bf3c\\res\\drawable\\abc_switch_thumb_material.xml"
-    },
-    {
         "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\6cbba51632de68ce6377a8af5b44bf3c\\res\\drawable-xhdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_switch_thumb_material.xml.flat",
+        "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\6cbba51632de68ce6377a8af5b44bf3c\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
         "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\layout_mtrl_layout_snackbar.xml.flat",
@@ -88,12 +84,12 @@
         "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\b68188692728fee0b151b37a946342ee\\res\\interpolator-v21\\mtrl_fast_out_linear_in.xml"
     },
     {
-        "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_sign_up.xml.flat",
-        "source": "D:\\VmatchU Android App\\VmatchU new\\app\\src\\main\\res\\layout\\activity_sign_up.xml"
-    },
-    {
         "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_select_dialog_material.xml.flat",
         "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\6cbba51632de68ce6377a8af5b44bf3c\\res\\layout\\abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_sign_up.xml.flat",
+        "source": "D:\\VmatchU Android App\\VmatchU new\\app\\src\\main\\res\\layout\\activity_sign_up.xml"
     },
     {
         "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_bar.png.flat",
@@ -116,12 +112,12 @@
         "source": "D:\\VmatchU Android App\\VmatchU new\\app\\src\\main\\res\\drawable-v21\\ic_menu_slideshow.xml"
     },
     {
-        "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
-        "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\6cbba51632de68ce6377a8af5b44bf3c\\res\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
-    },
-    {
         "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_cascading_menu_item_layout.xml.flat",
         "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\6cbba51632de68ce6377a8af5b44bf3c\\res\\layout\\abc_cascading_menu_item_layout.xml"
+    },
+    {
+        "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
+        "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\6cbba51632de68ce6377a8af5b44bf3c\\res\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -156,12 +152,12 @@
         "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\6cbba51632de68ce6377a8af5b44bf3c\\res\\layout\\abc_screen_content_include.xml"
     },
     {
-        "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_search_api_material.xml.flat",
-        "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\6cbba51632de68ce6377a8af5b44bf3c\\res\\drawable\\abc_ic_search_api_material.xml"
-    },
-    {
         "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_design_ic_visibility.xml.flat",
         "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\b68188692728fee0b151b37a946342ee\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
+    },
+    {
+        "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_search_api_material.xml.flat",
+        "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\6cbba51632de68ce6377a8af5b44bf3c\\res\\drawable\\abc_ic_search_api_material.xml"
     },
     {
         "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable_renton.jpg.flat",
@@ -414,6 +410,10 @@
     {
         "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\6cbba51632de68ce6377a8af5b44bf3c\\res\\drawable-mdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
+    },
+    {
+        "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_call.png.flat",
+        "source": "D:\\VmatchU Android App\\VmatchU new\\app\\src\\main\\res\\drawable-v24\\call.png"
     },
     {
         "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -1624,6 +1624,10 @@
         "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\b68188692728fee0b151b37a946342ee\\res\\layout\\design_menu_item_action_area.xml"
     },
     {
+        "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_sms.png.flat",
+        "source": "D:\\VmatchU Android App\\VmatchU new\\app\\src\\main\\res\\drawable-v24\\sms.png"
+    },
+    {
         "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_alert_dialog_button_bar_material.xml.flat",
         "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\6cbba51632de68ce6377a8af5b44bf3c\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
@@ -2142,10 +2146,6 @@
     {
         "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_material.xml.flat",
         "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\6cbba51632de68ce6377a8af5b44bf3c\\res\\drawable\\abc_ratingbar_material.xml"
-    },
-    {
-        "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "D:\\VmatchU Android App\\VmatchU new\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
         "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_48dp.png.flat",

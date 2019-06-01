@@ -136,6 +136,11 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
     ArrayList<MyPropertyStatusForDB> propertyListStatus;
     ArrayList<MyPropertyCityForDB> propertyListCity;
 
+    String date, propertyCity, propertyArea, propertySubArea, propertySector, propertyGarages, propertyBathrooms, propertyBedrooms = "";
+    String propertyRooms, propertyDesc, propertyAreaType, propertyPropertyType, propertyStatus, propertyTitle = "";
+    String propertyCityId,propertyAreaId,propertySubAreaId,propertySectorId,propertyAreaTypeId,propertyPropertyTypeId,propertyStatusId;
+    String propertyMinSize,propertyMinSizePid,propertyMinPrice,propertyMinPricePid,propertyMaxSize ,propertyMaxSizePid ,propertyMaxPrice,propertyMaxPricePid;
+
 
     String statusTypeID = "";
     private ArrayList<CityAreaSubareaSectorDetailsResponse> area_type=new ArrayList<>();
@@ -296,57 +301,79 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
     }
 
     private void setViews() {
-        if(propertyListCity.size() != 0){
-            citytxt.setText(propertyListCity.get(0).getCity());
+        countrytxt.setText("Pakistan");
+
+        if(propertyCity != null && !propertyCity.isEmpty()){
+            citytxt.setText(propertyCity);
+        }
+        if(propertyArea != null && !propertyArea.isEmpty()){
+            areatxt.setText(propertyArea);
         }
 
-        if(propertyListArea.size() != 0){
-            areatxt.setText(propertyListArea.get(0).getArea());
+        if(propertySubArea != null && !propertySubArea.isEmpty()){
+            subareatxt.setText(propertySubArea);
         }
 
-        if(propertyListSubArea.size() != 0){
-            subareatxt.setText(propertyListSubArea.get(0).getSub_area());
+        if(propertySector !=null && !propertySector.isEmpty()){
+            sectortxt.setText(propertySector);
+        }
+
+        if(propertyGarages != null && !propertyGarages.isEmpty()){
+            garages.setText(propertyGarages);
+        }
+        if(propertyBathrooms != null && !propertyBathrooms.isEmpty()){
+            bathroom.setText(propertyBathrooms);
+        }
+
+        if(propertyBedrooms != null && !propertyBedrooms.isEmpty()){
+            bedroom.setText(propertyBedrooms);
+        }
+
+        if(propertyAreaType != null && !propertyAreaType.isEmpty()){
+            areaType.setText(propertyAreaType);
+        }
+
+        if(propertyPropertyType != null && !propertyPropertyType.isEmpty()){
+            propertyType.setText(propertyPropertyType);
+        }
+
+        if(propertyStatus != null && !propertyStatus.isEmpty()){
+            status.setText(propertyStatus);
+        }
+
+        if(propertyTitle != null && !propertyTitle.isEmpty()){
+            title.setText(propertyTitle);
         }
 
 
-        if(propertyListSectors.size() != 0){
-            sectortxt.setText(propertyListSectors.get(0).getSectors());
+        if(propertyMinSizePid.equals(pid)){
+
+            if(propertyMinSize != null && !propertyMinSize.isEmpty()){
+                minSize.setText(propertyMinSize);
+            }
+
+        }else if(propertyMinPricePid.equals(pid)){
+
+            if(propertyMinPrice != null && !propertyMinPrice.isEmpty()){
+                minPrice.setText(propertyMinPrice);
+            }
+
+        }else if(propertyMaxSizePid.equals(pid)){
+
+            if(propertyMaxSize != null && !propertyMaxSize.isEmpty()){
+                maxSize.setText(propertyMaxSize);
+            }
+
+        }else if(propertyMaxPricePid.equals(pid)){
+
+            if(propertyMaxPrice != null && !propertyMaxPrice.isEmpty()){
+                maxPrice.setText(propertyMaxPrice);
+            }
+
         }
 
-        if(propertyListPropertyType.size() != 0){
-            propertyType.setText(propertyListPropertyType.get(0).getProperty_type());
-        }
-
-        if(propertyListStatus.size() != 0){
-            status.setText(propertyListStatus.get(0).getStatus());
-        }
 
 
-        if(propertyListGarages.size() != 0){
-            garages.setText(propertyListGarages.get(0).getGarages());
-        }
-
-        if(propertyListBathrooms.size() != 0){
-            bathroom.setText(propertyListBathrooms.get(0).getBathrooms());
-        }
-
-        if(propertyListBedrooms.size() != 0){
-            bedroom.setText(propertyListBedrooms.get(0).getBedrooms());
-        }
-
-        if(propertyListRooms.size() != 0){
-            rooms.setText(propertyListRooms.get(0).getRooms());
-        }
-
-        title.setText(propertyList.get(0).getTitle());
-
-        if(propertyListDescription.size() != 0){
-            details.setText(propertyListDescription.get(0).getDescription());
-        }
-
-        if(propertyListAreaType.size() != 0){
-            areaType.setText(propertyListAreaType.get(0).getArea_type());
-        }
 
     }
 
@@ -463,21 +490,60 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
 
         apiService = ApiUtil.getAPIService();
 
-        propertyList = dBhelper.getMyPropertyOnPid(pid);
-        propertyListGarages = dBhelper.getMyPropertyGarages(pid);
-        propertyListBathrooms = dBhelper.getMyPropertyBathrooms(pid);
-        propertyListBedrooms = dBhelper.getMyPropertyBedrooms(pid);
-        propertyListRooms = dBhelper.getMyPropertyRooms(pid);
-        propertyListDescription = dBhelper.getMyPropertyDescription(pid);
-        propertyListSectors = dBhelper.getMyPropertySectors(pid);
-        propertyListCity = dBhelper.getMyPropertyCityByPid(pid);
-        propertyListArea = dBhelper.getMyPropertyArea(pid);
-        propertyListSubArea = dBhelper.getMyPropertySubArea(pid);
-        propertyListAreaType = dBhelper.getMyPropertyAreaType(pid);
-        propertyListPropertyType = dBhelper.getMyPropertyPropertyType(pid);
-        propertyListStatus = dBhelper.getMyPropertyStatusByPid(pid);
+        date = getIntent().getStringExtra("propertyData");
+        propertyTitle = getIntent().getStringExtra("propertyDataTitle");
+        propertyGarages = getIntent().getStringExtra("propertyListGarages");
+        propertyBathrooms = getIntent().getStringExtra("propertyListBathroom");
+        propertyBedrooms =  getIntent().getStringExtra("propertyListBedroom");
+        propertyRooms = getIntent().getStringExtra("propertyListRoom");
+        propertyDesc = getIntent().getStringExtra("propertyListDescription");
+        propertySector = getIntent().getStringExtra("propertyListSector");
+        propertySectorId = getIntent().getStringExtra("propertyListSectorID");
+        SaveInSharedPreference.getInSharedPreference(this).saveSectorId(propertySectorId);
+        propertyCity = getIntent().getStringExtra("propertyListCity");
+        propertyCityId = getIntent().getStringExtra("propertyListCityID");
+        SaveInSharedPreference.getInSharedPreference(this).saveCityId(propertyCityId);
+        propertyArea = getIntent().getStringExtra("propertyListArea");
+        propertyAreaId = getIntent().getStringExtra("propertyListAreaID");
+        SaveInSharedPreference.getInSharedPreference(this).saveAreaId(propertyAreaId);
+        propertySubArea =  getIntent().getStringExtra("propertyListSubArea");
+        propertySubAreaId =  getIntent().getStringExtra("propertyListSubAreaID");
+        SaveInSharedPreference.getInSharedPreference(this).saveSubAreaId(propertySubAreaId);
+        propertyAreaType = getIntent().getStringExtra("propertyListAreaType");
+        propertyAreaTypeId = getIntent().getStringExtra("propertyListAreaTypeID");
+        SaveInSharedPreference.getInSharedPreference(this).saveAreaTypeId(propertyAreaTypeId);
+        propertyPropertyType = getIntent().getStringExtra("propertyListPropertyType");
+        propertyPropertyTypeId = getIntent().getStringExtra("propertyListPropertyTypeID");
+        SaveInSharedPreference.getInSharedPreference(this).savePropertyTypeId(propertyPropertyTypeId);
+        propertyStatus =  getIntent().getStringExtra("propertyListStatus");
+        propertyStatusId =  getIntent().getStringExtra("propertyListStatusID");
 
-        statusType = propertyListStatus.get(0).getStatus();
+        propertyMinSize =  getIntent().getStringExtra("propertyListMinSize");
+        propertyMinSizePid =  getIntent().getStringExtra("propertyListMinSizePid");
+        propertyMinPrice =  getIntent().getStringExtra("propertyListMinPrice");
+        propertyMinPricePid =  getIntent().getStringExtra("propertyListMinPricePid ");
+        propertyMaxSize =  getIntent().getStringExtra("propertyListMaxSize");
+        propertyMaxSizePid =  getIntent().getStringExtra("propertyListMaxSizePid");
+        propertyMaxPrice =  getIntent().getStringExtra("propertyListMaxPrice");
+        propertyMaxPricePid =  getIntent().getStringExtra("propertyListMaxPricePid");
+
+
+//
+//        propertyList = dBhelper.getMyPropertyOnPid(pid);
+//        propertyListGarages = dBhelper.getMyPropertyGarages(pid);
+//        propertyListBathrooms = dBhelper.getMyPropertyBathrooms(pid);
+//        propertyListBedrooms = dBhelper.getMyPropertyBedrooms(pid);
+//        propertyListRooms = dBhelper.getMyPropertyRooms(pid);
+//        propertyListDescription = dBhelper.getMyPropertyDescription(pid);
+//        propertyListSectors = dBhelper.getMyPropertySectors(pid);
+//        propertyListCity = dBhelper.getMyPropertyCityByPid(pid);
+//        propertyListArea = dBhelper.getMyPropertyArea(pid);
+//        propertyListSubArea = dBhelper.getMyPropertySubArea(pid);
+//        propertyListAreaType = dBhelper.getMyPropertyAreaType(pid);
+//        propertyListPropertyType = dBhelper.getMyPropertyPropertyType(pid);
+//        propertyListStatus = dBhelper.getMyPropertyStatusByPid(pid);
+
+        statusType = propertyStatus;
 
     }
 
@@ -895,7 +961,7 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
         String q = garages.getText().toString();
         int r = remainingMoney;
 
-        Call<InsertPurchasePropertyResponse> call = apiService.postEditPurchaseProperty(propertyList.get(0).getPid(),
+        Call<InsertPurchasePropertyResponse> call = apiService.postEditPurchaseProperty(pid,
                 title.getText().toString(),
                 SaveInSharedPreference.getInSharedPreference(this).getUserId(),
                 SaveInSharedPreference.getInSharedPreference(this).getPropertyTypeId(),

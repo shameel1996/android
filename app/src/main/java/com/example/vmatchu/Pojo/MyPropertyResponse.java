@@ -62,6 +62,22 @@ public class MyPropertyResponse {
     @Expose
     private List<MyPropertyPropertyType> propertyType;
 
+    @SerializedName("minSize")
+    @Expose
+    private List<MyPropertyMinSize> minSize;
+
+    @SerializedName("minPrice")
+    @Expose
+    private List<MyPropertyMinPrice> minPrice;
+
+    @SerializedName("maxSize")
+    @Expose
+    private List<MyPropertyMaxSize> maxSize;
+
+    @SerializedName("maxPrice")
+    @Expose
+    private List<MyPropertyMaxPrice> maxPrice;
+
     public String getError() {
         return error;
     }
@@ -116,5 +132,21 @@ public class MyPropertyResponse {
 
     public List<MyPropertyPropertyType> getPropertyType() {
         return propertyType;
+    }
+
+    public List<MyPropertyMinSize> getMinSize() {
+        return minSize;
+    }
+
+    public List<MyPropertyMinPrice> getMinPrice() {
+        return minPrice;
+    }
+
+    public List<MyPropertyMaxSize> getMaxSize() {
+        return maxSize;
+    }
+
+    public List<MyPropertyMaxPrice> getMaxPrice() {
+        return maxPrice;
     }
 }

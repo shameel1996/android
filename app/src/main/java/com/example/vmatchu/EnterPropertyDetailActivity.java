@@ -346,7 +346,7 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
             @Override
             public void onFailure(Call<CityResponse> call, Throwable t) {
                 progressDialog.dismiss();
-                CustomAlert.alertDialog(EnterPropertyDetailActivity.this, "Response Failed");
+                CustomAlert.alertDialog(EnterPropertyDetailActivity.this, "Cities not found");
                 Log.e("response_Failed", "Unable to submit post to API." + t);
             }
         });
@@ -484,19 +484,82 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.submitProp:
-                if (!title.getText().toString().equals("") && !areatxt.getText().toString().equals("") &&
-                        !citytxt.getText().toString().equals("") && !countrytxt.getText().toString().equals("")
-                        && !subareatxt.getText().toString().equals("")
-                        && !propertyType.getText().toString().equals("") &&
-                        !status.getText().toString().equals("") && !size.getText().toString().equals("")
-                        && !areaType.getText().toString().equals("")) {
-                    progressDialog.show();
-                    totalMoney = SaveInSharedPreference.getInSharedPreference(this).getRemainingMoney();
-                    remainingMoney = totalMoney - 50;
-                    postPropertyDetails();
-                } else {
-                    CustomAlert.alertDialog(this, "Please Insert Correct Data");
+                if (!title.getText().toString().equals("")){
+
+                    if (!areatxt.getText().toString().equals("")){
+
+                        if (!citytxt.getText().toString().equals("")){
+
+                            if (!countrytxt.getText().toString().equals("")){
+
+                                if (!subareatxt.getText().toString().equals("")){
+
+                                    if (!propertyType.getText().toString().equals("")){
+
+                                        if (!status.getText().toString().equals("")){
+
+                                            if (!size.getText().toString().equals("")){
+
+                                                if (!areaType.getText().toString().equals("")){
+
+                                                    progressDialog.show();
+                                                    totalMoney = SaveInSharedPreference.getInSharedPreference(this).getRemainingMoney();
+                                                    remainingMoney = totalMoney - 50;
+                                                    postPropertyDetails();
+
+                                                }else{
+                                                    CustomAlert.alertDialog(this, "Insert Area Type");
+                                                }
+
+                                            }else{
+                                                CustomAlert.alertDialog(this, "Insert Size");
+                                            }
+
+                                        }else{
+                                            CustomAlert.alertDialog(this, "Insert Status");
+                                        }
+
+                                    }else{
+                                        CustomAlert.alertDialog(this, "Insert Property Type");
+                                    }
+
+                                }else{
+                                    CustomAlert.alertDialog(this, "Insert Sub Area");
+                                }
+
+                            }else{
+                                CustomAlert.alertDialog(this, "Insert Country");
+                            }
+
+
+                        }else{
+                            CustomAlert.alertDialog(this, "Insert City");
+                        }
+
+                    }else{
+                        CustomAlert.alertDialog(this, "Insert Area");
+                    }
+
+
+                }else{
+                    CustomAlert.alertDialog(this, "Insert Title");
                 }
+
+
+
+//                if (!title.getText().toString().equals("") && !areatxt.getText().toString().equals("") &&
+//                        !citytxt.getText().toString().equals("") && !countrytxt.getText().toString().equals("")
+//                        && !subareatxt.getText().toString().equals("")
+//                        && !propertyType.getText().toString().equals("") &&
+//                        !status.getText().toString().equals("") && !size.getText().toString().equals("")
+//                        && !areaType.getText().toString().equals("")) {
+//                    progressDialog.show();
+//                    totalMoney = SaveInSharedPreference.getInSharedPreference(this).getRemainingMoney();
+//                    remainingMoney = totalMoney - 50;
+//                    postPropertyDetails();
+//                } else {
+//                    CustomAlert.alertDialog(this, "Please Insert Correct Data");
+//                }
 
                 break;
 
@@ -659,7 +722,7 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
             @Override
             public void onFailure(Call<AreaTypeResponse> call, Throwable t) {
                 progressDialog.dismiss();
-                CustomAlert.alertDialog(EnterPropertyDetailActivity.this, "Response Failed");
+                CustomAlert.alertDialog(EnterPropertyDetailActivity.this, "Area Type not found");
                 Log.e("response_Failed", "Unable to submit post to API." + t);
             }
         });
@@ -717,7 +780,7 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
             @Override
             public void onFailure(Call<SectorResponse> call, Throwable t) {
                 progressDialog.dismiss();
-                CustomAlert.alertDialog(EnterPropertyDetailActivity.this, "Response Failed");
+                CustomAlert.alertDialog(EnterPropertyDetailActivity.this, "Sectors not found");
                 Log.e("response_Failed", "Unable to submit post to API." + t);
             }
         });
@@ -775,7 +838,7 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
             @Override
             public void onFailure(Call<SubAreaResponse> call, Throwable t) {
                 progressDialog.dismiss();
-                CustomAlert.alertDialog(EnterPropertyDetailActivity.this, "Response Failed");
+                CustomAlert.alertDialog(EnterPropertyDetailActivity.this, "Sub Areas not found");
                 Log.e("response_Failed", "Unable to submit post to API." + t);
             }
         });
@@ -831,7 +894,7 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
             @Override
             public void onFailure(Call<AreaResponse> call, Throwable t) {
                 progressDialog.dismiss();
-                CustomAlert.alertDialog(EnterPropertyDetailActivity.this, "Response Failed");
+                CustomAlert.alertDialog(EnterPropertyDetailActivity.this, "Areas not found");
                 Log.e("response_Failed", "Unable to submit post to API." + t);
             }
         });
