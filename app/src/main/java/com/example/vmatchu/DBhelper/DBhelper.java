@@ -10,6 +10,19 @@ import android.graphics.Bitmap;
 import android.os.Environment;
 import android.util.Log;
 
+import com.example.vmatchu.Models.MathchedPropertyForDB;
+import com.example.vmatchu.Models.MyPropertyAreaForDB;
+import com.example.vmatchu.Models.MyPropertyAreaTypeForDB;
+import com.example.vmatchu.Models.MyPropertyBathroomsForDB;
+import com.example.vmatchu.Models.MyPropertyBedroomsForDB;
+import com.example.vmatchu.Models.MyPropertyCityForDB;
+import com.example.vmatchu.Models.MyPropertyDescriptionForDB;
+import com.example.vmatchu.Models.MyPropertyGaragesForDB;
+import com.example.vmatchu.Models.MyPropertyPropertyTypeForDB;
+import com.example.vmatchu.Models.MyPropertyRoomsForDB;
+import com.example.vmatchu.Models.MyPropertySectorsForDB;
+import com.example.vmatchu.Models.MyPropertyStatusForDB;
+import com.example.vmatchu.Models.MyPropertySubAreaForDB;
 import com.example.vmatchu.Pojo.CityAreaSubareaSectorDetailsResponse;
 import com.example.vmatchu.Pojo.MyPropertyForDB;
 import com.example.vmatchu.Pojo.MyPropertyResponse;
@@ -39,6 +52,18 @@ public class DBhelper extends SQLiteOpenHelper {
     private static final String TABLE_PROPERTY_STATUS = "propertyStatus";
     private static final String TABLE_MY_PROPERTY = "myProperty";
     private static final String TABLE_MATCHED_PROPERTY = "matchProperty";
+    private static final String TABLE_MY_PROPERTY_SECTOR = "myPropertySector";
+    private static final String TABLE_MY_PROPERTY_GARAGES = "myPropertyGarages";
+    private static final String TABLE_MY_PROPERTY_BATHROOMS = "myPropertyBathrooms";
+    private static final String TABLE_MY_PROPERTY_BEDROOMS = "myPropertyBedrooms";
+    private static final String TABLE_MY_PROPERTY_ROOMS = "myPropertyRooms";
+    private static final String TABLE_MY_PROPERTY_DESCRIPTION = "myPropertyDescription";
+    private static final String TABLE_MY_PROPERTY_CITY = "myPropertyCity";
+    private static final String TABLE_MY_PROPERTY_AREA = "myPropertyArea";
+    private static final String TABLE_MY_PROPERTY_SUB_AREA = "myPropertySubArea";
+    private static final String TABLE_MY_PROPERTY_AREA_TYPE = "myPropertyAreaType";
+    private static final String TABLE_MY_PROPERTY_PROPERTY_TYPE = "myPropertyPropertyType";
+    private static final String TABLE_MY_PROPERTY_STATUS = "myPropertyStatus";
 
 
     public static String TAG = "VmatchU";
@@ -85,11 +110,46 @@ public class DBhelper extends SQLiteOpenHelper {
                 "term_id text not null,property_name text not null)";
 
         String createMyPropertyTable = "CREATE TABLE IF NOT EXISTS " + TABLE_MY_PROPERTY + " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
-                "pid text, title text, date text , status text, city text, area text, sub_area text, sector text, garages text, bathrooms text," +
-                " bedrooms text, rooms text, description text)";
+                "pid text, title text, date text , status text, city text, area text, sub_area text, sector text, property_type text, area_type text)";
 
         String createMatchPropertyTable = "CREATE TABLE IF NOT EXISTS " + TABLE_MATCHED_PROPERTY + " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
                 "pid text, title text, post_date text , status text, city text, area text, sub_area text, sector text)";
+
+        String createMyPropertySector = "CREATE TABLE IF NOT EXISTS " + TABLE_MY_PROPERTY_SECTOR + " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                "pid text, sectors text)";
+
+        String createMyPropertyGarages = "CREATE TABLE IF NOT EXISTS " + TABLE_MY_PROPERTY_GARAGES + " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                "pid text, garages text)";
+
+        String createMyPropertyBathrooms = "CREATE TABLE IF NOT EXISTS " + TABLE_MY_PROPERTY_BATHROOMS + " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                "pid text, bathrooms text)";
+
+        String createMyPropertyBedrooms = "CREATE TABLE IF NOT EXISTS " + TABLE_MY_PROPERTY_BEDROOMS + " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                "pid text, bedrooms text)";
+
+        String createMyPropertyRooms = "CREATE TABLE IF NOT EXISTS " + TABLE_MY_PROPERTY_ROOMS + " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                "pid text, rooms text)";
+
+        String createMyPropertyDescription = "CREATE TABLE IF NOT EXISTS " + TABLE_MY_PROPERTY_DESCRIPTION + " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                "pid text, descriptions text)";
+
+        String createMyPropertyCity = "CREATE TABLE IF NOT EXISTS " + TABLE_MY_PROPERTY_CITY + " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                "pid text, city text)";
+
+        String createMyPropertyArea = "CREATE TABLE IF NOT EXISTS " + TABLE_MY_PROPERTY_AREA + " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                "pid text, area text)";
+
+        String createMyPropertySubArea = "CREATE TABLE IF NOT EXISTS " + TABLE_MY_PROPERTY_SUB_AREA + " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                "pid text, sub_area text)";
+
+        String createMyPropertyAreaType = "CREATE TABLE IF NOT EXISTS " + TABLE_MY_PROPERTY_AREA_TYPE + " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                "pid text, area_type text)";
+
+        String createMyPropertyPropertyType = "CREATE TABLE IF NOT EXISTS " + TABLE_MY_PROPERTY_PROPERTY_TYPE + " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                "pid text, property_type text)";
+
+        String createMyPropertyStatus = "CREATE TABLE IF NOT EXISTS " + TABLE_MY_PROPERTY_STATUS + " (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
+                "pid text, status text)";
 
 
 
@@ -104,6 +164,19 @@ public class DBhelper extends SQLiteOpenHelper {
         db.execSQL(createPropertyStatus);
         db.execSQL(createMyPropertyTable);
         db.execSQL(createMatchPropertyTable);
+        db.execSQL(createMyPropertySector);
+        db.execSQL(createMyPropertyGarages);
+        db.execSQL(createMyPropertyBathrooms);
+        db.execSQL(createMyPropertyBedrooms);
+        db.execSQL(createMyPropertyRooms);
+        db.execSQL(createMyPropertyDescription);
+        db.execSQL(createMyPropertyCity);
+        db.execSQL(createMyPropertyArea);
+        db.execSQL(createMyPropertySubArea);
+        db.execSQL(createMyPropertyAreaType);
+        db.execSQL(createMyPropertyPropertyType);
+        db.execSQL(createMyPropertyStatus);
+
 
 
     }
@@ -479,51 +552,184 @@ public class DBhelper extends SQLiteOpenHelper {
     }
 
 
-    public void addMyPropertyData(String pid, String title, String date, String status, String city, String area,
-                                  String sub_area, String sector, String garages, String bathrooms, String bedrooms,
-                                  String rooms, String description) {
+    public void addMyPropertyData(String pid, String title, String date) {
         ContentValues contentValues = new ContentValues();
 
         contentValues.put("pid", pid);
         contentValues.put("title", title);
         contentValues.put("date", date);
-        contentValues.put("status", status);
-        contentValues.put("city", city);
-        contentValues.put("area", area);
-        contentValues.put("sub_area", sub_area);
-        contentValues.put("sector", sector);
+//        contentValues.put("status", status);
+//        contentValues.put("city", city);
+//        contentValues.put("area", area);
+//        contentValues.put("sub_area", sub_area);
+//        contentValues.put("sector", sector);
+//        contentValues.put("garages", garages);
+//        contentValues.put("bathrooms", bathrooms);
+//        contentValues.put("bedrooms", bedrooms);
+//        contentValues.put("rooms", rooms);
+//        contentValues.put("description", description);
+//        contentValues.put("area_type", areaType);
+//        contentValues.put("property_type", propertyType);
+
+
+        long insert = insertTableData(TABLE_MY_PROPERTY, contentValues);
+        if (insert != -1) {
+            Log.i(TAG, "Row Succesfully Inserted");
+        }
+    }
+
+    public void addMyPropertySectors(String pid, String sectors) {
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put("pid", pid);
+        contentValues.put("sectors", sectors);
+
+        long insert = insertTableData(TABLE_MY_PROPERTY_SECTOR, contentValues);
+        if (insert != -1) {
+            Log.i(TAG, "Row Succesfully Inserted");
+        }
+    }
+//
+    public void adddMyPropertyGarages(String pid, String garages) {
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put("pid", pid);
         contentValues.put("garages", garages);
+
+
+        long insert = insertTableData(TABLE_MY_PROPERTY_GARAGES, contentValues);
+        if (insert != -1) {
+            Log.i(TAG, "Row Succesfully Inserted");
+        }
+    }
+//
+    public void addMyPropertyBathrooms(String pid, String bathrooms) {
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put("pid", pid);
         contentValues.put("bathrooms", bathrooms);
+
+        long insert = insertTableData(TABLE_MY_PROPERTY_BATHROOMS, contentValues);
+        if (insert != -1) {
+            Log.i(TAG, "Row Succesfully Inserted");
+        }
+    }
+//
+    public void addMyPropertyBedrooms(String pid, String bedrooms) {
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put("pid", pid);
         contentValues.put("bedrooms", bedrooms);
+
+
+        long insert = insertTableData(TABLE_MY_PROPERTY_BEDROOMS, contentValues);
+        if (insert != -1) {
+            Log.i(TAG, "Row Succesfully Inserted");
+        }
+    }
+//
+    public void addMyPropertyRooms(String pid, String rooms) {
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put("pid", pid);
         contentValues.put("rooms", rooms);
-        contentValues.put("description", description);
 
 
-        long insert = insertTableData(TABLE_MY_PROPERTY, contentValues);
+        long insert = insertTableData(TABLE_MY_PROPERTY_ROOMS, contentValues);
+        if (insert != -1) {
+            Log.i(TAG, "Row Succesfully Inserted");
+        }
+    }
+//
+    public void addMyPropertyDescription(String pid, String description) {
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put("pid", pid);
+        contentValues.put("descriptions", description);
+
+
+        long insert = insertTableData(TABLE_MY_PROPERTY_DESCRIPTION, contentValues);
         if (insert != -1) {
             Log.i(TAG, "Row Succesfully Inserted");
         }
     }
 
-    public void addMyPropertyStatus(String status) {
+    public void addMyPropertyArea(String pid,String area) {
         ContentValues contentValues = new ContentValues();
 
+        contentValues.put("pid", pid);
+        contentValues.put("area", area);
+
+
+
+        long insert = insertTableData(TABLE_MY_PROPERTY_AREA, contentValues);
+        if (insert != -1) {
+            Log.i(TAG, "Row Succesfully Inserted");
+        }
+    }
+
+    public void addMyPropertySubArea(String pid, String sub_area) {
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put("pid", pid);
+        contentValues.put("sub_area", sub_area);
+
+
+
+        long insert = insertTableData(TABLE_MY_PROPERTY_SUB_AREA, contentValues);
+        if (insert != -1) {
+            Log.i(TAG, "Row Succesfully Inserted");
+        }
+    }
+
+    public void addMyPropertyAreaType(String pid,String area_type) {
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put("pid", pid);
+        contentValues.put("area_type", area_type);
+
+
+        long insert = insertTableData(TABLE_MY_PROPERTY_AREA_TYPE, contentValues);
+        if (insert != -1) {
+            Log.i(TAG, "Row Succesfully Inserted");
+        }
+    }
+
+    public void addMyPropertyPropertyType(String pid,String property_type) {
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put("pid", pid);
+        contentValues.put("property_type", property_type);
+
+
+        long insert = insertTableData(TABLE_MY_PROPERTY_PROPERTY_TYPE, contentValues);
+        if (insert != -1) {
+            Log.i(TAG, "Row Succesfully Inserted");
+        }
+    }
+
+    public void addMyPropertyStatus(String pid,String status) {
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put("pid", pid);
         contentValues.put("status", status);
 
 
-        long insert = insertTableData(TABLE_MY_PROPERTY, contentValues);
+        long insert = insertTableData(TABLE_MY_PROPERTY_STATUS, contentValues);
         if (insert != -1) {
             Log.i(TAG, "Row Succesfully Inserted");
         }
     }
 
-    public void addMyPropertyCity(String city) {
+    public void addMyPropertyCity(String pid,String city) {
         ContentValues contentValues = new ContentValues();
 
+        contentValues.put("pid", pid);
         contentValues.put("city", city);
 
 
-        long insert = insertTableData(TABLE_MY_PROPERTY, contentValues);
+
+        long insert = insertTableData(TABLE_MY_PROPERTY_CITY, contentValues);
         if (insert != -1) {
             Log.i(TAG, "Row Succesfully Inserted");
         }
@@ -534,16 +740,14 @@ public class DBhelper extends SQLiteOpenHelper {
     public ArrayList<MyPropertyForDB> getMyProperty() {
         ArrayList<MyPropertyForDB> arrayList = new ArrayList<>();
         db = getWritableDatabase();
-        String query = "SELECT pid,title,date,status,city FROM " + TABLE_MY_PROPERTY + "";
+        String query = "SELECT pid,title,date FROM " + TABLE_MY_PROPERTY + "";
 
         Cursor c = db.rawQuery(query, null);
         if (c != null && c.moveToFirst()) {
             do {
                 arrayList.add(new MyPropertyForDB(c.getString(0),
                         c.getString(1),
-                        c.getString(2),
-                        c.getString(3),
-                        c.getString(4)));
+                        c.getString(2)));
 
             } while (c.moveToNext());
         }
@@ -556,16 +760,14 @@ public class DBhelper extends SQLiteOpenHelper {
     public ArrayList<MyPropertyForDB> getMyPropertyOnPid(String pid) {
         ArrayList<MyPropertyForDB> arrayList = new ArrayList<>();
         db = getWritableDatabase();
-        String query = "SELECT pid,title,date,status,city FROM " + TABLE_MY_PROPERTY + "";
+        String query = "SELECT pid,title,date FROM " + TABLE_MY_PROPERTY + " WHERE pid = "+pid+"";
 
         Cursor c = db.rawQuery(query, null);
         if (c != null && c.moveToFirst()) {
             do {
                 arrayList.add(new MyPropertyForDB(c.getString(0),
                         c.getString(1),
-                        c.getString(2),
-                        c.getString(3),
-                        c.getString(4)));
+                        c.getString(2)));
 
             } while (c.moveToNext());
         }
@@ -578,7 +780,7 @@ public class DBhelper extends SQLiteOpenHelper {
     public ArrayList<MyPropertyForDB> getMyPropertyAreaSubAreaSector(String pid) {
         ArrayList<MyPropertyForDB> arrayList = new ArrayList<>();
         db = getWritableDatabase();
-        String query = "SELECT area,sub_area,sector FROM " + TABLE_MY_PROPERTY + " WHERE pid = "+pid+"";
+        String query = "SELECT pid,title,date FROM " + TABLE_MY_PROPERTY + " WHERE pid = "+pid+"";
 
         Cursor c = db.rawQuery(query, null);
         if (c != null && c.moveToFirst()) {
@@ -587,6 +789,278 @@ public class DBhelper extends SQLiteOpenHelper {
                 arrayList.add(new MyPropertyForDB(c.getString(0),
                         c.getString(1),
                         c.getString(2)));
+
+            } while (c.moveToNext());
+        }
+        c.close();
+        db.close();
+        return arrayList;
+    }
+
+    public ArrayList<MyPropertyCityForDB> getMyPropertyCity() {
+        ArrayList<MyPropertyCityForDB> arrayList = new ArrayList<>();
+        db = getWritableDatabase();
+        String query = "SELECT pid,city FROM " + TABLE_MY_PROPERTY_CITY + "";
+
+        Cursor c = db.rawQuery(query, null);
+        if (c != null && c.moveToFirst()) {
+            do {
+
+                arrayList.add(new MyPropertyCityForDB(c.getString(0),
+                        c.getString(1)));
+
+            } while (c.moveToNext());
+        }
+        c.close();
+        db.close();
+        return arrayList;
+    }
+
+    public ArrayList<MyPropertyCityForDB> getMyPropertyCityByPid(String pid) {
+        ArrayList<MyPropertyCityForDB> arrayList = new ArrayList<>();
+        db = getWritableDatabase();
+        String query = "SELECT pid,city FROM " + TABLE_MY_PROPERTY_CITY + " WHERE pid = "+pid+"";
+
+        Cursor c = db.rawQuery(query, null);
+        if (c != null && c.moveToFirst()) {
+            do {
+
+                arrayList.add(new MyPropertyCityForDB(c.getString(0),
+                        c.getString(1)));
+
+            } while (c.moveToNext());
+        }
+        c.close();
+        db.close();
+        return arrayList;
+    }
+
+
+    public ArrayList<MyPropertyAreaForDB> getMyPropertyArea(String pid) {
+        ArrayList<MyPropertyAreaForDB> arrayList = new ArrayList<>();
+        db = getWritableDatabase();
+        String query = "SELECT pid,area FROM " + TABLE_MY_PROPERTY_AREA + " WHERE pid = "+pid+"";
+
+        Cursor c = db.rawQuery(query, null);
+        if (c != null && c.moveToFirst()) {
+            do {
+
+                arrayList.add(new MyPropertyAreaForDB(c.getString(0),
+                        c.getString(1)));
+
+            } while (c.moveToNext());
+        }
+        c.close();
+        db.close();
+        return arrayList;
+    }
+
+
+    public ArrayList<MyPropertySubAreaForDB> getMyPropertySubArea(String pid) {
+        ArrayList<MyPropertySubAreaForDB> arrayList = new ArrayList<>();
+        db = getWritableDatabase();
+        String query = "SELECT pid,sub_area FROM " + TABLE_MY_PROPERTY_SUB_AREA + " WHERE pid = "+pid+"";
+
+        Cursor c = db.rawQuery(query, null);
+        if (c != null && c.moveToFirst()) {
+            do {
+
+                arrayList.add(new MyPropertySubAreaForDB(c.getString(0),
+                        c.getString(1)));
+
+            } while (c.moveToNext());
+        }
+        c.close();
+        db.close();
+        return arrayList;
+    }
+
+
+    public ArrayList<MyPropertyAreaTypeForDB> getMyPropertyAreaType(String pid) {
+        ArrayList<MyPropertyAreaTypeForDB> arrayList = new ArrayList<>();
+        db = getWritableDatabase();
+        String query = "SELECT pid,area_type FROM " + TABLE_MY_PROPERTY_AREA_TYPE + " WHERE pid = "+pid+"";
+
+        Cursor c = db.rawQuery(query, null);
+        if (c != null && c.moveToFirst()) {
+            do {
+
+                arrayList.add(new MyPropertyAreaTypeForDB(c.getString(0),
+                        c.getString(1)));
+
+            } while (c.moveToNext());
+        }
+        c.close();
+        db.close();
+        return arrayList;
+    }
+
+
+    public ArrayList<MyPropertyPropertyTypeForDB> getMyPropertyPropertyType(String pid) {
+        ArrayList<MyPropertyPropertyTypeForDB> arrayList = new ArrayList<>();
+        db = getWritableDatabase();
+        String query = "SELECT pid,property_type FROM " + TABLE_MY_PROPERTY_PROPERTY_TYPE + " WHERE pid = "+pid+"";
+
+        Cursor c = db.rawQuery(query, null);
+        if (c != null && c.moveToFirst()) {
+            do {
+
+                arrayList.add(new MyPropertyPropertyTypeForDB(c.getString(0),
+                        c.getString(1)));
+
+            } while (c.moveToNext());
+        }
+        c.close();
+        db.close();
+        return arrayList;
+    }
+
+
+    public ArrayList<MyPropertyStatusForDB> getMyPropertyStatus() {
+        ArrayList<MyPropertyStatusForDB> arrayList = new ArrayList<>();
+        db = getWritableDatabase();
+        String query = "SELECT pid,status FROM " + TABLE_MY_PROPERTY_STATUS + "";
+
+        Cursor c = db.rawQuery(query, null);
+        if (c != null && c.moveToFirst()) {
+            do {
+
+                arrayList.add(new MyPropertyStatusForDB(c.getString(0),
+                        c.getString(1)));
+
+            } while (c.moveToNext());
+        }
+        c.close();
+        db.close();
+        return arrayList;
+    }
+
+    public ArrayList<MyPropertyStatusForDB> getMyPropertyStatusByPid(String pid) {
+        ArrayList<MyPropertyStatusForDB> arrayList = new ArrayList<>();
+        db = getWritableDatabase();
+        String query = "SELECT pid,status FROM " + TABLE_MY_PROPERTY_STATUS + " WHERE pid = "+pid+"";
+
+        Cursor c = db.rawQuery(query, null);
+        if (c != null && c.moveToFirst()) {
+            do {
+
+                arrayList.add(new MyPropertyStatusForDB(c.getString(0),
+                        c.getString(1)));
+
+            } while (c.moveToNext());
+        }
+        c.close();
+        db.close();
+        return arrayList;
+    }
+
+
+    public ArrayList<MyPropertySectorsForDB> getMyPropertySectors(String pid) {
+        ArrayList<MyPropertySectorsForDB> arrayList = new ArrayList<>();
+        db = getWritableDatabase();
+        String query = "SELECT pid,sectors FROM " + TABLE_MY_PROPERTY_SECTOR + " WHERE pid = "+pid+"";
+
+        Cursor c = db.rawQuery(query, null);
+        if (c != null && c.moveToFirst()) {
+            do {
+
+                arrayList.add(new MyPropertySectorsForDB(c.getString(0),
+                        c.getString(1)));
+
+            } while (c.moveToNext());
+        }
+        c.close();
+        db.close();
+        return arrayList;
+    }
+
+    public ArrayList<MyPropertyGaragesForDB> getMyPropertyGarages(String pid) {
+        ArrayList<MyPropertyGaragesForDB> arrayList = new ArrayList<>();
+        db = getWritableDatabase();
+        String query = "SELECT pid,garages FROM " + TABLE_MY_PROPERTY_GARAGES + " WHERE pid = "+pid+"";
+
+        Cursor c = db.rawQuery(query, null);
+        if (c != null && c.moveToFirst()) {
+            do {
+
+                arrayList.add(new MyPropertyGaragesForDB(c.getString(0),
+                        c.getString(1)));
+
+            } while (c.moveToNext());
+        }
+        c.close();
+        db.close();
+        return arrayList;
+    }
+
+    public ArrayList<MyPropertyBathroomsForDB> getMyPropertyBathrooms(String pid) {
+        ArrayList<MyPropertyBathroomsForDB> arrayList = new ArrayList<>();
+        db = getWritableDatabase();
+        String query = "SELECT pid,bathrooms FROM " + TABLE_MY_PROPERTY_BATHROOMS + " WHERE pid = "+pid+"";
+
+        Cursor c = db.rawQuery(query, null);
+        if (c != null && c.moveToFirst()) {
+            do {
+
+                arrayList.add(new MyPropertyBathroomsForDB(c.getString(0),
+                        c.getString(1)));
+
+            } while (c.moveToNext());
+        }
+        c.close();
+        db.close();
+        return arrayList;
+    }
+
+    public ArrayList<MyPropertyBedroomsForDB> getMyPropertyBedrooms(String pid) {
+        ArrayList<MyPropertyBedroomsForDB> arrayList = new ArrayList<>();
+        db = getWritableDatabase();
+        String query = "SELECT pid,bedrooms FROM " + TABLE_MY_PROPERTY_BEDROOMS + " WHERE pid = "+pid+"";
+
+        Cursor c = db.rawQuery(query, null);
+        if (c != null && c.moveToFirst()) {
+            do {
+
+                arrayList.add(new MyPropertyBedroomsForDB(c.getString(0),
+                        c.getString(1)));
+
+            } while (c.moveToNext());
+        }
+        c.close();
+        db.close();
+        return arrayList;
+    }
+
+    public ArrayList<MyPropertyRoomsForDB> getMyPropertyRooms(String pid) {
+        ArrayList<MyPropertyRoomsForDB> arrayList = new ArrayList<>();
+        db = getWritableDatabase();
+        String query = "SELECT pid,rooms FROM " + TABLE_MY_PROPERTY_ROOMS + " WHERE pid = "+pid+"";
+
+        Cursor c = db.rawQuery(query, null);
+        if (c != null && c.moveToFirst()) {
+            do {
+
+                arrayList.add(new MyPropertyRoomsForDB(c.getString(0),
+                        c.getString(1)));
+
+            } while (c.moveToNext());
+        }
+        c.close();
+        db.close();
+        return arrayList;
+    }
+
+    public ArrayList<MyPropertyDescriptionForDB> getMyPropertyDescription(String pid) {
+        ArrayList<MyPropertyDescriptionForDB> arrayList = new ArrayList<>();
+        db = getWritableDatabase();
+        String query = "SELECT pid,descriptions FROM " + TABLE_MY_PROPERTY_DESCRIPTION + " WHERE pid = "+pid+"";
+
+        Cursor c = db.rawQuery(query, null);
+        if (c != null && c.moveToFirst()) {
+            do {
+
+                arrayList.add(new MyPropertyDescriptionForDB(c.getString(0),
+                        c.getString(1)));
 
             } while (c.moveToNext());
         }
@@ -614,8 +1088,8 @@ public class DBhelper extends SQLiteOpenHelper {
         }
     }
 
-    public ArrayList<MyPropertyForDB> getMatchProperty(String pid) {
-        ArrayList<MyPropertyForDB> arrayList = new ArrayList<>();
+    public ArrayList<MathchedPropertyForDB> getMatchProperty(String pid) {
+        ArrayList<MathchedPropertyForDB> arrayList = new ArrayList<>();
         db = getWritableDatabase();
         String query = "SELECT pid,title,post_date,status,city FROM " + TABLE_MATCHED_PROPERTY + " WHERE pid = "+pid+"";
 
@@ -623,7 +1097,7 @@ public class DBhelper extends SQLiteOpenHelper {
         if (c != null && c.moveToFirst()) {
             do {
 
-                arrayList.add(new MyPropertyForDB(c.getString(0),
+                arrayList.add(new MathchedPropertyForDB(c.getString(0),
                         c.getString(1),
                         c.getString(2),
                         c.getString(3),

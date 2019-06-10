@@ -1,33 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#fcfcfc"
     android:layout_height="match_parent"
-    tools:context=".Home2activity">
+    android:orientation="vertical">
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/apBar"
-
-        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp">
+        android:layout_height="match_parent"
+        android:id="@+id/coordinator"
+        android:background="#fcfcfc"
+        tools:context=".Home2activity">
 
-        <android.support.design.widget.CollapsingToolbarLayout
-            app:layout_scrollFlags="exitUntilCollapsed|scroll"
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/apBar"
+
             android:layout_width="match_parent"
-            app:title="Reyan's House"
-            app:titleTextColor="#FFFFFF"
-            app:expandedTitleMarginStart="60dp"
-            app:expandedTitleMarginEnd="50dp"
-            android:background="@drawable/propertyback"
-            android:layout_height="match_parent">
-            <RelativeLayout
+            android:layout_height="250dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/toolbar_title"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <!--<TextView-->
+                android:layout_height="match_parent"
+                android:background="@drawable/propertyback"
+                app:expandedTitleMarginEnd="50dp"
+                app:expandedTitleMarginStart="60dp"
+                app:layout_scrollFlags="exitUntilCollapsed|scroll"
+                app:title="Reyan's House"
+                app:titleTextColor="#FFFFFF">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--<TextView-->
                     <!--android:id="@+id/peic"-->
                     <!--android:textColor="@android:color/white"-->
                     <!--android:layout_margin="10dp"-->
@@ -36,15 +44,15 @@
                     <!--android:layout_height="wrap_content"-->
                     <!--android:text="Price On Sell"-->
                     <!--/>-->
-                <!--<LinearLayout-->
+                    <!--<LinearLayout-->
                     <!--android:layout_marginTop="30dp"-->
-                <!--android:layout_width="150dp"-->
-                <!--android:layout_height="?attr/actionBarSize"-->
+                    <!--android:layout_width="150dp"-->
+                    <!--android:layout_height="?attr/actionBarSize"-->
 
-                <!--android:layout_alignParentRight="true"-->
-                <!--android:background="@drawable/colorsnew"-->
-                <!--android:orientation="vertical">-->
-                <!--<TextView-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:background="@drawable/colorsnew"-->
+                    <!--android:orientation="vertical">-->
+                    <!--<TextView-->
 
                     <!--android:layout_width="match_parent"-->
                     <!--android:layout_height="wrap_content"-->
@@ -53,522 +61,457 @@
                     <!--android:textColor="@android:color/white"-->
                     <!--android:textSize="30dp" />-->
 
-            <!--</LinearLayout>-->
-            </RelativeLayout>
-            <android.support.v7.widget.Toolbar
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
-                app:popupTheme="@style/Base.AlertDialog.AppCompat.Light"></android.support.v7.widget.Toolbar>
-        </android.support.design.widget.CollapsingToolbarLayout>
+                    <!--</LinearLayout>-->
+                </RelativeLayout>
+
+                <android.support.v7.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/Base.AlertDialog.AppCompat.Light"></android.support.v7.widget.Toolbar>
+            </android.support.design.widget.CollapsingToolbarLayout>
 
 
-    </android.support.design.widget.AppBarLayout>
+        </android.support.design.widget.AppBarLayout>
 
 
-    <android.support.v4.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-        <RelativeLayout
-
-
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scrollView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <GridLayout
-                android:layout_below="@+id/date_and_views"
-                android:id="@+id/header_details"
-                android:layout_centerInParent="true"
-                android:columnCount="2"
-                android:rowCount="2"
-                android:padding="20dp"
-                android:layout_centerHorizontal="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <android.support.v7.widget.CardView
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-                    android:layout_margin="15dp"
-                    >
-                    <RelativeLayout
+            <RelativeLayout
 
-                        android:layout_width="120dp"
-                        android:layout_height="120dp">
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="7dp"
-                            android:id="@+id/bar_imaqe"
-                            android:layout_width="80dp"
-                            android:layout_height="60dp"
-                            android:src="@drawable/bar" />
-                        <TextView
-                            android:id="@+id/id_text"
-                            android:gravity="center"
-                            android:layout_below="@+id/bar_imaqe"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Property ID"
-                            android:layout_centerHorizontal="true"
-                            />
-                        <TextView
-                            android:id="@+id/id_value"
-                            android:layout_centerHorizontal="true"
-                            android:layout_below="@+id/id_text"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="03403"
-                            android:textColor="@android:color/black"
-                            />
-
-                    </RelativeLayout>
-
-                </android.support.v7.widget.CardView>
-                <android.support.v7.widget.CardView
-                    android:padding="10dp"
-                    android:layout_margin="15dp"
-                    >
-                    <RelativeLayout
-                        android:layout_width="120dp"
-                        android:layout_height="120dp">
-                        <de.hdodenhof.circleimageview.CircleImageView
-
-                            android:layout_marginTop="7dp"
-                            android:layout_width="80dp"
-                            android:id="@+id/size_imaqe"
-                            android:layout_height="60dp"
-                            android:src="@drawable/size"/>
-                        <TextView
-                            android:id="@+id/size_text"
-                            android:gravity="center"
-                            android:layout_below="@+id/size_imaqe"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Property ID"
-                            android:layout_centerHorizontal="true"
-                            />
-                        <TextView
-                            android:id="@+id/size_value"
-                            android:layout_centerHorizontal="true"
-                            android:layout_below="@+id/size_text"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="03403"
-                            android:textColor="@android:color/black"
-                            />
-
-                    </RelativeLayout>
-
-                </android.support.v7.widget.CardView>
-                <android.support.v7.widget.CardView
-                    android:padding="10dp"
-                    android:layout_margin="15dp"
-                    >
-                    <RelativeLayout
-                        android:layout_width="120dp"
-                        android:layout_height="120dp">
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:layout_width="80dp"
-                            android:layout_marginTop="7dp"
-                            android:id="@+id/bed_imaqe"
-                            android:layout_height="60dp"
-                            android:src="@drawable/bath"/>
-                        <TextView
-                            android:id="@+id/bed_text"
-                            android:gravity="center"
-                            android:layout_below="@+id/bed_imaqe"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Property ID"
-                            android:layout_centerHorizontal="true"
-                            />
-                        <TextView
-                            android:id="@+id/bed_value"
-                            android:layout_centerHorizontal="true"
-                            android:layout_below="@+id/bed_text"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="03403"
-                            android:textColor="@android:color/black"
-                            />
-
-                    </RelativeLayout>
-
-                </android.support.v7.widget.CardView>
-                <android.support.v7.widget.CardView
-                    android:padding="10dp"
-                    android:layout_margin="15dp"
-                    >
-                    <RelativeLayout
-
-                        android:layout_width="120dp"
-                        android:layout_height="120dp">
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:layout_width="80dp"
-                            android:layout_marginTop="7dp"
-                            android:id="@+id/bath_imaqe"
-                            android:layout_height="60dp"
-                            android:src="@drawable/bednew"/>
-                        <TextView
-                            android:id="@+id/bath_text"
-                            android:gravity="center"
-                            android:layout_below="@+id/bath_imaqe"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Property ID"
-                            android:layout_centerHorizontal="true"
-                            />
-                        <TextView
-                            android:id="@+id/bath_value"
-                            android:layout_centerHorizontal="true"
-                            android:layout_below="@+id/bath_text"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="03403"
-                            android:textColor="@android:color/black"
-                            />
-
-                    </RelativeLayout>
-
-                </android.support.v7.widget.CardView>
-
-            </GridLayout>
-
-<LinearLayout
-    android:layout_centerHorizontal="true"
-    android:id="@+id/date_and_views"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    >
-
-
-    <TextView
-        android:padding="10dp"
-        android:drawableLeft="@drawable/calendra"
-        android:id="@+id/date_desc"
-        android:gravity="center"
-        android:text="02-May-2019"
-        android:drawablePadding="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:drawablePadding="10dp"
-        android:padding="10dp"
-        android:drawableLeft="@drawable/eyeopen"
-        android:id="@+id/views_desc"
-        android:gravity="center"
-        android:text="5 views"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-</LinearLayout>
-
-            <TextView
-
-                android:id="@+id/description"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_below="@+id/header_details"
-                android:layout_marginLeft="30dp"
-                android:text="Description"
-                android:textColor="@color/colorPrimaryNext"
-                android:textSize="18dp"
-               />
-            <LinearLayout
-
-                android:layout_marginTop="10dp"
-                android:background="@color/colorPrimary"
-                android:layout_below="@+id/description"
-                android:layout_width="150dp"
-                android:layout_height="2dp"></LinearLayout>
-
-            <TextView
-                android:layout_marginTop="10dp"
-                android:id="@+id/desc_text"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/description"
-                android:padding="10dp"
-                android:text="Essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." />
-
-            <TextView
-                android:layout_marginLeft="30dp"
-                android:id="@+id/adress"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/desc_text"
-
-                android:text="Address"
-                android:textColor="@color/colorPrimaryNext"
-                android:textSize="18dp" />
-            <LinearLayout
-                android:padding="10dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/colorPrimary"
-                android:layout_below="@+id/adress"
-                android:layout_width="150dp"
-                android:layout_height="2dp"></LinearLayout>
-            <LinearLayout
-
-                android:id="@+id/lladd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/adress"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
+                android:layout_height="match_parent">
 
                 <LinearLayout
+                    android:id="@+id/date_and_views"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
 
                     <TextView
+                        android:id="@+id/date_desc"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:text="Country" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:text="City" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:text="Area" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:text="Sub-Area" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:text="Sector" />
+                        android:layout_below="@+id/date_and_views"
+                        android:layout_alignStart="@+id/date_and_views"
+                        android:drawableLeft="@drawable/calendra"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="02-May-2019" />
                 </LinearLayout>
 
-                <LinearLayout
+                <TextView
+
+                    android:id="@+id/description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+
+                    android:layout_below="@+id/date_and_views"
                     android:layout_marginLeft="30dp"
+                    android:text="Description"
+                    android:textColor="@color/colorPrimaryNext"
+                    android:textSize="18dp" />
+
+                <LinearLayout
+
+                    android:id="@+id/linear_desc_line"
+                    android:layout_width="150dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/description"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal"></LinearLayout>
+
+                <TextView
+                    android:id="@+id/desc_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/description"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:id="@+id/adress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/desc_text"
+                    android:layout_marginLeft="30dp"
+
+                    android:text="Address"
+                    android:textColor="@color/colorPrimaryNext"
+                    android:textSize="18dp" />
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/adress"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="10dp"></LinearLayout>
+
+                <LinearLayout
+
+                    android:id="@+id/lladd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/adress"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:id="@+id/tv_city"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:text="Pakistan"
-                        android:textColor="@android:color/black" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/tv_area"
-                        android:layout_margin="5dp"
-                        android:text="Karachi"
-                        android:textColor="@android:color/black" />
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/tv_sub_area"
-                        android:layout_margin="5dp"
-                        android:text="Bahria Town Karachi"
-                        android:textColor="@android:color/black" />
+                    <LinearLayout
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:text="Bahria Apartment"
-                        android:textColor="@android:color/black" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/tv_sector"
-                        android:layout_margin="5dp"
-                        android:text="Bahria Apartment - 4 bed"
-                        android:textColor="@android:color/black" />
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:text="Country" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/pid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:text="Pakistan" />
+
+
+                    </LinearLayout>
+
 
                 </LinearLayout>
-            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+
+                    android:orientation="horizontal">
+
+                    <LinearLayout
 
 
-            <android.support.design.widget.TabLayout
-                android:layout_marginTop="10dp"
-                android:id="@+id/tabMode"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="#F1EDED"
+                        android:orientation="horizontal">
 
-                android:layout_width="match_parent"
+                        <TextView
 
-                app:tabSelectedTextColor="@color/colorPrimary"
-                android:layout_height="match_parent"
-                android:layout_below="@id/lladd"
-                app:tabGravity="fill"
-                app:tabMode="fixed" />
-            <android.support.v4.view.ViewPager
-                android:id="@+id/viewpager"
-                android:layout_width="match_parent"
-                android:layout_height="400dp"
-                android:layout_below="@+id/tabMode"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:text="City" />
 
-<LinearLayout
-    android:layout_marginTop="20dp"
-    android:id="@+id/agent_detail"
-    android:layout_below="@+id/viewpager"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    >
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="150dp"
+                    </LinearLayout>
 
-        android:layout_height="150dp"
+                    <LinearLayout
 
-        android:layout_alignTop="@+id/agent_detail"
-        android:src="@drawable/profileavatar"
-        android:layout_alignLeft="@+id/agent_detail" />
+
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="#F1EDED"
+
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+
+
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:text="Area" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_area"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+
+
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="#F1EDED"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:text="Sub Area" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:background="#F1EDED"
+
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_sub_area"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+
+
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="4dp"
+                                android:text="Sector" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_sector"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_margin="4dp" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabMode"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+
+                    android:layout_below="@id/lladd"
+                    android:layout_marginTop="10dp"
+                    app:tabGravity="fill"
+                    app:tabMode="fixed"
+                    app:tabSelectedTextColor="@color/colorPrimary" />
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:layout_below="@+id/tabMode"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+                <!--<LinearLayout-->
+
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="200dp"-->
+                    <!--android:id="@+id/viewpager_linear"-->
+                    <!--android:layout_below="@+id/lladd"-->
+                    <!--android:orientation="vertical"></LinearLayout>-->
+
+
+
+            </RelativeLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
     <LinearLayout
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
+        android:id="@+id/groupbutton"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
-        <TextView
-            android:layout_marginTop="5dp"
-            android:textSize="18sp"
-            android:text="Reyan Ahmed"
-            android:id="@+id/desc_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:visibility="gone"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:weightSum="1">
 
-            android:textSize="12dp"
-            android:text="Property Agent"
-            android:id="@+id/desc_agent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
+        <LinearLayout
+            android:id="@+id/call"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/buttons"
+            android:orientation="horizontal"
+            android:weightSum="0.5">
 
-            android:layout_marginTop="5dp"
-            android:drawableLeft="@drawable/email"
-            android:text="reyana015@gmail.com"
-            android:id="@+id/desc_Email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_weight="0.12"
+                android:padding="5dp"
+                android:src="@drawable/call" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:gravity="center"
+                android:text="CALL"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sms"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/buttons"
+            android:orientation="horizontal"
+            android:weightSum="0.5">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_weight="0.12"
+                android:padding="5dp"
+                android:src="@drawable/sms" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:gravity="center"
+                android:text="SMS"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
     </LinearLayout>
 
-</LinearLayout>
-
-          <LinearLayout
-              android:layout_below="@+id/agent_detail"
-              android:id="@+id/customer_message"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              tools:ignore="UnknownId">
-
-              <android.support.design.widget.TextInputLayout
-
-                  android:layout_marginTop="10dp"
-                  android:layout_margin="10dp"
-                  android:id="@+id/full_name"
-                  android:layout_centerHorizontal="true"
-                  style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content">
-                  <android.support.design.widget.TextInputEditText
-
-                      android:id="@+id/full_name_ed"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:hint="Full Name *" />
-              </android.support.design.widget.TextInputLayout>
-
-              <android.support.design.widget.TextInputLayout
-
-                  android:layout_marginTop="10dp"
-                  android:layout_margin="10dp"
-                  android:id="@+id/phone_number"
-                  android:layout_centerHorizontal="true"
-                  style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content">
-                  <android.support.design.widget.TextInputEditText
-
-                      android:id="@+id/phone_number_ed"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:hint="Phone Number *" />
-              </android.support.design.widget.TextInputLayout>
-
-              <android.support.design.widget.TextInputLayout
-
-              android:layout_marginTop="10dp"
-              android:layout_margin="10dp"
-              android:id="@+id/email_adress"
-              android:layout_centerHorizontal="true"
-              style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content">
-              <android.support.design.widget.TextInputEditText
-
-                  android:id="@+id/email_adress_ed"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:hint="Email *" />
-          </android.support.design.widget.TextInputLayout>
-              <android.support.design.widget.TextInputLayout
-
-                  android:layout_marginTop="10dp"
-                  android:layout_margin="10dp"
-                  android:id="@+id/input_Messege_text"
-                  android:layout_centerHorizontal="true"
-                  style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content">
-                  <android.support.design.widget.TextInputEditText
-
-                      android:gravity="top"
-                      android:id="@+id/input_Messege_text_ed"
-                      android:layout_width="match_parent"
-                      android:layout_height="200dp"
-                      android:hint="Message *" />
-              </android.support.design.widget.TextInputLayout>
-
-          </LinearLayout>
-            <Button
-                android:layout_below="@id/customer_message"
-                android:layout_margin="10dp"
-                android:textColor="@android:color/white"
-                android:text="Submit Request"
-                android:id="@+id/sumit_btn"
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/buttons"/>
-            <LinearLayout
-
-                android:layout_below="@+id/sumit_btn"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"></LinearLayout>
-
-        </RelativeLayout>
-
-
-    </android.support.v4.widget.NestedScrollView>
-</android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>

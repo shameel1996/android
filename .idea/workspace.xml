@@ -91,7 +91,11 @@
         <repository>Google,Android Repository</repository>
       </library-update>
     </library-updates>
+<<<<<<< HEAD
+    <last-search-timestamp>1558167598861</last-search-timestamp>
+=======
     <last-search-timestamp>1558167696115</last-search-timestamp>
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -100,6 +104,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b37f5f9-a2f5-4a0d-a31f-cf28a05aea61" name="Default" comment="init">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v21/menuicon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileChanges/last-build.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileContent/fileContent.lock" beforeDir="false" />
@@ -116,6 +121,121 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/fileHashes/fileHashes.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/fileHashes/fileHashes.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/gc.properties" beforeDir="false" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_esotericsoftware_kryo_4_0_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_esotericsoftware_minlog_1_3_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_esotericsoftware_reflectasm_1_11_3_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__de_javakaffee_kryo_serializers_0_40_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_paperdb_paperdb_2_6_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_objenesis_objenesis_2_5_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_ow2_asm_asm_5_0_4_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/android.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Prevelent/Prevalent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v21/cross.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v21/menub.png" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Adpaters/packageAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Classes/PackageDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/GeneratedInvoiceActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/InvoiceActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/PackageActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Splash.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v21/homeorang.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v21/homeorange.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v21/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v21/pdf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v21/pdficon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable-v21/submitproperty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/blackcorner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ripplefactor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/ic_launcher-web.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/ic_launcher_abc-web.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/ic_launcher_new-web.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/ic_launcher_new_icon-web.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/ic_launcher_new_icon_new-web.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/ic_launcher_new_icon_new_nerw-web.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_generated_invoice.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_invoice.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_package.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/buy_packages.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/introvedio.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/raw/splash.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-anydpi-v26/ic_launcher_abc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-anydpi-v26/ic_launcher_abc_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-anydpi-v26/ic_launcher_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-anydpi-v26/ic_launcher_new_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-hdpi/ic_launcher_abc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-hdpi/ic_launcher_abc_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-hdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-hdpi/ic_launcher_foreground_abc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-hdpi/ic_launcher_foreground_new.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-hdpi/ic_launcher_new.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-hdpi/ic_launcher_new_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-hdpi/ic_launcher_new_icon_new.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-hdpi/ic_launcher_new_icon_new_nerw.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-hdpi/ic_launcher_new_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-mdpi/ic_launcher_abc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-mdpi/ic_launcher_abc_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-mdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-mdpi/ic_launcher_foreground_abc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-mdpi/ic_launcher_foreground_new.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-mdpi/ic_launcher_new.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-mdpi/ic_launcher_new_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-mdpi/ic_launcher_new_icon_new.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-mdpi/ic_launcher_new_icon_new_nerw.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-mdpi/ic_launcher_new_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xhdpi/ic_launcher_abc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xhdpi/ic_launcher_abc_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xhdpi/ic_launcher_foreground_abc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xhdpi/ic_launcher_foreground_new.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xhdpi/ic_launcher_new.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xhdpi/ic_launcher_new_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xhdpi/ic_launcher_new_icon_new.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xhdpi/ic_launcher_new_icon_new_nerw.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xhdpi/ic_launcher_new_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xxhdpi/ic_launcher_abc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xxhdpi/ic_launcher_abc_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xxhdpi/ic_launcher_foreground_abc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xxhdpi/ic_launcher_foreground_new.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xxhdpi/ic_launcher_new.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xxhdpi/ic_launcher_new_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xxhdpi/ic_launcher_new_icon_new.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xxhdpi/ic_launcher_new_icon_new_nerw.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xxhdpi/ic_launcher_new_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xxxhdpi/ic_launcher_abc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xxxhdpi/ic_launcher_abc_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xxxhdpi/ic_launcher_foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xxxhdpi/ic_launcher_foreground_abc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xxxhdpi/ic_launcher_foreground_new.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xxxhdpi/ic_launcher_new.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xxxhdpi/ic_launcher_new_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xxxhdpi/ic_launcher_new_icon_new.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xxxhdpi/ic_launcher_new_icon_new_nerw.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xxxhdpi/ic_launcher_new_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/values/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/values/ic_launcher_background_abc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/res/values/ic_launcher_background_new.xml" afterDir="false" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -321,7 +441,36 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_enter_properpty_details2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_enter_properpty_details2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_enter_property_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_enter_property_detail.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/property.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/property.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_my_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_my_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_property_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_property_details.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_in.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_in.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_submit_property.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_submit_property.xml" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_my_property.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_my_property.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/gv_items.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/gv_items.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/homelayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/homelayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/activity_home_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/activity_home_drawer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/activity_my_property_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/activity_my_property_drawer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/app_bar_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/content_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/content_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/filter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/filter.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/com/android/support/constraint/group-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/com/android/support/group-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/com/android/support/test/espresso/group-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/com/android/support/test/group-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/maven.google/master-index.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/intermediates/lint-cache/sdk-registry.xml/sdk-registry.xml" beforeDir="false" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -344,38 +493,129 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterProperptyDetails2Activity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="6953">
               <caret line="475" column="20" selection-start-line="475" selection-start-column="20" selection-end-line="475" selection-end-column="20" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="659" selection-start-line="659" selection-end-line="659" />
+=======
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="367" selection-start-line="367" selection-end-line="367" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Adpaters/packageAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="49" column="102" selection-start-line="49" selection-start-column="102" selection-end-line="49" selection-end-column="102" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#521#522#0" expanded="true" />
+                <element signature="e#545#546#0" expanded="true" />
+              </folding>
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Adpaters/cityAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+=======
+<<<<<<< HEAD
+      <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="199" selection-start-line="199" selection-end-line="199" />
+=======
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/HomeActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="190" column="8" selection-start-line="190" selection-start-column="8" selection-end-line="190" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3276">
+              <caret line="67" column="38" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="38" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Adpaters/PropertyAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="389">
               <caret line="129" column="61" selection-start-line="129" selection-start-column="61" selection-end-line="129" selection-end-column="61" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/signInActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="69" selection-start-line="69" selection-end-line="69" />
+=======
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+        <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b5835f462336c416d2c62de240cf32c6/jars/classes.jar!/android/support/v7/widget/RecyclerView.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="4290" column="26" selection-start-line="4290" selection-start-column="26" selection-end-line="4290" selection-end-column="26" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Adpaters/PropertyAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="58" column="13" lean-forward="true" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+=======
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/property.xml">
           <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="697">
               <caret line="41" column="11" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="297">
+              <caret line="109" selection-start-line="109" selection-end-line="109" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+            <state relative-caret-position="-12">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
             </state>
           </provider>
         </entry>
@@ -383,34 +623,95 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterPropertyDetailActivity.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="127">
               <caret line="257" selection-start-line="257" selection-end-line="257" />
               <folding>
                 <element signature="e#9567#10009#0" expanded="true" />
                 <element signature="e#10008#10009#0" expanded="true" />
               </folding>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <state relative-caret-position="268">
+              <caret line="552" selection-start-line="552" selection-end-line="552" />
+=======
+            <state relative-caret-position="111">
+              <caret line="144" column="51" selection-start-line="144" selection-start-column="51" selection-end-line="144" selection-end-column="51" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+            <state relative-caret-position="187">
+              <caret line="11" column="43" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="43" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Fragments/DetailsFragments.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="353">
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_enter_property_detail.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="347" column="48" selection-start-line="347" selection-start-column="48" selection-end-line="347" selection-end-column="48" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Rest/ApiUtil.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="255">
               <caret line="15" selection-start-line="15" selection-end-line="15" />
+=======
+            <state relative-caret-position="246">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Rest/RetrofitClient.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/HomeActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="121" selection-start-line="121" selection-end-line="121" />
+=======
+        <entry file="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/example/vmatchu/BuildConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/HomeActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="89">
+              <caret line="258" column="80" selection-start-line="258" selection-start-column="80" selection-end-line="258" selection-end-column="80" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/GalleryAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -422,11 +723,37 @@
                 <element signature="e#863#864#0" expanded="true" />
                 <element signature="e#1494#1856#0" expanded="true" />
               </folding>
+=======
+      <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditPurchasePropertyActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="872" selection-start-line="872" selection-end-line="872" />
+              <folding>
+                <element signature="e#7327#7493#0" expanded="true" />
+                <element signature="e#7492#7493#0" expanded="true" />
+              </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/ViewPagerAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Classes/PropertiesDetails.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/HomeActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="246">
@@ -434,16 +761,80 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.0.2/2e1d97eec8a4c7517486234666d8b8245f63ae89/retrofit-2.0.2-sources.jar!/retrofit2/ExecutorCallAdapterFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="69" selection-start-line="69" selection-end-line="69" />
+              <folding>
+                <element signature="e#2115#2547#0" expanded="true" />
+                <element signature="e#2546#2547#0" expanded="true" />
+              </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/submitProperty.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="782">
+              <caret line="63" column="11" selection-start-line="63" selection-start-column="11" selection-end-line="63" selection-end-column="11" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/buy_packages.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="92" column="46" selection-start-line="92" selection-start-column="33" selection-end-line="92" selection-end-column="46" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/show_city.xml">
           <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
               <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/os/Handler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="891" selection-start-line="891" selection-end-line="891" />
+=======
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/SignUpActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-527">
+              <caret line="45" column="54" selection-start-line="45" selection-start-column="54" selection-end-line="45" selection-end-column="54" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Classes/PackageDetails.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="31" column="28" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="28" />
+              <folding>
+                <element signature="e#499#500#0" expanded="true" />
+                <element signature="e#543#544#0" expanded="true" />
+                <element signature="e#601#602#0" expanded="true" />
+                <element signature="e#646#647#0" expanded="true" />
+                <element signature="e#694#695#0" expanded="true" />
+                <element signature="e#729#730#0" expanded="true" />
+                <element signature="e#788#789#0" expanded="true" />
+                <element signature="e#837#838#0" expanded="true" />
+                <element signature="e#484#485#0" expanded="true" />
+                <element signature="e#517#518#0" expanded="true" />
+                <element signature="e#557#558#0" expanded="true" />
+                <element signature="e#593#594#0" expanded="true" />
+                <element signature="e#628#629#0" expanded="true" />
+                <element signature="e#659#660#0" expanded="true" />
+                <element signature="e#698#699#0" expanded="true" />
+                <element signature="e#736#737#0" expanded="true" />
+              </folding>
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
             </state>
           </provider>
         </entry>
@@ -473,15 +864,36 @@
       <find>@field</find>
       <find>extra</find>
       <find>wher</find>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <find>alertDialog</find>
+      <find>startActivity</find>
+      <find>EnterProperptyDetails2Activity</find>
+=======
+      <find>btn</find>
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
       <find>ini</find>
       <find>onBac</find>
+<<<<<<< HEAD
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
       <find>status</find>
+<<<<<<< HEAD
       <find>onclick</find>
       <find>textWatcherMin</find>
       <find>btn</find>
       <find>path</find>
       <find>adap</find>
+=======
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
     </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>EditPurchase</replace>
+      <replace>EditPurchasePropertyActivity</replace>
+    </replaceStrings>
   </component>
   <component name="GenerateSignedApkSettings">
     <option name="BUILD_TARGET_KEY" value="apk" />
@@ -492,6 +904,80 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyStatus.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyData.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyCity.java" />
+        <option value="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/app_bar_match_property.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/activity_my_property_drawer.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_match_property.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/content_match_property.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Adpaters/MatchPropertyAdapter.java" />
+=======
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/CustomAlert/CustomAlert.java" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/MatchPropertyActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyArea.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertySubArea.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertySector.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MatchedPropertyResponse.java" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/SharedPrefs/SaveInSharedPreference.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/RemainingMoneyResponse.java" />
+=======
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyForDB.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/property.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/SharedPrefs/SaveInSharedPreference.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/RemainingMoneyResponse.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Rest/APIService.java" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditPropertyActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_property.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_sell_property.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyGarages.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyBathrooms.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyBedrooms.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyRooms.java" />
+=======
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyDescription.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/details_fragment.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyAreaType.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyPropertyType.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyResponse.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_property_details.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/CustomAlert/CustomAlert.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterPropertyDetailActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterProperptyDetails2Activity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_purchase_property.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Rest/ApiUtil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyForDB.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Models/MyPropertyBathroomsForDB.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Models/MyPropertyBedroomsForDB.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Models/MyPropertyDescriptionForDB.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Models/MyPropertyGaragesForDB.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Models/MyPropertyRoomsForDB.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Models/MyPropertySectorsForDB.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/PropertyDetailsActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Fragments/DetailsFragments.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Adpaters/PropertyAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Rest/APIService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditPurchasePropertyActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditSellPropertyActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/property.xml" />
+=======
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Rest/ApiUtil.java" />
+=======
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Contact.java" />
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
         <option value="$PROJECT_DIR$/app/src/main/res/layout/gv_items.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/submitProperty.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_my_property.xml" />
@@ -505,6 +991,9 @@
         <option value="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Splash.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/MainActivity.java" />
+<<<<<<< HEAD
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/blackcorner.xml" />
@@ -514,6 +1003,11 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_generated_invoice.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyForDB.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/filter.xml" />
+<<<<<<< HEAD
+=======
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java" />
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_in.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_submit_property.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml" />
@@ -560,7 +1054,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="Scope" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <pane id="Scope" />
+=======
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -593,11 +1099,62 @@
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="PackagesPane" />
+=======
+      <pane id="Scope" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
       <pane id="AndroidView">
         <subPane>
           <expand>
             <path>
+<<<<<<< HEAD
+              <item name="VmatchU new" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="VmatchU new" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+            </path>
+            <path>
+              <item name="VmatchU new" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="vmatchu" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VmatchU new" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="vmatchu" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="Adpaters" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VmatchU new" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="vmatchu" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VmatchU new" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="vmatchu" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="Pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VmatchU new" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="vmatchu" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="Rest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VmatchU new" type="1abcf292:AndroidViewProjectNode" />
+=======
               <item name="android" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
             </path>
@@ -633,16 +1190,72 @@
             </path>
             <path>
               <item name="android" type="1abcf292:AndroidViewProjectNode" />
+<<<<<<< HEAD
+=======
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="vmatchu" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="SharedPrefs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="android" type="1abcf292:AndroidViewProjectNode" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+<<<<<<< HEAD
+              <item name="VmatchU new" type="1abcf292:AndroidViewProjectNode" />
+=======
+              <item name="android" type="1abcf292:AndroidViewProjectNode" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+<<<<<<< HEAD
+              <item name="VmatchU new" type="1abcf292:AndroidViewProjectNode" />
+=======
+              <item name="android" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="android" type="1abcf292:AndroidViewProjectNode" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+=======
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+      <pane id="PackagesPane" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+<<<<<<< HEAD
+    <property name="device.picker.selection" value="TRJDU19327001608" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+=======
     <property name="device.picker.selection" value="ZY224MVJW7" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-v21" />
     <property name="last_opened_file_path" value="E:/VmatchUnew/vmatchu" />
@@ -653,6 +1266,7 @@
   </component>
   <component name="PsdUISettings">
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -661,12 +1275,27 @@
     <key name="android.template.packageName">
       <recent name="com.example.vmatchu" />
     </key>
+<<<<<<< HEAD
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.example.vmatchu.Adpaters" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\vmatchUKnova\android\app\src\main\res\drawable-v21" />
       <recent name="E:\vmatchUKnova\android\app\src\main\res\raw" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <key name="android.template.parentActivityClass">
+      <recent name="" />
+=======
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\vmatchUKnova\android\app\src\main\res\drawable-v21" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\vmatchUKnova\android\app\src\main\res\mipmap-mdpi" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
     </key>
   </component>
   <component name="RunDashboard">
@@ -782,7 +1411,7 @@
     </recent_temporary>
   </component>
   <component name="SvnConfiguration">
-    <configuration />
+    <configuration>C:\Users\pc1\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -837,7 +1466,15 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18003026" />
+=======
+<<<<<<< HEAD
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22239032" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18003026" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Build Variants" order="3" side_tool="true" />
@@ -848,8 +1485,30 @@
       <window_info id="Resources Explorer" order="8" weight="0.32980332" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.2913257" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" weight="0.47135842" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2651391" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" weight="0.28805238" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49848714" weight="0.1816694" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50075644" side_tool="true" weight="0.41734862" />
+      <window_info anchor="bottom" id="Logcat" order="10" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.43698853" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.45662847" />
+=======
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.26350245" />
+=======
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.2913257" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" weight="0.35679215" />
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
@@ -858,7 +1517,12 @@
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5030257" side_tool="true" weight="0.2487725" />
       <window_info anchor="bottom" id="Logcat" order="10" weight="0.3289689" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.82487726" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.55482817" />
+=======
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.5531915" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -921,41 +1585,105 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterPropertyDetailActivity.java</url>
+<<<<<<< HEAD
           <line>809</line>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <line>810</line>
+=======
+          <line>799</line>
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+          <line>801</line>
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterPropertyDetailActivity.java</url>
+<<<<<<< HEAD
           <line>825</line>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <line>826</line>
+=======
+          <line>815</line>
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+          <line>817</line>
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterPropertyDetailActivity.java</url>
+<<<<<<< HEAD
           <line>840</line>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <line>841</line>
+=======
+          <line>830</line>
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+          <line>832</line>
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterProperptyDetails2Activity.java</url>
+<<<<<<< HEAD
           <line>798</line>
+=======
+<<<<<<< HEAD
+          <line>791</line>
+=======
+          <line>787</line>
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterProperptyDetails2Activity.java</url>
+<<<<<<< HEAD
           <line>808</line>
+=======
+<<<<<<< HEAD
+          <line>801</line>
+=======
+          <line>797</line>
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterProperptyDetails2Activity.java</url>
+<<<<<<< HEAD
           <line>812</line>
+=======
+<<<<<<< HEAD
+          <line>805</line>
+=======
+          <line>801</line>
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+<<<<<<< HEAD
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterPropertyDetailActivity.java</url>
+          <line>512</line>
+=======
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterProperptyDetails2Activity.java</url>
           <line>826</line>
           <properties />
@@ -963,19 +1691,51 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterPropertyDetailActivity.java</url>
+<<<<<<< HEAD
           <line>534</line>
+=======
+<<<<<<< HEAD
+          <line>524</line>
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+          <line>526</line>
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterPropertyDetailActivity.java</url>
+<<<<<<< HEAD
           <line>541</line>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <line>519</line>
+=======
+          <line>531</line>
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+          <line>533</line>
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterPropertyDetailActivity.java</url>
+<<<<<<< HEAD
           <line>508</line>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <line>674</line>
+=======
+          <line>498</line>
+=======
+          <line>500</line>
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
@@ -993,19 +1753,51 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterPropertyDetailActivity.java</url>
+<<<<<<< HEAD
           <line>674</line>
+=======
+<<<<<<< HEAD
+          <line>664</line>
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+          <line>666</line>
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterPropertyDetailActivity.java</url>
+<<<<<<< HEAD
           <line>683</line>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <line>683</line>
+=======
+          <line>673</line>
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+          <line>675</line>
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterPropertyDetailActivity.java</url>
+<<<<<<< HEAD
           <line>633</line>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <line>832</line>
+=======
+          <line>623</line>
+=======
+          <line>625</line>
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
@@ -1017,31 +1809,79 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterPropertyDetailActivity.java</url>
+<<<<<<< HEAD
           <line>831</line>
+=======
+<<<<<<< HEAD
+          <line>821</line>
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+          <line>823</line>
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterPropertyDetailActivity.java</url>
+<<<<<<< HEAD
           <line>552</line>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <line>552</line>
+=======
+          <line>542</line>
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+          <line>544</line>
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterPropertyDetailActivity.java</url>
+<<<<<<< HEAD
           <line>550</line>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <line>541</line>
+=======
+          <line>540</line>
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+          <line>542</line>
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterProperptyDetails2Activity.java</url>
+<<<<<<< HEAD
           <line>780</line>
+=======
+<<<<<<< HEAD
+          <line>772</line>
+=======
+          <line>769</line>
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterProperptyDetails2Activity.java</url>
+<<<<<<< HEAD
           <line>500</line>
+=======
+<<<<<<< HEAD
+          <line>645</line>
+=======
+          <line>492</line>
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="30" />
         </line-breakpoint>
@@ -1059,17 +1899,25 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterProperptyDetails2Activity.java</url>
+<<<<<<< HEAD
           <line>653</line>
+=======
+          <line>642</line>
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+<<<<<<< HEAD
+=======
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterProperptyDetails2Activity.java</url>
           <line>606</line>
           <properties />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/signInActivity.java</url>
           <line>76</line>
           <properties />
@@ -1113,37 +1961,129 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java</url>
+<<<<<<< HEAD
           <line>310</line>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <line>576</line>
+=======
+          <line>278</line>
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+          <line>308</line>
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Adpaters/PropertyAdapter.java</url>
+<<<<<<< HEAD
           <line>61</line>
+=======
+<<<<<<< HEAD
+          <line>53</line>
+=======
+          <line>56</line>
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+<<<<<<< HEAD
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java</url>
+<<<<<<< HEAD
+          <line>564</line>
+=======
+          <line>251</line>
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+          <properties />
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java</url>
+<<<<<<< HEAD
+          <line>562</line>
+=======
+          <line>249</line>
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+          <properties />
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+=======
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java</url>
+<<<<<<< HEAD
           <line>534</line>
+=======
+          <line>642</line>
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+<<<<<<< HEAD
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java</url>
+<<<<<<< HEAD
+          <line>559</line>
+=======
+          <line>245</line>
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+          <properties />
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+=======
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java</url>
+<<<<<<< HEAD
           <line>508</line>
+=======
+          <line>616</line>
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java</url>
+<<<<<<< HEAD
           <line>551</line>
+=======
+          <line>659</line>
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java</url>
+<<<<<<< HEAD
           <line>352</line>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <line>618</line>
+=======
+          <line>261</line>
+          <properties />
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java</url>
+          <line>262</line>
+          <properties />
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java</url>
+          <line>320</line>
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+          <line>350</line>
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="63" />
         </line-breakpoint>
@@ -1173,7 +2113,11 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java</url>
+<<<<<<< HEAD
           <line>62</line>
+=======
+          <line>70</line>
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="69" />
         </line-breakpoint>
@@ -1213,13 +2157,21 @@
           <properties />
           <option name="timeStamp" value="76" />
         </line-breakpoint>
+<<<<<<< HEAD
+<<<<<<< HEAD
         <line-breakpoint enabled="true" type="java-line">
+<<<<<<< HEAD
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/PackageActivity.java</url>
           <line>29</line>
+=======
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Adpaters/MatchPropertyAdapter.java</url>
+          <line>40</line>
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
-          <option name="timeStamp" value="83" />
+          <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+<<<<<<< HEAD
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterPropertyDetailActivity.java</url>
           <line>257</line>
           <properties />
@@ -1240,21 +2192,474 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/GalleryAdapter.java</url>
           <line>60</line>
+=======
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java</url>
+          <line>192</line>
+          <properties />
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Adpaters/PropertyAdapter.java</url>
+          <line>81</line>
+          <properties />
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/PropertyDetailsActivity.java</url>
+          <line>56</line>
+          <properties />
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java</url>
+          <line>690</line>
+          <properties />
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java</url>
+          <line>712</line>
+          <properties />
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Fragments/DetailsFragments.java</url>
+          <line>46</line>
+          <properties />
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/PropertyDetailsActivity.java</url>
+          <line>97</line>
+          <properties />
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Fragments/DetailsFragments.java</url>
+          <line>59</line>
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="87" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+<<<<<<< HEAD
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/GalleryAdapter.java</url>
           <line>64</line>
+=======
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/PropertyDetailsActivity.java</url>
+          <line>73</line>
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           <properties />
           <option name="timeStamp" value="88" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+<<<<<<< HEAD
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/GalleryAdapter.java</url>
           <line>55</line>
           <properties />
           <option name="timeStamp" value="91" />
         </line-breakpoint>
+=======
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditSellPropertyActivity.java</url>
+          <line>145</line>
+          <properties />
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditSellPropertyActivity.java</url>
+          <line>276</line>
+          <properties />
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditSellPropertyActivity.java</url>
+          <line>420</line>
+          <properties />
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java</url>
+          <line>558</line>
+          <properties />
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterPropertyDetailActivity.java</url>
+          <line>450</line>
+          <properties />
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterPropertyDetailActivity.java</url>
+          <line>451</line>
+          <properties />
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java</url>
+          <line>577</line>
+          <properties />
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/submitProperty.java</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterProperptyDetails2Activity.java</url>
+          <line>356</line>
+          <properties />
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterProperptyDetails2Activity.java</url>
+          <line>460</line>
+          <properties />
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterProperptyDetails2Activity.java</url>
+          <line>821</line>
+          <properties />
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditSellPropertyActivity.java</url>
+          <line>868</line>
+          <properties />
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditSellPropertyActivity.java</url>
+          <line>877</line>
+          <properties />
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditSellPropertyActivity.java</url>
+          <line>893</line>
+          <properties />
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditSellPropertyActivity.java</url>
+          <line>894</line>
+          <properties />
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditSellPropertyActivity.java</url>
+          <line>908</line>
+          <properties />
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditPurchasePropertyActivity.java</url>
+          <line>853</line>
+          <properties />
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditPurchasePropertyActivity.java</url>
+          <line>871</line>
+          <properties />
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditPurchasePropertyActivity.java</url>
+          <line>872</line>
+          <properties />
+          <option name="timeStamp" value="110" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditPurchasePropertyActivity.java</url>
+          <line>887</line>
+          <properties />
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Adpaters/PropertyAdapter.java</url>
+          <line>100</line>
+          <properties />
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Adpaters/PropertyAdapter.java</url>
+          <line>101</line>
+          <properties />
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Adpaters/PropertyAdapter.java</url>
+          <line>104</line>
+          <properties />
+          <option name="timeStamp" value="114" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Adpaters/PropertyAdapter.java</url>
+          <line>105</line>
+          <properties />
+          <option name="timeStamp" value="115" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java</url>
+          <line>197</line>
+          <properties />
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java</url>
+          <line>199</line>
+          <properties />
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java</url>
+          <line>201</line>
+          <properties />
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java</url>
+          <line>208</line>
+          <properties />
+          <option name="timeStamp" value="121" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java</url>
+          <line>214</line>
+          <properties />
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java</url>
+          <line>221</line>
+          <properties />
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java</url>
+          <line>225</line>
+          <properties />
+          <option name="timeStamp" value="124" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java</url>
+          <line>235</line>
+          <properties />
+          <option name="timeStamp" value="125" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Adpaters/PropertyAdapter.java</url>
+          <line>108</line>
+          <properties />
+          <option name="timeStamp" value="126" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Adpaters/PropertyAdapter.java</url>
+          <line>109</line>
+          <properties />
+          <option name="timeStamp" value="127" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Adpaters/PropertyAdapter.java</url>
+          <line>112</line>
+          <properties />
+          <option name="timeStamp" value="128" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Adpaters/PropertyAdapter.java</url>
+          <line>113</line>
+          <properties />
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditSellPropertyActivity.java</url>
+          <line>421</line>
+          <properties />
+          <option name="timeStamp" value="130" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java</url>
+          <line>202</line>
+          <properties />
+          <option name="timeStamp" value="131" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java</url>
+          <line>209</line>
+          <properties />
+          <option name="timeStamp" value="132" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java</url>
+          <line>215</line>
+          <properties />
+          <option name="timeStamp" value="133" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java</url>
+          <line>482</line>
+          <properties />
+          <option name="timeStamp" value="134" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java</url>
+          <line>554</line>
+          <properties />
+          <option name="timeStamp" value="141" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java</url>
+          <line>572</line>
+          <properties />
+          <option name="timeStamp" value="142" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java</url>
+          <line>571</line>
+          <properties />
+          <option name="timeStamp" value="143" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java</url>
+          <line>583</line>
+          <properties />
+          <option name="timeStamp" value="144" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java</url>
+          <line>584</line>
+          <properties />
+          <option name="timeStamp" value="145" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java</url>
+          <line>585</line>
+          <properties />
+          <option name="timeStamp" value="146" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java</url>
+          <line>546</line>
+          <properties />
+          <option name="timeStamp" value="147" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java</url>
+          <line>547</line>
+          <properties />
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java</url>
+          <line>610</line>
+          <properties />
+          <option name="timeStamp" value="149" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java</url>
+          <line>611</line>
+          <properties />
+          <option name="timeStamp" value="150" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java</url>
+          <line>597</line>
+          <properties />
+          <option name="timeStamp" value="151" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java</url>
+          <line>598</line>
+          <properties />
+          <option name="timeStamp" value="152" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java</url>
+          <line>737</line>
+          <properties />
+          <option name="timeStamp" value="153" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java</url>
+          <line>750</line>
+          <properties />
+          <option name="timeStamp" value="154" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditSellPropertyActivity.java</url>
+          <line>510</line>
+          <properties />
+          <option name="timeStamp" value="155" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditSellPropertyActivity.java</url>
+          <line>527</line>
+          <properties />
+          <option name="timeStamp" value="156" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditSellPropertyActivity.java</url>
+          <line>523</line>
+          <properties />
+          <option name="timeStamp" value="157" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditSellPropertyActivity.java</url>
+          <line>522</line>
+          <properties />
+          <option name="timeStamp" value="158" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditSellPropertyActivity.java</url>
+          <line>409</line>
+          <properties />
+          <option name="timeStamp" value="159" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditPurchasePropertyActivity.java</url>
+          <line>283</line>
+          <properties />
+          <option name="timeStamp" value="161" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditPurchasePropertyActivity.java</url>
+          <line>427</line>
+          <properties />
+          <option name="timeStamp" value="162" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditPurchasePropertyActivity.java</url>
+          <line>428</line>
+          <properties />
+          <option name="timeStamp" value="163" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditPurchasePropertyActivity.java</url>
+          <line>825</line>
+          <properties />
+          <option name="timeStamp" value="164" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditPurchasePropertyActivity.java</url>
+          <line>435</line>
+          <properties />
+          <option name="timeStamp" value="166" />
+        </line-breakpoint>
+=======
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/PackageActivity.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -1264,16 +2669,32 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Splash.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="50" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/RemainingMoneyResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#417#418#0" expanded="true" />
+            <element signature="e#445#446#0" expanded="true" />
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DemoClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1324,11 +2745,133 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-680">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/SharedPrefs/SaveInSharedPreference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="126" column="30" selection-start-line="126" selection-start-column="30" selection-end-line="126" selection-end-column="30" />
+=======
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/os/Binder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="366" selection-start-line="366" selection-end-line="366" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Rest/APIService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="44" column="43" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Interfaces/OnItemClick.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Rest/ApiUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="63" selection-start-line="5" selection-start-column="63" selection-end-line="5" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyGarages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7871">
+          <caret line="477" column="25" selection-start-line="477" selection-start-column="25" selection-end-line="477" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyDescription.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/com/example/vmatchu/ExampleInstrumentedTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/test/java/com/example/vmatchu/ExampleUnitTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/androidTest/debug/com/example/vmatchu/test/BuildConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Contact.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/AboutUs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/initListData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProfileActivity.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="147">
           <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
         </state>
@@ -1386,6 +2929,221 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/SharedPrefs/SaveInSharedPreference.java">
+=======
+        <state relative-caret-position="136">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyCity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditSellPropertyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="259" selection-start-line="259" selection-end-line="259" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Prevelent/Prevalent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.0.2/2e1d97eec8a4c7517486234666d8b8245f63ae89/retrofit-2.0.2-sources.jar!/retrofit2/Retrofit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="141" selection-start-line="141" selection-end-line="141" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="547" selection-start-line="547" selection-end-line="547" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/cornesrs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="6" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ripplefactor.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/InvoiceActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/blackcorner.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_invoice.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3400">
+          <caret line="200" column="25" selection-start-line="200" selection-start-column="25" selection-end-line="200" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_generated_invoice.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10455">
+          <caret line="615" column="41" selection-start-line="615" selection-start-column="41" selection-end-line="615" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_my_property.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/filter.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyForDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/GeneratedInvoiceActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_sign_in.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Splash.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="50" selection-end-column="7" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyBathrooms.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="60" column="10" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyBedrooms.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_my_property.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/property.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyRooms.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="5" selection-start-line="6" selection-start-column="4" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_my_property.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/submitProperty.java">
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1828">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
@@ -1401,12 +3159,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Classes/PropertiesDetails.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Adpaters/packageAdapter.java">
+=======
+        <state relative-caret-position="68">
+          <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyDescription.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Adpaters/MatchPropertyAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+=======
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/view/View.java">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_enter_property_detail.xml">
+      <provider editor-type-id="android-designer2" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="49" column="102" selection-start-line="49" selection-start-column="102" selection-end-line="49" selection-end-column="102" />
@@ -1418,13 +3210,48 @@
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b5835f462336c416d2c62de240cf32c6/jars/classes.jar!/android/support/v7/widget/RecyclerView.class">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="69139">
           <caret line="4290" column="26" selection-start-line="4290" selection-start-column="26" selection-end-line="4290" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_package.xml">
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="289">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+        <state relative-caret-position="51">
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="31" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b68188692728fee0b151b37a946342ee/res/values/values.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="328" column="18" selection-start-line="328" selection-start-column="18" selection-end-line="328" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyGarages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="13" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/GalleryAdapter.java">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml">
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
       <provider editor-type-id="android-designer2" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="43" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="43" />
@@ -1433,6 +3260,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/PackageActivity.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="306">
           <caret line="28" selection-start-line="28" selection-end-line="28" />
         </state>
@@ -1440,13 +3268,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/buy_packages.xml">
       <provider editor-type-id="android-designer2" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="289">
+          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+        <state relative-caret-position="204">
+          <caret line="79" column="81" selection-start-line="79" selection-start-column="81" selection-end-line="79" selection-end-column="81" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyAreaType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterProperptyDetails2Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="832">
+          <caret line="897" column="5" selection-start-line="897" selection-start-column="5" selection-end-line="897" selection-end-column="5" />
+          <folding>
+            <element signature="e#7000#7166#0" expanded="true" />
+            <element signature="e#7165#7166#0" expanded="true" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyPropertyType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <caret line="62" column="39" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2116#2117#0" expanded="true" />
+            <element signature="e#2150#2151#0" expanded="true" />
+            <element signature="e#2404#2405#0" expanded="true" />
+            <element signature="e#2435#2436#0" expanded="true" />
+            <element signature="e#2495#2496#0" expanded="true" />
+            <element signature="e#2530#2531#0" expanded="true" />
+          </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/submit.java">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/PropertyDetailsActivity.java">
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1564">
           <caret line="92" column="46" selection-start-line="92" selection-start-column="33" selection-end-line="92" selection-end-column="46" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Classes/PackageDetails.java">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterPropertyDetailActivity.java">
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="31" column="28" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="28" />
@@ -1465,8 +3360,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/signInActivity.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-53">
           <caret line="140" column="61" selection-start-line="140" selection-start-column="61" selection-end-line="140" selection-end-column="61" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="272">
+          <caret line="16" column="81" selection-start-line="16" selection-start-column="81" selection-end-line="16" selection-end-column="81" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+        <state relative-caret-position="119">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
         </state>
       </provider>
     </entry>
@@ -1478,13 +3384,37 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/submitProperty.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
           <caret line="15" selection-start-line="15" selection-end-line="15" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/details_fragment.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
+=======
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-28/android.jar!/java/lang/Override.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_property_details.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-680">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1493,6 +3423,49 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/java/util/ArrayList.java">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_enter_property_detail.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6562">
+          <caret line="386" column="36" selection-start-line="386" selection-start-column="36" selection-end-line="386" selection-end-column="36" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/homelayout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProfileActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/CustomAlert/CustomAlert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DemoClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_my_profile.xml">
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+      <provider editor-type-id="android-designer2" />
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="529" column="21" selection-start-line="529" selection-start-column="21" selection-end-line="529" selection-end-column="21" />
@@ -1508,13 +3481,46 @@
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/database/Cursor.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="134">
           <caret line="375" column="9" selection-start-line="375" selection-start-column="9" selection-end-line="375" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_enter_property_detail.xml">
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="178">
+          <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+        </state>
+      </provider>
       <provider editor-type-id="android-designer2" />
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_edit_sell_property.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1785">
+          <caret line="105" column="48" selection-start-line="105" selection-start-column="48" selection-end-line="105" selection-end-column="48" />
+=======
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_edit_purchase_property.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4284">
+          <caret line="252" column="56" selection-start-line="252" selection-start-column="56" selection-end-line="252" selection-end-column="56" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_home.xml">
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
+      <provider editor-type-id="android-designer2" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="94" column="71" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="71" />
@@ -1524,6 +3530,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_enter_properpty_details2.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="345">
           <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
         </state>
@@ -1531,6 +3538,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_edit_sell_property.xml">
       <provider editor-type-id="android-designer2" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="264">
+          <caret line="51" column="48" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+        <state relative-caret-position="101">
+          <caret line="101" column="5" lean-forward="true" selection-start-line="101" selection-start-column="5" selection-end-line="101" selection-end-column="5" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/InsertPropertyResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Rest/ApiUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_my_property_drawer.xml">
+=======
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/app/Activity.java">
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
           <caret line="124" column="32" selection-start-line="124" selection-start-column="32" selection-end-line="124" selection-end-column="32" />
@@ -1544,6 +3582,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Adpaters/PropertyTypeAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-204">
           <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
         </state>
@@ -1557,6 +3596,202 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditSellPropertyActivity.java">
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="34">
+          <caret line="28" column="60" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+        <state relative-caret-position="747">
+          <caret line="86" column="15" selection-start-line="86" selection-start-column="15" selection-end-line="86" selection-end-column="15" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/MyPropertyForDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding>
+            <element signature="e#1511#1512#0" expanded="true" />
+            <element signature="e#1540#1541#0" expanded="true" />
+          </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_match_property.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Models/MyPropertyBathroomsForDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+            <element signature="e#445#446#0" expanded="true" />
+            <element signature="e#485#486#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Models/MyPropertyBedroomsForDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding>
+            <element signature="e#278#279#0" expanded="true" />
+            <element signature="e#304#305#0" expanded="true" />
+            <element signature="e#340#341#0" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Models/MyPropertyDescriptionForDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding>
+            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Models/MyPropertyGaragesForDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding>
+            <element signature="e#293#294#0" expanded="true" />
+            <element signature="e#327#328#0" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Models/MyPropertyRoomsForDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding>
+            <element signature="e#280#281#0" expanded="true" />
+            <element signature="e#312#313#0" expanded="true" />
+            <element signature="e#340#341#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Models/MyPropertySectorsForDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <element signature="e#266#267#0" expanded="true" />
+            <element signature="e#292#293#0" expanded="true" />
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#356#357#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_property_details.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="244" column="4" selection-start-line="244" selection-start-column="4" selection-end-line="244" selection-end-column="4" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Adpaters/SubAreaAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/MatchPropertyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/submitProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterProperptyDetails2Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="805" selection-start-line="805" selection-end-line="805" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_enter_properpty_details2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="349" column="20" selection-start-line="349" selection-start-column="20" selection-end-line="349" selection-end-column="20" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/SharedPrefs/SaveInSharedPreference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1828">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/InsertPurchasePropertyResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Rest/APIService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="121" column="50" selection-start-line="121" selection-start-column="50" selection-end-line="121" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Pojo/CityResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/app/ActivityThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="3359" selection-start-line="3359" selection-end-line="3359" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditSellPropertyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="428" column="53" selection-start-line="428" selection-start-column="53" selection-end-line="428" selection-end-column="53" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_my_property.xml">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Rest/ApiUtil.java">
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3042">
           <caret line="128" column="49" selection-start-line="128" selection-start-column="49" selection-end-line="128" selection-end-column="49" />
@@ -1609,12 +3844,124 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Rest/ApiUtil.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="255">
           <caret line="15" selection-start-line="15" selection-end-line="15" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="179">
+          <caret line="190" column="8" selection-start-line="190" selection-start-column="8" selection-end-line="190" selection-end-column="8" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+        <state relative-caret-position="221">
+          <caret line="49" column="102" selection-start-line="49" selection-start-column="102" selection-end-line="49" selection-end-column="102" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#545#546#0" expanded="true" />
+          </folding>
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/property.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/PropertyDetailsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Fragments/DetailsFragments.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.0.2/2e1d97eec8a4c7517486234666d8b8245f63ae89/retrofit-2.0.2-sources.jar!/retrofit2/ExecutorCallAdapterFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+          <folding>
+            <element signature="e#2115#2547#0" expanded="true" />
+            <element signature="e#2546#2547#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/os/Handler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="891" selection-start-line="891" selection-end-line="891" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterPropertyDetailActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="552" selection-start-line="552" selection-end-line="552" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/signInActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/HomeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EditPurchasePropertyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="872" selection-start-line="872" selection-end-line="872" />
+          <folding>
+            <element signature="e#7327#7493#0" expanded="true" />
+            <element signature="e#7492#7493#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/myProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="199" selection-start-line="199" selection-end-line="199" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/DBhelper/DBhelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="659" selection-start-line="659" selection-end-line="659" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Adpaters/PropertyAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="58" column="13" lean-forward="true" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/signInActivity.java">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/Adpaters/PropertyAdapter.java">
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="389">
           <caret line="129" column="61" selection-start-line="129" selection-start-column="61" selection-end-line="129" selection-end-column="61" />
@@ -1633,17 +3980,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/EnterPropertyDetailActivity.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="127">
           <caret line="257" selection-start-line="257" selection-end-line="257" />
           <folding>
             <element signature="e#9567#10009#0" expanded="true" />
             <element signature="e#10008#10009#0" expanded="true" />
           </folding>
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="251">
+          <caret line="347" column="48" selection-start-line="347" selection-start-column="48" selection-end-line="347" selection-end-column="48" />
+>>>>>>> d4d1dd8a85e650939ee255590287e4b846c037fb
+=======
+        <state relative-caret-position="246">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/vmatchu/GalleryAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="73">
           <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
           <folding>
@@ -1652,6 +4010,11 @@
             <element signature="e#863#864#0" expanded="true" />
             <element signature="e#1494#1856#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="-3276">
+          <caret line="67" column="38" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="38" />
+>>>>>>> a1c7e90cbe6668373bcb3bf19b9116eb91d00b90
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
         </state>
       </provider>
     </entry>

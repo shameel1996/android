@@ -14,6 +14,7 @@
         <android.support.design.widget.CollapsingToolbarLayout
             app:layout_scrollFlags="exitUntilCollapsed|scroll"
             android:layout_width="match_parent"
+            android:id="@+id/title"
             app:title="My Property"
             app:titleTextColor="#FFFFFF"
             app:expandedTitleMarginStart="60dp"

@@ -3,9 +3,10 @@ package com.example.vmatchu.Pojo;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class MyPropertyData {
+public class MyPropertyData implements Serializable {
     @SerializedName("pid")
     @Expose
     private String pid;

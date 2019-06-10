@@ -16,6 +16,7 @@
             app:layout_scrollFlags="exitUntilCollapsed|scroll"
             android:layout_width="match_parent"
 
+            android:id="@+id/title"
             app:titleTextColor="#FFFFFF"
             app:expandedTitleMarginStart="60dp"
             app:expandedTitleMarginEnd="50dp"
@@ -344,6 +345,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <GridView
+<<<<<<< HEAD
                     android:id="@+id/gv"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
@@ -353,6 +355,13 @@
                     android:numColumns="4"
                     android:stretchMode="columnWidth"
                     android:verticalSpacing="20dp" />
+=======
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gv"
+                    android:numColumns="3">
+                </GridView>
+>>>>>>> af700c286b58570ba248232e10954a4e88aba63a
 
                 <Button
                     android:layout_below="@id/gv"
@@ -411,24 +420,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <TextView
-                android:id="@+id/info_text"
-                android:layout_below="@id/btnImage360"
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"
-                android:textSize="18dp"
-                android:text="Contact Information"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <RadioButton
-                android:id="@+id/RB_check"
-                android:layout_below="@+id/info_text"
-                android:layout_marginTop="20dp"
-                android:text="My Profile Information"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+            <!--<TextView-->
+                <!--android:id="@+id/info_text"-->
+                <!--android:layout_below="@id/btnImage360"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textSize="18dp"-->
+                <!--android:text="Contact Information"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content" />-->
+            <!--<RadioButton-->
+                <!--android:id="@+id/RB_check"-->
+                <!--android:layout_below="@+id/info_text"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:text="My Profile Information"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content" />-->
             <Button
-                android:layout_below="@+id/RB_check"
+                android:layout_below="@+id/btnImage360"
                 android:layout_marginTop="20dp"
                 android:textColor="@android:color/white"
                 android:textSize="12sp"

@@ -32,34 +32,34 @@ public class signInActivity extends AppCompatActivity {
 
     Button signIn;
     TextView newAcc;
-    EditText et_username,et_password;
+    EditText et_username, et_password;
     String uname, pass;
     ProgressDialog progressDialog;
     APIService apiService;
     CheckBox rememberMe;
 
-    public static String  PREFS_NAME="mypre";
-    public static String PREF_USERNAME="username";
-    public static String PREF_PASSWORD="password";
+    public static String PREFS_NAME = "mypre";
+    public static String PREF_USERNAME = "username";
+    public static String PREF_PASSWORD = "password";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
-       initialize();
+        initialize();
 
         //signIn=(Button)findViewById(R.id.signin);
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // startActivity(new Intent(signInActivity.this,HomeActivity.class));
+                // startActivity(new Intent(signInActivity.this,HomeActivity.class));
                 progressDialog.show();
                 uname = et_username.getText().toString();
                 pass = et_password.getText().toString();
 
 
-                if(!TextUtils.isEmpty(uname) && !TextUtils.isEmpty(pass)) {
+                if (!TextUtils.isEmpty(uname) && !TextUtils.isEmpty(pass)) {
                     postLogInApi(uname, pass);
                 }
             }
@@ -68,7 +68,7 @@ public class signInActivity extends AppCompatActivity {
         newAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(signInActivity.this,SignUpActivity.class));
+                startActivity(new Intent(signInActivity.this, SignUpActivity.class));
             }
         });
     }
@@ -80,26 +80,27 @@ public class signInActivity extends AppCompatActivity {
 
             @Override
             public void onResponse(Call<UserLogin> call, Response<UserLogin> response) {
-                if(response.isSuccessful()) {
+                if (response.isSuccessful()) {
                     progressDialog.dismiss();
                     UserLogin signupResponse = response.body();
-                    if(signupResponse.getError().equals("-1")){
+                    if (signupResponse.getError().equals("-1")) {
                         SaveInSharedPreference.getInSharedPreference(signInActivity.this).saveUserId(signupResponse.getId());
-                       // startActivity(new Intent(signInActivity.this,HomeActivity.class));
-                        if(rememberMe.isChecked()){
-                            rememberme(uname,pass); //save username and password
-                        //show logout activity
-                        showLogout();
+                        SaveInSharedPreference.getInSharedPreference(signInActivity.this).saveUserName(signupResponse.getUsername());
+
+                        startActivity(new Intent(signInActivity.this, HomeActivity.class));
+                        if (rememberMe.isChecked()) {
+                            rememberme(uname, pass); //save username and password
+                            //show logout activity
+                            showLogout();
+
+                        }
+                    } else {
+                        progressDialog.dismiss();
+                        CustomAlert.alertDialog(signInActivity.this, "Incorrect Username or Password");
+
+                        // startActivity(new Intent(signInActivity.this,HomeActivity.class));
 
                     }
-                    else {
-
-                                rememberme(uname,pass); //save username and password
-                                //show logout activity
-                                showLogout();
-                    }
-
-                }
                     Log.i("response", "post submitted to API." + signupResponse);
                 }
             }
@@ -107,20 +108,20 @@ public class signInActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<UserLogin> call, Throwable t) {
                 progressDialog.dismiss();
-                CustomAlert.alertDialog(signInActivity.this,"Response failed");
+                CustomAlert.alertDialog(signInActivity.this, "Response failed");
                 Log.e("response_Failed", "Unable to submit post to API." + t);
             }
         });
     }
 
     private void initialize() {
-       signIn=(Button)findViewById(R.id.signin);
-        newAcc=(TextView)findViewById(R.id.createAcc);
+        signIn = (Button) findViewById(R.id.signin);
+        newAcc = (TextView) findViewById(R.id.createAcc);
         et_username = findViewById(R.id.userName);
         et_password = findViewById(R.id.Password);
 
 
-        rememberMe=findViewById(R.id.remeberMe);
+        rememberMe = findViewById(R.id.remeberMe);
         apiService = ApiUtil.getAPIService();
 
         progressDialog = new ProgressDialog(signInActivity.this);
@@ -128,15 +129,16 @@ public class signInActivity extends AppCompatActivity {
         progressDialog.setCancelable(false);
 
     }
+
     @Override
-    public void onStart(){
+    public void onStart() {
         super.onStart();
         //read username and password from SharedPreferences
         getUser();
     }
 
     private void getUser() {
-        SharedPreferences pref = getSharedPreferences(PREFS_NAME,MODE_PRIVATE);
+        SharedPreferences pref = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         String username = pref.getString(PREF_USERNAME, null);
         String password = pref.getString(PREF_PASSWORD, null);
 
@@ -146,16 +148,17 @@ public class signInActivity extends AppCompatActivity {
         }
     }
 
-    private void showLogout( ) {
-        Intent intent=new Intent(this, HomeActivity.class);
+    private void showLogout() {
+        Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
     }
-    public void rememberme(String user, String password){
+
+    public void rememberme(String user, String password) {
         //save username and password in SharedPreferences
-        getSharedPreferences(PREFS_NAME,MODE_PRIVATE)
+        getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
                 .edit()
-                .putString(PREF_USERNAME,user)
-                .putString(PREF_PASSWORD,password)
+                .putString(PREF_USERNAME, user)
+                .putString(PREF_PASSWORD, password)
                 .commit();
     }
 

@@ -10,6 +10,10 @@ public class MyPropertyResponse {
     @Expose
     private String error;
 
+    @SerializedName("isClosed")
+    @Expose
+    private List<MyPropertyIsClosed> isClosed;
+
     @SerializedName("data")
     @Expose
     private List<MyPropertyData> data;
@@ -53,6 +57,30 @@ public class MyPropertyResponse {
     @SerializedName("description")
     @Expose
     private List<MyPropertyDescription> description;
+
+    @SerializedName("areaType")
+    @Expose
+    private List<MyPropertyAreaType> areaType;
+
+    @SerializedName("propertyType")
+    @Expose
+    private List<MyPropertyPropertyType> propertyType;
+
+    @SerializedName("minSize")
+    @Expose
+    private List<MyPropertyMinSize> minSize;
+
+    @SerializedName("minPrice")
+    @Expose
+    private List<MyPropertyMinPrice> minPrice;
+
+    @SerializedName("maxSize")
+    @Expose
+    private List<MyPropertyMaxSize> maxSize;
+
+    @SerializedName("maxPrice")
+    @Expose
+    private List<MyPropertyMaxPrice> maxPrice;
 
     public String getError() {
         return error;
@@ -100,5 +128,33 @@ public class MyPropertyResponse {
 
     public List<MyPropertyDescription> getDescription() {
         return description;
+    }
+
+    public List<MyPropertyAreaType> getAreaType() {
+        return areaType;
+    }
+
+    public List<MyPropertyPropertyType> getPropertyType() {
+        return propertyType;
+    }
+
+    public List<MyPropertyMinSize> getMinSize() {
+        return minSize;
+    }
+
+    public List<MyPropertyMinPrice> getMinPrice() {
+        return minPrice;
+    }
+
+    public List<MyPropertyMaxSize> getMaxSize() {
+        return maxSize;
+    }
+
+    public List<MyPropertyMaxPrice> getMaxPrice() {
+        return maxPrice;
+    }
+
+    public List<MyPropertyIsClosed> getIsClosed() {
+        return isClosed;
     }
 }

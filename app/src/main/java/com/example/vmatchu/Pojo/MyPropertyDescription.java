@@ -3,7 +3,9 @@ package com.example.vmatchu.Pojo;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class MyPropertyDescription {
+import java.io.Serializable;
+
+public class MyPropertyDescription implements Serializable {
     @SerializedName("description")
     @Expose
     private String description;

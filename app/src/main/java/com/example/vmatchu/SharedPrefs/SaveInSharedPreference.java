@@ -81,6 +81,18 @@ public class SaveInSharedPreference {
         return preferences.getString("user_id","");
     }
 
+    public void saveUserName(String name){
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("username",name);
+        editor.apply();
+    }
+
+    public String getUserName(){
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        return preferences.getString("username","");
+    }
+
     public void saveAreaTypeId(String id){
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
         SharedPreferences.Editor editor = preferences.edit();

@@ -1050,6 +1050,7 @@ drawable buttons
 drawable calen
 drawable calendar
 drawable calendra
+drawable call
 drawable cap
 drawable closeenvelope
 drawable colorsnew
@@ -1148,6 +1149,7 @@ drawable ripplefactor
 drawable roundcorner
 drawable side_nav_bar
 drawable size
+drawable sms
 drawable sold
 drawable submita
 drawable submitproperty
@@ -1178,7 +1180,6 @@ id LogOut_btn_prop
 id META
 id Password
 id PasswordSignUp
-id RB_check
 id SHIFT
 id SYM
 id Subarea_ed
@@ -1215,7 +1216,6 @@ id active_2
 id activity_chooser_view_content
 id add
 id adress
-id agent_detail
 id agentbtn
 id alertTitle
 id all
@@ -1225,21 +1225,16 @@ id apBar
 id areaType_ed
 id area_ed
 id area_type_ed
+id areatype
 id async
 id auto
 id bank_invoice
 id bank_invoice2
 id bank_invoice3
-id bar_imaqe
 id barrier
-id bath_imaqe
-id bath_text
-id bath_value
 id bathroom
 id bathroom_ed
-id bed_imaqe
-id bed_text
-id bed_value
+id bathrooms
 id bedrooms
 id bedrooms_ed
 id bedrooms_ed_2
@@ -1252,6 +1247,7 @@ id buttonPanel
 id cName_invoice
 id c_adress_invoice
 id calenxder_2
+id call
 id cancel_action
 id card
 id cardv
@@ -1282,7 +1278,6 @@ id createAcc
 id credit_pack
 id custom
 id customPanel
-id customer_message
 id date_and_views
 id date_desc
 id date_invoice
@@ -1291,10 +1286,7 @@ id decor_content_parent
 id default_activity_button
 id delete_image
 id desc
-id desc_Email
-id desc_agent
 id desc_ed
-id desc_name
 id desc_text
 id description
 id design_bottom_sheet
@@ -1311,8 +1303,6 @@ id drawer_layout_my_property
 id dropForProperty
 id edit_query
 id email
-id email_adress
-id email_adress_ed
 id email_ed
 id email_invoice
 id end
@@ -1336,17 +1326,15 @@ id first_name_ed
 id fixed
 id forever
 id from_invoice
-id full_name
-id full_name_ed
 id garages
 id garages_ed
 id ghost_view
 id giveOnRent
 id gone
 id group_divider
+id groupbutton
 id groups
 id gv
-id header_details
 id home
 id homeAsUp
 id iamge_SS_invoice3
@@ -1355,8 +1343,6 @@ id icon
 id icon_group
 id id_invoice
 id id_property
-id id_text
-id id_value
 id ifRoom
 id image
 id image360
@@ -1364,11 +1350,8 @@ id image360_ed
 id imageView
 id image_prop_2
 id info
-id info_text
 id input_Email
 id input_Messege
-id input_Messege_text
-id input_Messege_text_ed
 id input_Name
 id input_layout_password
 id invisible
@@ -1385,6 +1368,7 @@ id lgo
 id line1
 id line2
 id line3
+id linear_desc_line
 id list
 id listMode
 id listTitle
@@ -1401,8 +1385,10 @@ id mainView
 id masked
 id mat
 id max
+id maxPrice
 id maxS
 id maxS_ed
+id maxSize
 id max_ed
 id media_actions
 id media_text
@@ -1410,6 +1396,7 @@ id menuRight
 id message
 id middle
 id min
+id minPrice
 id minS
 id minS_ed
 id min_ed
@@ -1461,8 +1448,7 @@ id payment_method_invoice
 id payment_type_invoice
 id percent
 id phone_invoice
-id phone_number
-id phone_number_ed
+id pid
 id pin
 id price
 id price_ed
@@ -1476,6 +1462,7 @@ id pro_title_ed
 id profile_image
 id progress_circular
 id progress_horizontal
+id propertyType
 id property_type_ed
 id purProp
 id radio
@@ -1537,10 +1524,8 @@ id signUp
 id signin
 id size
 id size_ed
-id size_imaqe
-id size_text
-id size_value
 id smallLabel
+id sms
 id snackbar_action
 id snackbar_text
 id snap
@@ -1556,6 +1541,7 @@ id src_in
 id src_over
 id standard
 id start
+id status
 id status1
 id status2
 id status_bar_latest_event_content
@@ -1565,7 +1551,6 @@ id subarea_ed
 id submenuarrow
 id submitProp
 id submit_area
-id sumit_btn
 id tabMode
 id tag_transition_group
 id tag_unhandled_key_event_manager
@@ -1577,7 +1562,6 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
-id textView
 id text_input_password_toggle
 id textforagent
 id textinput_counter
@@ -1597,6 +1581,7 @@ id toolbarMyAccount
 id toolbarMyProperty
 id toolbarSubmitProperty
 id toolbar_layout
+id toolbar_title
 id toolbarmessege
 id top
 id topPanel
@@ -1620,12 +1605,12 @@ id up
 id useLogo
 id userName
 id userNameSignUp
+id username
 id vedioURL
 id vedioURL_ed
 id videoview
 id view_offset_helper
 id viewpager
-id views_desc
 id visible
 id wesiteurl
 id wesiteurl_ed
@@ -1681,6 +1666,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout aboutus
+layout activity_edit_purchase_property
 layout activity_edit_sell_property
 layout activity_enter_properpty_details2
 layout activity_enter_property_detail
@@ -1777,6 +1763,7 @@ menu activity_home_drawer
 menu activity_my_property_drawer
 mipmap ic_launcher
 mipmap ic_launcher_round
+raw introvedio
 raw splash
 string abc_action_bar_home_description
 string abc_action_bar_up_description
