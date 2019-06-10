@@ -1179,7 +1179,6 @@ id LogOut_btn_prop
 id META
 id Password
 id PasswordSignUp
-id RB_check
 id SHIFT
 id SYM
 id Subarea_ed
@@ -1350,7 +1349,6 @@ id image360_ed
 id imageView
 id image_prop_2
 id info
-id info_text
 id input_Email
 id input_Messege
 id input_Name
@@ -1563,7 +1561,6 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
-id textView
 id text_input_password_toggle
 id textforagent
 id textinput_counter
@@ -1607,6 +1604,7 @@ id up
 id useLogo
 id userName
 id userNameSignUp
+id username
 id vedioURL
 id vedioURL_ed
 id videoview

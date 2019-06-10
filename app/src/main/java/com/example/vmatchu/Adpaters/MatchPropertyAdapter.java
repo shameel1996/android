@@ -178,8 +178,8 @@ public class MatchPropertyAdapter extends RecyclerView.Adapter{
 
     @Override
     public int getItemCount() {
-        if(matchPropertyLsit!=null){
-            return matchPropertyLsit.size();
+        if(propertiesDetails!=null){
+            return propertiesDetails.size();
         }
         else {
             return 0;

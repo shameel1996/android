@@ -10,6 +10,10 @@ public class MyPropertyResponse {
     @Expose
     private String error;
 
+    @SerializedName("isClosed")
+    @Expose
+    private List<MyPropertyIsClosed> isClosed;
+
     @SerializedName("data")
     @Expose
     private List<MyPropertyData> data;
@@ -148,5 +152,9 @@ public class MyPropertyResponse {
 
     public List<MyPropertyMaxPrice> getMaxPrice() {
         return maxPrice;
+    }
+
+    public List<MyPropertyIsClosed> getIsClosed() {
+        return isClosed;
     }
 }

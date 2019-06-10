@@ -11,6 +11,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.provider.MediaStore;
 import android.support.annotation.RequiresApi;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -119,6 +120,7 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
     RecyclerView recyclerViewPropertyType;
     int totalMoney;
     int remainingMoney;
+    CollapsingToolbarLayout screenTitle;
 
 
     private SpinnerDialog spinnnerDialogue, spinnerDialog, DialogAreaType;
@@ -357,6 +359,7 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
 //        areaType=(TextInputEditText) findViewById(R.id.areaType_ed) ;
         countrytxt = (TextView) findViewById(R.id.Country_ed);
         citytxt = (TextView) findViewById(R.id.City_ed);
+        screenTitle = findViewById(R.id.title);
 
 
         status = (TextView) findViewById(R.id.status1);
@@ -377,6 +380,12 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
 
         dBhelper = new DBhelper(this);
         submit = findViewById(R.id.submitProp);
+
+        if(DemoClass.status.equals("For Sale")){
+            screenTitle.setTitle("For Sale");
+        }else if(DemoClass.status.equals("For Rent")){
+            screenTitle.setTitle("For Rent");
+        }
 
         submit.setOnClickListener(this);
         citytxt.setOnClickListener(this);

@@ -65,7 +65,7 @@
                android:layout_height="wrap_content"
                android:layout_below="@+id/title_myProp_2"
                android:layout_toRightOf="@+id/image_prop_2"
-               android:text="Active"
+               android:text=""
                android:textColor="@android:color/holo_green_dark"
                android:textSize="10dp" />
 

@@ -85,6 +85,7 @@ public class signInActivity extends AppCompatActivity {
                     UserLogin signupResponse = response.body();
                     if (signupResponse.getError().equals("-1")) {
                         SaveInSharedPreference.getInSharedPreference(signInActivity.this).saveUserId(signupResponse.getId());
+                        SaveInSharedPreference.getInSharedPreference(signInActivity.this).saveUserName(signupResponse.getUsername());
 
                         startActivity(new Intent(signInActivity.this, HomeActivity.class));
                         if (rememberMe.isChecked()) {
@@ -95,7 +96,7 @@ public class signInActivity extends AppCompatActivity {
                         }
                     } else {
                         progressDialog.dismiss();
-                        CustomAlert.alertDialog(signInActivity.this, "Incorrect Password");
+                        CustomAlert.alertDialog(signInActivity.this, "Incorrect Username or Password");
 
                         // startActivity(new Intent(signInActivity.this,HomeActivity.class));
 

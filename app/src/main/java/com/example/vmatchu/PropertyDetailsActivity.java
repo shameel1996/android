@@ -66,9 +66,9 @@ public class PropertyDetailsActivity extends AppCompatActivity {
     TextView city,area,sub_Area,sector,propertyId,propertyType,bathroom,bedroom,tv_date,tv_desc;
     CollapsingToolbarLayout collapsingToolbarLayout;
     String pid,date,propertyCity,propertyArea,propertySubArea,propertySector,propertyGarages,propertyBathrooms,propertyBedrooms;
-    String propertyRooms,propertyDesc,propertyAreaType,propertyPropertyType,propertyStatus,propertyTitle;
-    String propertyCityId,propertyAreaId,propertySubAreaId,propertySectorId,propertyAreaTypeId,propertyPropertyTypeId,propertyStatusId;
-    String propertyMinSize,propertyMinSizePid,propertyMinPrice,propertyMinPricePid,propertyMaxSize ,propertyMaxSizePid ,propertyMaxPrice,propertyMaxPricePid;
+    String propertyRooms,propertyDesc,propertyAreaType,propertyPropertyType,propertyStatus,propertyTitle= "";
+    String propertyCityId,propertyAreaId,propertySubAreaId,propertySectorId,propertyAreaTypeId,propertyPropertyTypeId,propertyStatusId = "";
+    String propertyMinSize,propertyMinSizePid,propertyMinPrice,propertyMinPricePid,propertyMaxSize ,propertyMaxSizePid ,propertyMaxPrice,propertyMaxPricePid ="";
     LinearLayout call,sms, call_sms_linear;
     TextView tv_description;
     LinearLayout linear_desc_line;
@@ -105,7 +105,7 @@ public class PropertyDetailsActivity extends AppCompatActivity {
         propertyMinSize =  getIntent().getStringExtra("propertyListMinSize");
         propertyMinSizePid =  getIntent().getStringExtra("propertyListMinSizePid");
         propertyMinPrice =  getIntent().getStringExtra("propertyListMinPrice");
-        propertyMinPricePid =  getIntent().getStringExtra("propertyListMinPricePid ");
+        propertyMinPricePid =  getIntent().getStringExtra("propertyListMinPricePid");
         propertyMaxSize =  getIntent().getStringExtra("propertyListMaxSize");
         propertyMaxSizePid =  getIntent().getStringExtra("propertyListMaxSizePid");
         propertyMaxPrice =  getIntent().getStringExtra("propertyListMaxPrice");
@@ -210,7 +210,7 @@ public class PropertyDetailsActivity extends AppCompatActivity {
         bundle.putString("propertyListMinSize", propertyMinSize);
         bundle.putString("propertyListMinSizePid", propertyMinSizePid);
         bundle.putString("propertyListMinPrice", propertyMinPrice);
-        bundle.putString("propertyListMinPricePid ", propertyMinPricePid);
+        bundle.putString("propertyListMinPricePid", propertyMinPricePid);
         bundle.putString("propertyListMaxSize", propertyMaxSize);
         bundle.putString("propertyListMaxSizePid", propertyMaxSizePid);
         bundle.putString("propertyListMaxPrice", propertyMaxPrice);

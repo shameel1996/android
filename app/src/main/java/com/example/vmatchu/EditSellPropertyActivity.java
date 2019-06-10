@@ -151,8 +151,8 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
     String statusTypeID = "";
 
     private String[] tit = {""};
-    String propertyCityId,propertyAreaId,propertySubAreaId,propertySectorId,propertyAreaTypeId,propertyPropertyTypeId,propertyStatusId;
-    String propertyMinSize,propertyMinSizePid,propertyMinPrice,propertyMinPricePid,propertyMaxSize ,propertyMaxSizePid ,propertyMaxPrice,propertyMaxPricePid;
+    String propertyCityId, propertyAreaId, propertySubAreaId, propertySectorId, propertyAreaTypeId, propertyPropertyTypeId, propertyStatusId = "";
+    String propertyMinSize, propertyMinSizePid, propertyMinPrice, propertyMinPricePid, propertyMaxSize, propertyMaxSizePid, propertyMaxPrice, propertyMaxPricePid = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -291,58 +291,67 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
 
         countrytxt.setText("Pakistan");
 
-        if(propertyCity != null && !propertyCity.isEmpty()){
+        if (propertyCity != null && !propertyCity.isEmpty()) {
             citytxt.setText(propertyCity);
         }
-        if(propertyArea != null && !propertyArea.isEmpty()){
+        if (propertyArea != null && !propertyArea.isEmpty()) {
             areatxt.setText(propertyArea);
         }
 
-        if(propertySubArea != null && !propertySubArea.isEmpty()){
+        if (propertySubArea != null && !propertySubArea.isEmpty()) {
             subareatxt.setText(propertySubArea);
         }
 
-        if(propertySector !=null && !propertySector.isEmpty()){
+        if (propertySector != null && !propertySector.isEmpty()) {
             sectortxt.setText(propertySector);
         }
 
-        if(propertyGarages != null && !propertyGarages.isEmpty()){
+        if (propertyGarages != null && !propertyGarages.isEmpty()) {
             garages.setText(propertyGarages);
         }
-        if(propertyBathrooms != null && !propertyBathrooms.isEmpty()){
+        if (propertyBathrooms != null && !propertyBathrooms.isEmpty()) {
             bathroom.setText(propertyBathrooms);
         }
 
-        if(propertyBedrooms != null && !propertyBedrooms.isEmpty()){
+        if (propertyRooms != null && !propertyRooms.isEmpty()) {
+            rooms.setText(propertyRooms);
+        }
+
+        if (propertyBedrooms != null && !propertyBedrooms.isEmpty()) {
             bedroom.setText(propertyBedrooms);
         }
 
-        if(propertyAreaType != null && !propertyAreaType.isEmpty()){
+        if (propertyDesc != null && !propertyDesc.isEmpty()) {
+            details.setText(propertyDesc);
+        }
+
+        if (propertyAreaType != null && !propertyAreaType.isEmpty()) {
             areaType.setText(propertyAreaType);
         }
 
-        if(propertyPropertyType != null && !propertyPropertyType.isEmpty()){
+        if (propertyPropertyType != null && !propertyPropertyType.isEmpty()) {
             propertyType.setText(propertyPropertyType);
         }
 
-        if(propertyStatus != null && !propertyStatus.isEmpty()){
+        if (propertyStatus != null && !propertyStatus.isEmpty()) {
             status.setText(propertyStatus);
         }
 
-        if(propertyTitle != null && !propertyTitle.isEmpty()){
+        if (propertyTitle != null && !propertyTitle.isEmpty()) {
             title.setText(propertyTitle);
         }
 
 
-        if(propertyMinSizePid.equals(pid)){
-
-            if(propertyMinSize != null && !propertyMinSize.isEmpty()){
+        if (propertyMinSize != null && !propertyMinSize.isEmpty()) {
+            if (propertyMinSizePid.equals(pid)) {
                 size.setText(propertyMinSize);
             }
 
-        }else if(propertyMinPricePid.equals(pid)){
+        }
 
-            if(propertyMinPrice != null && !propertyMinPrice.isEmpty()){
+
+        if (propertyMinPrice != null && !propertyMinPrice.isEmpty()) {
+            if (propertyMinPricePid.equals(pid)) {
                 price.setText(propertyMinPrice);
             }
 
@@ -360,9 +369,6 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
 //            }
 //
 //        }
-
-
-
 
 
     }
@@ -478,7 +484,7 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
         propertyTitle = getIntent().getStringExtra("propertyDataTitle");
         propertyGarages = getIntent().getStringExtra("propertyListGarages");
         propertyBathrooms = getIntent().getStringExtra("propertyListBathroom");
-        propertyBedrooms =  getIntent().getStringExtra("propertyListBedroom");
+        propertyBedrooms = getIntent().getStringExtra("propertyListBedroom");
         propertyRooms = getIntent().getStringExtra("propertyListRoom");
         propertyDesc = getIntent().getStringExtra("propertyListDescription");
         propertySector = getIntent().getStringExtra("propertyListSector");
@@ -490,8 +496,8 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
         propertyArea = getIntent().getStringExtra("propertyListArea");
         propertyAreaId = getIntent().getStringExtra("propertyListAreaID");
         SaveInSharedPreference.getInSharedPreference(this).saveAreaId(propertyAreaId);
-        propertySubArea =  getIntent().getStringExtra("propertyListSubArea");
-        propertySubAreaId =  getIntent().getStringExtra("propertyListSubAreaID");
+        propertySubArea = getIntent().getStringExtra("propertyListSubArea");
+        propertySubAreaId = getIntent().getStringExtra("propertyListSubAreaID");
         SaveInSharedPreference.getInSharedPreference(this).saveSubAreaId(propertySubAreaId);
         propertyAreaType = getIntent().getStringExtra("propertyListAreaType");
         propertyAreaTypeId = getIntent().getStringExtra("propertyListAreaTypeID");
@@ -499,17 +505,17 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
         propertyPropertyType = getIntent().getStringExtra("propertyListPropertyType");
         propertyPropertyTypeId = getIntent().getStringExtra("propertyListPropertyTypeID");
         SaveInSharedPreference.getInSharedPreference(this).savePropertyTypeId(propertyPropertyTypeId);
-        propertyStatus =  getIntent().getStringExtra("propertyListStatus");
-        propertyStatusId =  getIntent().getStringExtra("propertyListStatusID");
+        propertyStatus = getIntent().getStringExtra("propertyListStatus");
+        propertyStatusId = getIntent().getStringExtra("propertyListStatusID");
 
-        propertyMinSize =  getIntent().getStringExtra("propertyListMinSize");
-        propertyMinSizePid =  getIntent().getStringExtra("propertyListMinSizePid");
-        propertyMinPrice =  getIntent().getStringExtra("propertyListMinPrice");
-        propertyMinPricePid =  getIntent().getStringExtra("propertyListMinPricePid ");
-        propertyMaxSize =  getIntent().getStringExtra("propertyListMaxSize");
-        propertyMaxSizePid =  getIntent().getStringExtra("propertyListMaxSizePid");
-        propertyMaxPrice =  getIntent().getStringExtra("propertyListMaxPrice");
-        propertyMaxPricePid =  getIntent().getStringExtra("propertyListMaxPricePid");
+        propertyMinSize = getIntent().getStringExtra("propertyListMinSize");
+        propertyMinSizePid = getIntent().getStringExtra("propertyListMinSizePid");
+        propertyMinPrice = getIntent().getStringExtra("propertyListMinPrice");
+        propertyMinPricePid = getIntent().getStringExtra("propertyListMinPricePid");
+        propertyMaxSize = getIntent().getStringExtra("propertyListMaxSize");
+        propertyMaxSizePid = getIntent().getStringExtra("propertyListMaxSizePid");
+        propertyMaxPrice = getIntent().getStringExtra("propertyListMaxPrice");
+        propertyMaxPricePid = getIntent().getStringExtra("propertyListMaxPricePid");
 //        checkStatus = getIntent().getStringExtra("status");
 
 //        propertyList = dBhelper.getMyPropertyOnPid(pid);
@@ -609,23 +615,84 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.saveChangesProp:
-                if (!title.getText().toString().equals("") &&
-                        !areatxt.getText().toString().equals("") &&
-                        !citytxt.getText().toString().equals("") &&
-                        !countrytxt.getText().toString().equals("") &&
-                        !subareatxt.getText().toString().equals("") &&
-                        !propertyType.getText().toString().equals("") &&
-                        !status.getText().toString().equals("") &&
-                        !size.getText().toString().equals("") &&
-                        !areaType.getText().toString().equals("")) {
-                    progressDialog.show();
-                    totalMoney = SaveInSharedPreference.getInSharedPreference(this).getRemainingMoney();
-                    remainingMoney = totalMoney - 50;
-                    postPropertyDetails();
-//                    startActivity(new Intent(this,HomeActivity.class));
-                } else {
-                    CustomAlert.alertDialog(this, "Please Insert Correct Data");
+                if (!title.getText().toString().equals("")){
+
+                    if (!areatxt.getText().toString().equals("")){
+
+                        if (!citytxt.getText().toString().equals("")){
+
+                            if (!countrytxt.getText().toString().equals("")){
+
+                                if (!subareatxt.getText().toString().equals("")){
+
+                                    if (!propertyType.getText().toString().equals("")){
+
+                                        if (!status.getText().toString().equals("")){
+
+                                            if (!size.getText().toString().equals("")){
+
+                                                if (!areaType.getText().toString().equals("")){
+
+                                                    progressDialog.show();
+                                                    totalMoney = SaveInSharedPreference.getInSharedPreference(this).getRemainingMoney();
+                                                    remainingMoney = totalMoney - 50;
+                                                    postPropertyDetails();
+
+                                                }else{
+                                                    CustomAlert.alertDialog(this, "Insert Area Type");
+                                                }
+
+                                            }else{
+                                                CustomAlert.alertDialog(this, "Insert Size");
+                                            }
+
+                                        }else{
+                                            CustomAlert.alertDialog(this, "Insert Status");
+                                        }
+
+                                    }else{
+                                        CustomAlert.alertDialog(this, "Insert Property Type");
+                                    }
+
+                                }else{
+                                    CustomAlert.alertDialog(this, "Insert Sub Area");
+                                }
+
+                            }else{
+                                CustomAlert.alertDialog(this, "Insert Country");
+                            }
+
+
+                        }else{
+                            CustomAlert.alertDialog(this, "Insert City");
+                        }
+
+                    }else{
+                        CustomAlert.alertDialog(this, "Insert Area");
+                    }
+
+
+                }else{
+                    CustomAlert.alertDialog(this, "Insert Title");
                 }
+
+//                if (!title.getText().toString().equals("") &&
+//                        !areatxt.getText().toString().equals("") &&
+//                        !citytxt.getText().toString().equals("") &&
+//                        !countrytxt.getText().toString().equals("") &&
+//                        !subareatxt.getText().toString().equals("") &&
+//                        !propertyType.getText().toString().equals("") &&
+//                        !status.getText().toString().equals("") &&
+//                        !size.getText().toString().equals("") &&
+//                        !areaType.getText().toString().equals("")) {
+//                    progressDialog.show();
+//                    totalMoney = SaveInSharedPreference.getInSharedPreference(this).getRemainingMoney();
+//                    remainingMoney = totalMoney - 50;
+//                    postPropertyDetails();
+////                    startActivity(new Intent(this,HomeActivity.class));
+//                } else {
+//                    CustomAlert.alertDialog(this, "Please Insert Correct Data");
+//                }
 
                 break;
 
@@ -989,7 +1056,7 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
         String p = bathroom.getText().toString();
         String q = garages.getText().toString();
         int r = remainingMoney;
-        Call<InsertPropertyResponse> call = apiService.postEditSellProperty(pid,title.getText().toString(),
+        Call<InsertPropertyResponse> call = apiService.postEditSellProperty(pid, title.getText().toString(),
                 SaveInSharedPreference.getInSharedPreference(this).getUserId(),
                 SaveInSharedPreference.getInSharedPreference(this).getPropertyTypeId(), statusTypeID,
                 countrytxt.getText().toString(), SaveInSharedPreference.getInSharedPreference(this).getCityId(),
@@ -1021,7 +1088,7 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
             @Override
             public void onFailure(Call<InsertPropertyResponse> call, Throwable t) {
                 progressDialog.dismiss();
-                CustomAlert.alertDialog(EditSellPropertyActivity.this, "Property Inserted");
+                CustomAlert.alertDialog(EditSellPropertyActivity.this, "Response Failed, Check Internet Connection");
                 Log.e("response_Failed", "Unable to submit post to API." + t);
             }
         });

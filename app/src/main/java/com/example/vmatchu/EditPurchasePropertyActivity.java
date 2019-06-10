@@ -70,8 +70,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class EditPurchasePropertyActivity extends AppCompatActivity implements View.OnClickListener{
-
+public class EditPurchasePropertyActivity extends AppCompatActivity implements View.OnClickListener {
 
 
     private Button btn;
@@ -80,26 +79,26 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
     private List<String> imagesEncodedList;
     private GridView gvGallery;
     private GalleryAdapter galleryAdapter;
-    private Spinner spinType,cityED,areaED,subareaED,sectorED;
+    private Spinner spinType, cityED, areaED, subareaED, sectorED;
     private Spinner spinStatus;
     private String spin_val_status;
     private String spin_val_type;
     private Button submit;
     private APIService apiService;
     private ProgressDialog progressDialog;
-    private String cityName,areaName,subareaName,sectorName;
-    private String cityId,areaId,subareaId,sectorId;
-    private String[] proType = { "None","Agriculture/Dairy","Apartment/Flat","Banglow/House","Commercial Plot","Commercial Portion/Office Area","Farm House","Hotel","Industrial land","Industrial Plot" ,"Land","Penthouse","Plot","Plot File","Residential Lower Portion","Residential Upper Portion","Restuarent","Shop/Showroom","villa"};//array of strings used to populate the spinner
+    private String cityName, areaName, subareaName, sectorName;
+    private String cityId, areaId, subareaId, sectorId;
+    private String[] proType = {"None", "Agriculture/Dairy", "Apartment/Flat", "Banglow/House", "Commercial Plot", "Commercial Portion/Office Area", "Farm House", "Hotel", "Industrial land", "Industrial Plot", "Land", "Penthouse", "Plot", "Plot File", "Residential Lower Portion", "Residential Upper Portion", "Restuarent", "Shop/Showroom", "villa"};//array of strings used to populate the spinner
 
 
     private TextView areaType;
     private TextInputEditText title;
-    private ArrayList<String> country=new ArrayList<>();
-    private ArrayList<CityAreaSubareaSectorDetailsResponse> city=new ArrayList<>();
-    private ArrayList<CityAreaSubareaSectorDetailsResponse> area=new ArrayList<>();
-    private ArrayList<CityAreaSubareaSectorDetailsResponse> subArea=new ArrayList<>();
-    private ArrayList<CityAreaSubareaSectorDetailsResponse> sector=new ArrayList<>();
-    private ArrayList<String> areaTypeArray=new ArrayList<>();
+    private ArrayList<String> country = new ArrayList<>();
+    private ArrayList<CityAreaSubareaSectorDetailsResponse> city = new ArrayList<>();
+    private ArrayList<CityAreaSubareaSectorDetailsResponse> area = new ArrayList<>();
+    private ArrayList<CityAreaSubareaSectorDetailsResponse> subArea = new ArrayList<>();
+    private ArrayList<CityAreaSubareaSectorDetailsResponse> sector = new ArrayList<>();
+    private ArrayList<String> areaTypeArray = new ArrayList<>();
     cityAdapter adapter;
     AreaAdapter areaAdapter;
     SubAreaAdapter subAreaAdapter;
@@ -113,7 +112,7 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
     TextInputEditText maxPrice;
     TextInputEditText minSize;
     TextInputEditText maxSize;
-    private ArrayList<PropertyTypeData> propertyTypeList=new ArrayList<>();
+    private ArrayList<PropertyTypeData> propertyTypeList = new ArrayList<>();
     RecyclerView recyclerViewPropertyType;
     PropertyTypeAdapter propertyTypeAdapter;
     RecyclerView recyclerViewAreaType;
@@ -138,31 +137,30 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
 
     String date, propertyCity, propertyArea, propertySubArea, propertySector, propertyGarages, propertyBathrooms, propertyBedrooms = "";
     String propertyRooms, propertyDesc, propertyAreaType, propertyPropertyType, propertyStatus, propertyTitle = "";
-    String propertyCityId,propertyAreaId,propertySubAreaId,propertySectorId,propertyAreaTypeId,propertyPropertyTypeId,propertyStatusId;
-    String propertyMinSize,propertyMinSizePid,propertyMinPrice,propertyMinPricePid,propertyMaxSize ,propertyMaxSizePid ,propertyMaxPrice,propertyMaxPricePid;
+    String propertyCityId, propertyAreaId, propertySubAreaId, propertySectorId, propertyAreaTypeId, propertyPropertyTypeId, propertyStatusId = "";
+    String propertyMinSize, propertyMinSizePid, propertyMinPrice, propertyMinPricePid, propertyMaxSize, propertyMaxSizePid, propertyMaxPrice, propertyMaxPricePid = "";
 
 
     String statusTypeID = "";
-    private ArrayList<CityAreaSubareaSectorDetailsResponse> area_type=new ArrayList<>();
+    private ArrayList<CityAreaSubareaSectorDetailsResponse> area_type = new ArrayList<>();
 
-    private SpinnerDialog spinnnerDialogue,spinnerDialog,DialogAreaType;
+    private SpinnerDialog spinnnerDialogue, spinnerDialog, DialogAreaType;
 
 
-    private String[] proStatus = { "For Rent","For Purchase" };
+    private String[] proStatus = {"For Rent", "For Purchase"};
 
     DBhelper dBhelper;
 
 
+    private TextView countrytxt, citytxt, areatxt, subareatxt, sectortxt, propertyType, status;
+    ;
 
-
-
-    private TextView countrytxt,citytxt,areatxt,subareatxt,sectortxt,propertyType,status;;
-
-    private TextInputEditText price,size,rooms,bedroom,bathroom,garages,details,video_url,image360_url;
+    private TextInputEditText price, size, rooms, bedroom, bathroom, garages, details, video_url, image360_url;
 
     String statusType;
 
-    private String[] tit={""};
+    private String[] tit = {""};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -180,8 +178,7 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
         country.add("America");
 
 
-
-        gvGallery = (GridView)findViewById(R.id.gv);
+        gvGallery = (GridView) findViewById(R.id.gv);
 //        area = dBhelper.getArea();
 //        subArea = dBhelper.getSubArea();
 //        sector = dBhelper.getSector();
@@ -203,7 +200,7 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
         areaTypeArray.add("Square Feet");
         areaTypeArray.add("Square Meter");
         areaTypeArray.add("Square Yard");
-        spinnerDialog=new SpinnerDialog(this,country,"select Item");
+        spinnerDialog = new SpinnerDialog(this, country, "select Item");
         spinnerDialog.bindOnSpinerListener(new OnSpinerItemClick() {
             @Override
             public void onClick(String item, int position) {
@@ -218,8 +215,7 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
         });
 
 
-
-        DialogAreaType=new SpinnerDialog(this,areaTypeArray,"select Item");
+        DialogAreaType = new SpinnerDialog(this, areaTypeArray, "select Item");
         DialogAreaType.bindOnSpinerListener(new OnSpinerItemClick() {
             @Override
             public void onClick(String item, int position) {
@@ -234,7 +230,7 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
 //        });
 
 
-        gvGallery = (GridView)findViewById(R.id.gv);
+        gvGallery = (GridView) findViewById(R.id.gv);
         //fetching view's id
         //Register a callback to be invoked when an item in this AdapterView has been selected
 //        spinType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -303,76 +299,88 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
     private void setViews() {
         countrytxt.setText("Pakistan");
 
-        if(propertyCity != null && !propertyCity.isEmpty()){
+        if (propertyCity != null && !propertyCity.isEmpty()) {
             citytxt.setText(propertyCity);
         }
-        if(propertyArea != null && !propertyArea.isEmpty()){
+        if (propertyArea != null && !propertyArea.isEmpty()) {
             areatxt.setText(propertyArea);
         }
 
-        if(propertySubArea != null && !propertySubArea.isEmpty()){
+        if (propertySubArea != null && !propertySubArea.isEmpty()) {
             subareatxt.setText(propertySubArea);
         }
 
-        if(propertySector !=null && !propertySector.isEmpty()){
+        if (propertySector != null && !propertySector.isEmpty()) {
             sectortxt.setText(propertySector);
         }
 
-        if(propertyGarages != null && !propertyGarages.isEmpty()){
+        if (propertyGarages != null && !propertyGarages.isEmpty()) {
             garages.setText(propertyGarages);
         }
-        if(propertyBathrooms != null && !propertyBathrooms.isEmpty()){
+        if (propertyBathrooms != null && !propertyBathrooms.isEmpty()) {
             bathroom.setText(propertyBathrooms);
         }
 
-        if(propertyBedrooms != null && !propertyBedrooms.isEmpty()){
+        if (propertyRooms != null && !propertyRooms.isEmpty()) {
+            rooms.setText(propertyRooms);
+        }
+
+        if (propertyBedrooms != null && !propertyBedrooms.isEmpty()) {
             bedroom.setText(propertyBedrooms);
         }
 
-        if(propertyAreaType != null && !propertyAreaType.isEmpty()){
+        if (propertyAreaType != null && !propertyAreaType.isEmpty()) {
             areaType.setText(propertyAreaType);
         }
 
-        if(propertyPropertyType != null && !propertyPropertyType.isEmpty()){
+        if (propertyDesc != null && !propertyDesc.isEmpty()) {
+            details.setText(propertyDesc);
+        }
+
+
+        if (propertyPropertyType != null && !propertyPropertyType.isEmpty()) {
             propertyType.setText(propertyPropertyType);
         }
 
-        if(propertyStatus != null && !propertyStatus.isEmpty()){
+        if (propertyStatus != null && !propertyStatus.isEmpty()) {
             status.setText(propertyStatus);
         }
 
-        if(propertyTitle != null && !propertyTitle.isEmpty()){
+        if (propertyTitle != null && !propertyTitle.isEmpty()) {
             title.setText(propertyTitle);
         }
 
 
-        if(propertyMinSizePid.equals(pid)){
-
-            if(propertyMinSize != null && !propertyMinSize.isEmpty()){
+        if (propertyMinSize != null && !propertyMinSize.isEmpty()) {
+            if (propertyMinSizePid.equals(pid)) {
                 minSize.setText(propertyMinSize);
-            }
-
-        }else if(propertyMinPricePid.equals(pid)){
-
-            if(propertyMinPrice != null && !propertyMinPrice.isEmpty()){
-                minPrice.setText(propertyMinPrice);
-            }
-
-        }else if(propertyMaxSizePid.equals(pid)){
-
-            if(propertyMaxSize != null && !propertyMaxSize.isEmpty()){
-                maxSize.setText(propertyMaxSize);
-            }
-
-        }else if(propertyMaxPricePid.equals(pid)){
-
-            if(propertyMaxPrice != null && !propertyMaxPrice.isEmpty()){
-                maxPrice.setText(propertyMaxPrice);
             }
 
         }
 
 
+        if (propertyMinPrice != null && !propertyMinPrice.isEmpty()) {
+            if (propertyMinPricePid.equals(pid)) {
+                minPrice.setText(propertyMinPrice);
+            }
+
+        }
+
+
+        if (propertyMaxSize != null && !propertyMaxSize.isEmpty()) {
+            if (propertyMaxSizePid.equals(pid)) {
+                maxSize.setText(propertyMaxSize);
+            }
+
+        }
+
+
+        if (propertyMaxPrice != null && !propertyMaxPrice.isEmpty()) {
+            if (propertyMaxPricePid.equals(pid)) {
+                maxPrice.setText(propertyMaxPrice);
+            }
+
+        }
 
 
     }
@@ -384,12 +392,12 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
 
             @Override
             public void onResponse(Call<CityResponse> call, Response<CityResponse> response) {
-                if(response.isSuccessful()){
+                if (response.isSuccessful()) {
                     city.clear();
                     CityResponse cityResponse = response.body();
-                    if(cityResponse.getError().equals("-1")){
+                    if (cityResponse.getError().equals("-1")) {
                         dBhelper.emptyTable("city");
-                        for(int i=0; i < cityResponse.getCity().size(); i++){
+                        for (int i = 0; i < cityResponse.getCity().size(); i++) {
                             dBhelper.addCities(cityResponse.getCity().get(i).getTermId(),
                                     cityResponse.getCity().get(i).getName());
 
@@ -403,13 +411,13 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
                         final Dialog dialog = new Dialog(EditPurchasePropertyActivity.this);
                         dialog.setContentView(R.layout.show_city);
                         recyclerView = dialog.findViewById(R.id.showCity);
-                        RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(EditPurchasePropertyActivity.this);
+                        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(EditPurchasePropertyActivity.this);
                         recyclerView.setLayoutManager(layoutManager);
 //                        AlertDialog dialog = builder.create();
 //                        builder.setCancelable(false);
 //                        builder.setView(view1);
 
-                        adapter=new cityAdapter(city,EditPurchasePropertyActivity.this,dialog,citytxt);
+                        adapter = new cityAdapter(city, EditPurchasePropertyActivity.this, dialog, citytxt);
                         recyclerView.setAdapter(adapter);
 //                        adapter.setItemClick(EnterPropertyDetailActivity.this);
                         progressDialog.dismiss();
@@ -418,8 +426,8 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
 //                        citytxt.setText(dBhelper.getCityById(SaveInSharedPreference.getInSharedPreference(EnterPropertyDetailActivity.this).getCityId()));
 
 
-                    }else{
-                        CustomAlert.alertDialog(EditPurchasePropertyActivity.this,"Cities Not Fetched");
+                    } else {
+                        CustomAlert.alertDialog(EditPurchasePropertyActivity.this, "Cities Not Fetched");
                     }
                     Log.i("response", "post submitted to API." + cityResponse);
                 }
@@ -428,48 +436,47 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
             @Override
             public void onFailure(Call<CityResponse> call, Throwable t) {
                 progressDialog.dismiss();
-                CustomAlert.alertDialog(EditPurchasePropertyActivity.this,"Response Failed");
+                CustomAlert.alertDialog(EditPurchasePropertyActivity.this, "Response Failed");
                 Log.e("response_Failed", "Unable to submit post to API." + t);
             }
         });
     }
 
     private void initialize() {
-        title=(TextInputEditText) findViewById(R.id.pro_title_ed) ;
-        areaType=(TextView) findViewById(R.id.areaType_ed) ;
-        countrytxt=(TextView) findViewById(R.id.Country_ed) ;
-        citytxt=(TextView)findViewById(R.id.City_ed_2);
+        title = (TextInputEditText) findViewById(R.id.pro_title_ed);
+        areaType = (TextView) findViewById(R.id.areaType_ed);
+        countrytxt = (TextView) findViewById(R.id.Country_ed);
+        citytxt = (TextView) findViewById(R.id.City_ed_2);
 
 
+        areatxt = (TextView) findViewById(R.id.Area_ed);
+        subareatxt = (TextView) findViewById(R.id.Subarea_ed);
+        sectortxt = (TextView) findViewById(R.id.sector_ed);
+        price = (TextInputEditText) findViewById(R.id.price_ed);
+        size = (TextInputEditText) findViewById(R.id.size_ed);
 
-        areatxt=(TextView)findViewById(R.id.Area_ed) ;
-        subareatxt=(TextView)findViewById(R.id.Subarea_ed) ;
-        sectortxt=(TextView)findViewById(R.id.sector_ed) ;
-        price=(TextInputEditText)findViewById(R.id.price_ed) ;
-        size=(TextInputEditText)findViewById(R.id.size_ed) ;
+        propertyType = (TextView) findViewById(R.id.type);
 
-        propertyType=(TextView)findViewById(R.id.type);
-
-        rooms=(TextInputEditText)findViewById(R.id.rooms_ed) ;
-        bedroom = (TextInputEditText)findViewById(R.id.bedrooms_ed_2);
-        bathroom = (TextInputEditText)findViewById(R.id.bathroom_ed);
-        garages = (TextInputEditText)findViewById(R.id.garages_ed);
+        rooms = (TextInputEditText) findViewById(R.id.rooms_ed);
+        bedroom = (TextInputEditText) findViewById(R.id.bedrooms_ed_2);
+        bathroom = (TextInputEditText) findViewById(R.id.bathroom_ed);
+        garages = (TextInputEditText) findViewById(R.id.garages_ed);
 //        details = (TextInputEditText)findViewById(R.id.desc_ed);
-        video_url = (TextInputEditText)findViewById(R.id.vedioURL_ed);
-        image360_url = (TextInputEditText)findViewById(R.id.image360_ed);
-        btn = (Button)findViewById(R.id.btnImage);
+        video_url = (TextInputEditText) findViewById(R.id.vedioURL_ed);
+        image360_url = (TextInputEditText) findViewById(R.id.image360_ed);
+        btn = (Button) findViewById(R.id.btnImage);
         minPrice = findViewById(R.id.min_ed);
         maxPrice = findViewById(R.id.max_ed);
         minSize = findViewById(R.id.minS_ed);
         maxSize = findViewById(R.id.maxS_ed);
-        status=(TextView)findViewById(R.id.status2);
+        status = (TextView) findViewById(R.id.status2);
         status.setText(DemoClass.status);
 
         pid = getIntent().getStringExtra("pid");
         propertyList = new ArrayList<>();
 
         dBhelper = new DBhelper(this);
-        submit=findViewById(R.id.submitProp) ;
+        submit = findViewById(R.id.submitProp);
 
         submit.setOnClickListener(this);
         citytxt.setOnClickListener(this);
@@ -478,7 +485,6 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
         sectortxt.setOnClickListener(this);
         propertyType.setOnClickListener(this);
         areaType.setOnClickListener(this);
-
 
 
 //        submit.setOnClickListener(this);
@@ -494,7 +500,7 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
         propertyTitle = getIntent().getStringExtra("propertyDataTitle");
         propertyGarages = getIntent().getStringExtra("propertyListGarages");
         propertyBathrooms = getIntent().getStringExtra("propertyListBathroom");
-        propertyBedrooms =  getIntent().getStringExtra("propertyListBedroom");
+        propertyBedrooms = getIntent().getStringExtra("propertyListBedroom");
         propertyRooms = getIntent().getStringExtra("propertyListRoom");
         propertyDesc = getIntent().getStringExtra("propertyListDescription");
         propertySector = getIntent().getStringExtra("propertyListSector");
@@ -506,8 +512,8 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
         propertyArea = getIntent().getStringExtra("propertyListArea");
         propertyAreaId = getIntent().getStringExtra("propertyListAreaID");
         SaveInSharedPreference.getInSharedPreference(this).saveAreaId(propertyAreaId);
-        propertySubArea =  getIntent().getStringExtra("propertyListSubArea");
-        propertySubAreaId =  getIntent().getStringExtra("propertyListSubAreaID");
+        propertySubArea = getIntent().getStringExtra("propertyListSubArea");
+        propertySubAreaId = getIntent().getStringExtra("propertyListSubAreaID");
         SaveInSharedPreference.getInSharedPreference(this).saveSubAreaId(propertySubAreaId);
         propertyAreaType = getIntent().getStringExtra("propertyListAreaType");
         propertyAreaTypeId = getIntent().getStringExtra("propertyListAreaTypeID");
@@ -515,17 +521,17 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
         propertyPropertyType = getIntent().getStringExtra("propertyListPropertyType");
         propertyPropertyTypeId = getIntent().getStringExtra("propertyListPropertyTypeID");
         SaveInSharedPreference.getInSharedPreference(this).savePropertyTypeId(propertyPropertyTypeId);
-        propertyStatus =  getIntent().getStringExtra("propertyListStatus");
-        propertyStatusId =  getIntent().getStringExtra("propertyListStatusID");
+        propertyStatus = getIntent().getStringExtra("propertyListStatus");
+        propertyStatusId = getIntent().getStringExtra("propertyListStatusID");
 
-        propertyMinSize =  getIntent().getStringExtra("propertyListMinSize");
-        propertyMinSizePid =  getIntent().getStringExtra("propertyListMinSizePid");
-        propertyMinPrice =  getIntent().getStringExtra("propertyListMinPrice");
-        propertyMinPricePid =  getIntent().getStringExtra("propertyListMinPricePid ");
-        propertyMaxSize =  getIntent().getStringExtra("propertyListMaxSize");
-        propertyMaxSizePid =  getIntent().getStringExtra("propertyListMaxSizePid");
-        propertyMaxPrice =  getIntent().getStringExtra("propertyListMaxPrice");
-        propertyMaxPricePid =  getIntent().getStringExtra("propertyListMaxPricePid");
+        propertyMinSize = getIntent().getStringExtra("propertyListMinSize");
+        propertyMinSizePid = getIntent().getStringExtra("propertyListMinSizePid");
+        propertyMinPrice = getIntent().getStringExtra("propertyListMinPrice");
+        propertyMinPricePid = getIntent().getStringExtra("propertyListMinPricePid");
+        propertyMaxSize = getIntent().getStringExtra("propertyListMaxSize");
+        propertyMaxSizePid = getIntent().getStringExtra("propertyListMaxSizePid");
+        propertyMaxPrice = getIntent().getStringExtra("propertyListMaxPrice");
+        propertyMaxPricePid = getIntent().getStringExtra("propertyListMaxPricePid");
 
 
 //
@@ -556,11 +562,11 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
                     && null != data) {
                 // Get the Image from data
 
-                String[] filePathColumn = { MediaStore.Images.Media.DATA };
+                String[] filePathColumn = {MediaStore.Images.Media.DATA};
                 imagesEncodedList = new ArrayList<String>();
-                if(data.getData()!=null){
+                if (data.getData() != null) {
 
-                    Uri mImageUri=data.getData();
+                    Uri mImageUri = data.getData();
 
                     // Get the cursor
                     Cursor cursor = getContentResolver().query(mImageUri,
@@ -569,12 +575,12 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
                     cursor.moveToFirst();
 
                     int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-                    imageEncoded  = cursor.getString(columnIndex);
+                    imageEncoded = cursor.getString(columnIndex);
                     cursor.close();
 
                     ArrayList<Uri> mArrayUri = new ArrayList<Uri>();
                     mArrayUri.add(mImageUri);
-                    galleryAdapter = new GalleryAdapter(getApplicationContext(),mArrayUri);
+                    galleryAdapter = new GalleryAdapter(getApplicationContext(), mArrayUri);
                     gvGallery.setAdapter(galleryAdapter);
                     gvGallery.setVerticalSpacing(gvGallery.getHorizontalSpacing());
                     ViewGroup.MarginLayoutParams mlp = (ViewGroup.MarginLayoutParams) gvGallery
@@ -596,11 +602,11 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
                             cursor.moveToFirst();
 
                             int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-                            imageEncoded  = cursor.getString(columnIndex);
+                            imageEncoded = cursor.getString(columnIndex);
                             imagesEncodedList.add(imageEncoded);
                             cursor.close();
 
-                            galleryAdapter = new GalleryAdapter(getApplicationContext(),mArrayUri);
+                            galleryAdapter = new GalleryAdapter(getApplicationContext(), mArrayUri);
                             gvGallery.setAdapter(galleryAdapter);
                             gvGallery.setVerticalSpacing(gvGallery.getHorizontalSpacing());
                             ViewGroup.MarginLayoutParams mlp = (ViewGroup.MarginLayoutParams) gvGallery
@@ -624,22 +630,80 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.submitProp:
                 String s = status.getText().toString();
-                if (!title.getText().toString().equals("") && !areatxt.getText().toString().equals("") &&
-                        !citytxt.getText().toString().equals("") && !countrytxt.getText().toString().equals("")
-                        && !subareatxt.getText().toString().equals("")
-                        && !propertyType.getText().toString().equals("") &&
-                        !status.getText().toString().equals("")
-                        && !areaType.getText().toString().equals("")) {
-                    progressDialog.show();
-                    totalMoney = SaveInSharedPreference.getInSharedPreference(this).getRemainingMoney();
-                    remainingMoney = totalMoney - 50;
-                    postPropertyDetails();
+
+                if (!title.getText().toString().equals("")) {
+
+                    if (!areatxt.getText().toString().equals("")) {
+
+                        if (!citytxt.getText().toString().equals("")) {
+
+                            if (!countrytxt.getText().toString().equals("")) {
+
+                                if (!subareatxt.getText().toString().equals("")) {
+
+                                    if (!propertyType.getText().toString().equals("")) {
+
+                                        if (!status.getText().toString().equals("")) {
+
+
+                                            if (!areaType.getText().toString().equals("")) {
+
+                                                progressDialog.show();
+                                                totalMoney = SaveInSharedPreference.getInSharedPreference(this).getRemainingMoney();
+                                                remainingMoney = totalMoney - 50;
+                                                postPropertyDetails();
+
+                                            } else {
+                                                CustomAlert.alertDialog(this, "Insert Area Type");
+                                            }
+
+                                        } else {
+                                            CustomAlert.alertDialog(this, "Insert Status");
+                                        }
+
+                                    } else {
+                                        CustomAlert.alertDialog(this, "Insert Property Type");
+                                    }
+
+                                } else {
+                                    CustomAlert.alertDialog(this, "Insert Sub Area");
+                                }
+
+                            } else {
+                                CustomAlert.alertDialog(this, "Insert Country");
+                            }
+
+
+                        } else {
+                            CustomAlert.alertDialog(this, "Insert City");
+                        }
+
+                    } else {
+                        CustomAlert.alertDialog(this, "Insert Area");
+                    }
+
+
                 } else {
-                    CustomAlert.alertDialog(this, "Please Insert Correct Data");
+                    CustomAlert.alertDialog(this, "Insert Title");
                 }
+
+
+//                if (!title.getText().toString().equals("") && !areatxt.getText().toString().equals("") &&
+//                        !citytxt.getText().toString().equals("") && !countrytxt.getText().toString().equals("")
+//                        && !subareatxt.getText().toString().equals("")
+//                        && !propertyType.getText().toString().equals("") &&
+//                        !status.getText().toString().equals("")
+//                        && !areaType.getText().toString().equals("")) {
+//                    progressDialog.show();
+//                    totalMoney = SaveInSharedPreference.getInSharedPreference(this).getRemainingMoney();
+//                    remainingMoney = totalMoney - 50;
+//                    postPropertyDetails();
+//                } else {
+//                    CustomAlert.alertDialog(this, "Please Insert Correct Data");
+//                }
                 break;
 
             case R.id.City_ed_2:
@@ -692,13 +756,13 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
         final Dialog dialogPropertyType = new Dialog(EditPurchasePropertyActivity.this);
         dialogPropertyType.setContentView(R.layout.show_property_type);
         recyclerViewPropertyType = dialogPropertyType.findViewById(R.id.showPropertyType);
-        RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(EditPurchasePropertyActivity.this);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(EditPurchasePropertyActivity.this);
         recyclerViewPropertyType.setLayoutManager(layoutManager);
 //                        AlertDialog dialog = builder.create();
 //                        builder.setCancelable(false);
 //                        builder.setView(view1);
 
-        propertyTypeAdapter = new PropertyTypeAdapter(propertyTypeList,EditPurchasePropertyActivity.this,dialogPropertyType,propertyType);
+        propertyTypeAdapter = new PropertyTypeAdapter(propertyTypeList, EditPurchasePropertyActivity.this, dialogPropertyType, propertyType);
         recyclerViewPropertyType.setAdapter(propertyTypeAdapter);
 //                        adapter.setItemClick(EnterPropertyDetailActivity.this);
         dialogPropertyType.show();
@@ -711,11 +775,11 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
 
             @Override
             public void onResponse(Call<AreaTypeResponse> call, Response<AreaTypeResponse> response) {
-                if(response.isSuccessful()) {
+                if (response.isSuccessful()) {
                     AreaTypeResponse areaTypeResponse = response.body();
-                    if(areaTypeResponse.getError().equals("-1")){
+                    if (areaTypeResponse.getError().equals("-1")) {
                         dBhelper.emptyTable("areaType");
-                        for(int i=0; i < areaTypeResponse.getAreaType().size(); i++){
+                        for (int i = 0; i < areaTypeResponse.getAreaType().size(); i++) {
                             dBhelper.addAreaType(areaTypeResponse.getAreaType().get(i).getTermId(),
                                     areaTypeResponse.getAreaType().get(i).getName());
 
@@ -729,13 +793,13 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
                         final Dialog dialogAreaType = new Dialog(EditPurchasePropertyActivity.this);
                         dialogAreaType.setContentView(R.layout.show_area_type);
                         recyclerViewAreaType = dialogAreaType.findViewById(R.id.showAreaType);
-                        RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(EditPurchasePropertyActivity.this);
+                        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(EditPurchasePropertyActivity.this);
                         recyclerViewAreaType.setLayoutManager(layoutManager);
 //                        AlertDialog dialog = builder.create();
 //                        builder.setCancelable(false);
 //                        builder.setView(view1);
 
-                        areaTypeAdapter = new AreaTypeAdapter(area_type,EditPurchasePropertyActivity.this,dialogAreaType,areaType);
+                        areaTypeAdapter = new AreaTypeAdapter(area_type, EditPurchasePropertyActivity.this, dialogAreaType, areaType);
                         recyclerViewAreaType.setAdapter(areaTypeAdapter);
 //                        adapter.setItemClick(EnterPropertyDetailActivity.this);
                         progressDialog.dismiss();
@@ -744,9 +808,9 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
 //                        citytxt.setText(dBhelper.getCityById(SaveInSharedPreference.getInSharedPreference(EnterPropertyDetailActivity.this).getCityId()));
 
 
-                    }else{
+                    } else {
                         progressDialog.dismiss();
-                        CustomAlert.alertDialog(EditPurchasePropertyActivity.this,"Area Type Not Fetched");
+                        CustomAlert.alertDialog(EditPurchasePropertyActivity.this, "Area Type Not Fetched");
                     }
                     Log.i("response", "post submitted to API." + areaTypeResponse);
                 }
@@ -755,7 +819,7 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
             @Override
             public void onFailure(Call<AreaTypeResponse> call, Throwable t) {
                 progressDialog.dismiss();
-                CustomAlert.alertDialog(EditPurchasePropertyActivity.this,"Response Failed");
+                CustomAlert.alertDialog(EditPurchasePropertyActivity.this, "Response Failed");
                 Log.e("response_Failed", "Unable to submit post to API." + t);
             }
         });
@@ -768,11 +832,11 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
 
             @Override
             public void onResponse(Call<SectorResponse> call, Response<SectorResponse> response) {
-                if(response.isSuccessful()) {
+                if (response.isSuccessful()) {
                     SectorResponse sectorResponse = response.body();
-                    if(sectorResponse.getError().equals("-1")){
+                    if (sectorResponse.getError().equals("-1")) {
                         dBhelper.emptyTable("sector");
-                        for(int i=0; i < sectorResponse.getSectors().size(); i++){
+                        for (int i = 0; i < sectorResponse.getSectors().size(); i++) {
                             dBhelper.addSector(sectorResponse.getSectors().get(i).getTermId(),
                                     sectorResponse.getSectors().get(i).getName());
 
@@ -786,13 +850,13 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
                         final Dialog dialogSector = new Dialog(EditPurchasePropertyActivity.this);
                         dialogSector.setContentView(R.layout.show_sector);
                         recyclerViewSector = dialogSector.findViewById(R.id.showSector);
-                        RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(EditPurchasePropertyActivity.this);
+                        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(EditPurchasePropertyActivity.this);
                         recyclerViewSector.setLayoutManager(layoutManager);
 //                        AlertDialog dialog = builder.create();
 //                        builder.setCancelable(false);
 //                        builder.setView(view1);
 
-                        sectorAdapter = new SectorAdapter(sector,EditPurchasePropertyActivity.this,dialogSector,sectortxt);
+                        sectorAdapter = new SectorAdapter(sector, EditPurchasePropertyActivity.this, dialogSector, sectortxt);
                         recyclerViewSector.setAdapter(sectorAdapter);
 //                        adapter.setItemClick(EnterPropertyDetailActivity.this);
                         progressDialog.dismiss();
@@ -801,9 +865,9 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
 //                        citytxt.setText(dBhelper.getCityById(SaveInSharedPreference.getInSharedPreference(EnterPropertyDetailActivity.this).getCityId()));
 
 
-                    }else{
+                    } else {
                         progressDialog.dismiss();
-                        CustomAlert.alertDialog(EditPurchasePropertyActivity.this,"Sectors Not Fetched");
+                        CustomAlert.alertDialog(EditPurchasePropertyActivity.this, "Sectors Not Fetched");
                     }
                     Log.i("response", "post submitted to API." + sectorResponse);
                 }
@@ -812,11 +876,12 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
             @Override
             public void onFailure(Call<SectorResponse> call, Throwable t) {
                 progressDialog.dismiss();
-                CustomAlert.alertDialog(EditPurchasePropertyActivity.this,"Response Failed");
+                CustomAlert.alertDialog(EditPurchasePropertyActivity.this, "Response Failed");
                 Log.e("response_Failed", "Unable to submit post to API." + t);
             }
         });
     }
+
     //
     private void getSubAreaApi() {
         Call<SubAreaResponse> call = apiService.getSubArea(SaveInSharedPreference.getInSharedPreference(this).getAreaId());
@@ -825,11 +890,11 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
 
             @Override
             public void onResponse(Call<SubAreaResponse> call, Response<SubAreaResponse> response) {
-                if(response.isSuccessful()) {
+                if (response.isSuccessful()) {
                     SubAreaResponse subAreaResponse = response.body();
-                    if(subAreaResponse.getError().equals("-1")){
+                    if (subAreaResponse.getError().equals("-1")) {
                         dBhelper.emptyTable("subArea");
-                        for(int i=0; i < subAreaResponse.getSubAreas().size(); i++){
+                        for (int i = 0; i < subAreaResponse.getSubAreas().size(); i++) {
                             dBhelper.addSubArea(subAreaResponse.getSubAreas().get(i).getTermId(),
                                     subAreaResponse.getSubAreas().get(i).getName());
 
@@ -843,13 +908,13 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
                         final Dialog dialogSubArea = new Dialog(EditPurchasePropertyActivity.this);
                         dialogSubArea.setContentView(R.layout.show_subarea);
                         recyclerViewSubArea = dialogSubArea.findViewById(R.id.showSubArea);
-                        RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(EditPurchasePropertyActivity.this);
+                        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(EditPurchasePropertyActivity.this);
                         recyclerViewSubArea.setLayoutManager(layoutManager);
 //                        AlertDialog dialog = builder.create();
 //                        builder.setCancelable(false);
 //                        builder.setView(view1);
 
-                        subAreaAdapter = new SubAreaAdapter(subArea,EditPurchasePropertyActivity.this,dialogSubArea,subareatxt);
+                        subAreaAdapter = new SubAreaAdapter(subArea, EditPurchasePropertyActivity.this, dialogSubArea, subareatxt);
                         recyclerViewSubArea.setAdapter(subAreaAdapter);
 //                        adapter.setItemClick(EnterPropertyDetailActivity.this);
                         progressDialog.dismiss();
@@ -858,9 +923,9 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
 //                        citytxt.setText(dBhelper.getCityById(SaveInSharedPreference.getInSharedPreference(EnterPropertyDetailActivity.this).getCityId()));
 
 
-                    }else{
+                    } else {
                         progressDialog.dismiss();
-                        CustomAlert.alertDialog(EditPurchasePropertyActivity.this,"Sub Areas Not Fetched");
+                        CustomAlert.alertDialog(EditPurchasePropertyActivity.this, "Sub Areas Not Fetched");
                     }
                     Log.i("response", "post submitted to API." + subAreaResponse);
                 }
@@ -869,7 +934,7 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
             @Override
             public void onFailure(Call<SubAreaResponse> call, Throwable t) {
                 progressDialog.dismiss();
-                CustomAlert.alertDialog(EditPurchasePropertyActivity.this,"Response Failed");
+                CustomAlert.alertDialog(EditPurchasePropertyActivity.this, "Response Failed");
                 Log.e("response_Failed", "Unable to submit post to API." + t);
             }
         });
@@ -882,11 +947,11 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
 
             @Override
             public void onResponse(Call<AreaResponse> call, Response<AreaResponse> response) {
-                if(response.isSuccessful()) {
+                if (response.isSuccessful()) {
                     AreaResponse areaResponse = response.body();
-                    if(areaResponse.getError().equals("-1")){
+                    if (areaResponse.getError().equals("-1")) {
                         dBhelper.emptyTable("area");
-                        for(int i=0; i < areaResponse.getAreas().size(); i++){
+                        for (int i = 0; i < areaResponse.getAreas().size(); i++) {
                             dBhelper.addArea(areaResponse.getAreas().get(i).getTermId(),
                                     areaResponse.getAreas().get(i).getName());
 
@@ -900,13 +965,13 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
                         final Dialog dialogarea = new Dialog(EditPurchasePropertyActivity.this);
                         dialogarea.setContentView(R.layout.show_area);
                         recyclerViewArea = dialogarea.findViewById(R.id.showArea);
-                        RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(EditPurchasePropertyActivity.this);
+                        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(EditPurchasePropertyActivity.this);
                         recyclerViewArea.setLayoutManager(layoutManager);
 //                        AlertDialog dialog = builder.create();
 //                        builder.setCancelable(false);
 //                        builder.setView(view1);
 
-                        areaAdapter = new AreaAdapter(area,EditPurchasePropertyActivity.this,dialogarea,areatxt);
+                        areaAdapter = new AreaAdapter(area, EditPurchasePropertyActivity.this, dialogarea, areatxt);
                         recyclerViewArea.setAdapter(areaAdapter);
 //                        adapter.setItemClick(EnterPropertyDetailActivity.this);
                         progressDialog.dismiss();
@@ -915,8 +980,8 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
 //                        citytxt.setText(dBhelper.getCityById(SaveInSharedPreference.getInSharedPreference(EnterPropertyDetailActivity.this).getCityId()));
 
 
-                    }else{
-                        CustomAlert.alertDialog(EditPurchasePropertyActivity.this,"Areas Not Fetched");
+                    } else {
+                        CustomAlert.alertDialog(EditPurchasePropertyActivity.this, "Areas Not Fetched");
                     }
                     Log.i("response", "post submitted to API." + areaResponse);
                 }
@@ -925,7 +990,7 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
             @Override
             public void onFailure(Call<AreaResponse> call, Throwable t) {
                 progressDialog.dismiss();
-                CustomAlert.alertDialog(EditPurchasePropertyActivity.this,"Response Failed");
+                CustomAlert.alertDialog(EditPurchasePropertyActivity.this, "Response Failed");
                 Log.e("response_Failed", "Unable to submit post to API." + t);
             }
         });
@@ -933,13 +998,13 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
 
     private void postPropertyDetails() {
 
-        if(statusType.equals("Want Rent")){
+        if (statusType.equals("Want Rent")) {
             statusTypeID = "228";
-        }else if(statusType.equals("Want Buy")){
+        } else if (statusType.equals("Want Buy")) {
             statusTypeID = "229";
-        } else if(statusType.equals("For Sale")){
+        } else if (statusType.equals("For Sale")) {
             statusTypeID = "72";
-        } else if(statusType.equals("For Rent")){
+        } else if (statusType.equals("For Rent")) {
             statusTypeID = "71";
         }
         String a = SaveInSharedPreference.getInSharedPreference(this).getUserId();
@@ -970,19 +1035,19 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
                 SaveInSharedPreference.getInSharedPreference(this).getAreaId(),
                 SaveInSharedPreference.getInSharedPreference(this).getSubAreaId(),
                 SaveInSharedPreference.getInSharedPreference(this).getSectorId(),
-                minPrice.getText().toString(),maxPrice.getText().toString(),
-                minSize.getText().toString(),maxSize.getText().toString(),
-                SaveInSharedPreference.getInSharedPreference(this).getAreaTypeId(),rooms.getText().toString(),
-                bedroom.getText().toString(),bathroom.getText().toString(),garages.getText().toString(),remainingMoney);
+                minPrice.getText().toString(), maxPrice.getText().toString(),
+                minSize.getText().toString(), maxSize.getText().toString(),
+                SaveInSharedPreference.getInSharedPreference(this).getAreaTypeId(), rooms.getText().toString(),
+                bedroom.getText().toString(), bathroom.getText().toString(), garages.getText().toString(), remainingMoney);
 
         call.enqueue(new Callback<InsertPurchasePropertyResponse>() {
 
             @Override
             public void onResponse(Call<InsertPurchasePropertyResponse> call, Response<InsertPurchasePropertyResponse> response) {
-                if(response.isSuccessful()) {
+                if (response.isSuccessful()) {
                     progressDialog.dismiss();
                     InsertPurchasePropertyResponse insertResponse = response.body();
-                    if(insertResponse.getError().equals("-1")){
+                    if (insertResponse.getError().equals("-1")) {
 
                         SaveInSharedPreference.getInSharedPreference(EditPurchasePropertyActivity.this).savePidToRedirectToWeb(insertResponse.getPid());
 //                        CustomAlert.alertDialog(EditPurchasePropertyActivity.this,"Your Property Has Been Inserted !");
@@ -996,7 +1061,7 @@ public class EditPurchasePropertyActivity extends AppCompatActivity implements V
             @Override
             public void onFailure(Call<InsertPurchasePropertyResponse> call, Throwable t) {
                 progressDialog.dismiss();
-                CustomAlert.alertDialog(EditPurchasePropertyActivity.this,"Property Inserted");
+                CustomAlert.alertDialog(EditPurchasePropertyActivity.this, "Response Failed, Check Internet Connection");
                 Log.e("response_Failed", "Unable to submit post to API." + t.getCause());
             }
         });

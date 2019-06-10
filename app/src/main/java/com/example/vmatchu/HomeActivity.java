@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.Uri;
@@ -272,6 +273,10 @@ public void onBackPressed() {
             case R.id.nav_myacoount:
                 startActivity(new Intent(HomeActivity.this, myProfileActivity.class));
                 break;
+            case R.id.LogOut_btn_home:
+                logout();
+                break;
+
         }
 
         //replacing the fragment
@@ -283,5 +288,16 @@ public void onBackPressed() {
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+    }
+
+    private void logout() {
+        SharedPreferences sharedPrefs =getSharedPreferences(signInActivity.PREFS_NAME,MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPrefs.edit();
+        editor.clear();
+        editor.commit();
+
+        //show login form
+        Intent intent=new Intent(this, signInActivity.class);
+        startActivity(intent);
     }
 }

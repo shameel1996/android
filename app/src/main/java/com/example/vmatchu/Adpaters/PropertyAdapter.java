@@ -49,6 +49,7 @@ import com.example.vmatchu.Pojo.MyPropertyData;
 import com.example.vmatchu.Pojo.MyPropertyDescription;
 import com.example.vmatchu.Pojo.MyPropertyForDB;
 import com.example.vmatchu.Pojo.MyPropertyGarages;
+import com.example.vmatchu.Pojo.MyPropertyIsClosed;
 import com.example.vmatchu.Pojo.MyPropertyMaxPrice;
 import com.example.vmatchu.Pojo.MyPropertyMaxSize;
 import com.example.vmatchu.Pojo.MyPropertyMinPrice;
@@ -78,6 +79,7 @@ import static java.security.AccessController.getContext;
 
 public class PropertyAdapter extends RecyclerView.Adapter {
     private List<MyPropertyData> propertiesDetails;
+    private List<MyPropertyIsClosed> propertyResponsesListIsClosed;
     private List<MyPropertyCity> propertyResponsesCityList;
     private List<MyPropertyStatus> propertyResponsesStatusList;
 
@@ -116,7 +118,8 @@ public class PropertyAdapter extends RecyclerView.Adapter {
         return new ViewHolder(view);
     }
 
-    public PropertyAdapter(ArrayAdapter<String> arrayAdapter, Context context, List<MyPropertyData> propertiesDetails,
+    public PropertyAdapter(ArrayAdapter<String> arrayAdapter, Context context, List<MyPropertyIsClosed> propertyResponsesListIsClosed,
+                           List<MyPropertyData> propertiesDetails,
                            List<MyPropertyCity> propertyResponsesCityList,
                            List<MyPropertyStatus> propertyResponsesStatusList, List<MyPropertyArea> propertyResponsesAreaList1,
                            List<MyPropertySubArea> propertyResponsesSubareaList1,
@@ -163,6 +166,13 @@ public class PropertyAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, final int i) {
         ViewHolder viewHolder1 = (ViewHolder) viewHolder;
 //        PropertiesDetails propertiesDetails1=propertiesDetails.get(i);
+        if (propertyResponsesListIsClosed.size() > i) {
+            if(propertyResponsesListIsClosed.get(i).getIsClosed().equals("1")){
+                viewHolder1.activeOrClosed.setText("Closed");
+            }else {
+                viewHolder1.activeOrClosed.setText("Active");
+            }
+        }
         if (propertiesDetails.size() > i) {
             viewHolder1.id_prop.setText(String.valueOf(propertiesDetails.get(i).getPid()));
             viewHolder1.Title.setText(propertiesDetails.get(i).getTitle());
@@ -181,7 +191,7 @@ public class PropertyAdapter extends RecyclerView.Adapter {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, MatchPropertyActivity.class);
-//                intent.putExtra("pid", propertiesDetails.get(i).getPid());
+                intent.putExtra("pid", propertiesDetails.get(i).getPid());
                 context.startActivity(intent);
             }
         });
@@ -256,6 +266,7 @@ public class PropertyAdapter extends RecyclerView.Adapter {
 
                 if (propertyResponsesMinPriceList1.size() > i) {
                     intent.putExtra("propertyListMinPrice", propertyResponsesMinPriceList1.get(i).getMinPrice());
+                    String pid1 = propertyResponsesMinPriceList1.get(i).getPid();
                     intent.putExtra("propertyListMinPricePid", propertyResponsesMinPriceList1.get(i).getPid());
                 }
 
@@ -716,6 +727,7 @@ public class PropertyAdapter extends RecyclerView.Adapter {
         TextView date;
         Spinner spinner;
         Button seeMatch;
+        TextView activeOrClosed;
 
 
         public ViewHolder(View view) {
@@ -730,6 +742,7 @@ public class PropertyAdapter extends RecyclerView.Adapter {
             date = view.findViewById(R.id.calenxder_2);
             spinner = view.findViewById(R.id.dropForProperty);
             seeMatch = view.findViewById(R.id.seeMatch);
+            activeOrClosed = view.findViewById(R.id.active_2);
 
         }
 

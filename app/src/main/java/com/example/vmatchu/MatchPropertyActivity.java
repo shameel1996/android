@@ -76,7 +76,7 @@ public class MatchPropertyActivity extends AppCompatActivity implements Navigati
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_match_property);
 
-//        pid = getIntent().getStringExtra("pid");
+        pid = getIntent().getStringExtra("pid");
         initViews();
         getMatchPropertyResponse();
 //        matchPropertyList = dBhelper.getMatchProperty(pid);

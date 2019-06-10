@@ -90,7 +90,7 @@ public class DetailsFragments extends Fragment {
         propertyMinSize =  getArguments().getString("propertyListMinSize");
         propertyMinSizePid =  getArguments().getString("propertyListMinSizePid");
         propertyMinPrice =  getArguments().getString("propertyListMinPrice");
-        propertyMinPricePid =  getArguments().getString("propertyListMinPricePid ");
+        propertyMinPricePid =  getArguments().getString("propertyListMinPricePid");
         propertyMaxSize =  getArguments().getString("propertyListMaxSize");
         propertyMaxSizePid =  getArguments().getString("propertyListMaxSizePid");
         propertyMaxPrice =  getArguments().getString("propertyListMaxPrice");
@@ -111,22 +111,36 @@ public class DetailsFragments extends Fragment {
         areaType.setText(propertyAreaType);
         pid.setText(propertyId);
 
-        if(propertyMinSizePid.equals(propertyId)){
+        if (propertyMinSize != null && !propertyMinSize.isEmpty()) {
+            if (propertyMinSizePid.equals(propertyId)) {
 
-            minSize.setText(propertyMinSize);
+                minSize.setText(propertyMinSize);
 
-        }else if(propertyMinPricePid.equals(propertyId)){
+            }
+        }
 
-            minPrice.setText(propertyMinPrice);
+        if (propertyMinPrice != null && !propertyMinPrice.isEmpty()) {
+            if (propertyMinPricePid.equals(propertyId)) {
 
-        }else if(propertyMaxSizePid.equals(propertyId)){
+                minPrice.setText(propertyMinPrice);
 
-            maxSize.setText(propertyMaxSize);
+            }
+        }
 
-        }else if(propertyMaxPricePid.equals(propertyId)){
+        if (propertyMaxSize != null && !propertyMaxSize.isEmpty()) {
+            if (propertyMaxSizePid.equals(propertyId)) {
+
+                maxSize.setText(propertyMaxSize);
+
+            }
+        }
+
+        if (propertyMaxPrice != null && !propertyMaxPrice.isEmpty()) {
+        if(propertyMaxPricePid.equals(propertyId)){
 
             maxPrice.setText(propertyMaxPrice);
 
+        }
         }
     }
 

@@ -150,7 +150,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="4dp"
-                    android:text="Price On Sell" />
+                    android:text="Price On Call" />
 
 
             </LinearLayout>
@@ -219,7 +219,6 @@
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
-                android:background="#F1EDED"
                 android:orientation="horizontal">
 
                 <TextView
@@ -237,7 +236,7 @@
                 android:layout_width="0dp"
                 android:layout_height="30dp"
                 android:layout_weight="1"
-                android:background="#F1EDED"
+
                 android:orientation="horizontal">
 
                 <TextView
@@ -607,7 +606,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="4dp"
-                    android:text="Max Size" />
+                    android:text="Max Price" />
 
 
             </LinearLayout>

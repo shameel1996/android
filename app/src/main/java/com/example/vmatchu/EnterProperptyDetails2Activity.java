@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.provider.MediaStore;
 import android.support.annotation.RequiresApi;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -132,6 +133,8 @@ public class EnterProperptyDetails2Activity extends AppCompatActivity implements
     ;
 
     private TextInputEditText price, size, rooms, bedroom, bathroom, garages, details, video_url, image360_url;
+
+    CollapsingToolbarLayout screenTitle;
 
     String statusType;
 
@@ -341,6 +344,7 @@ public class EnterProperptyDetails2Activity extends AppCompatActivity implements
         areaType = (TextView) findViewById(R.id.areaType_ed);
         countrytxt = (TextView) findViewById(R.id.Country_ed);
         citytxt = (TextView) findViewById(R.id.City_ed_2);
+        screenTitle = findViewById(R.id.title);
 
 
         areatxt = (TextView) findViewById(R.id.Area_ed);
@@ -365,6 +369,12 @@ public class EnterProperptyDetails2Activity extends AppCompatActivity implements
         maxSize = findViewById(R.id.maxS_ed);
         status = (TextView) findViewById(R.id.status2);
         status.setText(DemoClass.status);
+
+        if(DemoClass.status.equals("Want Rent")){
+            screenTitle.setTitle("Want Rent");
+        } else if(DemoClass.status.equals("Want Buy")){
+            screenTitle.setTitle("Want Buy");
+        }
 
         dBhelper = new DBhelper(this);
         submit = findViewById(R.id.submitProp);

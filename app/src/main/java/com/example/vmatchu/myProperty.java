@@ -51,6 +51,7 @@ import com.example.vmatchu.Pojo.MyPropertyData;
 import com.example.vmatchu.Pojo.MyPropertyDescription;
 import com.example.vmatchu.Pojo.MyPropertyForDB;
 import com.example.vmatchu.Pojo.MyPropertyGarages;
+import com.example.vmatchu.Pojo.MyPropertyIsClosed;
 import com.example.vmatchu.Pojo.MyPropertyMaxPrice;
 import com.example.vmatchu.Pojo.MyPropertyMaxSize;
 import com.example.vmatchu.Pojo.MyPropertyMinPrice;
@@ -98,6 +99,7 @@ public class myProperty extends AppCompatActivity implements NavigationView.OnNa
     private ArrayList<MyPropertyStatusForDB> propertyResponsesStatusList = new ArrayList<>();
 
     private List<MyPropertyData> propertyResponsesList1 = new ArrayList<>();
+    private List<MyPropertyIsClosed> propertyResponsesListIsClosed = new ArrayList<>();
 
     private List<MyPropertyCity> propertyResponsesCityList1 = new ArrayList<>();
     private List<MyPropertyStatus> propertyResponsesStatusList1 = new ArrayList<>();
@@ -311,6 +313,8 @@ public class myProperty extends AppCompatActivity implements NavigationView.OnNa
                         } else {
                             for (int i = 0; i < myPropertyResponse.getData().size(); i++) {
 
+
+                                propertyResponsesListIsClosed = myPropertyResponse.getIsClosed();
                                 propertyResponsesList1 = myPropertyResponse.getData();
                                 propertyResponsesCityList1 = myPropertyResponse.getCity();
                                 propertyResponsesStatusList1 = myPropertyResponse.getStatus();
@@ -332,7 +336,8 @@ public class myProperty extends AppCompatActivity implements NavigationView.OnNa
                                 recyclerView = (RecyclerView) findViewById(R.id.content_my_property);
                                 RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(myProperty.this);
                                 recyclerView.setLayoutManager(layoutManager);
-                                adapter = new PropertyAdapter(arrayAdapter, myProperty.this, propertyResponsesList1,
+                                adapter = new PropertyAdapter(arrayAdapter, myProperty.this,propertyResponsesListIsClosed,
+                                        propertyResponsesList1,
                                         propertyResponsesCityList1, propertyResponsesStatusList1, propertyResponsesAreaList1,
                                         propertyResponsesSubareaList1,propertyResponsesSectorList1,propertyResponsesGaragesList1,
                                         propertyResponsesBathroomList1,propertyResponsesBedroomList1,propertyResponsesRoomList1,
@@ -1666,6 +1671,8 @@ public class myProperty extends AppCompatActivity implements NavigationView.OnNa
         } else if (id == R.id.LogOut_btn_prop) {
 
             logout();
+        } else if (id == R.id.username){
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_my_property);
