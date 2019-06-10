@@ -64,6 +64,7 @@ public class myProperty extends AppCompatActivity implements NavigationView.OnNa
     private String[] proType = {"All status", "For Rent", "For Sell", "want Rent", "want Buy"};
     private APIService apiService;
     DBhelper dBhelper;
+
     ProgressDialog progressDialog;
     ArrayAdapter<String> arrayAdapter;
     SpinnerDialog spinnerDialog;
@@ -79,6 +80,7 @@ public class myProperty extends AppCompatActivity implements NavigationView.OnNa
         setContentView(R.layout.activity_my_property);
 
         myPropertyForDB=new MyPropertyForDB();
+
 
 
         Toolbar toolbar=findViewById(R.id.toolbarMyProperty);

@@ -1111,6 +1111,7 @@ drawable mark
 drawable match
 drawable maxresdefault
 drawable menub
+drawable menuicon
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable myaccount

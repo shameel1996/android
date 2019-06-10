@@ -7,6 +7,8 @@ import android.content.ClipData;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -121,6 +123,7 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
     int remainingMoney;
 
     ArrayList<Uri> mArrayUri;
+    Uri mUri;
 
     private SpinnerDialog spinnnerDialogue,spinnerDialog,DialogAreaType;
 
@@ -155,6 +158,7 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
         initialize();
 
         mArrayUri=new ArrayList<>();
+
         country.add("Pakistan");
         country.add("India");
         country.add("Bangladesh");
@@ -345,6 +349,7 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
         sectortxt=(TextView)findViewById(R.id.sector_ed);
         propertyType=(TextView)findViewById(R.id.type);
         price=(TextInputEditText)findViewById(R.id.price_ed);
+        price.addTextChangedListener(textWatcher());
         size=(TextInputEditText)findViewById(R.id.size_ed);
         areaType=(TextView)findViewById(R.id.areaType_ed);
         rooms=(TextInputEditText)findViewById(R.id.rooms_ed);
@@ -401,6 +406,7 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
                     Uri mImageUri=data.getData();
 
                     // Get the cursor
+
                     Cursor cursor = getContentResolver().query(mImageUri,
                             filePathColumn, null, null, null);
                     // Move to first row
@@ -411,9 +417,11 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
                     cursor.close();
 
 
+
                     mArrayUri.add(mImageUri);
-                    galleryAdapter = new GalleryAdapter(getApplicationContext(),mArrayUri);
+                    galleryAdapter = new GalleryAdapter(this,mArrayUri);
                     gvGallery.setAdapter(galleryAdapter);
+
                     gvGallery.setVerticalSpacing(gvGallery.getHorizontalSpacing());
                     ViewGroup.MarginLayoutParams mlp = (ViewGroup.MarginLayoutParams) gvGallery
                             .getLayoutParams();
@@ -427,7 +435,7 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
 
                             ClipData.Item item = mClipData.getItemAt(i);
                             Uri uri = item.getUri();
-                            mArrayUri.add(uri);
+
                             // Get the cursor
                             Cursor cursor = getContentResolver().query(uri, filePathColumn, null, null, null);
                             // Move to first row
@@ -437,8 +445,8 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
                             imageEncoded  = cursor.getString(columnIndex);
                             imagesEncodedList.add(imageEncoded);
                             cursor.close();
-
-                            galleryAdapter = new GalleryAdapter(getApplicationContext(),mArrayUri);
+                            mArrayUri.add(uri);
+                            galleryAdapter = new GalleryAdapter(this,mArrayUri);
                             gvGallery.setAdapter(galleryAdapter);
                             gvGallery.setVerticalSpacing(gvGallery.getHorizontalSpacing());
                             ViewGroup.MarginLayoutParams mlp = (ViewGroup.MarginLayoutParams) gvGallery

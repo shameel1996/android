@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.graphics.Bitmap;
+import android.os.Environment;
 import android.util.Log;
 
 import com.example.vmatchu.Pojo.CityAreaSubareaSectorDetailsResponse;
@@ -14,6 +16,8 @@ import com.example.vmatchu.Pojo.MyPropertyResponse;
 import com.example.vmatchu.Pojo.PropertyType;
 import com.example.vmatchu.Pojo.PropertyTypeData;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 
 public class DBhelper extends SQLiteOpenHelper {
@@ -650,4 +654,5 @@ public class DBhelper extends SQLiteOpenHelper {
 //        db.execSQL("delete from "+ DB_TABLE);
         db.close();
     }
+
 }

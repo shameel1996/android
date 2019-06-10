@@ -1132,6 +1132,10 @@
         "source": "E:\\vmatchUKnova\\android\\app\\src\\main\\res\\drawable\\filter.png"
     },
     {
+        "merged": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_menuicon.png.flat",
+        "source": "E:\\vmatchUKnova\\android\\app\\src\\main\\res\\drawable-v21\\menuicon.png"
+    },
+    {
         "merged": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_bottom_nav_colored_item_tint.xml.flat",
         "source": "C:\\Users\\hammad\\.gradle\\caches\\transforms-2\\files-2.1\\e41a3ca479f241d4b82fb505f949c9fb\\res\\color\\mtrl_bottom_nav_colored_item_tint.xml"
     },

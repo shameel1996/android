@@ -41,9 +41,9 @@ public class GalleryAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(final int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, final View convertView, final ViewGroup parent) {
 
-        pos = position;
+
         inflater = (LayoutInflater) ctx
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -54,11 +54,18 @@ public class GalleryAdapter extends BaseAdapter {
         imageButton=(ImageButton) itemView.findViewById(R.id.delete_image);
 
         ivGallery.setImageURI(mArrayUri.get(position));
+
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mArrayUri.remove(mArrayUri.get(position));
+                mArrayUri.remove(getItem(position));
+
+
+//                mArrayUri.get(position);
+                ivGallery.setImageURI(null);
+                //parent.removeView(convertView);
                 itemView.setVisibility(View.GONE);
+
             }
 
         });

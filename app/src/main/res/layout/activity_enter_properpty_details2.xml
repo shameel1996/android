@@ -58,13 +58,16 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <android.support.design.widget.TextInputEditText
 
+                    android:singleLine="true"
                     android:id="@+id/pro_title_ed"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Title" />
             </android.support.design.widget.TextInputLayout>
+
             <TextView
 
                 android:textStyle="bold"
@@ -79,7 +82,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+                <requestFocus />
                 <TextView
+
                     android:hint="Type"
                     android:drawableRight="@drawable/imgpshfullsizeanim"
                     android:textSize="18dp"

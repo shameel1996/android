@@ -1,13 +1,16 @@
 package com.example.vmatchu.Adpaters;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -21,6 +24,7 @@ import android.widget.Toast;
 import com.example.vmatchu.Classes.PackageDetails;
 import com.example.vmatchu.Classes.PropertiesDetails;
 import com.example.vmatchu.EditSellPropertyActivity;
+import com.example.vmatchu.EnterPropertyDetailActivity;
 import com.example.vmatchu.MatchPropertyActivity;
 import com.example.vmatchu.PackageActivity;
 import com.example.vmatchu.Pojo.MyPropertyForDB;
@@ -37,6 +41,7 @@ public class PropertyAdapter extends RecyclerView.Adapter {
     private ArrayList<MyPropertyForDB> propertiesDetails;
     Context context;
     ArrayAdapter<String> arrayAdapter;
+    RecyclerView recyclerView;
 
 
 
@@ -95,26 +100,44 @@ public class PropertyAdapter extends RecyclerView.Adapter {
 //                context.startActivity(new Intent(context, PropertyDetailsActivity.class));
             }
         });
-        viewHolder1.spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//        viewHolder1.spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//
+//            @Override
+//            public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id) {
+//                if(position == 2){
+//                    Intent intent = new Intent(context, EditSellPropertyActivity.class);
+//                    intent.putExtra("pid", propertiesDetails.get(i).getPid());
+//                    context.startActivity(intent);
+//                }
+//            }
+//            @Override
+//            public void onNothingSelected(AdapterView<?> arg0) {
+//
+//            }
+//
+//        });
+//
+//
+//        viewHolder1.spinner.setAdapter(arrayAdapter);
 
+        viewHolder1.spinner.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id) {
-                if(position == 2){
-                    Intent intent = new Intent(context, EditSellPropertyActivity.class);
-                    intent.putExtra("pid", propertiesDetails.get(i).getPid());
-                    context.startActivity(intent);
-                }
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> arg0) {
+            public void onClick(View v) {
+                final Dialog dialog = new Dialog(context);
+                dialog.setContentView(R.layout.show_city);
+                recyclerView = dialog.findViewById(R.id.showCity);
+                RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(context);
+                recyclerView.setLayoutManager(layoutManager);
+//                        AlertDialog dialog = builder.create();
+//                        builder.setCancelable(false);
+//                        builder.setView(view1);
+
+
+//                        adapter.setItemClick(EnterPropertyDetailActivity.this);
+
 
             }
-
         });
-
-
-        viewHolder1.spinner.setAdapter(arrayAdapter);
-
 
 
 
@@ -147,7 +170,7 @@ public class PropertyAdapter extends RecyclerView.Adapter {
         TextView city;
         TextView type;
         TextView date;
-        Spinner spinner;
+        ImageView spinner;
         Button seeMatch;
 
 
