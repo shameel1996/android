@@ -5,13 +5,17 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputType;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.widget.Toast;
 
 import com.example.vmatchu.CustomAlert.CustomAlert;
@@ -37,6 +41,8 @@ public class signInActivity extends AppCompatActivity {
     ProgressDialog progressDialog;
     APIService apiService;
     CheckBox rememberMe;
+    ImageView iv_show_pass;
+    boolean showPass = true;
 
     public static String PREFS_NAME = "mypre";
     public static String PREF_USERNAME = "username";
@@ -58,7 +64,6 @@ public class signInActivity extends AppCompatActivity {
                 uname = et_username.getText().toString();
                 pass = et_password.getText().toString();
 
-
                 if (!TextUtils.isEmpty(uname) && !TextUtils.isEmpty(pass)) {
                     postLogInApi(uname, pass);
                 }
@@ -69,6 +74,21 @@ public class signInActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(signInActivity.this, SignUpActivity.class));
+            }
+        });
+
+        iv_show_pass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(showPass){
+                    showPass = false;
+                    iv_show_pass.setImageResource(R.drawable.hide);
+                    et_password.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                }else{
+                    showPass = true;
+                    iv_show_pass.setImageResource(R.drawable.view);
+                    et_password.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                }
             }
         });
     }
@@ -119,6 +139,7 @@ public class signInActivity extends AppCompatActivity {
         newAcc = (TextView) findViewById(R.id.createAcc);
         et_username = findViewById(R.id.userName);
         et_password = findViewById(R.id.Password);
+        iv_show_pass = findViewById(R.id.show_pass);
 
 
         rememberMe = findViewById(R.id.remeberMe);

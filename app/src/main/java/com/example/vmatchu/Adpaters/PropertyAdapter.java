@@ -8,6 +8,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
@@ -185,6 +186,7 @@ public class PropertyAdapter extends RecyclerView.Adapter {
         if (propertyResponsesListIsClosed.size() > i) {
             if(propertyResponsesListIsClosed.get(i).getIsClosed().equals("1")){
                 viewHolder1.activeOrClosed.setText("Closed");
+                viewHolder1.activeOrClosed.setTextColor(Color.parseColor("#ffcc0000"));
             }else {
                 viewHolder1.activeOrClosed.setText("Active");
             }
