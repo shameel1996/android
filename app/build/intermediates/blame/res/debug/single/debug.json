@@ -112,7 +112,6 @@
         "source": "C:\\Users\\hammad\\.gradle\\caches\\transforms-2\\files-2.1\\c9347b383fd4185132045debda40b91b\\res\\layout\\abc_alert_dialog_material.xml"
     },
     {
-<<<<<<< HEAD
         "merged": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mtrl_tabs_default_indicator.xml.flat",
         "source": "C:\\Users\\hammad\\.gradle\\caches\\transforms-2\\files-2.1\\e41a3ca479f241d4b82fb505f949c9fb\\res\\drawable\\mtrl_tabs_default_indicator.xml"
     },
@@ -123,18 +122,6 @@
     {
         "merged": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\hammad\\.gradle\\caches\\transforms-2\\files-2.1\\c9347b383fd4185132045debda40b91b\\res\\drawable-xxhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
-=======
-        "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_cascading_menu_item_layout.xml.flat",
-        "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\6cbba51632de68ce6377a8af5b44bf3c\\res\\layout\\abc_cascading_menu_item_layout.xml"
-    },
-    {
-        "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
-        "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\6cbba51632de68ce6377a8af5b44bf3c\\res\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
-    },
-    {
-        "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
-        "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\6cbba51632de68ce6377a8af5b44bf3c\\res\\drawable-ldrtl-xhdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
->>>>>>> 7ecc9473f0493318b91eef5dd4ebcf302ad60071
     },
     {
         "merged": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_ripple_color.xml.flat",
@@ -369,17 +356,8 @@
         "source": "C:\\Users\\hammad\\.gradle\\caches\\transforms-2\\files-2.1\\e41a3ca479f241d4b82fb505f949c9fb\\res\\drawable-hdpi-v4\\design_ic_visibility_off.png"
     },
     {
-<<<<<<< HEAD
         "merged": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_btn_colored_borderless_text_material.xml.flat",
         "source": "C:\\Users\\hammad\\.gradle\\caches\\transforms-2\\files-2.1\\c9347b383fd4185132045debda40b91b\\res\\color-v23\\abc_btn_colored_borderless_text_material.xml"
-=======
-        "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable_view.png.flat",
-        "source": "D:\\VmatchU Android App\\VmatchU new\\app\\src\\main\\res\\drawable\\view.png"
-    },
-    {
-        "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\6cbba51632de68ce6377a8af5b44bf3c\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
->>>>>>> 7ecc9473f0493318b91eef5dd4ebcf302ad60071
     },
     {
         "merged": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_contact.png.flat",
@@ -610,17 +588,8 @@
         "source": "C:\\Users\\hammad\\.gradle\\caches\\transforms-2\\files-2.1\\3cd56d486f08b47437e5bfe24cdc77ef\\res\\layout\\notification_action_tombstone.xml"
     },
     {
-<<<<<<< HEAD
         "merged": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "C:\\Users\\hammad\\.gradle\\caches\\transforms-2\\files-2.1\\c9347b383fd4185132045debda40b91b\\res\\drawable-xxhdpi-v4\\abc_ic_star_black_36dp.png"
-=======
-        "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\drawable_hide.png.flat",
-        "source": "D:\\VmatchU Android App\\VmatchU new\\app\\src\\main\\res\\drawable\\hide.png"
-    },
-    {
-        "merged": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_search_url_text.xml.flat",
-        "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\6cbba51632de68ce6377a8af5b44bf3c\\res\\color\\abc_search_url_text.xml"
->>>>>>> 7ecc9473f0493318b91eef5dd4ebcf302ad60071
     },
     {
         "merged": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_area_type.xml.flat",
@@ -825,6 +794,10 @@
     {
         "merged": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_my_property.xml.flat",
         "source": "E:\\vmatchUKnova\\android\\app\\src\\main\\res\\layout\\content_my_property.xml"
+    },
+    {
+        "merged": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_hide.png.flat",
+        "source": "E:\\vmatchUKnova\\android\\app\\src\\main\\res\\drawable\\hide.png"
     },
     {
         "merged": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21_notification_template_custom_big.xml.flat",
@@ -1039,12 +1012,12 @@
         "source": "C:\\Users\\hammad\\.gradle\\caches\\transforms-2\\files-2.1\\c9347b383fd4185132045debda40b91b\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
-        "merged": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_show_city.xml.flat",
-        "source": "E:\\vmatchUKnova\\android\\app\\src\\main\\res\\layout\\show_city.xml"
-    },
-    {
         "merged": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_chip_ripple_color.xml.flat",
         "source": "C:\\Users\\hammad\\.gradle\\caches\\transforms-2\\files-2.1\\e41a3ca479f241d4b82fb505f949c9fb\\res\\color\\mtrl_chip_ripple_color.xml"
+    },
+    {
+        "merged": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_show_city.xml.flat",
+        "source": "E:\\vmatchUKnova\\android\\app\\src\\main\\res\\layout\\show_city.xml"
     },
     {
         "merged": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
@@ -1271,6 +1244,10 @@
         "source": "C:\\Users\\hammad\\.gradle\\caches\\transforms-2\\files-2.1\\e41a3ca479f241d4b82fb505f949c9fb\\res\\animator\\design_fab_show_motion_spec.xml"
     },
     {
+        "merged": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_view.png.flat",
+        "source": "E:\\vmatchUKnova\\android\\app\\src\\main\\res\\drawable\\view.png"
+    },
+    {
         "merged": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\hammad\\.gradle\\caches\\transforms-2\\files-2.1\\c9347b383fd4185132045debda40b91b\\res\\drawable-xhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
@@ -1335,6 +1312,10 @@
         "source": "E:\\vmatchUKnova\\android\\app\\src\\main\\res\\drawable\\toolbarpic.PNG"
     },
     {
+        "merged": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_onclickcolorchange.xml.flat",
+        "source": "E:\\vmatchUKnova\\android\\app\\src\\main\\res\\drawable\\onclickcolorchange.xml"
+    },
+    {
         "merged": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_imgpshfullsizeanim.png.flat",
         "source": "E:\\vmatchUKnova\\android\\app\\src\\main\\res\\drawable\\imgpshfullsizeanim.png"
     },
@@ -1349,10 +1330,6 @@
     {
         "merged": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_focused_holo.9.png.flat",
         "source": "C:\\Users\\hammad\\.gradle\\caches\\transforms-2\\files-2.1\\c9347b383fd4185132045debda40b91b\\res\\drawable-xxhdpi-v4\\abc_list_focused_holo.9.png"
-    },
-    {
-        "merged": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_onclickcolorchange.xml.flat",
-        "source": "E:\\vmatchUKnova\\android\\app\\src\\main\\res\\drawable\\onclickcolorchange.xml"
     },
     {
         "merged": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
