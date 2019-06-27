@@ -4,16 +4,21 @@
     android:id="@+id/cardv"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    app:cardElevation="3dp">
+    android:layout_margin="5dp"
+
+
+    >
 
     <RelativeLayout
+
         android:id="@+id/relative_row_area"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp">
+        >
 
         <TextView
+
+
             android:id="@+id/area_ed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

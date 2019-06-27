@@ -536,7 +536,7 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
         statusType = propertyStatus;
     }
 
-<<<<<<< HEAD
+
 //    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
 //    @Override
 //    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -611,7 +611,7 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
 //        }
 //        super.onActivityResult(requestCode, resultCode, data);
 //    }
-=======
+
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -686,7 +686,7 @@ public class EditSellPropertyActivity extends AppCompatActivity implements View.
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
->>>>>>> af700c286b58570ba248232e10954a4e88aba63a
+
 
     @Override
     public void onClick(View v) {

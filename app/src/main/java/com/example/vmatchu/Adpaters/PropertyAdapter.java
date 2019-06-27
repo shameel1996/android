@@ -1,10 +1,10 @@
 package com.example.vmatchu.Adpaters;
 
-<<<<<<< HEAD
+
 import android.app.Dialog;
-=======
+
 import android.app.ProgressDialog;
->>>>>>> af700c286b58570ba248232e10954a4e88aba63a
+
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -35,11 +35,10 @@ import com.example.vmatchu.CustomAlert.CustomAlert;
 import com.example.vmatchu.EditPurchasePropertyActivity;
 import com.example.vmatchu.EditSellPropertyActivity;
 import com.example.vmatchu.EnterPropertyDetailActivity;
-<<<<<<< HEAD
-=======
+
+
 import com.example.vmatchu.HomeActivity;
 import com.example.vmatchu.Interface.OnItemDeleteClick;
->>>>>>> af700c286b58570ba248232e10954a4e88aba63a
 import com.example.vmatchu.MatchPropertyActivity;
 
 import com.example.vmatchu.Models.MyPropertyCityForDB;
@@ -109,15 +108,17 @@ public class PropertyAdapter extends RecyclerView.Adapter {
     private List<MyPropertyMaxPrice> propertyResponsesMaxPriceList1;
     Context context;
     ArrayAdapter<String> arrayAdapter;
-<<<<<<< HEAD
-    RecyclerView recyclerView;
 
-=======
+    RecyclerView recyclerView;
+    ArrayList<String> menu;
+
+
+
     private APIService apiService;
     ProgressDialog progressDialog;
     boolean flag = false;
     OnItemDeleteClick onItemDeleteClick;
->>>>>>> af700c286b58570ba248232e10954a4e88aba63a
+
 
 
     @NonNull
@@ -156,6 +157,7 @@ public class PropertyAdapter extends RecyclerView.Adapter {
         progressDialog = new ProgressDialog(context);
         progressDialog.setMessage("Please Wait...");
         progressDialog.setCancelable(false);
+        this.propertyResponsesListIsClosed = propertyResponsesListIsClosed;
         this.propertyResponsesCityList = propertyResponsesCityList;
         this.propertyResponsesStatusList = propertyResponsesStatusList;
         this.propertyResponsesAreaList1 = propertyResponsesAreaList1;
@@ -301,13 +303,374 @@ public class PropertyAdapter extends RecyclerView.Adapter {
         });
 
 
+        viewHolder1.spinner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              // getPropertyType();
+                //showCustomDialog();
+
+
+                View dialogView = (View) LayoutInflater.from(context).inflate(R.layout.menu,  null);
+
+                final CharSequence[] items = { "Edit", "Delete", "Pause", "Close Deal" };
+
+                //Now we need an AlertDialog.Builder object
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+
+                //setting the view of the builder to our custom view that we already inflated
+                builder.setView(dialogView);
+                builder.setItems(items, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int pos) {
+                        switch (pos) {
+                            case 0:
+                            {
+//                        Toast.makeText(context,"Clicked on:"+items[pos],Toast.LENGTH_SHORT).show();
+                                if (propertyResponsesStatusList.get(i).getStatus().equals("Want Buy")) {
+                                    Intent intent = new Intent(context, EditPurchasePropertyActivity.class);
+                                    intent.putExtra("propertyData", propertiesDetails.get(i).getPostDate());
+                                    intent.putExtra("propertyDataTitle", propertiesDetails.get(i).getTitle());
+                                    if (propertyResponsesCityList.size() > i) {
+                                        intent.putExtra("propertyListCity", propertyResponsesCityList.get(i).getCity());
+                                        intent.putExtra("propertyListCityID", propertyResponsesCityList.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesAreaList1.size() > i) {
+                                        intent.putExtra("propertyListArea", propertyResponsesAreaList1.get(i).getArea());
+                                        intent.putExtra("propertyListAreaID", propertyResponsesAreaList1.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesSubareaList1.size() > i) {
+                                        intent.putExtra("propertyListSubArea", propertyResponsesSubareaList1.get(i).getSubArea());
+                                        intent.putExtra("propertyListSubAreaID", propertyResponsesSubareaList1.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesSectorList1.size() > i) {
+                                        intent.putExtra("propertyListSector", propertyResponsesSectorList1.get(i).getSector());
+                                        intent.putExtra("propertyListSectorID", propertyResponsesSectorList1.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesGaragesList1.size() > i) {
+                                        intent.putExtra("propertyListGarages", propertyResponsesGaragesList1.get(i).getGarages());
+                                    }
+
+                                    if (propertyResponsesBathroomList1.size() > i) {
+                                        intent.putExtra("propertyListBathroom", propertyResponsesBathroomList1.get(i).getBathroom());
+                                    }
+
+                                    if (propertyResponsesBedroomList1.size() > i) {
+                                        intent.putExtra("propertyListBedroom", propertyResponsesBedroomList1.get(i).getBedroom());
+                                    }
+
+                                    if (propertyResponsesRoomList1.size() > i) {
+                                        intent.putExtra("propertyListRoom", propertyResponsesRoomList1.get(i).getRoom());
+                                    }
+
+                                    if (propertyResponsesDescriptionList1.size() > i) {
+                                        intent.putExtra("propertyListDescription", propertyResponsesDescriptionList1.get(i).getDescription());
+                                    }
+
+                                    if (propertyResponsesAreaTypeList1.size() > i) {
+                                        intent.putExtra("propertyListAreaType", propertyResponsesAreaTypeList1.get(i).getAreaType());
+                                        intent.putExtra("propertyListAreaTypeID", propertyResponsesAreaTypeList1.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesPropertyTypeList1.size() > i) {
+                                        intent.putExtra("propertyListPropertyType", propertyResponsesPropertyTypeList1.get(i).getPropertyType());
+                                        intent.putExtra("propertyListPropertyTypeID", propertyResponsesPropertyTypeList1.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesStatusList.size() > i) {
+                                        intent.putExtra("propertyListStatus", propertyResponsesStatusList.get(i).getStatus());
+                                        intent.putExtra("propertyListStatusID", propertyResponsesStatusList.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesMinSizeList1.size() > i) {
+                                        intent.putExtra("propertyListMinSize", propertyResponsesMinSizeList1.get(i).getMinSize());
+                                        intent.putExtra("propertyListMinSizePid", propertyResponsesMinSizeList1.get(i).getPid());
+                                    }
+
+                                    if (propertyResponsesMinPriceList1.size() > i) {
+                                        intent.putExtra("propertyListMinPrice", propertyResponsesMinPriceList1.get(i).getMinPrice());
+                                        intent.putExtra("propertyListMinPricePid", propertyResponsesMinPriceList1.get(i).getPid());
+                                    }
+
+                                    if (propertyResponsesMaxSizeList1.size() > i) {
+                                        intent.putExtra("propertyListMaxSize", propertyResponsesMaxSizeList1.get(i).getMaxSize());
+                                        intent.putExtra("propertyListMaxSizePid", propertyResponsesMaxSizeList1.get(i).getPid());
+                                    }
+
+                                    if (propertyResponsesMaxPriceList1.size() > i) {
+                                        intent.putExtra("propertyListMaxPrice", propertyResponsesMaxPriceList1.get(i).getMaxPrice());
+                                        intent.putExtra("propertyListMaxPricePid", propertyResponsesMaxPriceList1.get(i).getPid());
+                                    }
+
+                                    intent.putExtra("pid", propertiesDetails.get(i).getPid());
+                                    context.startActivity(intent);
+                                } else if (propertyResponsesStatusList.get(i).getStatus().equals("For Sale")) {
+                                    Intent intent = new Intent(context, EditSellPropertyActivity.class);
+                                    intent.putExtra("propertyData", propertiesDetails.get(i).getPostDate());
+                                    intent.putExtra("propertyDataTitle", propertiesDetails.get(i).getTitle());
+                                    if (propertyResponsesCityList.size() > i) {
+                                        intent.putExtra("propertyListCity", propertyResponsesCityList.get(i).getCity());
+                                        intent.putExtra("propertyListCityID", propertyResponsesCityList.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesAreaList1.size() > i) {
+                                        intent.putExtra("propertyListArea", propertyResponsesAreaList1.get(i).getArea());
+                                        intent.putExtra("propertyListAreaID", propertyResponsesAreaList1.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesSubareaList1.size() > i) {
+                                        intent.putExtra("propertyListSubArea", propertyResponsesSubareaList1.get(i).getSubArea());
+                                        intent.putExtra("propertyListSubAreaID", propertyResponsesSubareaList1.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesSectorList1.size() > i) {
+                                        intent.putExtra("propertyListSector", propertyResponsesSectorList1.get(i).getSector());
+                                        intent.putExtra("propertyListSectorID", propertyResponsesSectorList1.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesGaragesList1.size() > i) {
+                                        intent.putExtra("propertyListGarages", propertyResponsesGaragesList1.get(i).getGarages());
+                                    }
+
+                                    if (propertyResponsesBathroomList1.size() > i) {
+                                        intent.putExtra("propertyListBathroom", propertyResponsesBathroomList1.get(i).getBathroom());
+                                    }
+
+                                    if (propertyResponsesBedroomList1.size() > i) {
+                                        intent.putExtra("propertyListBedroom", propertyResponsesBedroomList1.get(i).getBedroom());
+                                    }
+
+                                    if (propertyResponsesRoomList1.size() > i) {
+                                        intent.putExtra("propertyListRoom", propertyResponsesRoomList1.get(i).getRoom());
+                                    }
+
+                                    if (propertyResponsesDescriptionList1.size() > i) {
+                                        intent.putExtra("propertyListDescription", propertyResponsesDescriptionList1.get(i).getDescription());
+                                    }
+
+                                    if (propertyResponsesAreaTypeList1.size() > i) {
+                                        intent.putExtra("propertyListAreaType", propertyResponsesAreaTypeList1.get(i).getAreaType());
+                                        intent.putExtra("propertyListAreaTypeID", propertyResponsesAreaTypeList1.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesPropertyTypeList1.size() > i) {
+                                        intent.putExtra("propertyListPropertyType", propertyResponsesPropertyTypeList1.get(i).getPropertyType());
+                                        intent.putExtra("propertyListPropertyTypeID", propertyResponsesPropertyTypeList1.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesStatusList.size() > i) {
+                                        intent.putExtra("propertyListStatus", propertyResponsesStatusList.get(i).getStatus());
+                                        intent.putExtra("propertyListStatusID", propertyResponsesStatusList.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesMinSizeList1.size() > i) {
+                                        intent.putExtra("propertyListMinSize", propertyResponsesMinSizeList1.get(i).getMinSize());
+                                        intent.putExtra("propertyListMinSizePid", propertyResponsesMinSizeList1.get(i).getPid());
+                                    }
+
+                                    if (propertyResponsesMinPriceList1.size() > i) {
+                                        intent.putExtra("propertyListMinPrice", propertyResponsesMinPriceList1.get(i).getMinPrice());
+                                        intent.putExtra("propertyListMinPricePid", propertyResponsesMinPriceList1.get(i).getPid());
+                                    }
+
+                                    if (propertyResponsesMaxSizeList1.size() > i) {
+                                        intent.putExtra("propertyListMaxSize", propertyResponsesMaxSizeList1.get(i).getMaxSize());
+                                        intent.putExtra("propertyListMaxSizePid", propertyResponsesMaxSizeList1.get(i).getPid());
+                                    }
+
+                                    if (propertyResponsesMaxPriceList1.size() > i) {
+                                        intent.putExtra("propertyListMaxPrice", propertyResponsesMaxPriceList1.get(i).getMaxPrice());
+                                        intent.putExtra("propertyListMaxPricePid", propertyResponsesMaxPriceList1.get(i).getPid());
+                                    }
+
+                                    intent.putExtra("pid", propertiesDetails.get(i).getPid());
+                                    context.startActivity(intent);
+                                } else if (propertyResponsesStatusList.get(i).getStatus().equals("For Rent")) {
+                                    Intent intent = new Intent(context, EditSellPropertyActivity.class);
+                                    intent.putExtra("propertyData", propertiesDetails.get(i).getPostDate());
+                                    intent.putExtra("propertyDataTitle", propertiesDetails.get(i).getTitle());
+                                    if (propertyResponsesCityList.size() > i) {
+                                        intent.putExtra("propertyListCity", propertyResponsesCityList.get(i).getCity());
+                                        intent.putExtra("propertyListCityID", propertyResponsesCityList.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesAreaList1.size() > i) {
+                                        intent.putExtra("propertyListArea", propertyResponsesAreaList1.get(i).getArea());
+                                        intent.putExtra("propertyListAreaID", propertyResponsesAreaList1.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesSubareaList1.size() > i) {
+                                        intent.putExtra("propertyListSubArea", propertyResponsesSubareaList1.get(i).getSubArea());
+                                        intent.putExtra("propertyListSubAreaID", propertyResponsesSubareaList1.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesSectorList1.size() > i) {
+                                        intent.putExtra("propertyListSector", propertyResponsesSectorList1.get(i).getSector());
+                                        intent.putExtra("propertyListSectorID", propertyResponsesSectorList1.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesGaragesList1.size() > i) {
+                                        intent.putExtra("propertyListGarages", propertyResponsesGaragesList1.get(i).getGarages());
+                                    }
+
+                                    if (propertyResponsesBathroomList1.size() > i) {
+                                        intent.putExtra("propertyListBathroom", propertyResponsesBathroomList1.get(i).getBathroom());
+                                    }
+
+                                    if (propertyResponsesBedroomList1.size() > i) {
+                                        intent.putExtra("propertyListBedroom", propertyResponsesBedroomList1.get(i).getBedroom());
+                                    }
+
+                                    if (propertyResponsesRoomList1.size() > i) {
+                                        intent.putExtra("propertyListRoom", propertyResponsesRoomList1.get(i).getRoom());
+                                    }
+
+                                    if (propertyResponsesDescriptionList1.size() > i) {
+                                        intent.putExtra("propertyListDescription", propertyResponsesDescriptionList1.get(i).getDescription());
+                                    }
+
+                                    if (propertyResponsesAreaTypeList1.size() > i) {
+                                        intent.putExtra("propertyListAreaType", propertyResponsesAreaTypeList1.get(i).getAreaType());
+                                        intent.putExtra("propertyListAreaTypeID", propertyResponsesAreaTypeList1.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesPropertyTypeList1.size() > i) {
+                                        intent.putExtra("propertyListPropertyType", propertyResponsesPropertyTypeList1.get(i).getPropertyType());
+                                        intent.putExtra("propertyListPropertyTypeID", propertyResponsesPropertyTypeList1.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesStatusList.size() > i) {
+                                        intent.putExtra("propertyListStatus", propertyResponsesStatusList.get(i).getStatus());
+                                        intent.putExtra("propertyListStatusID", propertyResponsesStatusList.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesMinSizeList1.size() > i) {
+                                        intent.putExtra("propertyListMinSize", propertyResponsesMinSizeList1.get(i).getMinSize());
+                                        intent.putExtra("propertyListMinSizePid", propertyResponsesMinSizeList1.get(i).getPid());
+                                    }
+
+                                    if (propertyResponsesMinPriceList1.size() > i) {
+                                        intent.putExtra("propertyListMinPrice", propertyResponsesMinPriceList1.get(i).getMinPrice());
+                                        intent.putExtra("propertyListMinPricePid", propertyResponsesMinPriceList1.get(i).getPid());
+                                    }
+
+                                    if (propertyResponsesMaxSizeList1.size() > i) {
+                                        intent.putExtra("propertyListMaxSize", propertyResponsesMaxSizeList1.get(i).getMaxSize());
+                                        intent.putExtra("propertyListMaxSizePid", propertyResponsesMaxSizeList1.get(i).getPid());
+                                    }
+
+                                    if (propertyResponsesMaxPriceList1.size() > i) {
+                                        intent.putExtra("propertyListMaxPrice", propertyResponsesMaxPriceList1.get(i).getMaxPrice());
+                                        intent.putExtra("propertyListMaxPricePid", propertyResponsesMaxPriceList1.get(i).getPid());
+                                    }
+
+                                    intent.putExtra("pid", propertiesDetails.get(i).getPid());
+                                    context.startActivity(intent);
+                                } else if (propertyResponsesStatusList.get(i).getStatus().equals("Want Rent")) {
+                                    Intent intent = new Intent(context, EditPurchasePropertyActivity.class);
+                                    intent.putExtra("propertyData", propertiesDetails.get(i).getPostDate());
+                                    intent.putExtra("propertyDataTitle", propertiesDetails.get(i).getTitle());
+                                    if (propertyResponsesCityList.size() > i) {
+                                        intent.putExtra("propertyListCity", propertyResponsesCityList.get(i).getCity());
+                                        intent.putExtra("propertyListCityID", propertyResponsesCityList.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesAreaList1.size() > i) {
+                                        intent.putExtra("propertyListArea", propertyResponsesAreaList1.get(i).getArea());
+                                        intent.putExtra("propertyListAreaID", propertyResponsesAreaList1.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesSubareaList1.size() > i) {
+                                        intent.putExtra("propertyListSubArea", propertyResponsesSubareaList1.get(i).getSubArea());
+                                        intent.putExtra("propertyListSubAreaID", propertyResponsesSubareaList1.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesSectorList1.size() > i) {
+                                        intent.putExtra("propertyListSector", propertyResponsesSectorList1.get(i).getSector());
+                                        intent.putExtra("propertyListSectorID", propertyResponsesSectorList1.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesGaragesList1.size() > i) {
+                                        intent.putExtra("propertyListGarages", propertyResponsesGaragesList1.get(i).getGarages());
+                                    }
+
+                                    if (propertyResponsesBathroomList1.size() > i) {
+                                        intent.putExtra("propertyListBathroom", propertyResponsesBathroomList1.get(i).getBathroom());
+                                    }
+
+                                    if (propertyResponsesBedroomList1.size() > i) {
+                                        intent.putExtra("propertyListBedroom", propertyResponsesBedroomList1.get(i).getBedroom());
+                                    }
+
+                                    if (propertyResponsesRoomList1.size() > i) {
+                                        intent.putExtra("propertyListRoom", propertyResponsesRoomList1.get(i).getRoom());
+                                    }
+
+                                    if (propertyResponsesDescriptionList1.size() > i) {
+                                        intent.putExtra("propertyListDescription", propertyResponsesDescriptionList1.get(i).getDescription());
+                                    }
+
+                                    if (propertyResponsesAreaTypeList1.size() > i) {
+                                        intent.putExtra("propertyListAreaType", propertyResponsesAreaTypeList1.get(i).getAreaType());
+                                        intent.putExtra("propertyListAreaTypeID", propertyResponsesAreaTypeList1.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesPropertyTypeList1.size() > i) {
+                                        intent.putExtra("propertyListPropertyType", propertyResponsesPropertyTypeList1.get(i).getPropertyType());
+                                        intent.putExtra("propertyListPropertyTypeID", propertyResponsesPropertyTypeList1.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesStatusList.size() > i) {
+                                        intent.putExtra("propertyListStatus", propertyResponsesStatusList.get(i).getStatus());
+                                        intent.putExtra("propertyListStatusID", propertyResponsesStatusList.get(i).getId());
+                                    }
+
+                                    if (propertyResponsesMinSizeList1.size() > i) {
+                                        intent.putExtra("propertyListMinSize", propertyResponsesMinSizeList1.get(i).getMinSize());
+                                        intent.putExtra("propertyListMinSizePid", propertyResponsesMinSizeList1.get(i).getPid());
+                                    }
+
+                                    if (propertyResponsesMinPriceList1.size() > i) {
+                                        intent.putExtra("propertyListMinPrice", propertyResponsesMinPriceList1.get(i).getMinPrice());
+                                        intent.putExtra("propertyListMinPricePid", propertyResponsesMinPriceList1.get(i).getPid());
+                                    }
+
+                                    if (propertyResponsesMaxSizeList1.size() > i) {
+                                        intent.putExtra("propertyListMaxSize", propertyResponsesMaxSizeList1.get(i).getMaxSize());
+                                        intent.putExtra("propertyListMaxSizePid", propertyResponsesMaxSizeList1.get(i).getPid());
+                                    }
+
+                                    if (propertyResponsesMaxPriceList1.size() > i) {
+                                        intent.putExtra("propertyListMaxPrice", propertyResponsesMaxPriceList1.get(i).getMaxPrice());
+                                        intent.putExtra("propertyListMaxPricePid", propertyResponsesMaxPriceList1.get(i).getPid());
+                                    }
+
+                                    intent.putExtra("pid", propertiesDetails.get(i).getPid());
+                                    context.startActivity(intent);
+                                }
+                            }break;
+                            case 1:
+                            {
+                                Toast.makeText(context,"Clicked on:"+items[pos],Toast.LENGTH_SHORT).show();
+
+                            }break;
+                        }
+                    }});
+                //finally creating the alert dialog and displaying it
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
+            }
+        });
         viewHolder1.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                context.startActivity(new Intent(context, PropertyDetailsActivity.class));
             }
         });
-<<<<<<< HEAD
+
 //        viewHolder1.spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 //
 //            @Override
@@ -328,419 +691,426 @@ public class PropertyAdapter extends RecyclerView.Adapter {
 //
 //        viewHolder1.spinner.setAdapter(arrayAdapter);
 
-        viewHolder1.spinner.setOnClickListener(new View.OnClickListener() {
-=======
-        viewHolder1.spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-
-            @Override
-            public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id) {
-                if (position == 2) {
-
-                    if (propertyResponsesStatusList.get(i).getStatus().equals("Want Buy")) {
-                        Intent intent = new Intent(context, EditPurchasePropertyActivity.class);
-                        intent.putExtra("propertyData", propertiesDetails.get(i).getPostDate());
-                        intent.putExtra("propertyDataTitle", propertiesDetails.get(i).getTitle());
-                        if (propertyResponsesCityList.size() > i) {
-                            intent.putExtra("propertyListCity", propertyResponsesCityList.get(i).getCity());
-                            intent.putExtra("propertyListCityID", propertyResponsesCityList.get(i).getId());
-                        }
-
-                        if (propertyResponsesAreaList1.size() > i) {
-                            intent.putExtra("propertyListArea", propertyResponsesAreaList1.get(i).getArea());
-                            intent.putExtra("propertyListAreaID", propertyResponsesAreaList1.get(i).getId());
-                        }
-
-                        if (propertyResponsesSubareaList1.size() > i) {
-                            intent.putExtra("propertyListSubArea", propertyResponsesSubareaList1.get(i).getSubArea());
-                            intent.putExtra("propertyListSubAreaID", propertyResponsesSubareaList1.get(i).getId());
-                        }
-
-                        if (propertyResponsesSectorList1.size() > i) {
-                            intent.putExtra("propertyListSector", propertyResponsesSectorList1.get(i).getSector());
-                            intent.putExtra("propertyListSectorID", propertyResponsesSectorList1.get(i).getId());
-                        }
-
-                        if (propertyResponsesGaragesList1.size() > i) {
-                            intent.putExtra("propertyListGarages", propertyResponsesGaragesList1.get(i).getGarages());
-                        }
-
-                        if (propertyResponsesBathroomList1.size() > i) {
-                            intent.putExtra("propertyListBathroom", propertyResponsesBathroomList1.get(i).getBathroom());
-                        }
-
-                        if (propertyResponsesBedroomList1.size() > i) {
-                            intent.putExtra("propertyListBedroom", propertyResponsesBedroomList1.get(i).getBedroom());
-                        }
-
-                        if (propertyResponsesRoomList1.size() > i) {
-                            intent.putExtra("propertyListRoom", propertyResponsesRoomList1.get(i).getRoom());
-                        }
-
-                        if (propertyResponsesDescriptionList1.size() > i) {
-                            intent.putExtra("propertyListDescription", propertyResponsesDescriptionList1.get(i).getDescription());
-                        }
-
-                        if (propertyResponsesAreaTypeList1.size() > i) {
-                            intent.putExtra("propertyListAreaType", propertyResponsesAreaTypeList1.get(i).getAreaType());
-                            intent.putExtra("propertyListAreaTypeID", propertyResponsesAreaTypeList1.get(i).getId());
-                        }
-
-                        if (propertyResponsesPropertyTypeList1.size() > i) {
-                            intent.putExtra("propertyListPropertyType", propertyResponsesPropertyTypeList1.get(i).getPropertyType());
-                            intent.putExtra("propertyListPropertyTypeID", propertyResponsesPropertyTypeList1.get(i).getId());
-                        }
-
-                        if (propertyResponsesStatusList.size() > i) {
-                            intent.putExtra("propertyListStatus", propertyResponsesStatusList.get(i).getStatus());
-                            intent.putExtra("propertyListStatusID", propertyResponsesStatusList.get(i).getId());
-                        }
-
-                        if (propertyResponsesMinSizeList1.size() > i) {
-                            intent.putExtra("propertyListMinSize", propertyResponsesMinSizeList1.get(i).getMinSize());
-                            intent.putExtra("propertyListMinSizePid", propertyResponsesMinSizeList1.get(i).getPid());
-                        }
-
-                        if (propertyResponsesMinPriceList1.size() > i) {
-                            intent.putExtra("propertyListMinPrice", propertyResponsesMinPriceList1.get(i).getMinPrice());
-                            intent.putExtra("propertyListMinPricePid", propertyResponsesMinPriceList1.get(i).getPid());
-                        }
-
-                        if (propertyResponsesMaxSizeList1.size() > i) {
-                            intent.putExtra("propertyListMaxSize", propertyResponsesMaxSizeList1.get(i).getMaxSize());
-                            intent.putExtra("propertyListMaxSizePid", propertyResponsesMaxSizeList1.get(i).getPid());
-                        }
-
-                        if (propertyResponsesMaxPriceList1.size() > i) {
-                            intent.putExtra("propertyListMaxPrice", propertyResponsesMaxPriceList1.get(i).getMaxPrice());
-                            intent.putExtra("propertyListMaxPricePid", propertyResponsesMaxPriceList1.get(i).getPid());
-                        }
-
-                        intent.putExtra("pid", propertiesDetails.get(i).getPid());
-                        context.startActivity(intent);
-                    } else if (propertyResponsesStatusList.get(i).getStatus().equals("For Sale")) {
-                        Intent intent = new Intent(context, EditSellPropertyActivity.class);
-                        intent.putExtra("propertyData", propertiesDetails.get(i).getPostDate());
-                        intent.putExtra("propertyDataTitle", propertiesDetails.get(i).getTitle());
-                        if (propertyResponsesCityList.size() > i) {
-                            intent.putExtra("propertyListCity", propertyResponsesCityList.get(i).getCity());
-                            intent.putExtra("propertyListCityID", propertyResponsesCityList.get(i).getId());
-                        }
-
-                        if (propertyResponsesAreaList1.size() > i) {
-                            intent.putExtra("propertyListArea", propertyResponsesAreaList1.get(i).getArea());
-                            intent.putExtra("propertyListAreaID", propertyResponsesAreaList1.get(i).getId());
-                        }
-
-                        if (propertyResponsesSubareaList1.size() > i) {
-                            intent.putExtra("propertyListSubArea", propertyResponsesSubareaList1.get(i).getSubArea());
-                            intent.putExtra("propertyListSubAreaID", propertyResponsesSubareaList1.get(i).getId());
-                        }
-
-                        if (propertyResponsesSectorList1.size() > i) {
-                            intent.putExtra("propertyListSector", propertyResponsesSectorList1.get(i).getSector());
-                            intent.putExtra("propertyListSectorID", propertyResponsesSectorList1.get(i).getId());
-                        }
-
-                        if (propertyResponsesGaragesList1.size() > i) {
-                            intent.putExtra("propertyListGarages", propertyResponsesGaragesList1.get(i).getGarages());
-                        }
-
-                        if (propertyResponsesBathroomList1.size() > i) {
-                            intent.putExtra("propertyListBathroom", propertyResponsesBathroomList1.get(i).getBathroom());
-                        }
-
-                        if (propertyResponsesBedroomList1.size() > i) {
-                            intent.putExtra("propertyListBedroom", propertyResponsesBedroomList1.get(i).getBedroom());
-                        }
-
-                        if (propertyResponsesRoomList1.size() > i) {
-                            intent.putExtra("propertyListRoom", propertyResponsesRoomList1.get(i).getRoom());
-                        }
-
-                        if (propertyResponsesDescriptionList1.size() > i) {
-                            intent.putExtra("propertyListDescription", propertyResponsesDescriptionList1.get(i).getDescription());
-                        }
-
-                        if (propertyResponsesAreaTypeList1.size() > i) {
-                            intent.putExtra("propertyListAreaType", propertyResponsesAreaTypeList1.get(i).getAreaType());
-                            intent.putExtra("propertyListAreaTypeID", propertyResponsesAreaTypeList1.get(i).getId());
-                        }
-
-                        if (propertyResponsesPropertyTypeList1.size() > i) {
-                            intent.putExtra("propertyListPropertyType", propertyResponsesPropertyTypeList1.get(i).getPropertyType());
-                            intent.putExtra("propertyListPropertyTypeID", propertyResponsesPropertyTypeList1.get(i).getId());
-                        }
-
-                        if (propertyResponsesStatusList.size() > i) {
-                            intent.putExtra("propertyListStatus", propertyResponsesStatusList.get(i).getStatus());
-                            intent.putExtra("propertyListStatusID", propertyResponsesStatusList.get(i).getId());
-                        }
-
-                        if (propertyResponsesMinSizeList1.size() > i) {
-                            intent.putExtra("propertyListMinSize", propertyResponsesMinSizeList1.get(i).getMinSize());
-                            intent.putExtra("propertyListMinSizePid", propertyResponsesMinSizeList1.get(i).getPid());
-                        }
-
-                        if (propertyResponsesMinPriceList1.size() > i) {
-                            intent.putExtra("propertyListMinPrice", propertyResponsesMinPriceList1.get(i).getMinPrice());
-                            intent.putExtra("propertyListMinPricePid", propertyResponsesMinPriceList1.get(i).getPid());
-                        }
-
-                        if (propertyResponsesMaxSizeList1.size() > i) {
-                            intent.putExtra("propertyListMaxSize", propertyResponsesMaxSizeList1.get(i).getMaxSize());
-                            intent.putExtra("propertyListMaxSizePid", propertyResponsesMaxSizeList1.get(i).getPid());
-                        }
-
-                        if (propertyResponsesMaxPriceList1.size() > i) {
-                            intent.putExtra("propertyListMaxPrice", propertyResponsesMaxPriceList1.get(i).getMaxPrice());
-                            intent.putExtra("propertyListMaxPricePid", propertyResponsesMaxPriceList1.get(i).getPid());
-                        }
-
-                        intent.putExtra("pid", propertiesDetails.get(i).getPid());
-                        context.startActivity(intent);
-                    } else if (propertyResponsesStatusList.get(i).getStatus().equals("For Rent")) {
-                        Intent intent = new Intent(context, EditSellPropertyActivity.class);
-                        intent.putExtra("propertyData", propertiesDetails.get(i).getPostDate());
-                        intent.putExtra("propertyDataTitle", propertiesDetails.get(i).getTitle());
-                        if (propertyResponsesCityList.size() > i) {
-                            intent.putExtra("propertyListCity", propertyResponsesCityList.get(i).getCity());
-                            intent.putExtra("propertyListCityID", propertyResponsesCityList.get(i).getId());
-                        }
-
-                        if (propertyResponsesAreaList1.size() > i) {
-                            intent.putExtra("propertyListArea", propertyResponsesAreaList1.get(i).getArea());
-                            intent.putExtra("propertyListAreaID", propertyResponsesAreaList1.get(i).getId());
-                        }
-
-                        if (propertyResponsesSubareaList1.size() > i) {
-                            intent.putExtra("propertyListSubArea", propertyResponsesSubareaList1.get(i).getSubArea());
-                            intent.putExtra("propertyListSubAreaID", propertyResponsesSubareaList1.get(i).getId());
-                        }
-
-                        if (propertyResponsesSectorList1.size() > i) {
-                            intent.putExtra("propertyListSector", propertyResponsesSectorList1.get(i).getSector());
-                            intent.putExtra("propertyListSectorID", propertyResponsesSectorList1.get(i).getId());
-                        }
-
-                        if (propertyResponsesGaragesList1.size() > i) {
-                            intent.putExtra("propertyListGarages", propertyResponsesGaragesList1.get(i).getGarages());
-                        }
-
-                        if (propertyResponsesBathroomList1.size() > i) {
-                            intent.putExtra("propertyListBathroom", propertyResponsesBathroomList1.get(i).getBathroom());
-                        }
-
-                        if (propertyResponsesBedroomList1.size() > i) {
-                            intent.putExtra("propertyListBedroom", propertyResponsesBedroomList1.get(i).getBedroom());
-                        }
-
-                        if (propertyResponsesRoomList1.size() > i) {
-                            intent.putExtra("propertyListRoom", propertyResponsesRoomList1.get(i).getRoom());
-                        }
-
-                        if (propertyResponsesDescriptionList1.size() > i) {
-                            intent.putExtra("propertyListDescription", propertyResponsesDescriptionList1.get(i).getDescription());
-                        }
-
-                        if (propertyResponsesAreaTypeList1.size() > i) {
-                            intent.putExtra("propertyListAreaType", propertyResponsesAreaTypeList1.get(i).getAreaType());
-                            intent.putExtra("propertyListAreaTypeID", propertyResponsesAreaTypeList1.get(i).getId());
-                        }
-
-                        if (propertyResponsesPropertyTypeList1.size() > i) {
-                            intent.putExtra("propertyListPropertyType", propertyResponsesPropertyTypeList1.get(i).getPropertyType());
-                            intent.putExtra("propertyListPropertyTypeID", propertyResponsesPropertyTypeList1.get(i).getId());
-                        }
-
-                        if (propertyResponsesStatusList.size() > i) {
-                            intent.putExtra("propertyListStatus", propertyResponsesStatusList.get(i).getStatus());
-                            intent.putExtra("propertyListStatusID", propertyResponsesStatusList.get(i).getId());
-                        }
-
-                        if (propertyResponsesMinSizeList1.size() > i) {
-                            intent.putExtra("propertyListMinSize", propertyResponsesMinSizeList1.get(i).getMinSize());
-                            intent.putExtra("propertyListMinSizePid", propertyResponsesMinSizeList1.get(i).getPid());
-                        }
-
-                        if (propertyResponsesMinPriceList1.size() > i) {
-                            intent.putExtra("propertyListMinPrice", propertyResponsesMinPriceList1.get(i).getMinPrice());
-                            intent.putExtra("propertyListMinPricePid", propertyResponsesMinPriceList1.get(i).getPid());
-                        }
-
-                        if (propertyResponsesMaxSizeList1.size() > i) {
-                            intent.putExtra("propertyListMaxSize", propertyResponsesMaxSizeList1.get(i).getMaxSize());
-                            intent.putExtra("propertyListMaxSizePid", propertyResponsesMaxSizeList1.get(i).getPid());
-                        }
-
-                        if (propertyResponsesMaxPriceList1.size() > i) {
-                            intent.putExtra("propertyListMaxPrice", propertyResponsesMaxPriceList1.get(i).getMaxPrice());
-                            intent.putExtra("propertyListMaxPricePid", propertyResponsesMaxPriceList1.get(i).getPid());
-                        }
-
-                        intent.putExtra("pid", propertiesDetails.get(i).getPid());
-                        context.startActivity(intent);
-                    } else if (propertyResponsesStatusList.get(i).getStatus().equals("Want Rent")) {
-                        Intent intent = new Intent(context, EditPurchasePropertyActivity.class);
-                        intent.putExtra("propertyData", propertiesDetails.get(i).getPostDate());
-                        intent.putExtra("propertyDataTitle", propertiesDetails.get(i).getTitle());
-                        if (propertyResponsesCityList.size() > i) {
-                            intent.putExtra("propertyListCity", propertyResponsesCityList.get(i).getCity());
-                            intent.putExtra("propertyListCityID", propertyResponsesCityList.get(i).getId());
-                        }
-
-                        if (propertyResponsesAreaList1.size() > i) {
-                            intent.putExtra("propertyListArea", propertyResponsesAreaList1.get(i).getArea());
-                            intent.putExtra("propertyListAreaID", propertyResponsesAreaList1.get(i).getId());
-                        }
-
-                        if (propertyResponsesSubareaList1.size() > i) {
-                            intent.putExtra("propertyListSubArea", propertyResponsesSubareaList1.get(i).getSubArea());
-                            intent.putExtra("propertyListSubAreaID", propertyResponsesSubareaList1.get(i).getId());
-                        }
-
-                        if (propertyResponsesSectorList1.size() > i) {
-                            intent.putExtra("propertyListSector", propertyResponsesSectorList1.get(i).getSector());
-                            intent.putExtra("propertyListSectorID", propertyResponsesSectorList1.get(i).getId());
-                        }
-
-                        if (propertyResponsesGaragesList1.size() > i) {
-                            intent.putExtra("propertyListGarages", propertyResponsesGaragesList1.get(i).getGarages());
-                        }
-
-                        if (propertyResponsesBathroomList1.size() > i) {
-                            intent.putExtra("propertyListBathroom", propertyResponsesBathroomList1.get(i).getBathroom());
-                        }
-
-                        if (propertyResponsesBedroomList1.size() > i) {
-                            intent.putExtra("propertyListBedroom", propertyResponsesBedroomList1.get(i).getBedroom());
-                        }
-
-                        if (propertyResponsesRoomList1.size() > i) {
-                            intent.putExtra("propertyListRoom", propertyResponsesRoomList1.get(i).getRoom());
-                        }
-
-                        if (propertyResponsesDescriptionList1.size() > i) {
-                            intent.putExtra("propertyListDescription", propertyResponsesDescriptionList1.get(i).getDescription());
-                        }
-
-                        if (propertyResponsesAreaTypeList1.size() > i) {
-                            intent.putExtra("propertyListAreaType", propertyResponsesAreaTypeList1.get(i).getAreaType());
-                            intent.putExtra("propertyListAreaTypeID", propertyResponsesAreaTypeList1.get(i).getId());
-                        }
-
-                        if (propertyResponsesPropertyTypeList1.size() > i) {
-                            intent.putExtra("propertyListPropertyType", propertyResponsesPropertyTypeList1.get(i).getPropertyType());
-                            intent.putExtra("propertyListPropertyTypeID", propertyResponsesPropertyTypeList1.get(i).getId());
-                        }
-
-                        if (propertyResponsesStatusList.size() > i) {
-                            intent.putExtra("propertyListStatus", propertyResponsesStatusList.get(i).getStatus());
-                            intent.putExtra("propertyListStatusID", propertyResponsesStatusList.get(i).getId());
-                        }
-
-                        if (propertyResponsesMinSizeList1.size() > i) {
-                            intent.putExtra("propertyListMinSize", propertyResponsesMinSizeList1.get(i).getMinSize());
-                            intent.putExtra("propertyListMinSizePid", propertyResponsesMinSizeList1.get(i).getPid());
-                        }
-
-                        if (propertyResponsesMinPriceList1.size() > i) {
-                            intent.putExtra("propertyListMinPrice", propertyResponsesMinPriceList1.get(i).getMinPrice());
-                            intent.putExtra("propertyListMinPricePid", propertyResponsesMinPriceList1.get(i).getPid());
-                        }
-
-                        if (propertyResponsesMaxSizeList1.size() > i) {
-                            intent.putExtra("propertyListMaxSize", propertyResponsesMaxSizeList1.get(i).getMaxSize());
-                            intent.putExtra("propertyListMaxSizePid", propertyResponsesMaxSizeList1.get(i).getPid());
-                        }
-
-                        if (propertyResponsesMaxPriceList1.size() > i) {
-                            intent.putExtra("propertyListMaxPrice", propertyResponsesMaxPriceList1.get(i).getMaxPrice());
-                            intent.putExtra("propertyListMaxPricePid", propertyResponsesMaxPriceList1.get(i).getPid());
-                        }
-
-                        intent.putExtra("pid", propertiesDetails.get(i).getPid());
-                        context.startActivity(intent);
-                    }
-
-                }
-
-                if (position == 3) {
-                    onItemDeleteClick.onItemClick(position, propertiesDetails.get(i).getPid());
-//                    AlertDialog.Builder alert;
-//                    alert = new AlertDialog.Builder(context);
-//                    alert.setMessage("Do You Want To Delete Your Property?");
-//                    alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialog, int which) {
-//                            progressDialog.show();
-//                            Call<InsertPropertyResponse> call = apiService.postDeletePropertyResponse(
-//                                    SaveInSharedPreference.getInSharedPreference(context).getUserId(), propertiesDetails.get(i).getPid());
+//        viewHolder1.spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 //
-//                            call.enqueue(new Callback<InsertPropertyResponse>() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id) {
+//                if (position == 2) {
 //
-//                                @Override
-//                                public void onResponse(Call<InsertPropertyResponse> call, Response<InsertPropertyResponse> response) {
-//                                    if (response.isSuccessful()) {
-//                                        InsertPropertyResponse insertPropertyResponse = response.body();
-//                                        if (insertPropertyResponse.getError().equals("-1")) {
-//                                            progressDialog.dismiss();
-//                                            AlertDialog.Builder alertDone;
-//                                            alertDone = new AlertDialog.Builder(context);
-//                                            alertDone.setMessage("Your Property Has Been Deleted");
-//                                            alertDone.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-//                                                @Override
-//                                                public void onClick(DialogInterface dialog, int which) {
+//                    if (propertyResponsesStatusList.get(i).getStatus().equals("Want Buy")) {
+//                        Intent intent = new Intent(context, EditPurchasePropertyActivity.class);
+//                        intent.putExtra("propertyData", propertiesDetails.get(i).getPostDate());
+//                        intent.putExtra("propertyDataTitle", propertiesDetails.get(i).getTitle());
+//                        if (propertyResponsesCityList.size() > i) {
+//                            intent.putExtra("propertyListCity", propertyResponsesCityList.get(i).getCity());
+//                            intent.putExtra("propertyListCityID", propertyResponsesCityList.get(i).getId());
+//                        }
 //
-//                                                    context.startActivity(new Intent(context,myProperty.class));
-//                                                }
-//                                            });
-//                                            alertDone.show();
+//                        if (propertyResponsesAreaList1.size() > i) {
+//                            intent.putExtra("propertyListArea", propertyResponsesAreaList1.get(i).getArea());
+//                            intent.putExtra("propertyListAreaID", propertyResponsesAreaList1.get(i).getId());
+//                        }
 //
-//                                        }
+//                        if (propertyResponsesSubareaList1.size() > i) {
+//                            intent.putExtra("propertyListSubArea", propertyResponsesSubareaList1.get(i).getSubArea());
+//                            intent.putExtra("propertyListSubAreaID", propertyResponsesSubareaList1.get(i).getId());
+//                        }
 //
-//                                    }
+//                        if (propertyResponsesSectorList1.size() > i) {
+//                            intent.putExtra("propertyListSector", propertyResponsesSectorList1.get(i).getSector());
+//                            intent.putExtra("propertyListSectorID", propertyResponsesSectorList1.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesGaragesList1.size() > i) {
+//                            intent.putExtra("propertyListGarages", propertyResponsesGaragesList1.get(i).getGarages());
+//                        }
+//
+//                        if (propertyResponsesBathroomList1.size() > i) {
+//                            intent.putExtra("propertyListBathroom", propertyResponsesBathroomList1.get(i).getBathroom());
+//                        }
+//
+//                        if (propertyResponsesBedroomList1.size() > i) {
+//                            intent.putExtra("propertyListBedroom", propertyResponsesBedroomList1.get(i).getBedroom());
+//                        }
+//
+//                        if (propertyResponsesRoomList1.size() > i) {
+//                            intent.putExtra("propertyListRoom", propertyResponsesRoomList1.get(i).getRoom());
+//                        }
+//
+//                        if (propertyResponsesDescriptionList1.size() > i) {
+//                            intent.putExtra("propertyListDescription", propertyResponsesDescriptionList1.get(i).getDescription());
+//                        }
+//
+//                        if (propertyResponsesAreaTypeList1.size() > i) {
+//                            intent.putExtra("propertyListAreaType", propertyResponsesAreaTypeList1.get(i).getAreaType());
+//                            intent.putExtra("propertyListAreaTypeID", propertyResponsesAreaTypeList1.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesPropertyTypeList1.size() > i) {
+//                            intent.putExtra("propertyListPropertyType", propertyResponsesPropertyTypeList1.get(i).getPropertyType());
+//                            intent.putExtra("propertyListPropertyTypeID", propertyResponsesPropertyTypeList1.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesStatusList.size() > i) {
+//                            intent.putExtra("propertyListStatus", propertyResponsesStatusList.get(i).getStatus());
+//                            intent.putExtra("propertyListStatusID", propertyResponsesStatusList.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesMinSizeList1.size() > i) {
+//                            intent.putExtra("propertyListMinSize", propertyResponsesMinSizeList1.get(i).getMinSize());
+//                            intent.putExtra("propertyListMinSizePid", propertyResponsesMinSizeList1.get(i).getPid());
+//                        }
+//
+//                        if (propertyResponsesMinPriceList1.size() > i) {
+//                            intent.putExtra("propertyListMinPrice", propertyResponsesMinPriceList1.get(i).getMinPrice());
+//                            intent.putExtra("propertyListMinPricePid", propertyResponsesMinPriceList1.get(i).getPid());
+//                        }
+//
+//                        if (propertyResponsesMaxSizeList1.size() > i) {
+//                            intent.putExtra("propertyListMaxSize", propertyResponsesMaxSizeList1.get(i).getMaxSize());
+//                            intent.putExtra("propertyListMaxSizePid", propertyResponsesMaxSizeList1.get(i).getPid());
+//                        }
+//
+//                        if (propertyResponsesMaxPriceList1.size() > i) {
+//                            intent.putExtra("propertyListMaxPrice", propertyResponsesMaxPriceList1.get(i).getMaxPrice());
+//                            intent.putExtra("propertyListMaxPricePid", propertyResponsesMaxPriceList1.get(i).getPid());
+//                        }
+//
+//                        intent.putExtra("pid", propertiesDetails.get(i).getPid());
+//                        context.startActivity(intent);
+//                    } else if (propertyResponsesStatusList.get(i).getStatus().equals("For Sale")) {
+//                        Intent intent = new Intent(context, EditSellPropertyActivity.class);
+//                        intent.putExtra("propertyData", propertiesDetails.get(i).getPostDate());
+//                        intent.putExtra("propertyDataTitle", propertiesDetails.get(i).getTitle());
+//                        if (propertyResponsesCityList.size() > i) {
+//                            intent.putExtra("propertyListCity", propertyResponsesCityList.get(i).getCity());
+//                            intent.putExtra("propertyListCityID", propertyResponsesCityList.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesAreaList1.size() > i) {
+//                            intent.putExtra("propertyListArea", propertyResponsesAreaList1.get(i).getArea());
+//                            intent.putExtra("propertyListAreaID", propertyResponsesAreaList1.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesSubareaList1.size() > i) {
+//                            intent.putExtra("propertyListSubArea", propertyResponsesSubareaList1.get(i).getSubArea());
+//                            intent.putExtra("propertyListSubAreaID", propertyResponsesSubareaList1.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesSectorList1.size() > i) {
+//                            intent.putExtra("propertyListSector", propertyResponsesSectorList1.get(i).getSector());
+//                            intent.putExtra("propertyListSectorID", propertyResponsesSectorList1.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesGaragesList1.size() > i) {
+//                            intent.putExtra("propertyListGarages", propertyResponsesGaragesList1.get(i).getGarages());
+//                        }
+//
+//                        if (propertyResponsesBathroomList1.size() > i) {
+//                            intent.putExtra("propertyListBathroom", propertyResponsesBathroomList1.get(i).getBathroom());
+//                        }
+//
+//                        if (propertyResponsesBedroomList1.size() > i) {
+//                            intent.putExtra("propertyListBedroom", propertyResponsesBedroomList1.get(i).getBedroom());
+//                        }
+//
+//                        if (propertyResponsesRoomList1.size() > i) {
+//                            intent.putExtra("propertyListRoom", propertyResponsesRoomList1.get(i).getRoom());
+//                        }
+//
+//                        if (propertyResponsesDescriptionList1.size() > i) {
+//                            intent.putExtra("propertyListDescription", propertyResponsesDescriptionList1.get(i).getDescription());
+//                        }
+//
+//                        if (propertyResponsesAreaTypeList1.size() > i) {
+//                            intent.putExtra("propertyListAreaType", propertyResponsesAreaTypeList1.get(i).getAreaType());
+//                            intent.putExtra("propertyListAreaTypeID", propertyResponsesAreaTypeList1.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesPropertyTypeList1.size() > i) {
+//                            intent.putExtra("propertyListPropertyType", propertyResponsesPropertyTypeList1.get(i).getPropertyType());
+//                            intent.putExtra("propertyListPropertyTypeID", propertyResponsesPropertyTypeList1.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesStatusList.size() > i) {
+//                            intent.putExtra("propertyListStatus", propertyResponsesStatusList.get(i).getStatus());
+//                            intent.putExtra("propertyListStatusID", propertyResponsesStatusList.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesMinSizeList1.size() > i) {
+//                            intent.putExtra("propertyListMinSize", propertyResponsesMinSizeList1.get(i).getMinSize());
+//                            intent.putExtra("propertyListMinSizePid", propertyResponsesMinSizeList1.get(i).getPid());
+//                        }
+//
+//                        if (propertyResponsesMinPriceList1.size() > i) {
+//                            intent.putExtra("propertyListMinPrice", propertyResponsesMinPriceList1.get(i).getMinPrice());
+//                            intent.putExtra("propertyListMinPricePid", propertyResponsesMinPriceList1.get(i).getPid());
+//                        }
+//
+//                        if (propertyResponsesMaxSizeList1.size() > i) {
+//                            intent.putExtra("propertyListMaxSize", propertyResponsesMaxSizeList1.get(i).getMaxSize());
+//                            intent.putExtra("propertyListMaxSizePid", propertyResponsesMaxSizeList1.get(i).getPid());
+//                        }
+//
+//                        if (propertyResponsesMaxPriceList1.size() > i) {
+//                            intent.putExtra("propertyListMaxPrice", propertyResponsesMaxPriceList1.get(i).getMaxPrice());
+//                            intent.putExtra("propertyListMaxPricePid", propertyResponsesMaxPriceList1.get(i).getPid());
+//                        }
+//
+//                        intent.putExtra("pid", propertiesDetails.get(i).getPid());
+//                        context.startActivity(intent);
+//                    } else if (propertyResponsesStatusList.get(i).getStatus().equals("For Rent")) {
+//                        Intent intent = new Intent(context, EditSellPropertyActivity.class);
+//                        intent.putExtra("propertyData", propertiesDetails.get(i).getPostDate());
+//                        intent.putExtra("propertyDataTitle", propertiesDetails.get(i).getTitle());
+//                        if (propertyResponsesCityList.size() > i) {
+//                            intent.putExtra("propertyListCity", propertyResponsesCityList.get(i).getCity());
+//                            intent.putExtra("propertyListCityID", propertyResponsesCityList.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesAreaList1.size() > i) {
+//                            intent.putExtra("propertyListArea", propertyResponsesAreaList1.get(i).getArea());
+//                            intent.putExtra("propertyListAreaID", propertyResponsesAreaList1.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesSubareaList1.size() > i) {
+//                            intent.putExtra("propertyListSubArea", propertyResponsesSubareaList1.get(i).getSubArea());
+//                            intent.putExtra("propertyListSubAreaID", propertyResponsesSubareaList1.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesSectorList1.size() > i) {
+//                            intent.putExtra("propertyListSector", propertyResponsesSectorList1.get(i).getSector());
+//                            intent.putExtra("propertyListSectorID", propertyResponsesSectorList1.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesGaragesList1.size() > i) {
+//                            intent.putExtra("propertyListGarages", propertyResponsesGaragesList1.get(i).getGarages());
+//                        }
+//
+//                        if (propertyResponsesBathroomList1.size() > i) {
+//                            intent.putExtra("propertyListBathroom", propertyResponsesBathroomList1.get(i).getBathroom());
+//                        }
+//
+//                        if (propertyResponsesBedroomList1.size() > i) {
+//                            intent.putExtra("propertyListBedroom", propertyResponsesBedroomList1.get(i).getBedroom());
+//                        }
+//
+//                        if (propertyResponsesRoomList1.size() > i) {
+//                            intent.putExtra("propertyListRoom", propertyResponsesRoomList1.get(i).getRoom());
+//                        }
+//
+//                        if (propertyResponsesDescriptionList1.size() > i) {
+//                            intent.putExtra("propertyListDescription", propertyResponsesDescriptionList1.get(i).getDescription());
+//                        }
+//
+//                        if (propertyResponsesAreaTypeList1.size() > i) {
+//                            intent.putExtra("propertyListAreaType", propertyResponsesAreaTypeList1.get(i).getAreaType());
+//                            intent.putExtra("propertyListAreaTypeID", propertyResponsesAreaTypeList1.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesPropertyTypeList1.size() > i) {
+//                            intent.putExtra("propertyListPropertyType", propertyResponsesPropertyTypeList1.get(i).getPropertyType());
+//                            intent.putExtra("propertyListPropertyTypeID", propertyResponsesPropertyTypeList1.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesStatusList.size() > i) {
+//                            intent.putExtra("propertyListStatus", propertyResponsesStatusList.get(i).getStatus());
+//                            intent.putExtra("propertyListStatusID", propertyResponsesStatusList.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesMinSizeList1.size() > i) {
+//                            intent.putExtra("propertyListMinSize", propertyResponsesMinSizeList1.get(i).getMinSize());
+//                            intent.putExtra("propertyListMinSizePid", propertyResponsesMinSizeList1.get(i).getPid());
+//                        }
+//
+//                        if (propertyResponsesMinPriceList1.size() > i) {
+//                            intent.putExtra("propertyListMinPrice", propertyResponsesMinPriceList1.get(i).getMinPrice());
+//                            intent.putExtra("propertyListMinPricePid", propertyResponsesMinPriceList1.get(i).getPid());
+//                        }
+//
+//                        if (propertyResponsesMaxSizeList1.size() > i) {
+//                            intent.putExtra("propertyListMaxSize", propertyResponsesMaxSizeList1.get(i).getMaxSize());
+//                            intent.putExtra("propertyListMaxSizePid", propertyResponsesMaxSizeList1.get(i).getPid());
+//                        }
+//
+//                        if (propertyResponsesMaxPriceList1.size() > i) {
+//                            intent.putExtra("propertyListMaxPrice", propertyResponsesMaxPriceList1.get(i).getMaxPrice());
+//                            intent.putExtra("propertyListMaxPricePid", propertyResponsesMaxPriceList1.get(i).getPid());
+//                        }
+//
+//                        intent.putExtra("pid", propertiesDetails.get(i).getPid());
+//                        context.startActivity(intent);
+//                    } else if (propertyResponsesStatusList.get(i).getStatus().equals("Want Rent")) {
+//                        Intent intent = new Intent(context, EditPurchasePropertyActivity.class);
+//                        intent.putExtra("propertyData", propertiesDetails.get(i).getPostDate());
+//                        intent.putExtra("propertyDataTitle", propertiesDetails.get(i).getTitle());
+//                        if (propertyResponsesCityList.size() > i) {
+//                            intent.putExtra("propertyListCity", propertyResponsesCityList.get(i).getCity());
+//                            intent.putExtra("propertyListCityID", propertyResponsesCityList.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesAreaList1.size() > i) {
+//                            intent.putExtra("propertyListArea", propertyResponsesAreaList1.get(i).getArea());
+//                            intent.putExtra("propertyListAreaID", propertyResponsesAreaList1.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesSubareaList1.size() > i) {
+//                            intent.putExtra("propertyListSubArea", propertyResponsesSubareaList1.get(i).getSubArea());
+//                            intent.putExtra("propertyListSubAreaID", propertyResponsesSubareaList1.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesSectorList1.size() > i) {
+//                            intent.putExtra("propertyListSector", propertyResponsesSectorList1.get(i).getSector());
+//                            intent.putExtra("propertyListSectorID", propertyResponsesSectorList1.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesGaragesList1.size() > i) {
+//                            intent.putExtra("propertyListGarages", propertyResponsesGaragesList1.get(i).getGarages());
+//                        }
+//
+//                        if (propertyResponsesBathroomList1.size() > i) {
+//                            intent.putExtra("propertyListBathroom", propertyResponsesBathroomList1.get(i).getBathroom());
+//                        }
+//
+//                        if (propertyResponsesBedroomList1.size() > i) {
+//                            intent.putExtra("propertyListBedroom", propertyResponsesBedroomList1.get(i).getBedroom());
+//                        }
+//
+//                        if (propertyResponsesRoomList1.size() > i) {
+//                            intent.putExtra("propertyListRoom", propertyResponsesRoomList1.get(i).getRoom());
+//                        }
+//
+//                        if (propertyResponsesDescriptionList1.size() > i) {
+//                            intent.putExtra("propertyListDescription", propertyResponsesDescriptionList1.get(i).getDescription());
+//                        }
+//
+//                        if (propertyResponsesAreaTypeList1.size() > i) {
+//                            intent.putExtra("propertyListAreaType", propertyResponsesAreaTypeList1.get(i).getAreaType());
+//                            intent.putExtra("propertyListAreaTypeID", propertyResponsesAreaTypeList1.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesPropertyTypeList1.size() > i) {
+//                            intent.putExtra("propertyListPropertyType", propertyResponsesPropertyTypeList1.get(i).getPropertyType());
+//                            intent.putExtra("propertyListPropertyTypeID", propertyResponsesPropertyTypeList1.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesStatusList.size() > i) {
+//                            intent.putExtra("propertyListStatus", propertyResponsesStatusList.get(i).getStatus());
+//                            intent.putExtra("propertyListStatusID", propertyResponsesStatusList.get(i).getId());
+//                        }
+//
+//                        if (propertyResponsesMinSizeList1.size() > i) {
+//                            intent.putExtra("propertyListMinSize", propertyResponsesMinSizeList1.get(i).getMinSize());
+//                            intent.putExtra("propertyListMinSizePid", propertyResponsesMinSizeList1.get(i).getPid());
+//                        }
+//
+//                        if (propertyResponsesMinPriceList1.size() > i) {
+//                            intent.putExtra("propertyListMinPrice", propertyResponsesMinPriceList1.get(i).getMinPrice());
+//                            intent.putExtra("propertyListMinPricePid", propertyResponsesMinPriceList1.get(i).getPid());
+//                        }
+//
+//                        if (propertyResponsesMaxSizeList1.size() > i) {
+//                            intent.putExtra("propertyListMaxSize", propertyResponsesMaxSizeList1.get(i).getMaxSize());
+//                            intent.putExtra("propertyListMaxSizePid", propertyResponsesMaxSizeList1.get(i).getPid());
+//                        }
+//
+//                        if (propertyResponsesMaxPriceList1.size() > i) {
+//                            intent.putExtra("propertyListMaxPrice", propertyResponsesMaxPriceList1.get(i).getMaxPrice());
+//                            intent.putExtra("propertyListMaxPricePid", propertyResponsesMaxPriceList1.get(i).getPid());
+//                        }
+//
+//                        intent.putExtra("pid", propertiesDetails.get(i).getPid());
+//                        context.startActivity(intent);
+//                    }
+//
+//                }
+//
+//                if (position == 3) {
+//                    onItemDeleteClick.onItemClick(position, propertiesDetails.get(i).getPid());
+////                    AlertDialog.Builder alert;
+////                    alert = new AlertDialog.Builder(context);
+////                    alert.setMessage("Do You Want To Delete Your Property?");
+////                    alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+////                        @Override
+////                        public void onClick(DialogInterface dialog, int which) {
+////                            progressDialog.show();
+////                            Call<InsertPropertyResponse> call = apiService.postDeletePropertyResponse(
+////                                    SaveInSharedPreference.getInSharedPreference(context).getUserId(), propertiesDetails.get(i).getPid());
 ////
-//                                }
+////                            call.enqueue(new Callback<InsertPropertyResponse>() {
+////
+////                                @Override
+////                                public void onResponse(Call<InsertPropertyResponse> call, Response<InsertPropertyResponse> response) {
+////                                    if (response.isSuccessful()) {
+////                                        InsertPropertyResponse insertPropertyResponse = response.body();
+////                                        if (insertPropertyResponse.getError().equals("-1")) {
+////                                            progressDialog.dismiss();
+////                                            AlertDialog.Builder alertDone;
+////                                            alertDone = new AlertDialog.Builder(context);
+////                                            alertDone.setMessage("Your Property Has Been Deleted");
+////                                            alertDone.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+////                                                @Override
+////                                                public void onClick(DialogInterface dialog, int which) {
+////
+////                                                    context.startActivity(new Intent(context,myProperty.class));
+////                                                }
+////                                            });
+////                                            alertDone.show();
+////
+////                                        }
+////
+////                                    }
+//////
+////                                }
+////
+////
+////                                @Override
+////                                public void onFailure(Call<InsertPropertyResponse> call, Throwable t) {
+////                                    progressDialog.dismiss();
+////                                    CustomAlert.alertDialog(context, "Response Failed");
+////                                    Log.e("response_Failed", "Unable to submit post to API." + t);
+////                                }
+////                            });
+////                        }
+////                    });
+////
+////                    alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
+////                        @Override
+////                        public void onClick(DialogInterface dialog, int which) {
+////
+////                        }
+////                    });
+////                    alert.show();
+//                }
+//            }
 //
 //
-//                                @Override
-//                                public void onFailure(Call<InsertPropertyResponse> call, Throwable t) {
-//                                    progressDialog.dismiss();
-//                                    CustomAlert.alertDialog(context, "Response Failed");
-//                                    Log.e("response_Failed", "Unable to submit post to API." + t);
-//                                }
-//                            });
-//                        }
-//                    });
+//            @Override
+//            public void onClick(View v) {
+//                final Dialog dialog = new Dialog(context);
+//                dialog.setContentView(R.layout.show_city);
+//                recyclerView = dialog.findViewById(R.id.showCity);
+//                RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(context);
+//                recyclerView.setLayoutManager(layoutManager);
+////                        AlertDialog dialog = builder.create();
+////                        builder.setCancelable(false);
+////                        builder.setView(view1);
 //
-//                    alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialog, int which) {
 //
-//                        }
-//                    });
-//                    alert.show();
-                }
-            }
-
->>>>>>> af700c286b58570ba248232e10954a4e88aba63a
-            @Override
-            public void onClick(View v) {
-                final Dialog dialog = new Dialog(context);
-                dialog.setContentView(R.layout.show_city);
-                recyclerView = dialog.findViewById(R.id.showCity);
-                RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(context);
-                recyclerView.setLayoutManager(layoutManager);
-//                        AlertDialog dialog = builder.create();
-//                        builder.setCancelable(false);
-//                        builder.setView(view1);
+////                        adapter.setItemClick(EnterPropertyDetailActivity.this);
+//
+//
+//            }
+//        });
 
 
-//                        adapter.setItemClick(EnterPropertyDetailActivity.this);
+    }
+
+    private void showCustomDialog() {
 
 
-            }
-        });
+        //then we will inflate the custom alert dialog xml that we created
+
 
     }
 
@@ -753,10 +1123,12 @@ public class PropertyAdapter extends RecyclerView.Adapter {
         }
     }
 
+
     public void filterList(ArrayList<MyPropertyData> filterdNames) {
         this.propertiesDetails = filterdNames;
         notifyDataSetChanged();
     }
+
 
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

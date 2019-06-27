@@ -91,7 +91,7 @@ public class AreaAdapter extends RecyclerView.Adapter<AreaAdapter.ViewHolderArea
 
 
 
-    public class ViewHolderArea extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public static class ViewHolderArea extends RecyclerView.ViewHolder implements View.OnClickListener {
 
 
         RelativeLayout relative_row_area;

@@ -349,7 +349,7 @@ public class EnterProperptyDetails2Activity extends AppCompatActivity implements
         screenTitle = findViewById(R.id.title);
 
 
-<<<<<<< HEAD
+
         areatxt=(TextView)findViewById(R.id.Area_ed) ;
         subareatxt=(TextView)findViewById(R.id.Subarea_ed) ;
         sectortxt=(TextView)findViewById(R.id.sector_ed) ;
@@ -357,13 +357,13 @@ public class EnterProperptyDetails2Activity extends AppCompatActivity implements
 
 
         size=(TextInputEditText)findViewById(R.id.size_ed) ;
-=======
+
         areatxt = (TextView) findViewById(R.id.Area_ed);
         subareatxt = (TextView) findViewById(R.id.Subarea_ed);
         sectortxt = (TextView) findViewById(R.id.sector_ed);
         price = (TextInputEditText) findViewById(R.id.price_ed);
         size = (TextInputEditText) findViewById(R.id.size_ed);
->>>>>>> af700c286b58570ba248232e10954a4e88aba63a
+
 
         propertyType = (TextView) findViewById(R.id.type);
 
@@ -385,6 +385,7 @@ public class EnterProperptyDetails2Activity extends AppCompatActivity implements
         maxSize = findViewById(R.id.maxS_ed);
         status = (TextView) findViewById(R.id.status2);
         status.setText(DemoClass.status);
+        status.setVisibility(View.GONE);
 
         if(DemoClass.status.equals("Want Rent")){
             screenTitle.setTitle("Want Rent");
@@ -415,7 +416,7 @@ public class EnterProperptyDetails2Activity extends AppCompatActivity implements
         apiService = ApiUtil.getAPIService();
     }
 
-<<<<<<< HEAD
+
 //    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
 //    @Override
 //    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -490,7 +491,7 @@ public class EnterProperptyDetails2Activity extends AppCompatActivity implements
 //        }
 //        super.onActivityResult(requestCode, resultCode, data);
 //    }
-=======
+
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -565,7 +566,6 @@ public class EnterProperptyDetails2Activity extends AppCompatActivity implements
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
->>>>>>> af700c286b58570ba248232e10954a4e88aba63a
 
     @Override
     public void onClick(View v) {

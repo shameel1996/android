@@ -1056,6 +1056,7 @@ drawable closeenvelope
 drawable colorsnew
 drawable contact
 drawable contactus
+drawable cornertwo
 drawable cornesrs
 drawable creditcard
 drawable cross
@@ -1130,6 +1131,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable onclickcolorchange
 drawable operation
 drawable pass
 drawable pdf
@@ -1471,6 +1473,7 @@ id relative1
 id relative_row_area
 id relative_row_area_type
 id relative_row_city
+id relative_row_menu
 id relative_row_property_type
 id relative_row_sector
 id relative_row_subarea
@@ -1596,6 +1599,7 @@ id tv_city
 id tv_sector
 id tv_sub_area
 id type
+id typeRL
 id type_2
 id type_pack
 id type_text
@@ -1720,6 +1724,7 @@ layout homelayout
 layout image_fragment
 layout items_view
 layout matches
+layout menu
 layout messegetalkto
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include

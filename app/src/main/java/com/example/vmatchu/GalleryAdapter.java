@@ -64,7 +64,7 @@ public class GalleryAdapter extends BaseAdapter {
 //                mArrayUri.get(position);
                 ivGallery.setImageURI(null);
                 //parent.removeView(convertView);
-                itemView.setVisibility(View.GONE);
+                //itemView.setVisibility(View.GONE);
 
             }
 

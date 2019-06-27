@@ -138,13 +138,12 @@ public class myProperty extends AppCompatActivity implements NavigationView.OnNa
 
 //        myPropertyForDB=new MyPropertyForDB();
 
-<<<<<<< HEAD
 
 
         Toolbar toolbar=findViewById(R.id.toolbarMyProperty);
-=======
-        Toolbar toolbar = findViewById(R.id.toolbarMyProperty);
->>>>>>> af700c286b58570ba248232e10954a4e88aba63a
+
+
+
         setSupportActionBar(toolbar);
 
         status.add("For Rent");
@@ -299,19 +298,19 @@ public class myProperty extends AppCompatActivity implements NavigationView.OnNa
                     final MyPropertyResponse myPropertyResponse = response.body();
                     if (myPropertyResponse.getError().equals("-1")) {
 
-                        dBhelper.emptyTable("myProperty");
-                        dBhelper.emptyTable("myPropertySector");
-                        dBhelper.emptyTable("myPropertyGarages");
-                        dBhelper.emptyTable("myPropertyBathrooms");
-                        dBhelper.emptyTable("myPropertyBedrooms");
-                        dBhelper.emptyTable("myPropertyRooms");
-                        dBhelper.emptyTable("myPropertyDescription");
-                        dBhelper.emptyTable("myPropertyCity");
-                        dBhelper.emptyTable("myPropertyArea");
-                        dBhelper.emptyTable("myPropertySubArea");
-                        dBhelper.emptyTable("myPropertyAreaType");
-                        dBhelper.emptyTable("myPropertyPropertyType");
-                        dBhelper.emptyTable("myPropertyStatus");
+//                        dBhelper.emptyTable("myProperty");
+//                        dBhelper.emptyTable("myPropertySector");
+//                        dBhelper.emptyTable("myPropertyGarages");
+//                        dBhelper.emptyTable("myPropertyBathrooms");
+//                        dBhelper.emptyTable("myPropertyBedrooms");
+//                        dBhelper.emptyTable("myPropertyRooms");
+//                        dBhelper.emptyTable("myPropertyDescription");
+//                        dBhelper.emptyTable("myPropertyCity");
+//                        dBhelper.emptyTable("myPropertyArea");
+//                        dBhelper.emptyTable("myPropertySubArea");
+//                        dBhelper.emptyTable("myPropertyAreaType");
+//                        dBhelper.emptyTable("myPropertyPropertyType");
+//                        dBhelper.emptyTable("myPropertyStatus");
 
 
                         if (myPropertyResponse.getData().size() == 0) {

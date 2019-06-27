@@ -42,6 +42,7 @@ public class PropertyTypeAdapter  extends RecyclerView.Adapter<PropertyTypeAdapt
     }
 
 
+
     @NonNull
     @Override
     public ViewHolderPropertyType onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {

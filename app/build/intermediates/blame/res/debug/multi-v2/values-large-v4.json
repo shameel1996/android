@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\VmatchU Android App\\VmatchU new\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
+            "outputFile": "E:\\vmatchUKnova\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\b68188692728fee0b151b37a946342ee\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\hammad\\.gradle\\caches\\transforms-2\\files-2.1\\e41a3ca479f241d4b82fb505f949c9fb\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\pc1\\.gradle\\caches\\transforms-2\\files-2.1\\6cbba51632de68ce6377a8af5b44bf3c\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\hammad\\.gradle\\caches\\transforms-2\\files-2.1\\c9347b383fd4185132045debda40b91b\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

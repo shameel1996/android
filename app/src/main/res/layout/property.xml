@@ -41,22 +41,15 @@
 
            <ImageView
                android:id="@+id/dropForProperty"
-<<<<<<< HEAD
-               android:layout_width="wrap_content"
-=======
                android:layout_width="53dp"
->>>>>>> af700c286b58570ba248232e10954a4e88aba63a
+
                android:layout_height="wrap_content"
                android:src="@drawable/menuicon"
                android:layout_alignParentRight="true"
-<<<<<<< HEAD
+
                android:layout_margin="10dp"
 
              />
-=======
-               android:layout_marginRight="2dp"
-               android:layout_toRightOf="@+id/title_myProp_2" />
->>>>>>> af700c286b58570ba248232e10954a4e88aba63a
 
            <TextView
 

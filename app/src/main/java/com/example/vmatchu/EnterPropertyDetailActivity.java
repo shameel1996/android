@@ -34,6 +34,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -94,7 +95,7 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
     private String cityName, areaName, subareaName, sectorName;
     private String cityId, areaId, subareaId, sectorId;
     private String[] proType = {"None", "Agriculture/Dairy", "Apartment/Flat", "Banglow/House", "Commercial Plot", "Commercial Portion/Office Area", "Farm House", "Hotel", "Industrial land", "Industrial Plot", "Land", "Penthouse", "Plot", "Plot File", "Residential Lower Portion", "Residential Upper Portion", "Restuarent", "Shop/Showroom", "villa"};//array of strings used to populate the spinner
-
+    private boolean isButtonClicked = false;
     private TextInputEditText title;
     private TextView areaType;
     private ArrayList<String> country = new ArrayList<>();
@@ -106,6 +107,7 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
     private ArrayList<PropertyTypeData> propertyTypeList = new ArrayList<>();
     private ArrayList<String> areaTypeArray = new ArrayList<>();
 
+    private RelativeLayout relativeLayoutType;
     Intent intent2, intent1;
 
     cityAdapter adapter;
@@ -124,15 +126,12 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
     int remainingMoney;
     CollapsingToolbarLayout screenTitle;
 
-<<<<<<< HEAD
+
     ArrayList<Uri> mArrayUri;
     Uri mUri;
-=======
->>>>>>> af700c286b58570ba248232e10954a4e88aba63a
+
 
     private SpinnerDialog spinnnerDialogue, spinnerDialog, DialogAreaType;
-
-    ArrayList<Uri> mArrayUri;
 
 
 
@@ -365,11 +364,11 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
     private void initialize() {
         title = (TextInputEditText) findViewById(R.id.pro_title_ed);
 //        areaType=(TextInputEditText) findViewById(R.id.areaType_ed) ;
-<<<<<<< HEAD
+
         countrytxt=(TextView) findViewById(R.id.Country_ed) ;
         citytxt=(TextView)findViewById(R.id.City_ed);
 
-
+ relativeLayoutType=(RelativeLayout)findViewById(R.id.typeRL);
 
         status=(TextView)findViewById(R.id.status1);
         areatxt=(TextView)findViewById(R.id.Area_ed);
@@ -387,7 +386,7 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
         details = (TextInputEditText)findViewById(R.id.desc_ed);
         video_url = (TextInputEditText)findViewById(R.id.vedioURL_ed);
         image360_url = (TextInputEditText)findViewById(R.id.image360_ed);
-=======
+
         countrytxt = (TextView) findViewById(R.id.Country_ed);
         citytxt = (TextView) findViewById(R.id.City_ed);
         screenTitle = findViewById(R.id.title);
@@ -408,7 +407,6 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
         details = (TextInputEditText) findViewById(R.id.desc_ed);
         video_url = (TextInputEditText) findViewById(R.id.vedioURL_ed);
         image360_url = (TextInputEditText) findViewById(R.id.image360_ed);
->>>>>>> af700c286b58570ba248232e10954a4e88aba63a
 
         dBhelper = new DBhelper(this);
         submit = findViewById(R.id.submitProp);
@@ -426,11 +424,22 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
         sectortxt.setOnClickListener(this);
         areaType.setOnClickListener(this);
         propertyType.setOnClickListener(this);
+        relativeLayoutType.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (v.getId() == R.id.typeRL) {
+                    isButtonClicked = !isButtonClicked; // toggle the boolean flag
+                    v.setBackgroundResource(isButtonClicked ? R.drawable.onclickcolorchange : R.drawable.cornesrs);
+                }
+            }
+        });
+
 //        submit.setOnClickListener(this);
 
 
         status.setText(DemoClass.status);
         this.setTitle(DemoClass.status);
+        status.setVisibility(View.GONE);
 //        intent2=getIntent();
 //        status.setText(intent2.getStringExtra("Sell"));
 //        intent1=getIntent();
@@ -475,11 +484,11 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
 
 
                     mArrayUri.add(mImageUri);
-<<<<<<< HEAD
+
                     galleryAdapter = new GalleryAdapter(this,mArrayUri);
-=======
+
                     galleryAdapter = new GalleryAdapter(getApplicationContext(), mArrayUri);
->>>>>>> af700c286b58570ba248232e10954a4e88aba63a
+
                     gvGallery.setAdapter(galleryAdapter);
 
                     gvGallery.setVerticalSpacing(gvGallery.getHorizontalSpacing());
@@ -505,13 +514,13 @@ public class EnterPropertyDetailActivity extends AppCompatActivity implements Vi
                             imageEncoded = cursor.getString(columnIndex);
                             imagesEncodedList.add(imageEncoded);
                             cursor.close();
-<<<<<<< HEAD
+
                             mArrayUri.add(uri);
                             galleryAdapter = new GalleryAdapter(this,mArrayUri);
-=======
+
 
                             galleryAdapter = new GalleryAdapter(getApplicationContext(), mArrayUri);
->>>>>>> af700c286b58570ba248232e10954a4e88aba63a
+
                             gvGallery.setAdapter(galleryAdapter);
                             gvGallery.setVerticalSpacing(gvGallery.getHorizontalSpacing());
                             ViewGroup.MarginLayoutParams mlp = (ViewGroup.MarginLayoutParams) gvGallery

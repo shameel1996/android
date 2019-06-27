@@ -87,17 +87,29 @@
                 android:id="@+id/LL1"
                 android:layout_below="@+id/type_text"
                 android:layout_marginTop="10dp"
-                android:layout_margin="10dp"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <TextView
-                    android:hint="Type"
-                    android:drawableRight="@drawable/imgpshfullsizeanim"
-                    android:textSize="18dp"
-                    android:id="@+id/type"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"></TextView>
+                <RelativeLayout
+                    android:id="@+id/typeRL"
+                    android:padding="10dp"
+               android:background="@drawable/onclickcolorchange"
+                android:focusable="true"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp">
+                    <TextView
+
+                        android:layout_centerVertical="true"
+
+                        android:hint="Type"
+                        android:drawableRight="@drawable/imgpshfullsizeanim"
+                        android:textSize="18dp"
+                        android:id="@+id/type"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"></TextView>
+                </RelativeLayout>
+
                 <TextView
                     android:textSize="18dp"
                     android:layout_marginLeft="40dp"
@@ -345,23 +357,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <GridView
-<<<<<<< HEAD
+
                     android:id="@+id/gv"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+
                     android:gravity="center"
                     android:horizontalSpacing="2dp"
                     android:isScrollContainer="false"
-                    android:numColumns="4"
+
                     android:stretchMode="columnWidth"
-                    android:verticalSpacing="20dp" />
-=======
-                    android:layout_width="match_parent"
+                    android:verticalSpacing="20dp"
+                android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/gv"
+
                     android:numColumns="3">
                 </GridView>
->>>>>>> af700c286b58570ba248232e10954a4e88aba63a
+
 
                 <Button
                     android:layout_below="@id/gv"
