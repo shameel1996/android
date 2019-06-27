@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
@@ -142,6 +143,7 @@ public class PropertyAdapter extends RecyclerView.Adapter {
         progressDialog = new ProgressDialog(context);
         progressDialog.setMessage("Please Wait...");
         progressDialog.setCancelable(false);
+        this.propertyResponsesListIsClosed = propertyResponsesListIsClosed;
         this.propertyResponsesCityList = propertyResponsesCityList;
         this.propertyResponsesStatusList = propertyResponsesStatusList;
         this.propertyResponsesAreaList1 = propertyResponsesAreaList1;
@@ -169,6 +171,7 @@ public class PropertyAdapter extends RecyclerView.Adapter {
         if (propertyResponsesListIsClosed.size() > i) {
             if(propertyResponsesListIsClosed.get(i).getIsClosed().equals("1")){
                 viewHolder1.activeOrClosed.setText("Closed");
+                viewHolder1.activeOrClosed.setTextColor(Color.parseColor("#ffcc0000"));
             }else {
                 viewHolder1.activeOrClosed.setText("Active");
             }

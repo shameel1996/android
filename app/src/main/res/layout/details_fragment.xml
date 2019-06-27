@@ -65,6 +65,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:id="@+id/linear_status"
 
             android:orientation="horizontal">
 
@@ -115,6 +116,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:id="@+id/linear_price"
 
             android:orientation="horizontal">
 
@@ -163,6 +165,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:id="@+id/linear_min_size"
 
             android:orientation="horizontal">
 
@@ -210,6 +213,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:id="@+id/linear_max_size"
 
             android:orientation="horizontal">
 
@@ -256,6 +260,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:id="@+id/linear_property_type"
 
             android:orientation="horizontal">
 
@@ -281,7 +286,7 @@
 
 
                 android:layout_width="0dp"
-                android:layout_height="30dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
 
                 android:orientation="horizontal">
@@ -305,6 +310,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:id="@+id/linear_rooms"
 
             android:orientation="horizontal">
 
@@ -353,6 +359,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:id="@+id/linear_bedrooms"
 
             android:orientation="horizontal">
 
@@ -401,6 +408,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:id="@+id/linear_bathrooms"
 
             android:orientation="horizontal">
 
@@ -449,6 +457,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:id="@+id/linear_garages"
 
             android:orientation="horizontal">
 
@@ -497,6 +506,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:id="@+id/linear_area_type"
 
             android:orientation="horizontal">
 
@@ -543,6 +553,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:id="@+id/linear_min_price"
 
             android:orientation="horizontal">
 
@@ -590,6 +601,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:id="@+id/linear_max_price"
             android:background="#F1EDED"
             android:orientation="horizontal">
 
