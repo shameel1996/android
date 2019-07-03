@@ -5,26 +5,49 @@
     android:layout_width="match_parent"
     android:background="#fcfcfc"
     android:layout_height="match_parent"
-    tools:context=".Home2activity">
+    tools:context=".Activities.Home2activity">
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/apBar"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:id="@+id/apBarEditProperty"
         android:layout_width="match_parent"
-        android:layout_height="250dp">
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
         <android.support.design.widget.CollapsingToolbarLayout
-            app:layout_scrollFlags="exitUntilCollapsed|scroll"
+
+            app:title="Edit Property"
             android:layout_width="match_parent"
-            app:title="My Property"
-            app:titleTextColor="#FFFFFF"
-            app:expandedTitleMarginStart="60dp"
-            app:expandedTitleMarginEnd="50dp"
-            android:background="@drawable/propertyback"
-            android:layout_height="match_parent">
-            <android.support.v7.widget.Toolbar
-                app:popupTheme="@style/Base.AlertDialog.AppCompat.Light"
-                app:layout_collapseMode="pin"
+            android:layout_height="250dp"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="bottom"
+
+            app:expandedTitleMarginEnd="@dimen/activity_horizontal_margin"
+            app:expandedTitleMarginStart="@dimen/activity_horizontal_margin"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/toolbar_image"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"></android.support.v7.widget.Toolbar>
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/propertyback" />
+
+            <android.support.v7.widget.Toolbar
+
+                android:id="@+id/toolbarEnterProprtty"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/Base.AlertDialog.AppCompat.Light">
+
+            </android.support.v7.widget.Toolbar>
         </android.support.design.widget.CollapsingToolbarLayout>
 
 
@@ -37,11 +60,14 @@
         android:layout_margin="10dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <LinearLayout
+        <RelativeLayout
+            android:focusableInTouchMode="true"
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            >
             <TextView
+                android:id="@+id/title_text"
                 android:textStyle="bold"
                 android:textSize="18dp"
                 android:text="Property Title *"
@@ -51,6 +77,7 @@
 
             <android.support.design.widget.TextInputLayout
 
+                android:layout_below="@+id/title_text"
                 android:layout_marginTop="10dp"
                 android:id="@+id/pro_title"
                 android:layout_centerHorizontal="true"
@@ -66,6 +93,8 @@
             </android.support.design.widget.TextInputLayout>
             <TextView
 
+                android:id="@+id/type_text"
+                android:layout_below="@id/pro_title"
                 android:textStyle="bold"
                 android:textSize="18dp"
                 android:text="Property Type *"
@@ -73,18 +102,32 @@
                 android:layout_height="wrap_content" />
             <LinearLayout
 
+                android:id="@+id/LL1"
+                android:layout_below="@+id/type_text"
                 android:layout_marginTop="10dp"
-                android:layout_margin="10dp"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <TextView
-                    android:hint="Type"
-                    android:drawableRight="@drawable/imgpshfullsizeanim"
-                    android:textSize="18dp"
-                    android:id="@+id/type"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"></TextView>
+                <RelativeLayout
+                    android:id="@+id/typeRL"
+                    android:padding="10dp"
+                    android:background="@drawable/onclickcolorchange"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <TextView
+
+                        android:layout_centerVertical="true"
+
+                        android:hint="Type"
+                        android:drawableRight="@drawable/imgpshfullsizeanim"
+                        android:textSize="18dp"
+                        android:id="@+id/type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></TextView>
+                </RelativeLayout>
+
                 <TextView
                     android:textSize="18dp"
                     android:layout_marginLeft="40dp"
@@ -94,6 +137,8 @@
             </LinearLayout>
             <TextView
 
+                android:id="@+id/location_text"
+                android:layout_below="@id/LL1"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:textSize="18dp"
@@ -103,57 +148,110 @@
             <GridLayout
 
 
+                android:id="@+id/GL"
+                android:layout_below="@+id/location_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:rowCount="3"
                 android:columnCount="2"
                 >
-                <TextView
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/countryRL"
+                    android:padding="10dp"
+
+                    android:focusable="true"
+                    android:background="@drawable/onclickcolorchange"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:id="@+id/Country_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Country"
+                        android:drawableRight="@drawable/imgpshfullsizeanim" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/cityRL"
+                    android:padding="10dp"
+                    android:background="@drawable/onclickcolorchange"
+                    android:focusable="true"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp">
+                    <TextView
+
+                        android:textSize="18dp"
+                        android:id="@+id/City_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="City"
+                        android:drawableRight="@drawable/imgpshfullsizeanim" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/areaRL"
+                    android:padding="10dp"
+                    android:background="@drawable/onclickcolorchange"
+                    android:focusable="true"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:drawableRight="@drawable/imgpshfullsizeanim"
+
+                        android:textSize="18dp"
+                        android:id="@+id/Area_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Area" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/subareaR"
+                    android:padding="10dp"
+                    android:background="@drawable/onclickcolorchange"
+                    android:focusable="true"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:drawableRight="@drawable/imgpshfullsizeanim"
+
+                        android:textSize="18dp"
+                        android:id="@+id/Subarea_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Sub-Area" />
+                </RelativeLayout>
 
 
 
-                    android:layout_margin="10dp"
-                    android:textSize="18dp"
-                    android:id="@+id/Country_ed"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:hint="Country"
-                    android:drawableRight="@drawable/imgpshfullsizeanim" />
-                <TextView
-                    android:layout_margin="10dp"
-                    android:textSize="18dp"
-                    android:id="@+id/City_ed"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:hint="City"
-                    android:drawableRight="@drawable/imgpshfullsizeanim" />
+            </GridLayout>
+            <RelativeLayout
+                android:layout_below="@id/GL"
+                android:layout_marginTop="10dp"
+                android:id="@+id/sectorRL"
+                android:padding="10dp"
+                android:background="@drawable/onclickcolorchange"
+                android:focusable="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
                 <TextView
                     android:drawableRight="@drawable/imgpshfullsizeanim"
-                    android:layout_margin="10dp"
-                    android:textSize="18dp"
-                    android:id="@+id/Area_ed"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:hint="Area" />
 
-                <TextView
-                    android:drawableRight="@drawable/imgpshfullsizeanim"
-                    android:layout_margin="10dp"
-                    android:textSize="18dp"
-                    android:id="@+id/Subarea_ed"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:hint="Sub-Area" />
-                <TextView
-                    android:drawableRight="@drawable/imgpshfullsizeanim"
-                    android:layout_margin="10dp"
                     android:textSize="18dp"
                     android:id="@+id/sector_ed"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:hint="Sector" />
-            </GridLayout>
+            </RelativeLayout>
             <TextView
+                android:id="@+id/price_text"
+                android:layout_below="@+id/sectorRL"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:textSize="18dp"
@@ -162,6 +260,7 @@
                 android:layout_height="wrap_content" />
             <android.support.design.widget.TextInputLayout
 
+                android:layout_below="@id/price_text"
                 android:id="@+id/price"
                 android:layout_centerHorizontal="true"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -169,12 +268,16 @@
                 android:layout_height="wrap_content">
                 <android.support.design.widget.TextInputEditText
 
+
                     android:id="@+id/price_ed"
+                    android:inputType="number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Price" />
             </android.support.design.widget.TextInputLayout>
             <TextView
+                android:id="@+id/details_text"
+                android:layout_below="@+id/price"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:textSize="18dp"
@@ -183,6 +286,9 @@
                 android:layout_height="wrap_content" />
             <GridLayout
 
+
+                android:layout_below="@id/details_text"
+                android:id="@+id/GL2"
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -190,94 +296,105 @@
                 android:columnCount="2"
                 >
                 <android.support.design.widget.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
 
                     android:id="@+id/size"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content">
+                    android:layout_width="160dp"
+                    android:layout_height="55dp">
                     <android.support.design.widget.TextInputEditText
                         android:id="@+id/size_ed"
-                        android:layout_margin="10dp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="number"
+                        android:layout_height="match_parent"
                         android:hint="Size*" />
                 </android.support.design.widget.TextInputLayout>
-
-
-                <TextView
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/areaTypeRL"
                     android:padding="10dp"
-                    android:drawableRight="@drawable/imgpshfullsizeanim"
-                    android:layout_margin="10dp"
-                    android:textSize="18dp"
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/areaType_ed"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:hint="Area Type" />
+                    android:background="@drawable/onclickcolorchange"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp">
+                    <TextView
+
+                        android:drawableRight="@drawable/imgpshfullsizeanim"
+
+                        android:textSize="18dp"
+
+                        android:id="@+id/areaType_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Area Type" />
+
+                </RelativeLayout>
+
 
 
 
                 <android.support.design.widget.TextInputLayout
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
                     android:id="@+id/rooms"
                     android:layout_centerHorizontal="true"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content">
+                    android:layout_width="160dp"
+                    android:layout_height="55dp">
                     <android.support.design.widget.TextInputEditText
 
-                        android:layout_margin="10dp"
                         android:id="@+id/rooms_ed"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="number"
+                        android:layout_height="match_parent"
                         android:hint="Rooms" />
                 </android.support.design.widget.TextInputLayout>
                 <android.support.design.widget.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
+                    android:layout_marginLeft="10dp"
                     android:id="@+id/bedrooms"
                     android:layout_centerHorizontal="true"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content">
+                    android:layout_width="160dp"
+                    android:layout_height="55dp">
                     <android.support.design.widget.TextInputEditText
-                        android:layout_margin="10dp"
                         android:id="@+id/bedrooms_ed"
                         android:layout_width="match_parent"
-                        android:inputType="number"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:hint="Bedrooms" />
                 </android.support.design.widget.TextInputLayout>
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/bathroom"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_centerHorizontal="true"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content">
+                    android:layout_width="160dp"
+                    android:layout_height="55dp">
                     <android.support.design.widget.TextInputEditText
 
-                        android:layout_margin="10dp"
+
                         android:id="@+id/bathroom_ed"
                         android:layout_width="match_parent"
-                        android:inputType="number"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:hint="Bathrooms" />
                 </android.support.design.widget.TextInputLayout>
                 <android.support.design.widget.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
+                    android:layout_marginLeft="10dp"
                     android:id="@+id/garages"
                     android:layout_centerHorizontal="true"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content">
+                    android:layout_width="160dp"
+                    android:layout_height="50dp">
                     <android.support.design.widget.TextInputEditText
 
-                        android:layout_margin="10dp"
+
                         android:id="@+id/garages_ed"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="number"
+                        android:layout_height="match_parent"
                         android:hint="Garages" />
                 </android.support.design.widget.TextInputLayout>
 
             </GridLayout>
             <TextView
+                android:id="@+id/desc_text"
+                android:layout_below="@+id/GL2"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:textSize="18dp"
@@ -286,6 +403,7 @@
                 android:layout_height="wrap_content" />
             <android.support.design.widget.TextInputLayout
 
+                android:layout_below="@+id/desc_text"
                 android:layout_marginTop="10dp"
                 android:id="@+id/desc"
                 android:layout_centerHorizontal="true"
@@ -294,6 +412,7 @@
                 android:layout_height="200dp">
                 <android.support.design.widget.TextInputEditText
 
+
                     android:gravity="top"
                     android:id="@+id/desc_ed"
                     android:layout_width="match_parent"
@@ -301,13 +420,14 @@
                     android:hint="Description" />
             </android.support.design.widget.TextInputLayout>
             <TextView
+                android:id="@+id/media_text"
+                android:layout_below="@id/desc"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:textSize="18dp"
                 android:text="Property Media *"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-
 
             <LinearLayout
 
@@ -318,11 +438,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <GridView
+
+                    android:id="@+id/gv"
+
+                    android:gravity="center"
+                    android:horizontalSpacing="2dp"
+                    android:isScrollContainer="false"
+
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/gv"
+
                     android:numColumns="3">
                 </GridView>
+
 
                 <Button
                     android:layout_below="@id/gv"
@@ -338,8 +468,10 @@
 
             </LinearLayout>
 
+
             <android.support.design.widget.TextInputLayout
 
+                android:layout_below="@id/llformedia"
                 android:layout_marginTop="10dp"
                 android:id="@+id/vedioURL"
                 android:layout_centerHorizontal="true"
@@ -354,6 +486,7 @@
                     android:hint="Vedio URL" />
             </android.support.design.widget.TextInputLayout>
             <android.support.design.widget.TextInputLayout
+                android:layout_below="@id/vedioURL"
                 android:layout_marginTop="10dp"
                 android:id="@+id/image360"
                 android:layout_centerHorizontal="true"
@@ -368,6 +501,7 @@
                     android:hint="Image 360" />
             </android.support.design.widget.TextInputLayout>
             <Button
+                android:layout_below="@+id/image360"
                 android:layout_marginTop="10dp"
                 android:textColor="@android:color/white"
                 android:textSize="12sp"
@@ -377,19 +511,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <!--<TextView-->
-                <!--android:layout_marginTop="10dp"-->
-                <!--android:textStyle="bold"-->
-                <!--android:textSize="18dp"-->
-                <!--android:text="Contact Information"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content" />-->
-            <!--<RadioButton-->
-                <!--android:layout_marginTop="20dp"-->
-                <!--android:text="My Profile Information"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content" />-->
+
             <Button
+                android:layout_below="@+id/btnImage360"
                 android:layout_marginTop="20dp"
                 android:textColor="@android:color/white"
                 android:textSize="12sp"
@@ -400,10 +524,13 @@
                 android:layout_height="wrap_content" />
 
             <LinearLayout
-                android:background="@android:color/white"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"></LinearLayout>
-        </LinearLayout>
+                android:layout_height="100dp"
+                android:layout_below="@+id/saveChangesProp"
+                android:background="@android:color/white"></LinearLayout>
+        </RelativeLayout>
+
 
     </android.support.v4.widget.NestedScrollView>
 </android.support.design.widget.CoordinatorLayout>

@@ -1056,6 +1056,7 @@ drawable closeenvelope
 drawable colorsnew
 drawable contact
 drawable contactus
+drawable cornerclick
 drawable cornertwo
 drawable cornesrs
 drawable creditcard
@@ -1106,6 +1107,7 @@ drawable insta
 drawable locationpin
 drawable lock
 drawable logo
+drawable logobox
 drawable logoutbtn
 drawable logoutoutline
 drawable manuser
@@ -1162,6 +1164,7 @@ drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable twitter
 drawable unnamed
+drawable upload
 drawable user
 drawable view
 drawable vmatchu_logo_final
@@ -1226,10 +1229,18 @@ id all
 id already_acc_btn
 id always
 id apBar
+id apBarEditProperty
+id appbar
+id appbarDet
+id appbarMy
+id appbarMyProperty
+id areaRL
+id areaTypeRL
 id areaType_ed
 id area_ed
 id area_type_ed
 id areatype
+id areatypeRL
 id async
 id auto
 id bank_invoice
@@ -1263,6 +1274,7 @@ id change_pic
 id checkbox
 id choosePackage
 id chronometer
+id cityRL
 id clip_horizontal
 id clip_vertical
 id close
@@ -1278,6 +1290,7 @@ id content_main_frame_2
 id content_match_property
 id content_my_property
 id coordinator
+id countryRL
 id createAcc
 id credit_pack
 id custom
@@ -1288,7 +1301,6 @@ id date_invoice
 id dd
 id decor_content_parent
 id default_activity_button
-id delete_image
 id desc
 id desc_ed
 id desc_text
@@ -1385,6 +1397,7 @@ id linear_price
 id linear_property_type
 id linear_rooms
 id linear_status
+id linear_title_line
 id list
 id listMode
 id listTitle
@@ -1521,6 +1534,7 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id sectorRL
 id sector_ed
 id seeMatch
 id selProp
@@ -1565,8 +1579,11 @@ id status2
 id status_bar_latest_event_content
 id stretch
 id sub
+id subareaR
+id subareaRL
 id subarea_ed
 id submenuarrow
+id submitLayout
 id submitProp
 id submit_area
 id tabMode
@@ -1588,6 +1605,7 @@ id textinput_helper_text
 id time
 id title
 id titleDividerNoCustom
+id title_myProp
 id title_myProp_2
 id title_template
 id title_text
@@ -1598,8 +1616,11 @@ id toolbarInvoice
 id toolbarMyAccount
 id toolbarMyProperty
 id toolbarSubmitProperty
+id toolbar_image
 id toolbar_layout
+id toolbar_layout_myproperty
 id toolbar_title
+id toolbardetail
 id toolbarmessege
 id top
 id topPanel
@@ -1781,8 +1802,6 @@ layout support_simple_spinner_dropdown_item
 layout video_fragment
 menu activity_home_drawer
 menu activity_my_property_drawer
-mipmap ic_launcher
-mipmap ic_launcher_round
 raw introvedio
 raw splash
 string abc_action_bar_home_description

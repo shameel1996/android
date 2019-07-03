@@ -7,8 +7,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.vmatchu.DBhelper.DBhelper;
 import com.example.vmatchu.Interfaces.OnItemClick;
@@ -60,6 +62,7 @@ public class PropertyTypeAdapter  extends RecyclerView.Adapter<PropertyTypeAdapt
 //        this.itemClick = itemClick;
 //    }
 
+
     @Override
     public void onBindViewHolder(@NonNull ViewHolderPropertyType viewHolderPropertyType, final int i) {
 //        ViewHolderCityviewHolderCity=(ViewHolderCity)viewHolder;
@@ -78,6 +81,7 @@ public class PropertyTypeAdapter  extends RecyclerView.Adapter<PropertyTypeAdapt
         });
 
     }
+
 
 
     @Override

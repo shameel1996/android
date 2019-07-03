@@ -1,46 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.vmatchu">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="true" />
     <application
         android:allowBackup="true"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher"
+        android:roundIcon="@drawable/logobox"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".EditPurchasePropertyActivity"></activity>
+        <activity android:name=".Activities.EditPurchasePropertyActivity"></activity>
 
-        <activity android:name=".PackageActivity"></activity>
-        <activity android:name=".GeneratedInvoiceActivity"/>
-        <activity android:name=".InvoiceActivity" />
+        <activity android:name=".Activities.PackageActivity"></activity>
+        <activity android:name=".Activities.GeneratedInvoiceActivity"/>
+        <activity android:name=".Activities.InvoiceActivity" />
 
-        <activity android:name=".EditSellPropertyActivity" />
-        <activity android:name=".MatchPropertyActivity" />
-        <activity android:name=".PropertyDetailsActivity" />
-        <activity android:name=".EnterProperptyDetails2Activity" />
-        <activity android:name=".Splash" />
+        <activity android:name=".Activities.EditSellPropertyActivity" />
+        <activity android:name=".Activities.MatchPropertyActivity" />
+        <activity android:name=".Activities.PropertyDetailsActivity" />
+        <activity android:name=".Activities.EnterProperptyDetails2Activity" />
         <activity
-            android:name=".myProperty"
+            android:name=".Activities.myProperty"
             android:label="@string/title_activity_my_property"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".EnterPropertyDetailActivity" />
-        <activity android:name=".myProfileActivity" />
-        <activity android:name=".Home2activity" />
-        <activity android:name=".submitProperty" />
+        <activity android:name=".Activities.EnterPropertyDetailActivity" />
+        <activity android:name=".Activities.myProfileActivity" />
+        <activity android:name=".Activities.Home2activity" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".Activities.HomeActivity"
             android:label="@string/title_activity_home" />
         <activity
-            android:name=".SignUpActivity"
+            android:name=".Activities.submitProperty"
+            android:label="@string/title_activity_home"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".Activities.SignUpActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".signInActivity"
+            android:name=".Activities.signInActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

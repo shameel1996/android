@@ -4,22 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Activities.MainActivity">
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarMyProperty"
         android:layout_width="match_parent"
-        android:layout_height="192dp"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
 
         <android.support.design.widget.CollapsingToolbarLayout
-            android:id="@+id/toolbar_layout"
-            app:title="My Property"
-            app:collapsedTitleTextAppearance="@android:color/white"
+            android:id="@+id/toolbar_layout_myproperty"
+
+            app:title="My Properties"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/myproperty"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            android:layout_height="250dp"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="bottom"
+
+            app:expandedTitleMarginEnd="@dimen/activity_horizontal_margin"
+            app:expandedTitleMarginStart="@dimen/activity_horizontal_margin"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            >
+            <ImageView
+                android:id="@+id/toolbar_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/myproperty" />
+
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbarMyProperty"
@@ -27,6 +49,7 @@
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
                 app:layout_scrollFlags="scroll|enterAlways">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">

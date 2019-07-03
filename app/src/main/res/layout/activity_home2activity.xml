@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="#fcfcfc"
     android:layout_height="match_parent"
-    tools:context=".Home2activity">
+    tools:context=".Activities.Home2activity">
 <android.support.design.widget.AppBarLayout
     android:id="@+id/apBar"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"

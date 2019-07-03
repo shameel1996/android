@@ -7,12 +7,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.example.vmatchu.MatchPropertyActivity;
 import com.example.vmatchu.Models.MathchedPropertyForDB;
 import com.example.vmatchu.Pojo.MyPropertyArea;
 import com.example.vmatchu.Pojo.MyPropertyAreaType;
@@ -21,14 +18,13 @@ import com.example.vmatchu.Pojo.MyPropertyBedrooms;
 import com.example.vmatchu.Pojo.MyPropertyCity;
 import com.example.vmatchu.Pojo.MyPropertyData;
 import com.example.vmatchu.Pojo.MyPropertyDescription;
-import com.example.vmatchu.Pojo.MyPropertyForDB;
 import com.example.vmatchu.Pojo.MyPropertyGarages;
 import com.example.vmatchu.Pojo.MyPropertyPropertyType;
 import com.example.vmatchu.Pojo.MyPropertyRooms;
 import com.example.vmatchu.Pojo.MyPropertySector;
 import com.example.vmatchu.Pojo.MyPropertyStatus;
 import com.example.vmatchu.Pojo.MyPropertySubArea;
-import com.example.vmatchu.PropertyDetailsActivity;
+import com.example.vmatchu.Activities.PropertyDetailsActivity;
 import com.example.vmatchu.R;
 
 import java.util.ArrayList;

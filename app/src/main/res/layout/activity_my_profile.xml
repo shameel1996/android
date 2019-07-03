@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F7F8F8"
-    tools:context=".myProfileActivity">
+    tools:context=".Activities.myProfileActivity">
 <RelativeLayout
     android:id="@+id/relative1"
     android:layout_width="match_parent"

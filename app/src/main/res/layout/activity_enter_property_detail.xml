@@ -5,23 +5,39 @@
     android:layout_width="match_parent"
     android:background="#fcfcfc"
     android:layout_height="match_parent"
-    tools:context=".Home2activity">
+    tools:context=".Activities.Home2activity">
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/apBar"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:id="@+id/appbarMy"
         android:layout_width="match_parent"
-        android:layout_height="250dp">
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
         <android.support.design.widget.CollapsingToolbarLayout
 
-            app:layout_scrollFlags="exitUntilCollapsed|scroll"
-            android:layout_width="match_parent"
 
-            android:id="@+id/title"
-            app:titleTextColor="#FFFFFF"
-            app:expandedTitleMarginStart="60dp"
-            app:expandedTitleMarginEnd="50dp"
-            android:background="@drawable/propertyback"
-            android:layout_height="match_parent">
+            android:id="@+id/title_myProp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="bottom"
+            app:expandedTitleMarginEnd="@dimen/activity_horizontal_margin"
+            app:expandedTitleMarginStart="@dimen/activity_horizontal_margin"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+
+           >
+            <ImageView
+                android:id="@+id/toolbar_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/propertyback" />
 
             <android.support.v7.widget.Toolbar
 
@@ -36,6 +52,27 @@
 
 
     </android.support.design.widget.AppBarLayout>
+<LinearLayout
+  android:translationZ="10dp"
+android:layout_margin="10dp"
+android:layout_gravity="bottom"
+    android:orientation="horizontal"
+    android:id="@+id/submitLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/submitProp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnImage360"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/buttons"
+        android:text="Submit Property"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+
+</LinearLayout>
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -45,6 +82,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <RelativeLayout
+            android:focusableInTouchMode="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
@@ -95,8 +133,8 @@
                     android:id="@+id/typeRL"
                     android:padding="10dp"
                android:background="@drawable/onclickcolorchange"
-                android:focusable="true"
-                    android:layout_width="160dp"
+
+                    android:layout_width="match_parent"
                     android:layout_height="50dp">
                     <TextView
 
@@ -106,7 +144,7 @@
                         android:drawableRight="@drawable/imgpshfullsizeanim"
                         android:textSize="18dp"
                         android:id="@+id/type"
-                        android:layout_width="150dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"></TextView>
                 </RelativeLayout>
 
@@ -137,54 +175,103 @@
                 android:rowCount="3"
                 android:columnCount="2"
                 >
-                <TextView
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/countryRL"
+                    android:padding="10dp"
+
+                    android:focusable="true"
+                    android:background="@drawable/onclickcolorchange"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:textSize="18dp"
+                        android:id="@+id/Country_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Country"
+                        android:drawableRight="@drawable/imgpshfullsizeanim" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/cityRL"
+                    android:padding="10dp"
+                    android:background="@drawable/onclickcolorchange"
+                    android:focusable="true"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp">
+                    <TextView
+
+                        android:textSize="18dp"
+                        android:id="@+id/City_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="City"
+                        android:drawableRight="@drawable/imgpshfullsizeanim" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/areaRL"
+                    android:padding="10dp"
+                    android:background="@drawable/onclickcolorchange"
+                    android:focusable="true"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:drawableRight="@drawable/imgpshfullsizeanim"
+
+                        android:textSize="18dp"
+                        android:id="@+id/Area_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Area" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/subareaR"
+                    android:padding="10dp"
+                    android:background="@drawable/onclickcolorchange"
+                    android:focusable="true"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:drawableRight="@drawable/imgpshfullsizeanim"
+
+                        android:textSize="18dp"
+                        android:id="@+id/Subarea_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Sub-Area" />
+                </RelativeLayout>
 
 
 
-                    android:layout_margin="10dp"
-                    android:textSize="18dp"
-                    android:id="@+id/Country_ed"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:hint="Country"
-                    android:drawableRight="@drawable/imgpshfullsizeanim" />
-                <TextView
-                    android:layout_margin="10dp"
-                    android:textSize="18dp"
-                    android:id="@+id/City_ed"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:hint="City"
-                    android:drawableRight="@drawable/imgpshfullsizeanim" />
+            </GridLayout>
+            <RelativeLayout
+                android:layout_below="@id/GL"
+                android:layout_marginTop="10dp"
+                android:id="@+id/sectorRL"
+                android:padding="10dp"
+                android:background="@drawable/onclickcolorchange"
+                android:focusable="true"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
                 <TextView
                     android:drawableRight="@drawable/imgpshfullsizeanim"
-                    android:layout_margin="10dp"
-                    android:textSize="18dp"
-                    android:id="@+id/Area_ed"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:hint="Area" />
 
-                <TextView
-                    android:drawableRight="@drawable/imgpshfullsizeanim"
-                    android:layout_margin="10dp"
-                    android:textSize="18dp"
-                    android:id="@+id/Subarea_ed"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:hint="Sub-Area" />
-                <TextView
-                    android:drawableRight="@drawable/imgpshfullsizeanim"
-                    android:layout_margin="10dp"
                     android:textSize="18dp"
                     android:id="@+id/sector_ed"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:hint="Sector" />
-            </GridLayout>
+            </RelativeLayout>
             <TextView
                 android:id="@+id/price_text"
-                android:layout_below="@+id/GL"
+                android:layout_below="@+id/sectorRL"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:textSize="18dp"
@@ -229,84 +316,97 @@
                 android:columnCount="2"
                 >
                 <android.support.design.widget.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
 
                     android:id="@+id/size"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content">
+                    android:layout_width="160dp"
+                    android:layout_height="55dp">
                     <android.support.design.widget.TextInputEditText
                         android:id="@+id/size_ed"
-                        android:layout_margin="10dp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:hint="Size*" />
                 </android.support.design.widget.TextInputLayout>
-
-
-                <TextView
+                <RelativeLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/areaTypeRL"
                     android:padding="10dp"
-                    android:drawableRight="@drawable/imgpshfullsizeanim"
-                    android:layout_margin="10dp"
-                    android:textSize="18dp"
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/areaType_ed"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:hint="Area Type" />
+                    android:background="@drawable/onclickcolorchange"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp">
+                    <TextView
+
+                        android:drawableRight="@drawable/imgpshfullsizeanim"
+                        android:textSize="18dp"
+                        android:id="@+id/areaType_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Area Type" />
+
+                </RelativeLayout>
+
 
 
 
                 <android.support.design.widget.TextInputLayout
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
                     android:id="@+id/rooms"
                     android:layout_centerHorizontal="true"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content">
+                    android:layout_width="160dp"
+                    android:layout_height="55dp">
                     <android.support.design.widget.TextInputEditText
 
-                        android:layout_margin="10dp"
                         android:id="@+id/rooms_ed"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:hint="Rooms" />
                 </android.support.design.widget.TextInputLayout>
                 <android.support.design.widget.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
+                    android:layout_marginLeft="10dp"
                     android:id="@+id/bedrooms"
                     android:layout_centerHorizontal="true"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content">
+                    android:layout_width="160dp"
+                    android:layout_height="55dp">
                     <android.support.design.widget.TextInputEditText
-                        android:layout_margin="10dp"
                         android:id="@+id/bedrooms_ed"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:hint="Bedrooms" />
                 </android.support.design.widget.TextInputLayout>
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/bathroom"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_centerHorizontal="true"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content">
+                    android:layout_width="160dp"
+                    android:layout_height="55dp">
                     <android.support.design.widget.TextInputEditText
 
-                        android:layout_margin="10dp"
+
                         android:id="@+id/bathroom_ed"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:hint="Bathrooms" />
                 </android.support.design.widget.TextInputLayout>
                 <android.support.design.widget.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
+                    android:layout_marginLeft="10dp"
                     android:id="@+id/garages"
                     android:layout_centerHorizontal="true"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content">
+                    android:layout_width="160dp"
+                    android:layout_height="55dp">
                     <android.support.design.widget.TextInputEditText
 
-                        android:layout_margin="10dp"
+
                         android:id="@+id/garages_ed"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:hint="Garages" />
                 </android.support.design.widget.TextInputLayout>
 
@@ -338,97 +438,10 @@
                     android:layout_height="match_parent"
                     android:hint="Description" />
             </android.support.design.widget.TextInputLayout>
-            <TextView
-                android:id="@+id/media_text"
-                android:layout_below="@id/desc"
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"
-                android:textSize="18dp"
-                android:text="Property Media *"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <LinearLayout
-
-                android:id="@+id/llformedia"
-                android:layout_below="@+id/media_text"
-                android:layout_marginTop="10dp"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <GridView
-
-                    android:id="@+id/gv"
-
-                    android:gravity="center"
-                    android:horizontalSpacing="2dp"
-                    android:isScrollContainer="false"
-
-                    android:stretchMode="columnWidth"
-                    android:verticalSpacing="20dp"
-                android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:numColumns="3">
-                </GridView>
 
 
-                <Button
-                    android:layout_below="@id/gv"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@android:color/white"
-                    android:textSize="12sp"
-                    android:text="Upload Image"
-                    android:background="@drawable/buttons"
-                    android:id="@+id/btnImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
 
 
-            </LinearLayout>
-
-
-            <android.support.design.widget.TextInputLayout
-
-                android:layout_below="@id/llformedia"
-                android:layout_marginTop="10dp"
-                android:id="@+id/vedioURL"
-                android:layout_centerHorizontal="true"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <android.support.design.widget.TextInputEditText
-
-                    android:id="@+id/vedioURL_ed"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Vedio URL" />
-            </android.support.design.widget.TextInputLayout>
-            <android.support.design.widget.TextInputLayout
-                android:layout_below="@id/vedioURL"
-                android:layout_marginTop="10dp"
-                android:id="@+id/image360"
-                android:layout_centerHorizontal="true"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <android.support.design.widget.TextInputEditText
-
-                    android:id="@+id/image360_ed"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Image 360" />
-            </android.support.design.widget.TextInputLayout>
-            <Button
-                android:layout_below="@+id/image360"
-                android:layout_marginTop="10dp"
-                android:textColor="@android:color/white"
-                android:textSize="12sp"
-                android:text="upload Image"
-                android:background="@drawable/buttons"
-                android:id="@+id/btnImage360"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
 
             <!--<TextView-->
                 <!--android:id="@+id/info_text"-->
@@ -446,22 +459,73 @@
                 <!--android:text="My Profile Information"-->
                 <!--android:layout_width="match_parent"-->
                 <!--android:layout_height="wrap_content" />-->
-            <Button
-                android:layout_below="@+id/btnImage360"
-                android:layout_marginTop="20dp"
-                android:textColor="@android:color/white"
-                android:textSize="12sp"
-                android:text="Submit Property"
-                android:background="@drawable/buttons"
-                android:id="@+id/submitProp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+
+
+
+            <TextView
+                android:id="@+id/media_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/desc"
+                android:layout_marginTop="10dp"
+                android:text="Property Media *"
+                android:textSize="18dp"
+                android:textStyle="bold" />
 
             <LinearLayout
-                android:layout_below="@+id/submitProp"
-                android:background="@android:color/white"
+
+                android:id="@+id/llformedia"
+                android:layout_below="@+id/media_text"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"></LinearLayout>
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_horizontal"
+
+                        android:layout_below="@id/gv"
+                        android:layout_marginTop="20dp"
+
+
+
+                        android:background="@drawable/upload"
+                        android:id="@+id/btnImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_margin="5dp"
+                        android:text="Upload Images"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </android.support.v7.widget.CardView>
+
+                <GridView
+
+                    android:id="@+id/gv"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+
+
+                    android:layout_alignTop="@+id/llformedia"
+                    android:gravity="center"
+                    android:horizontalSpacing="2dp"
+                    android:isScrollContainer="false"
+
+                    android:numColumns="3"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="20dp"></GridView>
+
+            </LinearLayout>
+
+
         </RelativeLayout>
 
 

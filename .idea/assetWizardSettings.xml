@@ -62,7 +62,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="scalingPercent" value="82" />
+                                                <entry key="scalingPercent" value="80" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -83,11 +83,7 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundLayerName" value="ic_launcher_background_abc" />
                                       <entry key="foregroundImage" value="C:\Users\hammad\Downloads\logobox.png" />
-                                      <entry key="foregroundLayerName" value="ic_launcher_foreground_abc" />
-                                      <entry key="outputName" value="ic_launcher_abc" />
                                     </map>
                                   </option>
                                 </PersistentState>

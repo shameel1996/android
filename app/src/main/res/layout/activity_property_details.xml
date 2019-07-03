@@ -11,64 +11,50 @@
         android:layout_height="match_parent"
         android:id="@+id/coordinator"
         android:background="#fcfcfc"
-        tools:context=".Home2activity">
+        tools:context=".Activities.Home2activity">
 
         <android.support.design.widget.AppBarLayout
-            android:id="@+id/apBar"
-
+            android:id="@+id/appbarDet"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark">
-
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
             <android.support.design.widget.CollapsingToolbarLayout
+
+
                 android:id="@+id/toolbar_title"
+                app:title="Property Details"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/propertyback"
-                app:expandedTitleMarginEnd="50dp"
-                app:expandedTitleMarginStart="60dp"
-                app:layout_scrollFlags="exitUntilCollapsed|scroll"
-                app:title="Reyan's House"
-                app:titleTextColor="#FFFFFF">
-
-                <RelativeLayout
-
+                android:layout_height="250dp"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleGravity="bottom"
+                app:expandedTitleMarginEnd="@dimen/activity_horizontal_margin"
+                app:expandedTitleMarginStart="@dimen/activity_horizontal_margin"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                >
+                <ImageView
+                    android:id="@+id/toolbar_image"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <!--<TextView-->
-                    <!--android:id="@+id/peic"-->
-                    <!--android:textColor="@android:color/white"-->
-                    <!--android:layout_margin="10dp"-->
-                    <!--android:textSize="30dp"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:text="Price On Sell"-->
-                    <!--/>-->
-                    <!--<LinearLayout-->
-                    <!--android:layout_marginTop="30dp"-->
-                    <!--android:layout_width="150dp"-->
-                    <!--android:layout_height="?attr/actionBarSize"-->
-
-                    <!--android:layout_alignParentRight="true"-->
-                    <!--android:background="@drawable/colorsnew"-->
-                    <!--android:orientation="vertical">-->
-                    <!--<TextView-->
-
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_margin="5dp"-->
-                    <!--android:text="For Sell"-->
-                    <!--android:textColor="@android:color/white"-->
-                    <!--android:textSize="30dp" />-->
-
-                    <!--</LinearLayout>-->
-                </RelativeLayout>
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@null"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/propertyback" />
 
                 <android.support.v7.widget.Toolbar
+
+                    android:id="@+id/toolbardetail"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     app:layout_collapseMode="pin"
-                    app:popupTheme="@style/Base.AlertDialog.AppCompat.Light"></android.support.v7.widget.Toolbar>
+                    app:popupTheme="@style/Base.AlertDialog.AppCompat.Light">
+
+                </android.support.v7.widget.Toolbar>
             </android.support.design.widget.CollapsingToolbarLayout>
 
 
@@ -79,10 +65,13 @@
             android:id="@+id/scrollView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+
+
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             <RelativeLayout
-
+                android:focusableInTouchMode="true"
+                android:descendantFocusability="blocksDescendants"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -104,16 +93,47 @@
                         android:drawablePadding="10dp"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="02-May-2019" />
+                        android:text="02-May-2019"
+                        android:layout_alignLeft="@+id/date_and_views" />
                 </LinearLayout>
 
+                <TextView
+
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_below="@+id/date_and_views"
+                    android:layout_marginLeft="30dp"
+                    android:text="Title"
+                    android:textColor="@color/colorPrimaryNext"
+                    android:textSize="18dp" />
+
+                <LinearLayout
+
+                    android:id="@+id/linear_title_line"
+                    android:layout_width="150dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/title"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal"
+                    tools:ignore="DuplicateIds"></LinearLayout>
+                <TextView
+                    android:textSize="18sp"
+                    android:id="@+id/title_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linear_title_line"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp" />
                 <TextView
 
                     android:id="@+id/description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    android:layout_below="@+id/date_and_views"
+                    android:layout_below="@+id/title_text"
                     android:layout_marginLeft="30dp"
                     android:text="Description"
                     android:textColor="@color/colorPrimaryNext"

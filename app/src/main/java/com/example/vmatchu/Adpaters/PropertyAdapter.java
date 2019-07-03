@@ -1,53 +1,30 @@
 package com.example.vmatchu.Adpaters;
 
 
-import android.app.Dialog;
-
 import android.app.ProgressDialog;
 
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.CardView;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.Filter;
-import android.widget.Filterable;
 import android.widget.ImageView;
-import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.vmatchu.Classes.PackageDetails;
-import com.example.vmatchu.Classes.PropertiesDetails;
-import com.example.vmatchu.CustomAlert.CustomAlert;
-import com.example.vmatchu.EditPurchasePropertyActivity;
-import com.example.vmatchu.EditSellPropertyActivity;
-import com.example.vmatchu.EnterPropertyDetailActivity;
+import com.example.vmatchu.Activities.EditPurchasePropertyActivity;
+import com.example.vmatchu.Activities.EditSellPropertyActivity;
 
 
-import com.example.vmatchu.HomeActivity;
 import com.example.vmatchu.Interface.OnItemDeleteClick;
-import com.example.vmatchu.MatchPropertyActivity;
-
-import com.example.vmatchu.Models.MyPropertyCityForDB;
-import com.example.vmatchu.Models.MyPropertyStatusForDB;
-import com.example.vmatchu.Pojo.InsertPropertyResponse;
-import com.example.vmatchu.Pojo.MatchedPropertyResponse;
-
-import com.example.vmatchu.PackageActivity;
+import com.example.vmatchu.Activities.MatchPropertyActivity;
 
 import com.example.vmatchu.Pojo.MyPropertyArea;
 import com.example.vmatchu.Pojo.MyPropertyAreaType;
@@ -56,7 +33,6 @@ import com.example.vmatchu.Pojo.MyPropertyBedrooms;
 import com.example.vmatchu.Pojo.MyPropertyCity;
 import com.example.vmatchu.Pojo.MyPropertyData;
 import com.example.vmatchu.Pojo.MyPropertyDescription;
-import com.example.vmatchu.Pojo.MyPropertyForDB;
 import com.example.vmatchu.Pojo.MyPropertyGarages;
 import com.example.vmatchu.Pojo.MyPropertyIsClosed;
 import com.example.vmatchu.Pojo.MyPropertyMaxPrice;
@@ -64,27 +40,17 @@ import com.example.vmatchu.Pojo.MyPropertyMaxSize;
 import com.example.vmatchu.Pojo.MyPropertyMinPrice;
 import com.example.vmatchu.Pojo.MyPropertyMinSize;
 import com.example.vmatchu.Pojo.MyPropertyPropertyType;
-import com.example.vmatchu.Pojo.MyPropertyResponse;
 import com.example.vmatchu.Pojo.MyPropertyRooms;
 import com.example.vmatchu.Pojo.MyPropertySector;
 import com.example.vmatchu.Pojo.MyPropertyStatus;
 import com.example.vmatchu.Pojo.MyPropertySubArea;
-import com.example.vmatchu.PropertyDetailsActivity;
+import com.example.vmatchu.Activities.PropertyDetailsActivity;
 import com.example.vmatchu.R;
 import com.example.vmatchu.Rest.APIService;
 import com.example.vmatchu.Rest.ApiUtil;
-import com.example.vmatchu.SharedPrefs.SaveInSharedPreference;
-import com.example.vmatchu.myProperty;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
-import static java.security.AccessController.getContext;
 
 public class PropertyAdapter extends RecyclerView.Adapter {
     private List<MyPropertyData> propertiesDetails;
@@ -316,11 +282,20 @@ public class PropertyAdapter extends RecyclerView.Adapter {
 
                 final CharSequence[] items = { "Edit", "Delete", "Pause", "Close Deal" };
 
+
                 //Now we need an AlertDialog.Builder object
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
 
+
+
+
                 //setting the view of the builder to our custom view that we already inflated
                 builder.setView(dialogView);
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        System.exit(0);
+                    }
+                });
                 builder.setItems(items, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int pos) {
                         switch (pos) {
@@ -655,14 +630,19 @@ public class PropertyAdapter extends RecyclerView.Adapter {
                             }break;
                             case 1:
                             {
-                                Toast.makeText(context,"Clicked on:"+items[pos],Toast.LENGTH_SHORT).show();
+                                onItemDeleteClick.onItemClick(pos, propertiesDetails.get(i).getPid());
 
                             }break;
                         }
                     }});
+
                 //finally creating the alert dialog and displaying it
                 AlertDialog alertDialog = builder.create();
+
                 alertDialog.show();
+
+                alertDialog.setCancelable(true);
+                alertDialog.getWindow().setLayout(600,500   );
 
             }
         });
